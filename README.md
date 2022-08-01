@@ -97,7 +97,7 @@ pkg install ffmpeg -y
 pkg install wget
 pkg install imagemagick -y
 git clone https://github.com/FantoX001/Miku-MD
-cd Miku-Md
+cd Miku-MD
 npm start
 ```
 
