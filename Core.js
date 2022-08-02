@@ -1758,7 +1758,7 @@ sections
 }
 break
 
-
+/*
 case 'animesearchxxx': case 'anime':{
     await fetchJson(`https://api.jikan.moe/v4/anime/${q}`)
     .then((res) => {
@@ -1767,7 +1767,7 @@ case 'animesearchxxx': case 'anime':{
     })
     }
     break
-
+*/
 
 case 'coffee': case 'kopi': {
         if (isBan) return reply(mess.banned)	 			
