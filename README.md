@@ -26,8 +26,8 @@
     <img src="(https://visitor-badge.glitch.me/badge?page_id=https://github.com/FantoX001/Shikimori-MD.visitor-badge&left_text=Total%20Repo%20Visitors)">
   </a>
 </br>
-     </br>  
-  
+      
+</br> 
    
 ### ✧✧ This bot is still under development so if you want to recode/modify it, pls check this main repo once in 2 days because i am continuously debugging it and making major changes in it.
 ### ✧✧ Use `Heroku Deploy Method 2` for easy and more convenient deploy(Trust me).    
