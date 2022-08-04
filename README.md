@@ -52,7 +52,7 @@
 6. No API key needed!
 7. Supports latest WhatsApp version.
 8. Full premission to Recode.
-9. regularly Updating and Improving.
+9. Regularly Updating and Improving.
 
 ✧ The main motto of this project is to provide Beginner Devs a base without any limitations 😊.
 ✧ Check "Credits" section and Support Them too.
