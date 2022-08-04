@@ -41,7 +41,7 @@
 </br>
 
 
-## ✧✧ Why use Miku as your Base?
+## ✧✧✧ Why use Miku as your Base?
 
 ```
 1. Copyright Free.
@@ -61,7 +61,7 @@
 ```
 </br>
 
-## Heroku Deployment Method 1:
+## ✧✧✧ Heroku Deployment Method 1:
 
 #### ✧ Fork this repo.
 #### ✧ Click this scan button below and scan the given QR within 10 seconds from your WhatsApp. 
@@ -76,7 +76,7 @@
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/FantoX001/Miku-MD)
 
 
-## Heroku Deployment Method 2:
+## ✧✧✧ Heroku Deployment Method 2:
 
 #### ✧ `Fork` this repo.
 #### ✧ `Scan` the QR , download the `session.json` file and replace it with the older one present on the hompage of your `Fork`.
@@ -90,7 +90,7 @@
 #### ✧ Enjoy :)
 
 
-## Heroku Builbpacks:
+## ✧✧✧Heroku Builbpacks:
 
 ```
 https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest
@@ -105,12 +105,26 @@ heroku/nodejs
 
 
 
-## Join My Whatsapp Group for Support
+## ✧✧✧ Join My Whatsapp Group for Support
 
 <a href="https://chat.whatsapp.com/JcBzjRIxM5UHfuJbt0KrWt"><img src="https://img.shields.io/badge/Join Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 </a>
 
-## Physical Deployment Method ( Untested! )
+## ✧✧✧ CMD Deployment Method
+```
+git clone https://github.com/FantoX001/Miku-MD.git
+cd Miku-MD
+npm start
+```
+
+### ✧✧✧ Requirements for CMD istallation:
+- Git
+- Node.js
+- Libwebp
+- FFmpeg
+
+
+## ✧✧✧ Termux Deployment Method
 ```js
 apt update
 apt upgrade
@@ -127,21 +141,21 @@ cd Miku-MD
 npm start
 ```
 
-## License and recode Permission:
+## ✧✧✧ License and recode Permission:
 - Well, it's the most asked question !
 - And the answer is `"Permission is hereby granted for 100% modification/recode."`
 - And this project comes under [`MIT`](https://github.com/FantoX001/Miku-MD/blob/main/LICENSE.md) lincense.
 - Please at least [`Follow`](https://github.com/FantoX001/#follow) me on GitHub to show some appreciation.
    
    
-## Reminder:
+## ✧✧✧ Reminder:
 - This bot is not made by `WhatsApp Inc.` So misusing the bot might `ban` your `WhatsApp account!`(Though your WhatsApp account can be unbanned only once.)
 - I am not responsible for banning your account.
 - Use at your own risk by keeping this warning in mind.
  
 
 
-## Contribution:
+## ✧✧✧ Contribution:
 - I don't have any contributor in this project. Feel free to contribute.
 
 
