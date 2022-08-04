@@ -90,7 +90,7 @@
 #### ✧ Enjoy :)
 
 
-## ✧✧✧Heroku Builbpacks:
+## ✧ Heroku Builbpacks:
 
 ```
 https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest
