@@ -103,8 +103,6 @@ heroku/nodejs
 ```
 
 
-
-
 ## ✧✧✧ Join My Whatsapp Group for Support
 
 <a href="https://chat.whatsapp.com/JcBzjRIxM5UHfuJbt0KrWt"><img src="https://img.shields.io/badge/Join Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
@@ -141,6 +139,12 @@ cd Miku-MD
 npm start
 ```
 
+## ✧✧✧ To keep Miku alive without internet 24/7
+
+```
+npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
+```
+
 ## ✧✧✧ License and recode Permission:
 - Well, it's the most asked question !
 - And the answer is `"Permission is hereby granted for 100% modification/recode."`
@@ -148,24 +152,24 @@ npm start
 - Please at least [`Follow`](https://github.com/FantoX001/#follow) me on GitHub to show some appreciation.
    
    
-## ✧✧✧ Reminder:
+## ✧ Reminder:
 - This bot is not made by `WhatsApp Inc.` So misusing the bot might `ban` your `WhatsApp account!`(Though your WhatsApp account can be unbanned only once.)
 - I am not responsible for banning your account.
 - Use at your own risk by keeping this warning in mind.
  
 
 
-## ✧✧✧ Contribution:
+## ✧ Contribution:
 - I don't have any contributor in this project. Feel free to contribute.
 
 
 
-## Help:
+## ✧ Help Me:
 - [`Follow`](https://github.com/FantoX001/#follow) me on GitHub to make me feel motivated.
 - Give my project a ⭐ if you liked it.
 
      
-## Credits and Appreciation:
+## ✧ Credits and Appreciation:
 
 -   `Adiwajshing` sir for [Baileys](https://github.com/adiwajshing/baileys).
 -   `Arus~Bots` team for [Mizuhara](https://github.com/Arus-Bots/Mizuhara).
