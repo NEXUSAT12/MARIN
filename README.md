@@ -174,3 +174,4 @@ npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 -   `Adiwajshing` sir for [Baileys](https://github.com/adiwajshing/baileys).
 -   `Arus~Bots` team for [Mizuhara](https://github.com/Arus-Bots/Mizuhara).
 -   `Xeon` for [Cheems](https://github.com/DGXeon/CheemsBot-MD2).
+-   `Zhwzein` for [Killua](https://github.com/zhwzein/Killua-Zoldyck)
