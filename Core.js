@@ -48,6 +48,17 @@ let { msgFilter } = require('./lib/antispam')
 const { mediafireDl } = require('./lib/mediafire.js')
 
 
+if (!icmd&&!isGroup){
+	         await axios.get(`http://api.brainshop.ai/get?bid=165801&key=1ftAuFL7Fhj21Fyp&uid=[uid]&msg=${body}]`)
+        .then((response) => {
+                 txt = `${response.data.cnt}`
+
+                m.reply(txt);
+
+			 })
+	   }
+
+
 
 const _ = require('lodash')
 const yargs = require('yargs/yargs')
