@@ -47,6 +47,14 @@ const { hentai } = require('./lib/scraper2.js')
 let { msgFilter } = require('./lib/antispam')
 const { mediafireDl } = require('./lib/mediafire.js')
 
+// News api (DHN-api) //
+
+const {
+ 
+  Quotes,
+  Darkjokes
+} = require("dhn-api");
+
 /*
 if (!icmd&&!isGroup){
 	         await axios.get(`http://api.brainshop.ai/get?bid=165801&key=1ftAuFL7Fhj21Fyp&uid=[uid]&msg=${body}]`)
