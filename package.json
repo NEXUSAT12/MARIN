@@ -21,7 +21,7 @@
  "author": "Fantox (FantoX001)",
  "license": "MIT",
  "dependencies": {
-  "@adiwajshing/baileys": "^4.0.1",
+  "@adiwajshing/baileys": "^4.3.0",
   "@adiwajshing/keyed-db": "^0.2.4",
   "@develoka/angka-terbilang-js": "^1.4.2",
   "@shineiichijo/marika": "^2.0.2",
