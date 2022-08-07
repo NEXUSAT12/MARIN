@@ -47,6 +47,7 @@ const { hentai } = require('./lib/scraper2.js')
 let { msgFilter } = require('./lib/antispam')
 const { mediafireDl } = require('./lib/mediafire.js')
 
+/*
 // News api (DHN-api) //
 
 const {
@@ -55,17 +56,12 @@ const {
   Darkjokes
 } = require("dhn-api");
 
-/*
-if (!icmd&&!isGroup){
-	         await axios.get(`http://api.brainshop.ai/get?bid=165801&key=1ftAuFL7Fhj21Fyp&uid=[uid]&msg=${body}]`)
-        .then((response) => {
-                 txt = `${response.data.cnt}`
 
-                m.reply(txt);
-
-			 })
-	   }
 */
+
+
+
+
 
 
 const _ = require('lodash')
@@ -1620,13 +1616,13 @@ if (isBanChat) return reply(mess.bangc)
                 if (!args.join(" ")) return reply("What picture are you looking for??")
 		let { wikimedia } = require('./lib/scraper')
         anu = await wikimedia(args)
-        result = anu[Math.floor(Math.random() * anu.length)]
+        hasil = anu[Math.floor(Math.random() * anu.length)]
         let buttons = [
             {buttonId: `-wikimedia ${args.join(" ")}`, buttonText: {displayText: 'Next Image'}, type: 1}
         ]
         let buttonMessage = {
-            image: { url: result.image },
-            caption: `Title : ${result.title}\nSource : ${result.source}\nMedia Url : ${result.image}`,
+            image: { url: hasil.image },
+            caption: `Title : ${hasil.title}\nSource : ${hasil.source}\nMedia Url : ${hasil.image}`,
             footer: `${BotName}`,
             buttons: buttons,
             headerType: 4
@@ -1646,12 +1642,12 @@ if (isBanChat) return reply(mess.bangc)
 case 'quotesanime': case 'quoteanime': case 'animequote': case 'animequotes':{
 		let { quotesAnime } = require('./lib/scraper')
         let anu = await quotesAnime()
-        result = anu[Math.floor(Math.random() * anu.length)]
+        hasil = anu[Math.floor(Math.random() * anu.length)]
         let buttons = [
             {buttonId: `-quotesanime`, buttonText: {displayText: '>>'}, type: 1}
         ]
         let buttonMessage = {
-            text: `_${result.quotes}_\n\nBy '${result.karakter}', ${result.anime}\n\n- ${result.up_at}`,
+            text: `_${hasil.quotes}_\n\nBy '${hasil.karakter}', ${hasil.anime}\n\n- ${hasil.up_at}`,
             footer: 'Miku',
             buttons: buttons,
             headerType: 2
@@ -4842,6 +4838,29 @@ break
 
 
 default:
+
+/*
+    if (!isCmd && !isGroup){
+        const botreply = await axios.get(`http://api.brainshop.ai/get?bid=165801&key=1ftAuFL7Fhj21Fyp&uid=[uid]&msg=${budy}]`)
+       txt = `${botreply.data.cnt}`
+       m.reply(txt)
+
+  }
+
+*/
+
+  if (!isCmd&&!isGroup){
+    await axios.get(`http://api.brainshop.ai/get?bid=165801&key=1ftAuFL7Fhj21Fyp&uid=[uid]&msg=${budy}]`)
+.then((response) => {
+        txt = `${response.data.cnt}`
+
+       m.reply(txt);
+
+    })
+}
+
+
+
 if (budy.startsWith('=>')) {
 if (!isCreator) return reply(mess.botowner)
 function Return(sul) {
