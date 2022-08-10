@@ -50,9 +50,8 @@
 4. Singe prefix ("-").
 5. Self restoration.
 6. No API key needed!
-7. Supports latest WhatsApp version.
-8. Full premission to Recode.
-9. Regularly Updating and Improving.
+7. Full premission to Recode.
+8. Regularly Updating and Improving.
 
 ✧ The main motto of this project is to provide Beginner Devs a base without any limitations 😊.
 ✧ Check "Credits" section and Support Them too.
