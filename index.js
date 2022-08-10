@@ -110,8 +110,13 @@ Miku.ev.on('group-participants.update', async (anu) => {
                     ppgroup = 'https://wallpapercave.com/wp/wp10524609.jpg'
                 }
 
+                let targetname = await Miku.getName(num)
+                grpmembernum = metadata.participants.length
+
+                mikuWelcomepp = await getBuffer(`https://hardianto.xyz/api/welcome3?profile=${encodeURIComponent(ppuser)}&name=${encodeURIComponent(targetname)}&bg=https://telegra.ph/file/d460e086f9f9bf6b04e17.jpg&namegb=${encodeURIComponent(metadata.subject)}&member=${encodeURIComponent(grpmembernum)}`)
+                mikuByepp = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURIComponent(ppuser)}&name=${encodeURIComponent(targetname)}&bg=https://telegra.ph/file/d460e086f9f9bf6b04e17.jpg&namegb=${encodeURIComponent(metadata.subject)}&member=${encodeURIComponent(grpmembernum)}`)
+
                 if (anu.action == 'add') {
-                const buffer = await getBuffer(ppuser)
                 let WAuserName = num
                 Mikutext = `
 Hello @${WAuserName.split("@")[0]},
@@ -120,14 +125,13 @@ I am *Miku Nakano*, Welcome to ${metadata.subject}.
 
 *Group Description:*
 ${metadata.desc}
-
-Press the button below to start using *MIKU*...`
+`
 
 let Mikubuttons = [
-    {buttonId: `-menu`, buttonText: {displayText: 'Use Miku'}, type: 1}
+    {buttonId: `none`, buttonText: {displayText: '🏵️ Welcome buddy 🏵️'}, type: 1}
     ]
     let buttonMessage = {
-    jpegThumbnail:buffer,
+    jpegThumbnail: mikuWelcomepp,
     mentions: [num],
     caption: Mikutext,
     footer: `${global.BotName}`,
@@ -136,21 +140,18 @@ let Mikubuttons = [
     }
 Miku.sendMessage(anu.id, buttonMessage)
                 } else if (anu.action == 'remove') {
-                	const buffer = await getBuffer(ppuser)
                 	let WAuserName = num
                     Mikutext = `
 Sayonara 👋, @${WAuserName.split("@")[0]},
 
 I hope you will come back soon, but we are not going to miss you though!
-
-Just let him go and start using MIKU by pressing the button below...
 `
 
 let Mikubuttons = [
-    {buttonId: `-menu`, buttonText: {displayText: 'Use Miku'}, type: 1}
+    {buttonId: `none`, buttonText: {displayText: '👋 Sayonara buddy 👋'}, type: 1}
     ]
     let buttonMessage = {
-    jpegThumbnail:buffer,
+    jpegThumbnail:mikuByepp,
     mentions: [num],
     caption: Mikutext,
     footer: `${global.BotName}`,
@@ -166,6 +167,7 @@ let Mikubuttons = [
             }
     })
     
+
 
     Miku.decodeJid = (jid) => {
         if (!jid) return jid
