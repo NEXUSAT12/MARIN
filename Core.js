@@ -1799,6 +1799,7 @@ await Miku.sendMessage(from, {text:"reply -s to this image to make sticker"}, {q
 }
 break
 
+/*
 case 'delete': case 'del': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
@@ -1808,6 +1809,27 @@ case 'delete': case 'del': {
  Miku.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: true, id: m.quoted.id, participant: m.quoted.sender } })
  }
  break
+*/
+
+ case 'deleteall': case 'delall': case 'delete': case 'del': {
+    if (isBan) return reply(mess.banned)	 			
+ if (isBanChat) return reply(mess.bangc)
+ if (!isBotAdmins) return replay(mess.botadmin)
+ if (!isAdmins && !isCreator) return replay(mess.useradmin)
+ if (!m.quoted) return reply('Please mention a message baka!')
+ let { chat, fromMe, id} = m.quoted
+
+ key={
+    remoteJid:m.chat,
+    fromMe: false,
+    id:m.quoted.id,
+    participant:m.quoted.sender
+}
+
+ Miku.sendMessage(m.chat, { delete:{ remoteJid: m.chat, fromMe: false, id: m.quoted.id, participant: m.quoted.sender } })
+ }
+ break
+
 
 
  case 'listpc': {
@@ -4094,6 +4116,32 @@ reply(mess.waiting)
                 })
 break
 
+
+
+case 'crossplay': case 'crosplay': case 'cosplay':
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+    if (!m.isGroup) return replay(mess.grouponly)
+                const buttons = [
+        {buttonId: '-crossplay', buttonText: {displayText: '>>'}, type: 1},
+            ]               
+        const cosplybutton = {
+        image: {url: 'https://hanzz-web.herokuapp.com/api/randomimage/cosplay'},
+        caption: "Guess who am i...",
+        footer: `${global.BotName}`,
+        buttons: buttons,
+        headerType: 4
+        }
+                  
+        await Miku.sendMessage(m.chat,cosplybutton, { quoted:m }).catch(err => {
+            return('Error!')
+        })  
+
+        break
+
+
+
+
 case 'neko2':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
@@ -4720,7 +4768,7 @@ Here's the list of my Commands.
 
  *━━━━━━〈  🎆 Core 🎆  〉━━━━━━*
 
-profile, help, delete, listgc, listpc, welcome, support, repo, script 
+profile, help, delete, deleteall, listgc, listpc, welcome, support, repo, script 
  
  *━━━━━━〈  🎀 Owner 🎀  〉━━━━━━*
 
@@ -4756,7 +4804,7 @@ play, ytmp3, ytmp4, ytvideo, mediafire, instagram, igtv, facebook, fbmp3, twitte
 
  *━━━━━━〈  🈴 Weeb 🈴  〉━━━━━━*
 
-waifu, loli, neko, ppcouple, feed, foxgirl, feed, meow, tickle, wallpaper, coffee, animenom, waifu3, neko2, feed, meow, tickle, migumin, awoo, animewallpaper2, anime, manga
+crosplay, waifu, loli, neko, ppcouple, feed, foxgirl, feed, meow, tickle, wallpaper, coffee, animenom, waifu3, neko2, feed, meow, tickle, migumin, awoo, animewallpaper2, anime, manga
 
  *━━━━━━〈  ♨️ Informative ♨️  〉━━━━━━*
 
