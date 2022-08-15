@@ -1816,14 +1816,14 @@ case 'delete': case 'del': {
  if (!m.quoted) return reply('Please mention a message baka!')
  let { chat, fromMe, id} = m.quoted
 
- key={
-    remoteJid:m.chat,
+const key = {
+    remoteJid: m.chat,
     fromMe: false,
-    id:m.quoted.id,
-    participant:m.quoted.sender
+    id: m.quoted.id,
+    participant: m.quoted.sender
 }
 
- Miku.sendMessage(m.chat, { delete:{ remoteJid: m.chat, fromMe: false, id: m.quoted.id, participant: m.quoted.sender } })
+await Miku.sendMessage(m.chat, { delete: key })
  }
  break
 
