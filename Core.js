@@ -501,10 +501,11 @@ if (command) {
 await Miku.sendPresenceUpdate('composing', m.chat)
 Miku.sendReadReceipt(from, m.sender, [m.key.id])}
 }
-
+/*
   if (global.autoReadGc) {
   if (m.isGroup) { Miku.sendReadReceipt(m.chat, m.sender, [m.key.id]) }
 }
+*/
 
   if (global.autoReadAll) { if (m.chat) { Miku.sendReadReceipt(m.chat, m.sender, [m.key.id]) }
   }
