@@ -174,6 +174,7 @@ var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == '
 var budy = (typeof m.text == 'string' ? m.text : '')
 const prefix = global.prefa
 const isCmd = body.startsWith(prefix)
+const notCmd = body.startsWith('')
 const command = isCmd ? body.slice(1).trim().split(' ')[0].toLowerCase() : ''
 const args = body.trim().split(/ +/).slice(1)
 const pushname = m.pushName || "No Name"
@@ -234,6 +235,17 @@ const isImage = (m.type === 'imageMessage')
         const isQuotedTag = m.mtype === 'extendedTextMessage' && content.includes('mentionedJid')
         const isQuotedProd = m.mtype === 'extendedTextMessage' && content.includes('productMessage')
         const isQuotedReply = m.mtype === 'extendedTextMessage' && content.includes('Message')
+
+
+
+// DM chatbot
+
+if (!isCmd && !m.isGroup){
+    const botreply = await axios.get(`http://api.brainshop.ai/get?bid=168758&key=Ci7eNhtxpxxDB5FQ&uid=[uid]&msg=[${budy}]`)
+    txt = `${botreply.data.cnt}`
+    m.reply(txt)
+    }
+
 
 
 _sewa.expiredCheck(Miku, sewa)
@@ -4996,22 +5008,26 @@ default:
        txt = `${botreply.data.cnt}`
        m.reply(txt)
 
+
+
+await axios.get(`http://api.brainshop.ai/get?bid=165801&key=1ftAuFL7Fhj21Fyp&uid=[uid]&msg=${budy}]`)
+.then((response) => {
+        txt = `${response.data.cnt}`
+
+       m.reply(txt);http://api.brainshop.ai/get?bid=168758&key=Ci7eNhtxpxxDB5FQ&uid=[uid]&msg=[msg]
   }
 
 */
 
-  if (!isCmd&&!isGroup){
-    await axios.get(`http://api.brainshop.ai/get?bid=165801&key=1ftAuFL7Fhj21Fyp&uid=[uid]&msg=${budy}]`)
-.then((response) => {
-        txt = `${response.data.cnt}`
-
-       m.reply(txt);
-
-    })
-}
+  if (!isCmd && !m.isGroup){
+    const botreply = await axios.get(`http://api.brainshop.ai/get?bid=168758&key=Ci7eNhtxpxxDB5FQ&uid=[uid]&msg=[${budy}]`)
+    txt = `${botreply.data.cnt}`
+    m.reply(txt)
+    }
 
 
 
+    
 if (budy.startsWith('=>')) {
 if (!isCreator) return reply(mess.botowner)
 function Return(sul) {
@@ -5058,7 +5074,7 @@ if (!(budy.toLowerCase() in msgs)) return
 Miku.copyNForward(m.chat, msgs[budy.toLowerCase()], true)
 }
 }
-} catch (err) {
+}catch (err) {
 Miku.sendMessage(`${ownertag}@s.whatsapp.net`, util.format(err), {quoted:m})
 console.log(err)
 }
