@@ -3372,6 +3372,7 @@ case 'play2': case 'ytplay2': {
                     let buttonMessage = {
                         image: { url: anu.thumbnail},
                         caption: `「 _Miku Youtube Player_ 」
+
     Title : ${anu.title}
     ID : ${anu.videoId}
     Duration : ${anu.timestamp}
@@ -3697,17 +3698,6 @@ var { kasus, kematian, sembuh } = c[0]
 Miku.sendMessage(from, {text : `Case : ${kasus}\n\nDead : ${kematian}\n\nHealed : ${sembuh}`}, m)
 break
 
-case 'playstore': case 'apk':
-    if (isBan) return reply(mess.banned)
-    if (isBanChat) return reply(mess.bangc)
-if(!q) return reply('Pls enter a search term!')
-let play = await hx.playstore(q)
-let storee = '─────────────────────\n'
-for (let i of play){
-storee += `\n「  *Google Play*  」\n\n*Name* : ${i.name}\n*Link* : ${i.link}\n*Dev* : ${i.developer}*Dev Link* : ${i.link_dev}\n─────────────────────`
-}
-reply(storee)
-break
 
 case 'couple': case 'ship': {
     if (isBan) return reply(mess.banned)
@@ -4899,7 +4889,7 @@ antilinkgc, antilinktg, antilinktt, antilinkytch, antilinkytvid, antilinkig, ant
 
  *━━━━━━〈  🔍 Search 🔍  〉━━━━━━*
 
-play, song, yts, lyrics, google, playstore, gimage, pinterest, image, movie, wallpaper, searchgc, happymod, wikimedia, ringtone, anime, animestory, manga, ringtone   
+play, song, yts, lyrics, google, gimage, pinterest, image, movie, wallpaper, searchgc, happymod, wikimedia, ringtone, anime, animestory, manga, ringtone   
 
  *━━━━━━〈  🔰 Convert 🔰  〉━━━━━━*
 
