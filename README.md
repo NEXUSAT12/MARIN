@@ -52,6 +52,7 @@
 6. No API key needed!
 7. Full premission to Recode.
 8. Regularly Updating and Improving.
+9. Supports Latest WhatsApp, GB, Fouad, Alpha, YoWhatsApp and all other mods (MD).
 
 ✧ The main motto of this project is to provide Beginner Devs a base without any limitations 😊.
 ✧ Check "Credits" section and Support Them too.
