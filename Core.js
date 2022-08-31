@@ -47,19 +47,6 @@ const { hentai } = require('./lib/scraper2.js')
 let { msgFilter } = require('./lib/antispam')
 const { mediafireDl } = require('./lib/mediafire.js')
 
-/*
-// News api (DHN-api) //
-
-const {
- 
-  Quotes,
-  Darkjokes
-} = require("dhn-api");
-
-
-*/
-
-
 
 const _ = require('lodash')
 const yargs = require('yargs/yargs')
