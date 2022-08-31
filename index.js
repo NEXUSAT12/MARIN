@@ -65,23 +65,28 @@ require("./Core")(Miku, m, chatUpdate, store)
 console.log(err)
 }
 })
- 
-Miku.ev.on('groups.update', async pea => {
-    
-       try {
-       ppgc = await Miku.profilePictureUrl(pea[0].id, 'image')
-       } catch {
-       ppgc = 'https://wallpapercave.com/wp/wp10524580.jpg'
-       }
-       let wm_fatih = { url : ppgc }
-       if (pea[0].announce == true) {
-       Miku.send5ButImg(pea[0].id, `Grop has been *Closed!* Only *Admins* can send Messages!`, `${botname}`, wm_fatih, [])
-       } else if(pea[0].announce == false) {
-       Miku.send5ButImg(pea[0].id, `Grop has been *Opened!* Now *Everyone* can send Messages!`, `${botname}`, wm_fatih, [])
-       } else {
-       Miku.send5ButImg(pea[0].id, `Group Subject has been updated to *${pea[0].subject}*`, `${botname}`, wm_fatih, [])
-     }
-    })
+
+    Miku.ev.on('groups.update', async pea => {
+        try {
+        ppgc = await Miku.profilePictureUrl(pea[0].id, 'image')
+        } catch {
+        ppgc = 'https://wallpapercave.com/wp/wp10524580.jpg'
+        }
+        let wm_fatih = { url : ppgc }
+        if (pea[0].announce == true) {
+        Miku.sendMessage(m.chat, { image: wm_fatih, caption: 'Grop has been *Closed!* Only *Admins* can send Messages!'})
+        } else if(pea[0].announce == false) {
+       Miku.sendMessage(m.chat, { image: wm_fatih, caption: 'Grop has been *Opened!* Now *Everyone* can send Messages!'})
+        } else if (pea[0].restrict == true) {
+        Miku.sendMessage(m.chat, { image: wm_fatih, caption: 'Group Info modification has been *Restricted*, Now only *Admins* can edit Group Info !'})
+        } else if (pea[0].restrict == false) {
+        Miku.sendMessage(m.chat, { image: wm_fatih, caption: 'Group Info modification has been *Un-Restricted*, Now only *Everyone* can edit Group Info !'})
+        } else {
+        mikutextddfq =`Group Subject has been updated To:\n\n*${pea[0].subject}*`
+        Miku.sendMessage(pea[0].id, { image: wm_fatih, caption: mikutextddfq})
+      }
+     })
+
 
 
 function pickRandom(list) {
@@ -131,7 +136,7 @@ let Mikubuttons = [
     {buttonId: `none`, buttonText: {displayText: '🏵️ Welcome buddy 🏵️'}, type: 1}
     ]
     let buttonMessage = {
-    jpegThumbnail: mikuWelcomepp,
+    jpegThumbnail: ppuser,
     mentions: [num],
     caption: Mikutext,
     footer: `${global.BotName}`,
@@ -151,7 +156,7 @@ let Mikubuttons = [
     {buttonId: `none`, buttonText: {displayText: '👋 Sayonara buddy 👋'}, type: 1}
     ]
     let buttonMessage = {
-    jpegThumbnail:mikuByepp,
+    jpegThumbnail:ppuser,
     mentions: [num],
     caption: Mikutext,
     footer: `${global.BotName}`,
