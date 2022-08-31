@@ -195,33 +195,16 @@ const AntiLinkTelegram = m.isGroup ? ntilinktg.includes(from) : false
 const AntiLinkTwitter = m.isGroup ? ntilinktwt.includes(from) : false
 const AntiLinkAll = m.isGroup ? ntilinkall.includes(from) : false
 const antiWame = m.isGroup ? ntwame.includes(from) : false
-const antiToxic = m.isGroup ? nttoxic.includes(from) : false
 const antiVirtex = m.isGroup ? ntvirtex.includes(from) : false
 const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : false
-const welcm = m.isGroup ? wlcm.includes(from) : false
-const GcRvk = m.isGroup ? gcrevoke.includes(from) : false
 const isLeveling = m.isGroup ? _leveling.includes(from) : false
-const isAutoStick = _autostick.includes(from)
-const isAutoSticker = m.isGroup ? autosticker.includes(from) : false
-const isSewa = _sewa.checkSewaGroup(from, sewa)
-const Autoreply = m.isGroup ? autorep.includes(from) : true
 autoreadsw = true
 const content = JSON.stringify(m.message)
 const q = args.join(' ')
-const isImage = (m.type === 'imageMessage')
-        const isVideo = (m.type === 'videoMessage')
-        const isMedias = (m.mtype === 'imageMessage' || m.mtype === 'videoMessage')
-		const isQuotedImage = m.mtype === 'extendedTextMessage' && content.includes('imageMessage')
-		const isQuotedVideo = m.mtype === 'extendedTextMessage' && content.includes('videoMessage')
-		const isQuotedAudio = m.mtype === 'extendedTextMessage' && content.includes('audioMessage')
-		const isQuotedSticker = m.mtype === 'extendedTextMessage' && content.includes('stickerMessage')
-		const isQuotedLoca = m.mtype === 'extendedTextMessage' && content.includes('locationMessage')
-        const isQuotedContact = m.mtype === 'extendedTextMessage' && content.includes('contactMessage')
-        const isQuotedDocs = m.mtype === 'extendedTextMessage' && content.includes('documentMessage')
-        const isQuotedTeks = m.mtype === 'extendedTextMessage' && content.includes('quotedMessage')
-        const isQuotedTag = m.mtype === 'extendedTextMessage' && content.includes('mentionedJid')
-        const isQuotedProd = m.mtype === 'extendedTextMessage' && content.includes('productMessage')
-        const isQuotedReply = m.mtype === 'extendedTextMessage' && content.includes('Message')
+
+const isQuotedVideo = m.mtype === 'extendedTextMessage' && content.includes('videoMessage')
+const isQuotedAudio = m.mtype === 'extendedTextMessage' && content.includes('audioMessage')
+
 
 
 
@@ -1694,11 +1677,11 @@ let sections = []
         if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
             let sections = []
-            let com = [`group open`,`leveling on`,`welcome on`,`antilinkgc on`,`antilinktg on`,`antilinktt on`,`antilinkytch on`,`antilinkytvid on`,`antilinkig on`,`antilinkfb on`,`antilinktwit on`,`antilinkall on`,`antiwame on`]
-            let comm = [`group close`,`leveling off`,`welcome off`,`antilinkgc off`,`antilinktg off`,`antilinktt off`,`antilinkytch off`,`antilinkytvid off`,`antilinkig on`,`antilinkfb off`,`antilinktwit off`,`antilinkall off`,`antiwame off`]
-            let listnya = [`Group open/close`,`Leveling on/off`,`Welcome/Left on/off`,`Antilink Group on/off`,`Antilink Telegram on/off`,`Antilink Tiktok on/off`,`Antilink Youtube Channel on/off`,`Antilink Youtube Video on/off`,`Antilink Instagram on/off`,`Antilink Facebook on/off`,`Antilink Twitter on/off`,`Antilink All on/off`,`Anti Wame on/off`]
+            let com = [`group open`,`leveling on`,`antilinkgc on`,`antilinktg on`,`antilinktt on`,`antilinkytch on`,`antilinkytvid on`,`antilinkig on`,`antilinkfb on`,`antilinktwit on`,`antilinkall on`,`antiwame on`]
+            let comm = [`group close`,`leveling off`,`antilinkgc off`,`antilinktg off`,`antilinktt off`,`antilinkytch off`,`antilinkytvid off`,`antilinkig on`,`antilinkfb off`,`antilinktwit off`,`antilinkall off`,`antiwame off`]
+            let listnya = [`Group open/close`,`Leveling on/off`,`Antilink Group on/off`,`Antilink Telegram on/off`,`Antilink Tiktok on/off`,`Antilink Youtube Channel on/off`,`Antilink Youtube Video on/off`,`Antilink Instagram on/off`,`Antilink Facebook on/off`,`Antilink Twitter on/off`,`Antilink All on/off`,`Anti Wame on/off`]
             let suruh = [`Enable`, `Disable`]
-            let fiturname = [`Group`,`Leveling`,`Auto Sticker`,`Welcome`,`Antilink Group`,`Antilink Telegram`,`Antilink Tiktok`,`Antilink Youtube Channel`,`Antilink Youtube Video`,`Antilink Instagram`,`Antilink Facebook`,`Antilink Twitter`,`Antilink All`,`Anti Wame`,`Auto Revoke`,`Auto Reply`]
+            let fiturname = [`Group`,`Leveling`,`Auto Sticker`,`Antilink Group`,`Antilink Telegram`,`Antilink Tiktok`,`Antilink Youtube Channel`,`Antilink Youtube Video`,`Antilink Instagram`,`Antilink Facebook`,`Antilink Twitter`,`Antilink All`,`Anti Wame`,`Auto Revoke`]
             let startnum = 0; let startnu = 0; let startn = 0;let start = 0
             let startnumm = 1
             for (let x of com) {
@@ -1892,34 +1875,6 @@ await Miku.sendMessage(m.chat, { delete: key })
  replay(`Error!`)
  }
  }
-
-
-
- case 'welcome': {
-    if (isBan) return reply(mess.banned)	 			
- if (isBanChat) return reply(mess.bangc)
- if (!m.isGroup) return replay(mess.grouponly)
- if (!isBotAdmins) return replay(mess.botadmin)
- if (!isAdmins && !isCreator) return replay(mess.useradmin)
- if (args[0] === "on") {
- if (welcm) return replay('Already activated')
- wlcm.push(from)
- replay('Activated Welcome/Left message in this group.')
- } else if (args[0] === "off") {
- if (!welcm) return replay('Already deactivated')
- let off = wlcm.indexOf(from)
- wlcm.splice(off, 1)
- replay('Deactivated Welcome/Left message in this group.')
- } else {
-   let buttonswlcm = [
-   { buttonId: `-welcome on`, buttonText: { displayText: 'On' }, type: 1 },
-   { buttonId: `-welcome off`, buttonText: { displayText: 'Off' }, type: 1 }
-   ]
-   await Miku.sendButtonText(m.chat, buttonswlcm, `Please choose any button below\n\n_On_ to Activate\n_Off_ to Deactivate`, `${global.BotName}`, m)
-   }
-   }
-   break
-
 
    case 'leveling':
     if (isBan) return reply(mess.banned)	 			
