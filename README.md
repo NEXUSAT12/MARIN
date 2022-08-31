@@ -136,6 +136,7 @@ pkg install wget
 pkg install imagemagick -y
 git clone https://github.com/FantoX001/Miku-MD
 cd Miku-MD
+npm i
 npm start
 ```
 
