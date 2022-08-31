@@ -1541,13 +1541,13 @@ case 'nsfwmenu':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!AntiNsfw) return reply(mess.nonsfw)
-        reply(` *━━━━━━〈  📛 NSFW Menu 📛  〉━━━━━━*\n\nhentaivideo, blowjobgif, hneko, masturbation, thighs, pussy, panties, orgy, ahegao, ass, bdsm, blowjob, cuckold, ero, gasm, cum, femdom, foot, gangbang, glasses, jahy, trap, blowjobgif, spank, hneko, hwaifu, gasm`)
+        reply(` *━━━〈  📛 NSFW Menu 📛  〉━━━*\n\nhentaivideo, blowjobgif, hneko, masturbation, thighs, pussy, panties, orgy, ahegao, ass, bdsm, blowjob, cuckold, ero, gasm, cum, femdom, foot, gangbang, glasses, jahy, trap, blowjobgif, spank, hneko, hwaifu, gasm`)
     break
 
-case 'reaction': case 'react': case 'reactions':
+case 'reaction': case 'react': case 'reactions': case 'r':
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
-            reply(` *━━━━━━〈  📍 Reactions 📍  〉━━━━━━*\n\nbonk, cry, bully, cuddle, hug, kiss, lick, pat, smug, yeet, blush, smile, wave, highfive, handhold, nom, glomp, bite, slap, kill, happy, wink, poke, dance, cringe`)
+            reply(` *━━━〈  📍 Reactions 📍  〉━━━*\n\nbonk, cry, bully, cuddle, hug, kiss, lick, pat, smug, yeet, blush, smile, wave, highfive, handhold, nom, glomp, bite, slap, kill, happy, wink, poke, dance, cringe`)
         break   
     
 
@@ -4868,71 +4868,70 @@ I am *Miku Nakano*, a bot developed by *Fantox*.
 🔰 My prefix is:  ${prefix}
 
 Here's the list of my Commands.
+
+
  
-
-
- *━━━━━━〈  🎆 Core 🎆  〉━━━━━━*
+ *━━━〈  🎆 Core 🎆  〉━━━*
 
 stalk, profile, help, delete, deleteall, listgc, listpc, welcome, support, repo, script 
  
- *━━━━━━〈  🎀 Owner 🎀  〉━━━━━━*
+ *━━━〈  🎀 Owner 🎀  〉━━━*
 
 self, public, ban, bangroup, bye, join, bye, block, unblock, broadcast 
 
- *━━━━━━〈  ⭕ Group ⭕  〉━━━━━━*
-
+ *━━━〈  ⭕ Group ⭕  〉━━━*
+ 
 promote, demote, revoke, remove, tagall, hidetag, groupsetting, grouplink, setgcpp, setname, setdesc, group, nsfw 
 
- *━━━━━━〈  ➰ Anti Link ➰  〉━━━━━━*
+ *━━━〈  ➰ Anti Link ➰  〉━━━*
  
 antilinkgc, antilinktg, antilinktt, antilinkytch, antilinkytvid, antilinkig, antilinkfb, antilinktwit, antilinkall, antiwame
 
- *━━━━━━〈  🔍 Search 🔍  〉━━━━━━*
+ *━━━〈  🔍 Search 🔍  〉━━━*
 
-play, song, yts, lyrics, google, gimage, pinterest, image, movie, wallpaper, searchgc, happymod, wikimedia, ringtone, anime, animestory, manga, ringtone   
+play, song, yts, lyrics, google, gimage, pinterest, image, movie, wallpaper, searchgc, happymod, wikimedia, ringtone, anime, animestory, manga, ringtone  
 
- *━━━━━━〈  🔰 Convert 🔰  〉━━━━━━*
+ *━━━〈  🔰 Convert 🔰  〉━━━*
 
 sticker, toimg, tovideo, togif , steal, stickermeme, emojimix, tourl, tomp3, toaudio
 
- *━━━━━━〈  🔉 Audio 🔉  〉━━━━━━*
+ *━━━〈  🔉 Audio 🔉  〉━━━*
 
 bass, tempo, blown, deep, earrape, fast, fat, nightcore, reverse, robot, slow, squirrel
 
- *━━━━━━〈  📍 Reactions 📍  〉━━━━━━*
+ *━━━〈  📍 Reactions 📍  〉━━━*
 
 bonk, cry, bully, cuddle, hug, kiss, lick, pat, smug, yeet, blush, smile, wave, highfive, handhold, nom, glomp, bite, slap, kill, happy, wink, poke, dance, cringe
 
- *━━━━━━〈  🌌 Downloader 🌌  〉━━━━━━*
+ *━━━〈  🌌 Downloader 🌌  〉━━━*
 
 play, ytmp3, ytmp4, ytvideo, mediafire, instagram, igtv, facebook, fbmp3, twitter, twittermp3, tiktok, tiktokaudio, tiktoknowm, mediafire  
 
- *━━━━━━〈  🈴 Weeb 🈴  〉━━━━━━*
+ *━━━〈  🈴 Weeb 🈴  〉━━━*
 
 crosplay, waifu, loli, neko, ppcouple, feed, foxgirl, feed, meow, tickle, wallpaper, coffee, animenom, waifu3, neko2, feed, meow, tickle, migumin, awoo, animewallpaper2, anime, manga
 
- *━━━━━━〈  ♨️ Informative ♨️  〉━━━━━━*
+ *━━━〈  ♨️ Informative ♨️  〉━━━*
 
 animequote, quote, covid, earthquake, wiki
 
- *━━━━━━〈  🎗 Others 🎗  〉━━━━━━*
+ *━━━〈  🎗 Others 🎗  〉━━━*
 
 stickermeme, quotes, darkjoke 
 
- *━━━━━━〈  🎐 Fun 🎐  〉━━━━━━*
+ *━━━〈  🎐 Fun 🎐  〉━━━*
 
 reaction, truth, dare, couple, soulmate, handsomecheck, beautifulcheck, awesomecheck, greatcheck, gaycheck, cutecheck, lesbiancheck, hornycheck, prettycheck, lovelycheck, uglycheck, charactercheck
 
- *━━━━━━〈  🪁 Essentials 🪁  〉━━━━━━*
+ *━━━〈  🪁 Essentials 🪁  〉━━━*
 
 translate, fliptext, toletter
 
- *━━━━━━〈  💥 NSFW 💥  〉━━━━━━*
+ *━━━〈  💥 NSFW 💥  〉━━━*
 
 🍁 Type " *${prefix}nsfw* " then enable NSFW (Admin only!) 
 
 🍁 Then type " *${prefix}nsfwmenu* " to get full list of NSFW commands.
-
 
 
 
@@ -4946,22 +4945,23 @@ translate, fliptext, toletter
  🔰 To get Support Group link type " *${prefix}support* ".
 
  🔰 Type " *${prefix}help* " to get full command list.`
-     
+    
+
  let buttonshelpm = [
     {buttonId: `-owner`, buttonText: {displayText: 'Bot Owner'}, type: 1}
     ]
                 let buttonMessage = {
-                    file: Miku.sendMessage(m.chat,{video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:true,caption:helpmenu},{quoted:m}),
+                    video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:true,
                     caption: helpmenu,
                     footer: `${BotName}`,
                     buttons: buttonshelpm,
                     headerType: 4
+                    
                 }
             Miku.sendMessage(m.chat, buttonMessage,{ quoted:m })
                 }
 break
-
-
+ 
 
 case '':
     if(isCmd){
@@ -4977,7 +4977,7 @@ case '':
                 {buttonId: `-help`, buttonText: {displayText: 'Help'}, type: 1}
                 ]
                 let buttonMessage = {
-                    file: Miku.sendMessage(m.chat,{video:fs.readFileSync('./system/miku.mp4'),gifPlayback:true,caption:needhelpmenu},{quoted:m}),
+                    video:fs.readFileSync('./system/miku.mp4'),gifPlayback:true,
                     caption: needhelpmenu,
                     footer: `${global.BotName}`,
                     buttons: butRun,
