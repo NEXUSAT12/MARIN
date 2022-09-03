@@ -4815,7 +4815,7 @@ Here's the list of my Commands.
  
  *━━━〈  🎆 Core 🎆  〉━━━*
 
-stalk, profile, help, delete, deleteall, listgc, listpc, welcome, support, repo, script 
+miku, stalk, profile, help, delete, deleteall, listgc, listpc, welcome, support, repo, script 
  
  *━━━〈  🎀 Owner 🎀  〉━━━*
 
@@ -4929,6 +4929,54 @@ case '':
                 }
 break
 
+
+
+case 'miku':
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+
+const txt = `Do you love Miku? Then we are the same.`
+const mikuarray= [
+            "https://c.tenor.com/SOeIW-QVZvoAAAPo/scared-the-quintessential-quintuplets.mp4",
+            "https://c.tenor.com/FDe7lTs0xvMAAAPo/miku-nakano-nakano-miku.mp4",
+            "https://c.tenor.com/IWKYIP6AMIgAAAPo/miku-nakano-the-quintessential-quintuplets.mp4",
+            "https://c.tenor.com/qE3H_Ae_jTQAAAPo/miku-nakano-nakano.mp4",
+            "https://c.tenor.com/9ijVngbm_ZMAAAPo/itsuki-nakano-the-quintessential-quintuplets.mp4",
+            "https://c.tenor.com/Fz9xGVR_FHAAAAPo/miku-nakano-nakano-miku.mp4",
+            "https://c.tenor.com/ALV6SZoJZb8AAAPo/gotoubun-corada.mp4",
+            "https://c.tenor.com/QHefpWiqvN4AAAPo/blush-anime.mp4",
+            "https://c.tenor.com/NJVFjOYEcsIAAAPo/miku-gotoubun.mp4",
+            "https://c.tenor.com/DA88NW5x_0wAAAPo/miku-nakano-stare.mp4",
+            "https://c.tenor.com/zNTH_-ks3GEAAAPo/miku-nakano.mp4",
+            "https://c.tenor.com/V9XEKQYRwrEAAAPo/miku-nakano-the-quintessential-quintuplets.mp4",
+            "https://c.tenor.com/GDH4WFhELpAAAAPo/anime-pout.mp4",
+            "https://c.tenor.com/ME0cvLQiW0kAAAPo/nakano-miku-go-toubun-no-hanayome.mp4",
+            "https://c.tenor.com/d5pE_0GJUf0AAAPo/miku-nakano.mp4",
+            "https://c.tenor.com/zNTH_-ks3GEAAAPo/miku-nakano.mp4",
+            "https://c.tenor.com/pCgBkgDBbnIAAAPo/nakano-miku-go-toubun-no-hanayome.mp4",
+            "https://c.tenor.com/6GTU3JEtpKoAAAPo/miku-nakano-the-quintessential-quintuplets.mp4",
+            "https://c.tenor.com/XNbmenhVucMAAAPo/5toubun-no-hanayome-gotoubun-no-hanayome.mp4",
+            "https://c.tenor.com/lyMqrhEK4scAAAPo/%EC%98%A4%EB%93%B1%EB%B6%84-5%EB%93%B1%EB%B6%84.mp4",
+            "https://c.tenor.com/vQ9TpmdjfWAAAAPo/cuteness-overload.mp4",
+            "https://c.tenor.com/PHngM6-NJVwAAAPo/miku-quintessential.mp4",
+            "https://c.tenor.com/yniTgeiOo4gAAAPo/miku-nakano.mp4",
+            "https://c.tenor.com/AULffc4ZKFIAAAPo/miku-god-miku.mp4",
+            "https://c.tenor.com/Y8Y1GbmQSOIAAAPo/miku-nakano-quintessential-quintuplets.mp4",
+            "https://c.tenor.com/m0EjrelpOfkAAAPo/miku-nakano-nakano-miku.mp4",
+            "https://c.tenor.com/x6RTarQTMzoAAAPo/miku-nakano.mp4",
+            "https://c.tenor.com/hUzZGMltInkAAAPo/gotoubun-corada.mp4",
+            "https://c.tenor.com/9-7azOBpr84AAAPo/miku-nakano-and-i-love-you.mp4",
+            "https://c.tenor.com/Ed5IC_yxZkoAAAPo/miku-nakano-gotoubun-no-hanayome.mp4",
+            "https://c.tenor.com/hDKieuZGiU0AAAPo/miku-nakano.mp4",
+            "https://c.tenor.com/WD8L3QLO024AAAPo/whaatt-the-quintessential-quintuplets.mp4"
+            
+            ]
+        
+            const mikuselection = mikuarray[Math.floor(Math.random()*mikuarray.length)]
+        
+            Miku.sendMessage(from,{video:{url:mikuselection},gifPlayback:true,caption:txt},{quoted:m})
+
+break
 
 
 
