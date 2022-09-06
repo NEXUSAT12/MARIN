@@ -62,6 +62,7 @@
   "node-fetch": "^2.6.1",
   "rumus-bdr": "^1.0.0",
   "mongoose": "^6.2.1",
+  "google-tts-api": "^2.0.2",
   "node-webpmux": "^3.1.0",
   "os": "^0.1.2",
   "mumaker": "^1.0.0",
