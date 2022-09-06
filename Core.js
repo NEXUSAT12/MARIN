@@ -208,7 +208,7 @@ const isQuotedAudio = m.mtype === 'extendedTextMessage' && content.includes('aud
 
 
 
-// DM chatbot
+/////////// -  DM chatbot (Delete this part to turn off DM Chat Bot) - //////////////////
 
 if (!isCmd && !m.isGroup){
     const botreply = await axios.get(`http://api.brainshop.ai/get?bid=168758&key=Ci7eNhtxpxxDB5FQ&uid=[uid]&msg=[${budy}]`)
@@ -216,6 +216,7 @@ if (!isCmd && !m.isGroup){
     m.reply(txt)
     }
 
+//////////////////////////////////////////////////////////////////////////////////////
 
 
 _sewa.expiredCheck(Miku, sewa)
@@ -2927,7 +2928,7 @@ case 'translate': case 'trans': {
 case 'gimage': case 'gig': case 'googleimage':{
    if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
-if (!args[0]) return reply("Enter a search term to get Google Imae!")
+if (!args[0]) return reply("Enter a search term to get Google Image!")
 let gis = require('g-i-s')
 gis(args.join(" "), async (error, result) => {
 n = result
@@ -2938,6 +2939,7 @@ let buttons = [
 let buttonMessage = {
 image: { url: images },
 caption: `「 _Google Image Search_ 」
+
 _Search Term_ : ${text}
 _Media Url_ : ${images}`,
 footer: `${global.BotName}`,
@@ -4815,7 +4817,7 @@ Here's the list of my Commands.
  
  *━━━〈  🎆 Core 🎆  〉━━━*
 
-miku, stalk, profile, help, delete, deleteall, listgc, listpc, welcome, support, repo, script 
+speak, miku, stalk, profile, help, delete, deleteall, listgc, listpc, welcome, support, repo, script 
  
  *━━━〈  🎀 Owner 🎀  〉━━━*
 
@@ -4823,7 +4825,7 @@ self, public, ban, bangroup, bye, join, bye, block, unblock, broadcast
 
  *━━━〈  ⭕ Group ⭕  〉━━━*
  
-promote, demote, revoke, remove, tagall, hidetag, groupsetting, grouplink, setgcpp, setname, setdesc, group, nsfw 
+promote, demote, revoke, add, remove, tagall, hidetag, groupsetting, grouplink, setgcpp, setname, setdesc, group, nsfw 
 
  *━━━〈  ➰ Anti Link ➰  〉━━━*
  
@@ -4867,7 +4869,7 @@ reaction, truth, dare, couple, soulmate, handsomecheck, beautifulcheck, awesomec
 
  *━━━〈  🪁 Essentials 🪁  〉━━━*
 
-translate, fliptext, toletter
+say, translate, fliptext, toletter
 
  *━━━〈  💥 NSFW 💥  〉━━━*
 
@@ -4977,6 +4979,33 @@ const mikuarray= [
             Miku.sendMessage(from,{video:{url:mikuselection},gifPlayback:true,caption:txt},{quoted:m})
 
 break
+
+case 'add':{     			
+    if (!m.isGroup) return replay(mess.grouponly)
+ if (!isBotAdmins) return replay(mess.botadmin)
+ let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+ if (users.length == 0) return replay(`Please write the number of the person you want to add to thhis group`)
+  await Miku.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => replay(`User Added Successfully!`)).catch((err) => replay(`Cannot add that user to this group!`))
+ }
+ break
+
+
+ case "tts":  case "texttospeech":  case "say": case "speak":{
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+
+    if (!args[0]) return reply("Please give me a text so that i can speak it!")
+      
+      let texttosay = text
+        ? text
+        : m.quoted && m.quoted.text
+        ? m.quoted.text
+        : m.text;
+      const SpeakEngine = require("google-tts-api"); 
+      const texttospeechurl = SpeakEngine.getAudioUrl(texttosay, {lang: "en", slow: false, host: "https://translate.google.com",});
+      Miku.sendMessage(m.chat,{audio: {url: texttospeechurl,},mimetype: "audio/mpeg",fileName: `MikuSpeechEngine.mp3`,},{quoted: m,});
+    }
+    break;
 
 
 
