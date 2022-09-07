@@ -205,7 +205,7 @@ const q = args.join(' ')
 const isQuotedVideo = m.mtype === 'extendedTextMessage' && content.includes('videoMessage')
 const isQuotedAudio = m.mtype === 'extendedTextMessage' && content.includes('audioMessage')
 
-
+const mongoose = require("mongoose");
 
 
 /////////// -  DM chatbot (Delete this part to turn off DM Chat Bot) - //////////////////
@@ -5011,7 +5011,14 @@ case 'add':{
 
 default:
 
-    
+    if(isCmd){
+        if (isBan) return reply(mess.banned)	 			
+        if (isBanChat) return reply(mess.bangc)
+        reply (`No such command programmed *${pushname}* senpai! Type *${prefix}help* to get my full command list!`)
+
+    }	 			
+
+
 if (budy.startsWith('=>')) {
 if (!isCreator) return reply(mess.botowner)
 function Return(sul) {
