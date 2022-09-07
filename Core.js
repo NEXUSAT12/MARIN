@@ -205,7 +205,12 @@ const q = args.join(' ')
 const isQuotedVideo = m.mtype === 'extendedTextMessage' && content.includes('videoMessage')
 const isQuotedAudio = m.mtype === 'extendedTextMessage' && content.includes('audioMessage')
 
+
+
+
 const mongoose = require("mongoose");
+
+
 
 
 /////////// -  DM chatbot (Delete this part to turn off DM Chat Bot) - //////////////////
@@ -4869,7 +4874,7 @@ reaction, truth, dare, couple, soulmate, handsomecheck, beautifulcheck, awesomec
 
  *━━━〈  🪁 Essentials 🪁  〉━━━*
 
-say, translate, fliptext, toletter
+qr, say, translate, fliptext, toletter
 
  *━━━〈  💥 NSFW 💥  〉━━━*
 
@@ -5006,6 +5011,28 @@ case 'add':{
       Miku.sendMessage(m.chat,{audio: {url: texttospeechurl,},mimetype: "audio/mpeg",fileName: `MikuSpeechEngine.mp3`,},{quoted: m,});
     }
     break;
+
+
+    case 'qr': case 'qrcode':
+        if (isBan) return reply(mess.banned)	 			
+        if (isBanChat) return reply(mess.bangc)
+        if (!m.isGroup) return replay(mess.grouponly)
+    reply(`Running repl....Please wait until repl.it responds...`)						
+    var replqr =  await getBuffer(`https://miku-qr--fantox001.repl.co/`)
+                               var qrbutton = [
+            {buttonId: `-qr`, buttonText: {displayText: `Re-run Repl`}, type: 1}
+            ]
+          let bmffg = {
+           image: replqr,
+           caption:  `Scan the qr within 10-15 seconds...`,
+          footer: `${global.BotName}`,
+          buttons: qrbutton,
+          headerType: 4
+          }     
+                await Miku.sendMessage(m.chat, bmffg,{ quoted:m }).catch(err => {
+                        return('Error!')
+                    })
+    break
 
 
 
