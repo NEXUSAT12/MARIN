@@ -10,8 +10,8 @@ global.antitags = true
 global.Owner = ['918130784851']
 global.OwnerNumber = ['918130784851']
 global.ownertag = ['918130784851']
-global.BotName = "kou"
-global.packname = "KOU bot"
+global.BotName = "MARIN"
+global.packname = "MARIN bot"
 global.author = "By: ua❤️"
 global.OwnerName = "3.69_Kou"
 global.BotSourceCode = "https://github.com/DEVILL-MASCOT"
@@ -20,7 +20,7 @@ global.sessionName = "session"
 
 // Prefix //
 // If you want to change the prefix, change it and also change all switch's button id from Core.js  otherwise buttons will not work //
-global.prefa = ['-'] 
+global.prefa = ['/'] 
 
 
 global.location = "ghaziabad, india"
@@ -28,7 +28,7 @@ global.reactmoji = "❤️"
 global.themeemoji = "💖"
 global.vidmenu = { url: 'https://c.tenor.com/YGuLegQWubwAAAPo/miku-nakano-gotoubun-no-hanayome.mp4' }
 global.websitex = "https://github.com/DEVILL-MASCOT"
-global.lolhuman = "KaysaS"
+global.lolhuman = "ᴀʏᴜsʜ"
 
 
 global.BotLogo = fs.readFileSync("./Assets/pic1.jpg")
@@ -58,19 +58,19 @@ global.ntilink = []
 
 
 global.mess = {
-    jobdone: 'Kaam ho gya darling...',
-    useradmin: 'Sorry, only *Group Admins* can use this command !...Jaa pehle admin banke aa',
-    botadmin: 'Sorry, i cant execute this command without being an *Admin* of this group......To chal ab *Admin* bna 😏',
-    botowner: 'Only my *Owner* can use this command, and who are you...why you used this command!',
+    jobdone: 'ʙᴀᴊᴀᴏ ᴅᴏʟʟ.......✨',
+    useradmin: 'Sorry, only *Group Admins* can use this command !...ᴛᴜ ʜ ᴋᴏɴ ???  ',
+    botadmin: 'Sorry, i cant execute this command without being an *Admin* .....chal ab *Admin* bna 😏',
+    botowner: '*ᴋᴏɴ ʜ ʙʜᴏᴘᴀᴅɪᴋᴀ* 🙄.......ᴏᴡɴᴇʀ ᴏɴʟʏ ᴄᴀᴍᴍᴀɴᴅ ᴜsᴇ ᴋᴀʀᴇɢᴀ?? ʙᴀᴅᴀ ʜᴏᴊᴀ ᴄʜᴏᴛᴜ ᴘᴇʜʟᴇ ᴄʜᴀʟʟ',
     grouponly: 'This command is only made for *Groups*, and what the hell are you doing here!',
     privateonly: 'This command is only made for *Private Chat*, chal khopche me aa!',
     botonly: 'Only the *Bot itself* can use this command!',
-    waiting: '_Command processing_ ᵃⁿʸᵃ ᵇʸ ᵖⁱᵏᵃ.....',
-    nolink: 'Please provide me *link*, Asap!',
+    waiting: '_Command processing_ ᴍᴀʀɪɴ ᵇʸ ᴀʏᴜsʜ.....',
+    nolink: 'LINK KON DEGA CHUTUYE *link*, jaldie de!',
     error: 'Error....kuchh to garbar hai dyaa!',
-    banned: 'You are *Banned* fron using commands 😠!',
-    bangc: 'This Group is *Banned* from using Commands 😡!',
-    nonsfw: 'Dont be a pervert....Bc pdhai - likhai karo, IAS YAS bano par nhi tumhe to *nudity* dekhni hai 😒!'
+    banned: 'You are *Banned* fron using commands NOW M******A CHALL ABH 😠!',
+    bangc: 'This Group is *Banned* from using Commands g*** marao abh jake 😡!',
+    nonsfw: 'ʜ ʙʜɪ??? ....Bc pdhai - ʟɪᴋʜᴀɪ ᴋᴀʀᴊᴀᴋᴇ, ɪᴀs ʏᴀs ʙᴀɴᴏ ᴘᴀʀ ɴʜɪ ᴛᴜᴍʜᴇ to *nudity* ᴅᴇᴋʜɴɪ ʜᴀɪ 😒 ʙᴀᴅᴇ ᴀᴀʏᴇ ᴄʜᴏᴛɪ ɴᴜɴᴜ ᴡᴀʟᴇ!'
     
 }
 
