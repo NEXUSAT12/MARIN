@@ -4812,7 +4812,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
       
  const helpmenu = `Konichiwa *${pushname}* Senpai,
 
-I am *Anya*, a bot developed by *Pika❤️*.
+I am *MARIN*, a bot developed by *❤️*.
 
 🔥 My prefix is:  ${prefix}
 
@@ -5051,10 +5051,10 @@ Here's the list of my Commands.
 
 
  『  *${global.BotName}*  』
- Powered by: *Pika❤️*
+ Powered by: *MARIN❤️*
 
  
- 🔥 If you have any *Bot related* question then ask here *-* https://api.whatsapp.com/send?phone=+918811074852 .
+ 🔥 If you have any *Bot related* question then ask here *-* https://api.whatsapp.com/send?phone=+919971690443 .
 
  🔥 Type " *${prefix}help* " to get full command list.`
     
