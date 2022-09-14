@@ -761,7 +761,7 @@ if (antiVirtex) {
     reply(`*Caution!*\n\n`.repeat(200))
     reply(`\`\`\`Virus Detected !!\`\`\`\n\nRevoving sender...`)
     if (!isBotAdmins) return reply(mess.botAdmin)
-    Miku.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+    await Miku.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
     }
     }
 
