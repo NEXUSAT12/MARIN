@@ -5064,7 +5064,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 break
  
 
-case 'p':
+case '':
     if(isCmd){
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
@@ -5072,7 +5072,7 @@ case 'p':
       mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
     
         
- const 'th'`Do you need help ${pushname} Senpai? Type *${prefix}help* to get my full command list.`
+ const needhelpmenu = `Do you need help ${pushname} Senpai? Type *${prefix}help* to get my full command list.`
      
          let butRun = [
                 {buttonId: `${prefix}help`, buttonText: {displayText: 'Help'}, type: 1}
@@ -5088,17 +5088,13 @@ case 'p':
                 }
 break
 
-
-
-case 'alive'
+case 'alive':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
 const txt = `Do you love Anya (miku) ? Then we are the same.`
 const mikuarray= [
-            "https://telegra.ph/file/fc8c10666835418136477.mp4",
-            "https://telegra.ph/file/614ba2eb73d658b557b1b.mp4",
- 	    "https://telegra.ph/file/b79a65e4311d5a680c10f.mp4"
+            "https://c.tenor.com/hjL3MnIsB88AAAPo/marin-kitagawa-kitagawa-marin.mp4"
             
             ]
         
@@ -5107,6 +5103,7 @@ const mikuarray= [
             Miku.sendMessage(from,{video:{url:mikuselection},gifPlayback:true,caption:txt},{quoted:m})
 
 break
+
 
 case 'add':{     			
     if (!m.isGroup) return replay(mess.grouponly)
