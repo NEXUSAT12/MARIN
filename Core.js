@@ -5064,7 +5064,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 break
  
 
-case 'p:
+case 'p':
     if(isCmd){
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
