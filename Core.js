@@ -4203,7 +4203,7 @@ case 'neko2':
 reply(mess.waiting)							
    waifud = await axios.get('https://waifu.pics/api/sfw/neko')
                 var wbutsss = [
-        {buttonId: `-neko2`, buttonText: {displayText: `>>`}, type: 1},
+        {buttonId: `${prefix}neko2`, buttonText: {displayText: `>>`}, type: 1},
         ]
       let buttonssMessage = {
        image: {url:waifud.data.url},
@@ -4228,7 +4228,7 @@ case 'tickle':
 reply(mess.waiting)							
  waifudd = await axios.get(`https://nekos.life/api/v2/img/${command}`)
                            var wbuttsss = [
-        {buttonId: `-${command}`, buttonText: {displayText: `>>`}, type: 1},
+        {buttonId: `${prefix}${command}`, buttonText: {displayText: `>>`}, type: 1},
         ]
       let buttonssMessages = {
        image: {url:waifudd.data.url},
@@ -4511,7 +4511,7 @@ if (!m.isGroup) return replay(mess.grouponly)
 reply(mess.waiting)							
 ud = await axios.get('https://waifu.pics/api/sfw/megumin')
 var wbutsss = [
-    {buttonId: `-megumin`, buttonText: {displayText: `>>`}, type: 1},
+    {buttonId: `${prefix}megumin`, buttonText: {displayText: `>>`}, type: 1},
          ]
       let buttonzMessage = {
       image: {url:ud.data.url},
@@ -4532,7 +4532,7 @@ case 'awoo':
     reply(mess.waiting)						
  waifudd = await axios.get(`https://waifu.pics/api/sfw/awoo`)
  var wbuttsss = [
-    {buttonId: `-awoo`, buttonText: {displayText: `>>`}, type: 1},
+    {buttonId: `${prefix}awoo`, buttonText: {displayText: `>>`}, type: 1},
     ]
   let button1Messages = {
    image: {url:waifudd.data.url},
@@ -4562,7 +4562,7 @@ const wall = new AnimeWallpaper();
             .catch(() => null);
 const i = Math.floor(Math.random() * wallpaper.length);
 var walb = [
-        {buttonId: `-animewall2 ${q}`, buttonText: {displayText: `>>`}, type: 1},        
+        {buttonId: `${prefix}animewall2 ${q}`, buttonText: {displayText: `>>`}, type: 1},        
         ]
       let wal = {
        image: {url:wallpaper[i].image},
@@ -4668,7 +4668,7 @@ case 'waifu' :
 reply(mess.waiting)	
     waifuddd = await axios.get('https://waifu.pics/api/sfw/waifu')
  var wbuttsssr = [
-    {buttonId: `-waifu`, buttonText: {displayText: `>>`}, type: 1},
+    {buttonId: `${prefix}waifu`, buttonText: {displayText: `>>`}, type: 1},
     ]
         let button4Messagess = {
         image: {url:waifuddd.data.url},
@@ -4689,7 +4689,7 @@ case 'neko' :
 reply(mess.waiting)	
     waifuddd = await axios.get('https://waifu.pics/api/sfw/neko')
  var wbuttsssr = [
-    {buttonId: `-neko`, buttonText: {displayText: `>>`}, type: 1},
+    {buttonId: `${prefix}neko`, buttonText: {displayText: `>>`}, type: 1},
     ]
         let buttonMessagessf = {
         image: {url:waifuddd.data.url},
@@ -4711,7 +4711,7 @@ case 'loli' :
 reply(mess.waiting)	
     waifuddd = await axios.get('https://waifu.pics/api/sfw/shinobu')
  var wbuttsssr = [
-    {buttonId: `-loli`, buttonText: {displayText: `>>`}, type: 1},
+    {buttonId: `${prefix}loli`, buttonText: {displayText: `>>`}, type: 1},
     ]
         let buttonMessagessfgr = {
         image: {url:waifuddd.data.url},
@@ -4790,12 +4790,12 @@ await sleep(1500)
 let btn = [{
 quickReplyButton: {
 displayText: '✨Menu✨',
-id: '-menu'
+id: `${prefix}menu`
 }  
 }, {
 quickReplyButton: {
 displayText: 'Bot Owner',
-id: '-owner'
+id: `${prefix}owner`
 }
 }]
 let txt = `「 *${global.OwnerName}'s Broadcast* 」\n\n${text}`
@@ -4810,249 +4810,244 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
       
- const helpmenu = `Konichiwa *${pushname}* Senpai,
-
-I am *MARIN*, a bot developed by *❤️*.
-
-🔥 My prefix is:  ${prefix}
-
-Here's the list of my Commands.
+ const helpmenu = `「Kon'nichiwa *${pushname}*'san
+│⋊ I'am:  🎀𝓜𝓐𝓡𝓘𝓝𝓔🎀
+│⋊ MY PREFIX: ${prefix}
+│⋊ 私の愛: *${prefix}owner*
+│⋊ 私の愛 : wa.me//+918130784851     
+╰────────────┈平和   
 
 
  
  *━━━〈  🎆 Core 🎆  〉━━━*
 
-❒✗ -speak
-❒✗ -anya (miku)
-❒✗ -stalk
-❒✗ -profile
-❒✗ -help
-❒✗ -delete
-❒✗ -deleteall
-❒✗ -listgc
-❒✗ -listpc
-❒✗ -welcome
-❒✗ -support
-❒✗ -repo
-❒✗ -script 
+❒✗ ${prefix}speak
+❒✗ ${prefix}stalk
+❒✗ ${prefix}profile
+❒✗ ${prefix}help
+❒✗ ${prefix}delete
+❒✗ ${prefix}deleteall
+❒✗ ${prefix}listgc
+❒✗ ${prefix}listpc
+❒✗ ${prefix}welcome
+❒✗ ${prefix}support
 
  *━━━〈  🎀 Owner 🎀  〉━━━*
 
-❒✗ -self
-❒✗ -public
-❒✗ -ban
-❒✗ -bangroup
-❒✗ -bye
-❒✗ -join
-❒✗ -bye
-❒✗ -block
-❒✗ -unblock
-❒✗ -broadcast 
+❒✗ ${prefix}self
+❒✗ ${prefix}public
+❒✗ ${prefix}ban
+❒✗ ${prefix}bangroup
+❒✗ ${prefix}bye
+❒✗ ${prefix}join
+❒✗ ${prefix}bye
+❒✗ ${prefix}block
+❒✗ ${prefix}unblock
+❒✗ ${prefix}broadcast 
 
  *━━━〈  ⭕ Group ⭕  〉━━━*
  
-❒✗ -promote
-❒✗ -demote
-❒✗ -revoke
-❒✗ -add
-❒✗ -remove
-❒✗ -tagall
-❒✗ -hidetag
-❒✗ -groupsetting
-❒✗ -grouplink
-❒✗ -setgcpp
-❒✗ -setname
-❒✗ -setdesc
-❒✗ -group 
+❒✗ ${prefix}promote
+❒✗ ${prefix}demote
+❒✗ ${prefix}revoke
+❒✗ ${prefix}add
+❒✗ ${prefix}remove
+❒✗ ${prefix}tagall
+❒✗ ${prefix}hidetag
+❒✗ ${prefix}groupsetting
+❒✗ ${prefix}grouplink
+❒✗ ${prefix}setgcpp
+❒✗ ${prefix}setname
+❒✗ ${prefix}setdesc
+❒✗ ${prefix}group 
 
  *━━━〈  ➰ Anti Link ➰  〉━━━*
  
-❒✗ -antilinkgc
-❒✗ -antilinktg
-❒✗ -antilinktt
-❒✗ -antilinkytch
-❒✗ -antilinkytvid
-❒✗ -antilinkig
-❒✗ -antilinkfb
-❒✗ -antilinktwit
-❒✗ -antilinkall
-❒✗ -antiwame
+❒✗ ${prefix}antilinkgc
+❒✗ ${prefix}antilinktg
+❒✗ ${prefix}antilinktt
+❒✗ ${prefix}antilinkytch
+❒✗ ${prefix}antilinkytvid
+❒✗ ${prefix}antilinkig
+❒✗ ${prefix}antilinkfb
+❒✗ ${prefix}antilinktwit
+❒✗ ${prefix}antilinkall
+❒✗ ${prefix}antiwame
 
  *━━━〈  🔍 Search 🔍  〉━━━*
 
-❒✗ -play
-❒✗ -song
-❒✗ -yts
-❒✗ -lyrics
-❒✗ -google
-❒✗ -gimage
-❒✗ -pinterest
-❒✗ -image
-❒✗ -movie
-❒✗ -wallpaper
-❒✗ -searchgc
-❒✗ -happymod
-❒✗ -wikimedia
-❒✗ -ringtone
-❒✗ -anime
-❒✗ -animestory
-❒✗ -manga
-❒✗ -ringtone  
+❒✗ ${prefix}play
+❒✗ ${prefix}song
+❒✗ ${prefix}yts
+❒✗ ${prefix}lyrics
+❒✗ ${prefix}google
+❒✗ ${prefix}gimage
+❒✗ ${prefix}pinterest
+❒✗ ${prefix}image
+❒✗ ${prefix}movie
+❒✗ ${prefix}wallpaper
+❒✗ ${prefix}searchgc
+❒✗ ${prefix}happymod
+❒✗ ${prefix}wikimedia
+❒✗ ${prefix}ringtone
+❒✗ ${prefix}anime
+❒✗ ${prefix}animestory
+❒✗ ${prefix}manga
+❒✗ ${prefix}ringtone  
 
  *━━━〈  🔰 Convert 🔰  〉━━━*
 
-❒✗ -sticker
-❒✗ -toimg
-❒✗ -tovideo
-❒✗ -togif
-❒✗ -steal
-❒✗ -stickermeme
-❒✗ -emojimix
-❒✗ -tourl
-❒✗ -tomp3
-❒✗ -toaudio
+❒✗ ${prefix}sticker
+❒✗ ${prefix}toimg
+❒✗ ${prefix}tovideo
+❒✗ ${prefix}togif
+❒✗ ${prefix}steal
+❒✗ ${prefix}stickermeme
+❒✗ ${prefix}emojimix
+❒✗ ${prefix}tourl
+❒✗ ${prefix}tomp3
+❒✗ ${prefix}toaudio
 
  *━━━〈  🔉 Audio 🔉  〉━━━*
 
-❒✗ -bass
-❒✗ -tempo
-❒✗ -blown
-❒✗ -deep
-❒✗ -earrape
-❒✗ -fast
-❒✗ -fat
-❒✗ -nightcore
-❒✗ -reverse
-❒✗ -robot
-❒✗ -slow
-❒✗ -squirrel
+❒✗ ${prefix}bass
+❒✗ ${prefix}tempo
+❒✗ ${prefix}blown
+❒✗ ${prefix}deep
+❒✗ ${prefix}earrape
+❒✗ ${prefix}fast
+❒✗ ${prefix}fat
+❒✗ ${prefix}nightcore
+❒✗ ${prefix}reverse
+❒✗ ${prefix}robot
+❒✗ ${prefix}slow
+❒✗ ${prefix}squirrel
 
  *━━━〈  📍 Reactions 📍  〉━━━*
 
-❒✗ -bonk
-❒✗ -cry
-❒✗ -bully
-❒✗ -cuddle
-❒✗ -hug
-❒✗ -kiss
-❒✗ -lick
-❒✗ -pat
-❒✗ -smug
-❒✗ -yeet
-❒✗ -blush
-❒✗ -smile
-❒✗ -wave
-❒✗ -highfive
-❒✗ -handhold
-❒✗ -nom
-❒✗ -glomp
-❒✗ -bite
-❒✗ -slap
-❒✗ -kill
-❒✗ -happy
-❒✗ -wink
-❒✗ -poke
-❒✗ -dance
-❒✗ -cringe
+❒✗ ${prefix}bonk
+❒✗ ${prefix}cry
+❒✗ ${prefix}bully
+❒✗ ${prefix}cuddle
+❒✗ ${prefix}hug
+❒✗ ${prefix}kiss
+❒✗ ${prefix}lick
+❒✗ ${prefix}pat
+❒✗ ${prefix}smug
+❒✗ ${prefix}yeet
+❒✗ ${prefix}blush
+❒✗ ${prefix}smile
+❒✗ ${prefix}wave
+❒✗ ${prefix}highfive
+❒✗ ${prefix}handhold
+❒✗ ${prefix}nom
+❒✗ ${prefix}glomp
+❒✗ ${prefix}bite
+❒✗ ${prefix}slap
+❒✗ ${prefix}kill
+❒✗ ${prefix}happy
+❒✗ ${prefix}wink
+❒✗ ${prefix}poke
+❒✗ ${prefix}dance
+❒✗ ${prefix}cringe
 
  *━━━〈  🌌 Downloader 🌌  〉━━━*
 
-❒✗ -play
-❒✗ -ytmp3
-❒✗ -ytmp4
-❒✗ -ytvideo
-❒✗ -mediafire
-❒✗ -instagram
-❒✗ -igtv
-❒✗ -facebook
-❒✗ -fbmp3
-❒✗ -twitter
-❒✗ -twittermp3
-❒✗ -tiktok
-❒✗ -tiktokaudio
-❒✗ -tiktoknowm
-❒✗ -mediafire  
+❒✗ ${prefix}play
+❒✗ ${prefix}ytmp3
+❒✗ ${prefix}ytmp4
+❒✗ ${prefix}ytvideo
+❒✗ ${prefix}mediafire
+❒✗ ${prefix}instagram
+❒✗ ${prefix}igtv
+❒✗ ${prefix}facebook
+❒✗ ${prefix}fbmp3
+❒✗ ${prefix}twitter
+❒✗ ${prefix}twittermp3
+❒✗ ${prefix}tiktok
+❒✗ ${prefix}tiktokaudio
+❒✗ ${prefix}tiktoknowm
+❒✗ ${prefix}mediafire  
 
  *━━━〈  🈴 Weeb 🈴  〉━━━*
 
-❒✗ -crosplay
-❒✗ -waifu
-❒✗ -loli
-❒✗ -neko
-❒✗ -ppcouple
-❒✗ -feed
-❒✗ -foxgirl
-❒✗ -feed
-❒✗ -meow
-❒✗ -tickle
-❒✗ -wallpaper
-❒✗ -coffee
-❒✗ -animenom
-❒✗ -waifu3
-❒✗ -neko2
-❒✗ -feed
-❒✗ -meow
-❒✗ -tickle
-❒✗ -migumin
-❒✗ -awoo
-❒✗ -animewallpaper2
-❒✗ -anime
-❒✗ -manga
+❒✗ ${prefix}crosplay
+❒✗ ${prefix}waifu
+❒✗ ${prefix}loli
+❒✗ ${prefix}neko
+❒✗ ${prefix}ppcouple
+❒✗ ${prefix}feed
+❒✗ ${prefix}foxgirl
+❒✗ ${prefix}feed
+❒✗ ${prefix}meow
+❒✗ ${prefix}tickle
+❒✗ ${prefix}wallpaper
+❒✗ ${prefix}coffee
+❒✗ ${prefix}animenom
+❒✗ ${prefix}waifu3
+❒✗ ${prefix}neko2
+❒✗ ${prefix}feed
+❒✗ ${prefix}meow
+❒✗ ${prefix}tickle
+❒✗ ${prefix}migumin
+❒✗ ${prefix}awoo
+❒✗ ${prefix}animewallpaper2
+❒✗ ${prefix}anime
+❒✗ ${prefix}manga
 
  *━━━〈  ♨️ Informative ♨️  〉━━━*
 
-❒✗ -animequote
-❒✗ -quote
-❒✗ -covid
-❒✗ -earthquake
-❒✗ -wiki
+❒✗ ${prefix}animequote
+❒✗ ${prefix}quote
+❒✗ ${prefix}covid
+❒✗ ${prefix}earthquake
+❒✗ ${prefix}wiki
 
  *━━━〈  🎗 Others 🎗  〉━━━*
 
-❒✗ -stickermeme
-❒✗ -quotes
-❒✗ -darkjoke 
+❒✗ ${prefix}stickermeme
+❒✗ ${prefix}quotes
+❒✗ ${prefix}darkjoke 
 
  *━━━〈  🎐 Fun 🎐  〉━━━*
 
-❒✗ -reaction
-❒✗ -truth
-❒✗ -dare
-❒✗ -couple
-❒✗ -soulmate
-❒✗ -handsomecheck
-❒✗ -beautifulcheck
-❒✗ -awesomecheck
-❒✗ -greatcheck
-❒✗ -gaycheck
-❒✗ -cutecheck
-❒✗ -lesbiancheck
-❒✗ -hornycheck
-❒✗ -prettycheck
-❒✗ -lovelycheck
-❒✗ -uglycheck
-❒✗ -charactercheck
+❒✗ ${prefix}reaction
+❒✗ ${prefix}truth
+❒✗ ${prefix}dare
+❒✗ ${prefix}couple
+❒✗ ${prefix}soulmate
+❒✗ ${prefix}handsomecheck
+❒✗ ${prefix}beautifulcheck
+❒✗ ${prefix}awesomecheck
+❒✗ ${prefix}greatcheck
+❒✗ ${prefix}gaycheck
+❒✗ ${prefix}cutecheck
+❒✗ ${prefix}lesbiancheck
+❒✗ ${prefix}hornycheck
+❒✗ ${prefix}prettycheck
+❒✗ ${prefix}lovelycheck
+❒✗ ${prefix}uglycheck
+❒✗ ${prefix}charactercheck
 
  *━━━〈  🪁 Essentials 🪁  〉━━━*
 
-❒✗ -qr
-❒✗ -say
-❒✗ -translate
-❒✗ -fliptext
-❒✗ -toletter
+❒✗ *${prefix}qr
+❒✗ *${prefix}say
+❒✗ *${prefix}translate
+❒✗ *${prefix}fliptext
+❒✗ *${prefix}toletter
 
  *━━━〈  💥 NSFW 💥  〉━━━*
 
 ❤️ to use *NSFW* commands, ask to *Admin* or *Owner* 
 
-❤️ Then type " *${prefix}nsfwmenu* " to get full list of NSFW commands.
+❤️ Then type "*${prefix}nsfwmenu* " to get full list of NSFW commands.
 
-
-
-
- 『  *${global.BotName}*  』
- Powered by: *MARIN❤️*
-
+─❅┈[ 🎀𝓜𝓐𝓡𝓘𝓝𝓔🎀]┈❅───
+┌────────────┈𑁍𖣘
+│🎀𝓜𝓐𝓡𝓘𝓝𝓔🎀
+└────────────┈𖣘
+❅┈[𝐇𝐚𝐯𝐞 𝐆𝐫𝐞𝐚𝐭 𝐃𝐚𝐲]┈❅
  
  🔥 If you have any *Bot related* question then ask here *-* https://api.whatsapp.com/send?phone=+919971690443 .
 
@@ -5060,7 +5055,7 @@ Here's the list of my Commands.
     
 
  let buttonshelpm = [
-    {buttonId: `-owner`, buttonText: {displayText: '❤️Owner❤️'}, type: 1}
+    {buttonId: `${prefix}owner`, buttonText: {displayText: '❤️Owner❤️'}, type: 1}
     ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:true,
@@ -5183,7 +5178,7 @@ case 'add':{
     reply(`Running repl....Please wait until repl.it responds...`)						
     var replqr =  await getBuffer(`https://miku-qr--fantox001.repl.co/`)
                                var qrbutton = [
-            {buttonId: `-qr`, buttonText: {displayText: `Re-run Repl`}, type: 1}
+            {buttonId: `${prefix}qr`, buttonText: {displayText: `Re-run Repl`}, type: 1}
             ]
           let bmffg = {
            image: replqr,
