@@ -1184,7 +1184,7 @@ let cron = require('node-cron')
                 }
                 }
 
-		case 'fgif' : {
+		const fgif : {
                   key: { 
                         fromMe: false,
                        participant: `0@s.whatsapp.net`, ...(from ? 
