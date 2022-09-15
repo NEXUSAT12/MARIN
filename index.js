@@ -18,7 +18,7 @@ const { color } = require('./lib/color')
 const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) })
 
 async function startMiku() {
-console.log(color(figlet.textSync('Miku Bot MD', {
+console.log(color(figlet.textSync('MARIN BOT MD', {
 		font: 'Pagga',
 		horizontalLayout: 'default',
 		vertivalLayout: 'default',
@@ -26,8 +26,8 @@ console.log(color(figlet.textSync('Miku Bot MD', {
 		whitespaceBreak: true
         }), 'yellow'))
 
-console.log(color('\nHello, I am Fantox, the main developer of this bot.\n\nThanks for using: Miku Bot','aqua'))
-console.log(color('\nYou can follow me on GitHub: FantoX001','aqua'))
+console.log(color('\nHello, I am AYUSH, the main developer of this bot.\n\nThanks for using: MARIN Bot','aqua'))
+console.log(color('\nYou can follow me on GitHub: NEXUS_AT','aqua'))
 
     let { version, isLatest } = await fetchLatestBaileysVersion()
     const Miku = MikuConnect({
@@ -133,13 +133,13 @@ Miku.ev.on('group-participants.update', async (anu) => {
                 try {
                     ppuser = await Miku.profilePictureUrl(num, 'image')
                 } catch {
-                    ppuser = 'https://wallpapercave.com/wp/wp10753770.jpg'
+                    ppuser = 'https://wallpapercave.com/wp/wp10472356.png'
                 }
 
                 try {
                     ppgroup = await Miku.profilePictureUrl(anu.id, 'image')
                 } catch {
-                    ppgroup = 'https://telegra.ph/file/4cc2712eee93c105f6739.jpg'
+                    ppgroup = 'https://wallpapercave.com/wp/wp10472356.png'
                 }
 
                 let targetname = await Miku.getName(num)
@@ -151,7 +151,7 @@ Miku.ev.on('group-participants.update', async (anu) => {
                 mikutext = `
 Hello @${WAuserName.split("@")[0]},
 
-I am *Anya*, Welcome to ${metadata.subject}.
+I am *MARIN*, Welcome to ${metadata.subject}.
 
 *Group Description:*
 ${metadata.desc}
