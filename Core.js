@@ -1159,9 +1159,8 @@ let cron = require('node-cron')
                 Miku.sendMessage(m.chat, { text :teks, }, {quoted: m, thumbnail: fs.readFileSync('./Assets/pic4.jpg')}) 
                 }
                 
-               
-       const 'fakereply' : const 'fr' : {
-	        const 'ftoko' = {
+              
+	        const ftoko = {
                 key: {
                 fromMe: false,
                 participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "918130784851@s.whatsapp.net" } : {})
@@ -1185,7 +1184,7 @@ let cron = require('node-cron')
                 }
                 }
 
-                const 'fgi' = {
+		case 'fgif' : {
                   key: { 
                         fromMe: false,
                        participant: `0@s.whatsapp.net`, ...(from ? 
@@ -1204,7 +1203,7 @@ let cron = require('node-cron')
                                    } 
 
 //FAKEREPLY TROLI
-const 'ftroli' = {
+const ftroli = {
   key : {
   participant : '0@s.whatsapp.net'
   },
@@ -1222,7 +1221,7 @@ const 'ftroli' = {
   }
   }
   //FAKEREPLY LOCATION
-  const 'flokasi' = {
+  const flokasi = {
   key : {
    participant : '0@s.whatsapp.net'
   },
@@ -1234,7 +1233,7 @@ const 'ftroli' = {
   }
   }
   //FAKEREPLY DOCUMENT
-  const 'fdocs' = {
+  const fdocs = {
   key : {
    participant : '0@s.whatsapp.net'
   },
@@ -1246,7 +1245,7 @@ const 'ftroli' = {
   }
   }
   //FAKEREPLY VIDEO
-  const 'fvideo' = {
+  const fvideo = {
   key: { 
   fromMe: false,
   participant: `0@s.whatsapp.net`, ...(from ? 
@@ -1263,7 +1262,7 @@ const 'ftroli' = {
   }
   }
   //FAKEREPLY GROUPINVITE
-  const 'fgclink' = {
+  const fgclink = {
   "key": {
   "fromMe": false,
   "participant": "0@s.whatsapp.net",
@@ -1280,7 +1279,7 @@ const 'ftroli' = {
   }
   }
   //FAKEREPLY GIF
-  const 'fgif' = {
+  const fgif = {
   key: { 
   fromMe: false,
   participant: `0@s.whatsapp.net`, ...(from ? 
@@ -1298,7 +1297,7 @@ const 'ftroli' = {
   }
   } 
   //FAKEREPLY TEXT WITH THUMBNAIL
-  const 'ftextt' = {
+  const ftextt = {
   key: { 
   fromMe: false,
   participant: `0@s.whatsapp.net`, ...(from ? 
@@ -1313,7 +1312,7 @@ const 'ftroli' = {
   } 
   }
   //FAKEREPLY VN
-  const 'fvn' = {
+  const fvn = {
   key: { 
   fromMe: false,
   participant: `0@s.whatsapp.net`, ...(from ? 
