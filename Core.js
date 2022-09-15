@@ -945,6 +945,14 @@ let cron = require('node-cron')
       delete tebaklagu[m.sender.split('@')[0]]
       } else reply('*Wrong answer!*')
       }
+    if (kuismath.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
+      kuis = true
+      jawaban = kuismath[m.sender.split('@')[0]]
+      if (budy.toLowerCase() == jawaban) {
+      await reply(`「 *Math Quiz* 」\n\n 🎉 Correct Answer 🎉\n\nWant to play again? send ${prefix}math mode`)
+      delete kuismath[m.sender.split('@')[0]]
+      } else reply('*Wrong answer!*')
+      }
 
       if (tebakgambar.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
         kuis = true
@@ -1124,15 +1132,6 @@ let cron = require('node-cron')
                   })
               })
           }
-
-          if (kuismath.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
-            kuis = true
-            jawaban = kuismath[m.sender.split('@')[0]]
-            if (budy.toLowerCase() == jawaban) {
-            await reply(`「 *Math Quiz* 」\n\n 🎉 Correct Answer 🎉\n\nWant to play again? send ${prefix}math mode`)
-            delete kuismath[m.sender.split('@')[0]]
-            } else reply('*Wrong answer!*')
-            }
 
             if (isMedia && m.msg.fileSha256 && (m.msg.fileSha256.toString('base64') in global.db.sticker)) {
               let hash = global.db.sticker[m.msg.fileSha256.toString('base64')]
@@ -3617,7 +3616,7 @@ break
 
 case 'kuismath': case 'math': {
                 if (kuismath.hasOwnProperty(m.sender.split('@')[0])) return replay(`There Are Still Unfinished Sessions!`)
-                let { genMath, modes } = require('./lib/math')
+                let { genMath, modes } = require('./src/math')
                 if (!text) return replay(`Mode: ${Object.keys(modes).join(' | ')}\nFor Examples: ${prefix}math medium`)
                 let result = await genMath(text.toLowerCase())
                 Miku.sendText(m.chat, `*What Is The Result Of: ${result.soal.toLowerCase()}*?\n\nTime: ${(result.waktu / 1000).toFixed(2)} second`, m).then(() => {
@@ -5088,7 +5087,7 @@ case 'alive':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-const txt = `Do you love Anya (miku) ? Then we are the same.`
+const txt = `Do you love marin ? Then we are the same.`
 const mikuarray= [
             "https://c.tenor.com/hjL3MnIsB88AAAPo/marin-kitagawa-kitagawa-marin.mp4"
             
