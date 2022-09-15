@@ -5301,20 +5301,25 @@ break
 case 'alive':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
-const text1 = `HOw can i help  ${pushname} Senpai? Type *${prefix}help* to get my full command list.`
-     
-         let butRun = [
-                {buttonId: `${prefix}help`, buttonText: {displayText: 'Help'},type: 1} , {buttonId: `${prefix}owner`, buttonText: {displayText: '❤️‍🔥OWNER❤️‍🔥'}, type: 2}
-                ]
-	 	 let buttonMessage = {
-                    video:fs.readFileSync('"https://telegra.ph/file/fc8c10666835418136477.mp4'),gifPlayback:true,
-                    caption: text1,
+const txt = `Do you love marin ? Then we are the same.`
+const mikuarray= [
+            "https://c.tenor.com/hjL3MnIsB88AAAPo/marin-kitagawa-kitagawa-marin.mp4"
+            
+            ]
+        
+            const mikuselection = mikuarray[Math.floor(Math.random()*mikuarray.length)]
+	    let  butonss = [ {buttonId: `${prefix}owner`, buttonText: {displayText: '❤️Owner❤️'}, type: 1} ,  {buttonId: `${prefix}help`, buttonText: {displayText: '❤️help❤️'}, type: 2}
+            ]
+	     let buttonMessage = {
+                    video:{url:{mikuselection },gifPlayback:true,
+                    caption: txt,
                     footer: `${global.BotName}`,
-                    buttons: butRun,
+                    buttons: butonss,
                     headerType: 4
                 }
             Miku.sendMessage(m.chat,buttonMessage,{quoted:m})
                 }
+	    
 break
 
 
