@@ -3709,6 +3709,7 @@ case 'charactercheck':
 					const taky = Mikutttt[Math.floor(Math.random() * Mikutttt.length)]
 					Miku.sendMessage(from, { text: `Character Check : ${q}\nAnswer : *${taky}*` }, { quoted: m })
 				     break
+                   
  case 'dare':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
@@ -3796,7 +3797,7 @@ case 'charactercheck':
           "send abusive words in any grup, excepting this grup, and send screenshot proof here"
      ]
                    const Mikudareww = dare[Math.floor(Math.random() * dare.length)]
-                   buffer = await getBuffer(`https://i.pinimg.com/564x/44/c4/91/44c49115308e7023912ff02fe2190104.jpg`)
+                   buffer = await getBuffer(`https://i.pinimg.com/564x/ae/fa/40/aefa402b42dabb533a3537c74a0f68b1.jpg`)
                    Miku.sendMessage(from, { image: buffer, caption: '*You have chosen Dare*\n\n'+ Mikudareww }, {quoted:m})
                    break
                        
@@ -3899,9 +3900,10 @@ case 'truth':
                            buffer = await getBuffer(`https://i.pinimg.com/564x/ae/fa/40/aefa402b42dabb533a3537c74a0f68b1.jpg`)
                            Miku.sendMessage(from, { image: buffer, caption: '*You have chosen Truth*\n'+ mikutruthww }, {quoted:m})
                            break
-		 
-	
-case 'nsfwmiku':{
+
+
+
+case 'nsfwmiku':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
 reply(mess.wait)
@@ -3909,7 +3911,7 @@ nye = `http://api.lolhuman.xyz/api/gimage?apikey=${lolkey}&query=${command}`
 Miku.sendMessage(from, {image:{url:nye}, caption:"Master..."}, {quoted:m})
 break
 
-case 'mediafire': case 'mediafiredl': {
+case 'mediafire': case 'mediafirel': {
 	if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
 if (!text) return reply(mess.linkm)
