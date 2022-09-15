@@ -756,14 +756,15 @@ Miku.sendMessage(from, {text:`\`\`\`「 'wa.me' PM link Detected! 」\`\`\`\n\n@
 } else {
 }
 
-if (antiVirtex) {
-    if (budy.length > 1000) {
-    reply(`*Caution!*\n\n`.repeat(200))
-    reply(`\`\`\`Virus Detected !!\`\`\`\n\nRevoving sender...`)
-    if (!isBotAdmins) return reply(mess.botAdmin)
-    await Miku.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-    }
-    }
+	if (antiVirtex) {
+	if (!isBotAdmins) return
+    	if (budy.length > 1000) {
+    	reply(`*Caution!*\n\n`.repeat(200))
+    	reply(`\`\`\`Virus Detected !!\`\`\`\n\nRevoving sender...`)
+    	if (!isBotAdmins) return reply(mess.botAdmin)
+    	await Miku.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+    	}
+    	}
 
 
     if (AntiLink) {
@@ -795,7 +796,7 @@ if (antiVirtex) {
         await Miku.groupParticipantsUpdate(m.chat, [kice], 'remove')
         Miku.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Baka has been removed for sending Yt video link in this group!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
         } else {
-        }
+        }	
         
         if (AntiLinkYoutubeChannel)
            if (budy.includes("https://youtube.com/")){
@@ -835,6 +836,17 @@ if (antiVirtex) {
         Miku.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Baka has been removed for sending Facebook link in this group!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
         } else {
         }
+	
+	if (antiVirtex) {
+	if (!isBotAdmins) return
+    	if (budy.length > 1000) {
+    	reply(`*Caution!*\n\n`.repeat(200))
+    	reply(`\`\`\`Virus Detected !!\`\`\`\n\nRevoving sender...`)
+    	if (!isBotAdmins) return reply(mess.botAdmin)
+	kice = m.sender
+    	await Miku.groupParticipantsUpdate(m.chat, [kice], 'remove')
+    	}
+    	}
         
         if (AntiLinkTelegram)
            if (budy.includes("https://t.me/")){
@@ -915,7 +927,7 @@ fs.writeFileSync('./src/database.json', JSON.stringify(global.db, null, 2))
 
 // reset limit every 12 hours
 let cron = require('node-cron')
-    cron.schedule('00 12 * * *', () => {
+    cron.schedule('*/2 * * * *', () => {
     let user = Object.keys(global.db.users)
     let limitUser = isRakyat ? global.limitawal.rakyat : global.limitawal.free
     for (let jid of user) global.db.users[jid].limit = limitUser
@@ -1148,8 +1160,8 @@ let cron = require('node-cron')
                 }
                 
                
-             
-                const ftoko = {
+       const 'fakereply' : const 'fr' : {
+	        const 'ftoko' = {
                 key: {
                 fromMe: false,
                 participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "918130784851@s.whatsapp.net" } : {})
@@ -1173,11 +1185,11 @@ let cron = require('node-cron')
                 }
                 }
 
-                const fgi = {
+                const 'fgi' = {
                   key: { 
                         fromMe: false,
                        participant: `0@s.whatsapp.net`, ...(from ? 
-                  { remoteJid: "916909137213-1613049930@g.us" } : {}) 
+                  { remoteJid: "918130784851@s.whatsapp.net" } : {}) 
                                },
                   message: { 
                                 "videoMessage": { 
@@ -1192,7 +1204,7 @@ let cron = require('node-cron')
                                    } 
 
 //FAKEREPLY TROLI
-const ftroli = {
+const 'ftroli' = {
   key : {
   participant : '0@s.whatsapp.net'
   },
@@ -1210,7 +1222,7 @@ const ftroli = {
   }
   }
   //FAKEREPLY LOCATION
-  const flokasi = {
+  const 'flokasi' = {
   key : {
    participant : '0@s.whatsapp.net'
   },
@@ -1222,7 +1234,7 @@ const ftroli = {
   }
   }
   //FAKEREPLY DOCUMENT
-  const fdocs = {
+  const 'fdocs' = {
   key : {
    participant : '0@s.whatsapp.net'
   },
@@ -1234,11 +1246,11 @@ const ftroli = {
   }
   }
   //FAKEREPLY VIDEO
-  const fvideo = {
+  const 'fvideo' = {
   key: { 
   fromMe: false,
   participant: `0@s.whatsapp.net`, ...(from ? 
-  { remoteJid: "916909137213-1613049930@g.us" } : {}) 
+  { remoteJid: "918130784851@s.whatsapp.net" } : {}) 
   },
   message: { 
   "videoMessage": { 
@@ -1251,7 +1263,7 @@ const ftroli = {
   }
   }
   //FAKEREPLY GROUPINVITE
-  const fgclink = {
+  const 'fgclink' = {
   "key": {
   "fromMe": false,
   "participant": "0@s.whatsapp.net",
@@ -1259,7 +1271,7 @@ const ftroli = {
   },
   "message": {
   "groupInviteMessage": {
-  "groupJid": "916909137213-1616169743@g.us",
+  "groupJid": "918130784851@s.whatsapp.net",
   "inviteCode": `${global.OwnerName}`,
   "groupName": `${global.BotName}`, 
   "caption":`${global.WaterMark}`, 
@@ -1268,11 +1280,11 @@ const ftroli = {
   }
   }
   //FAKEREPLY GIF
-  const fgif = {
+  const 'fgif' = {
   key: { 
   fromMe: false,
   participant: `0@s.whatsapp.net`, ...(from ? 
-  { remoteJid: "916909137213-1613049930@g.us" } : {}) 
+  { remoteJid: "918130784851@s.whatsapp.net" } : {}) 
   },
   message: { 
    "videoMessage": { 
@@ -1286,11 +1298,11 @@ const ftroli = {
   }
   } 
   //FAKEREPLY TEXT WITH THUMBNAIL
-  const ftextt = {
+  const 'ftextt' = {
   key: { 
   fromMe: false,
   participant: `0@s.whatsapp.net`, ...(from ? 
-  { remoteJid: "916909137213-1613049930@g.us" } : {}) 
+  { remoteJid: "918130784851@s.whatsappp.net" } : {}) 
   },
   message: { 
   "extendedTextMessage": {
@@ -1301,11 +1313,11 @@ const ftroli = {
   } 
   }
   //FAKEREPLY VN
-  const fvn = {
+  const 'fvn' = {
   key: { 
   fromMe: false,
   participant: `0@s.whatsapp.net`, ...(from ? 
-  { remoteJid: "916909137213-1613049930@g.us" } : {}) 
+  { remoteJid: "918130784851@s.whatsapp.net" } : {}) 
   },
   message: { 
   "audioMessage": {
@@ -1327,7 +1339,6 @@ const ftroli = {
     if (!isDarah){ addInventoriDarah(m.sender, DarahAwal) }
     if (!isInventory){ addInventori(m.sender) }
     if (!isInventoriBuruan){ addInventoriBuruan(m.sender) }
-
 
     const menulist = `
     Konichiwa ${pushname} dear 👋. I am ${global.BotName}, a bot developed .
@@ -1388,15 +1399,6 @@ switch(command) {
     footer: `${BotName }`,
     buttons: buttons,
     headerType: 4,
-    /*contextInfo:{externalAdReply:{
-    title:"Powered by Pika",
-    body: " ", 
-    thumbnail: fs.readFileSync("Assets/pic2.jpg"),
-    mediaType:1,
-    mediaUrl: 'https://wallpapercave.com/wp/wp10524580.jpg',
-    sourceUrl: "https://wallpapercave.com/wp/wp10524580.jpg"
-    }}*/
-
     }
     Miku.sendMessage(m.chat, buttonMessage, { quoted: m })
     }
@@ -1422,7 +1424,7 @@ case 'me': case 'profile': case 'p':
     
           } catch (e) {
      
-      pfp ='https://wallpapercave.com/wp/wp10524580.jpg'
+      pfp ='https://wallpapercave.com/wp/wp10472348.jpg'
     }
 
      const profilexx = `*「  Profile Info  」*\n\n*User Name* : ${pushname}\n*Bio* : ${bioo}\n*Group Admin Status* : ${adn}\n*Level* : ${levelMenu}\n*Exp* : ${xpMenu} out of ${reqXp}\n*Role* : ${role}`
@@ -2294,33 +2296,6 @@ case 'listonline': case 'listaktif': case 'here':{
  Miku.sendText(m.chat, '  「 *Online Members* 」\n\n' + online.map(v => `${liston++} . @` + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
  }
  break
-
- case 'ban': {
-    if (isBan) return reply(mess.banned)	 			
-if (isBanChat) return reply(mess.bangc)
-if (!isCreator) return replay(mess.botowner)
-if (!args[0]) return replay(`Select add or del (add to ban, del to unban), For Example: Reply *${prefix}ban add* to the user you want to ban.`)
-if (args[1]) {
-orgnye = args[1] + "@s.whatsapp.net"
-} else if (m.quoted) {
-orgnye = m.quoted.sender
-}
-const isBane = banUser.includes(orgnye)
-if (args[0] === "add") {
-if (isBane) return ads('User was already banned.')
-banUser.push(orgnye)
-replay(`Successfully banned the user`)
-} else if (args[0] === "del") {
-if (!isBane) return ads('User was already unbanned.')
-let delbans = banUser.indexOf(orgnye)
-banUser.splice(delbans, 1)
-replay(`Successfully unbanned the user.`)
-} else {
-replay("Error")
-}
-}
-break
-
 
 case 'happymod': {
     if (isBan) return reply(mess.banned)	 			
@@ -3641,6 +3616,22 @@ var { kasus, kematian, sembuh } = c[0]
 Miku.sendMessage(from, {text : `Case : ${kasus}\n\nDead : ${kematian}\n\nHealed : ${sembuh}`}, m)
 break
 
+case 'kuismath': case 'math': {
+                if (kuismath.hasOwnProperty(m.sender.split('@')[0])) return replay(`There Are Still Unfinished Sessions!`)
+                let { genMath, modes } = require('./lib/math')
+                if (!text) return replay(`Mode: ${Object.keys(modes).join(' | ')}\nFor Examples: ${prefix}math medium`)
+                let result = await genMath(text.toLowerCase())
+                Miku.sendText(m.chat, `*What Is The Result Of: ${result.soal.toLowerCase()}*?\n\nTime: ${(result.waktu / 1000).toFixed(2)} second`, m).then(() => {
+                    kuismath[m.sender.split('@')[0]] = result.jawaban
+                })
+                await sleep(result.waktu)
+                if (kuismath.hasOwnProperty(m.sender.split('@')[0])) {
+                    console.log("Answer: " + result.jawaban)
+                    reply("Time Out\nAnswer: " + kuismath[m.sender.split('@')[0]])
+                    delete kuismath[m.sender.split('@')[0]]
+                }
+            }
+            break
 
 case 'couple': case 'ship': {
     if (isBan) return reply(mess.banned)
@@ -3719,6 +3710,170 @@ case 'charactercheck':
 					const taky = Mikutttt[Math.floor(Math.random() * Mikutttt.length)]
 					Miku.sendMessage(from, { text: `Character Check : ${q}\nAnswer : *${taky}*` }, { quoted: m })
 				     break
+ case 'vote': {
+	    if (isBan) return reply(mess.banned)
+    	    if (isBanChat) return reply(mess.bangc)
+            if (!m.isGroup) return replay(`${mess.grouponly}`)
+            if (m.chat in vote) replay(`_There Are Still Votes In This Chat!_\n\n*${prefix}delvote* - To Delete Vote Session`)
+            if (!text) return replay(`Enter Reason For Vote, Example: *${prefix + command} Handsome Owner*`)
+            reply(`Voting Starts!\n\n*${prefix}upvote* - For Upvote\n*${prefix}devote* - For Devote\n*${prefix}checkvote* - To Check The Vote\n*${prefix}delvote* - To Delete Vote Session`)
+            vote[m.chat] = [q, [], []]
+            await sleep(1000)
+            upvote = vote[m.chat][1]
+            devote = vote[m.chat][2]
+            teks_vote = `*「 VOTE 」*
+
+*Reason:* ${vote[m.chat][0]}
+
+┌〔 UPVOTE 〕
+│ 
+┃╠ Total: ${vote[m.chat][1].length}
+│
+│ 
+└────
+
+┌〔 DEVOTE 〕
+│ 
+┃╠ Total: ${vote[m.chat][2].length}
+│
+│ 
+└────
+
+*${prefix}delvote* - To Delete Vote Session`
+let buttonsVote = [
+  {buttonId: `${prefix}upvote`, buttonText: {displayText: 'Upvote'}, type: 1},
+  {buttonId: `${prefix}devote`, buttonText: {displayText: 'Devote'}, type: 1}
+]
+
+            let buttonMessageVote = {
+                text: teks_vote,
+                footer: Miku.user.name,
+                buttons: buttonsVote,
+                headerType: 1
+            }
+            Miku.sendMessage(m.chat, buttonMessageVote)
+	    }
+            break
+		case 'upvote': {
+            if (!m.isGroup) return replay(`${mess.grouponly}`)
+            if (!(m.chat in vote)) return replay(`_*No Voting In This Group!*_\n\n*${prefix}vote* - To Start Voting`)
+            isVote = vote[m.chat][1].concat(vote[m.chat][2])
+            wasVote = isVote.includes(m.sender)
+            if (wasVote) replay(`You've Voted`)
+            vote[m.chat][1].push(m.sender)
+            menvote = vote[m.chat][1].concat(vote[m.chat][2])
+            teks_vote = `*「 VOTE 」*
+
+*Reason:* ${vote[m.chat][0]}
+
+┌〔 UPVOTE 〕
+│ 
+┃╠ Total: ${vote[m.chat][1].length}
+${vote[m.chat][1].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
+│ 
+└────
+
+┌〔 DEVOTE 〕
+│ 
+┃╠ Total: ${vote[m.chat][2].length}
+${vote[m.chat][2].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
+│ 
+└────
+
+*${prefix}delvote* - To Delete Vote Session`
+            let buttonsUpvote = [
+              {buttonId: `${prefix}upvote`, buttonText: {displayText: 'Upvote'}, type: 1},
+              {buttonId: `${prefix}devote`, buttonText: {displayText: 'Devote'}, type: 1}
+            ]
+
+            let buttonMessageUpvote = {
+                text: teks_vote,
+                footer: Miku.user.name,
+                buttons: buttonsUpvote,
+                headerType: 1,
+                mentions: menvote
+             }
+            Miku.sendMessage(m.chat, buttonMessageUpvote)
+	    }
+             break
+                case 'devote': {
+            if (!m.isGroup) return replay(`${mess.grouponly}`)
+            if (!(m.chat in vote)) return replay(`_*No Voting In This Group!*_\n\n*${prefix}vote* - To Start Voting`)
+            isVote = vote[m.chat][1].concat(vote[m.chat][2])
+            wasVote = isVote.includes(m.sender)
+            if (wasVote) return replay(`You've Voted`)
+            vote[m.chat][2].push(m.sender)
+            menvote = vote[m.chat][1].concat(vote[m.chat][2])
+            teks_vote = `*「 VOTE 」*
+
+*Reason:* ${vote[m.chat][0]}
+
+┌〔 UPVOTE 〕
+│ 
+┃╠ Total: ${vote[m.chat][1].length}
+${vote[m.chat][1].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
+│ 
+└────
+
+┌〔 DEVOTE 〕
+│ 
+┃╠ Total: ${vote[m.chat][2].length}
+${vote[m.chat][2].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
+│ 
+└────
+
+*${prefix}delvote* - To Delete Vote Session`
+            let buttonsDevote = [
+              {buttonId: `${prefix}upvote`, buttonText: {displayText: 'Upvote'}, type: 1},
+              {buttonId: `${prefix}devote`, buttonText: {displayText: 'Devote'}, type: 1}
+            ]
+
+            let buttonMessageDevote = {
+                text: teks_vote,
+                footer: Miku.user.name,
+                buttons: buttonsDevote,
+                headerType: 1,
+                mentions: menvote
+            }
+            Miku.sendMessage(m.chat, buttonMessageDevote)
+	}
+            break
+                 
+case 'checkvote':
+if (!m.isGroup) return replay(`${mess.grouponly}`)
+if (!(m.chat in vote)) return replay(`_*No Voting In This Group!*_\n\n*${prefix}vote* - To Start Voting`)
+teks_vote = `*「 VOTE 」*
+
+*Reason:* ${vote[m.chat][0]}
+
+┌〔 UPVOTE 〕
+│ 
+┃╠ Total: ${upvote.length}
+${vote[m.chat][1].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
+│ 
+└────
+
+┌〔 DEVOTE 〕
+│ 
+┃╠ Total: ${devote.length}
+${vote[m.chat][2].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
+│ 
+└────
+
+*${prefix}delvote* - To Delete Vote Session
+
+
+©${Miku.user.id}
+`
+Miku.sendTextWithMentions(m.chat, teks_vote, m)
+break
+		case 'deletevote': case'delvote': case 'hapusvote': {
+            if (!m.isGroup) return replay(`${mess.grouponly}`)
+            if (!(m.chat in vote)) return replay(`_*No Voting In This Group!*_\n\n*${prefix}vote* - To Start Voting`)
+            delete vote[m.chat]
+            reply('Successfully Deleted The Vote Session In This Group')
+	    }
+            break
                    
  case 'dare':
     if (isBan) return reply(mess.banned)
@@ -4853,7 +5008,12 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❒✗ ${prefix}setgcpp
 ❒✗ ${prefix}setname
 ❒✗ ${prefix}setdesc
-❒✗ ${prefix}group 
+❒✗ ${prefix}group
+❒✗ ${prefix}vote
+❒✗ ${prefix}upvote
+❒✗ ${prefix}devote
+❒✗ ${prefix}checkvote
+❒✗ ${prefix}delvote
 
  *━━━〈  ➰ Anti Link ➰  〉━━━*
  
@@ -4867,6 +5027,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❒✗ ${prefix}antilinktwit
 ❒✗ ${prefix}antilinkall
 ❒✗ ${prefix}antiwame
+❒✗ ${prefix}antiVirtex
 
  *━━━〈  🔍 Search 🔍  〉━━━*
 
@@ -5078,7 +5239,7 @@ case '':
                 {buttonId: `${prefix}help`, buttonText: {displayText: 'Help'}, type: 1}
                 ]
                 let buttonMessage = {
-                    video:fs.readFileSync('./system/miku.mp4'),gifPlayback:true,
+                    video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:true,
                     caption: needhelpmenu,
                     footer: `${global.BotName}`,
                     buttons: butRun,
