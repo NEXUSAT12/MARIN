@@ -69,6 +69,7 @@ Here's the Video Tuturial for Deploying and Hosting Miku Bot on Heroku.
 #### Or, Scan indirectly from my `repl.it`
 
 #### <a href="https://replit.com/@DEVILL-MASCOT/marin?v=1"><img src="https://i.ibb.co/pPQjJL2/replit-logo-png-transparent.png" alt="replit-logo-png-transparent" border="0"  width="120"></a>
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/NEXUSAT12/MARIN)
 #### ✧ Download the `session.json` file and upload it on the hompage of your `Fork`.
 #### ✧ Go to your `Heroku` account.
 #### ✧ Create a `random app` in Heroku with any name.
