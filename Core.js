@@ -5308,7 +5308,7 @@ const mikuarray= [
             ]
         
             const mikuselection = mikuarray[Math.floor(Math.random()*mikuarray.length)]
-	    let  butonss = [ {buttonId: `${prefix}owner`, buttonText: {displayText: '❤️Owner❤️'}, type: 1} ,  {buttonId: `${prefix}help`, buttonText: {displayText: '❤️help❤️'}, type: 2}
+	    let  butonss = [ {buttonId: `${prefix}owner`, buttonText: {displayText: '❤️Owner❤️'} ,  buttonId: `${prefix}help`, buttonText: {displayText: '❤️help❤️'}, type : 1}
             ]
 	     let buttonMessage = {
                     video:{url:{mikuselection },gifPlayback:true,
