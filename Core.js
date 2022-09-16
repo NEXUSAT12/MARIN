@@ -4442,6 +4442,47 @@ reply(mess.waiting)
             await Miku.sendMessage(m.chat, buttonssMessages,{ quoted:m }).catch(err => {
                     return('Error!')
                 })
+                break
+
+
+
+case 'checknumber':
+  reply(mess.wait)
+  const dripska = {
+    method: 'GET',
+    url: 'https://phonenumbervalidatefree.p.rapidapi.com/ts_PhoneNumberValidateTest.jsp',
+    qs: {number: `${text}`},
+    headers: {
+      'X-RapidAPI-Key': '837661b454msh274b6753ca80823p11c653jsn973bb2a55a34',
+      'X-RapidAPI-Host': 'phonenumbervalidatefree.p.rapidapi.com',
+      useQueryString: true
+    }
+  };
+  let dhidhi = require('request')
+  dhidhi(dripska, function (error, response, body) {
+    if (error) throw new Error(error);
+    reply(body);
+    console.log(body);
+  });
+break
+case 'veriphone':
+  reply(mess.wait)
+  const dripdrop = {
+    method: 'GET',
+    url: 'https://veriphone.p.rapidapi.com/verify',
+    qs: {phone: `${text}`},
+    headers: {
+      'X-RapidAPI-Key': '837661b454msh274b6753ca80823p11c653jsn973bb2a55a34',
+      'X-RapidAPI-Host': 'veriphone.p.rapidapi.com',
+      useQueryString: true
+    }
+  };
+  let mhati = require('request')
+  mhati(dripdrop, function (error, response, body) {
+    if (error) throw new Error(error);
+    reply(body);
+    console.log(body);
+  });
 break
 
 
@@ -5245,6 +5286,10 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❒✗ *${prefix}fliptext
 ❒✗ *${prefix}toletter
 
+ *━━━〈  😈 Hacker 😈  〉━━━*
+ ❒✗ *${prefix}veriphone
+ ❒✗ *${prefix}chechnumber
+
  *━━━〈  💥 NSFW 💥  〉━━━*
 
 ❤️ to use *NSFW* commands, ask to *Admin* or *Owner* 
@@ -5329,26 +5374,22 @@ case 'add':{
  break
 
 
- case 'tts':
-  const gtts = require('./lib/gtts.js')(args[0])
-  if (args.length < 1) return Miku.sendMessage(from, `ᴇxᴀᴍᴘʟᴇ: ${prefix}ᴇɴ ʜᴇʟʟᴏ`, text, {quoted: m})
-  if (args.length < 2) return Miku.sendMessage(from, `ᴇxᴀᴍᴘʟᴇ: ${prefix}ᴇɴ ʜᴇʟʟᴏ`, text, {quoted: m})
- var dtt = body.slice(20)
-  reply(mess.wait)
-  var ranm = getRandom('.mp3')
-		var	rano = getRandom('.ogg')
-				dtt.length > 300
-         gtts.save(ranm, dtt, function() {
-          exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
-          fs.unlinkSync(ranm)
-          buffer = fs.readFileSync(rano)
-          if (err) return reply('error')
-          Ruri.sendMessage(from,  audio, {quoted: freply, ptt:true})
-          Miku.sendMessage(m.chat, { audio: buffer, mimetype: 'audio/mp4', ptt: true, quoted: mudratunha})
-          fs.unlinkSync(rano)
-          })
-          })
-  break;
+ case "tts":  case "texttospeech":  case "say": case "speak":{
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+
+    if (!args[0]) return reply("Please give me a text so that i can speak it!")
+      
+      let texttosay = text
+        ? text
+        : m.quoted && m.quoted.text
+        ? m.quoted.text
+        : m.text;
+      const SpeakEngine = require("google-tts-api"); 
+      const texttospeechurl = SpeakEngine.getAudioUrl(texttosay, {lang: "en", slow: false, host: "https://translate.google.com",});
+      Miku.sendMessage(m.chat,{audio: {url: texttospeechurl,},mimetype: "audio/mpeg",fileName: `MikuSpeechEngine.mp3`,},{quoted: m,});
+    }
+    break;
 
 
     case 'qr': case 'qrcode':
