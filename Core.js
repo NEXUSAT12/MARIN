@@ -2396,11 +2396,15 @@ if (isBanChat) return reply(mess.bangc)
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
- let teks = `「 _Tag All_ 」
- *group💕: *${groupMetadata.subject}*\n
- *Message👑 : ${args.join(" ") ? args.join(" ") : 'no message'}*\n\n`
+ let teks = ` 
+ ┏━━━━━━━━━━━┑
+ ┃𝗧𝗔𝗚𝗔𝗟𝗟
+ ┃ group💕: *${groupMetadata.subject}*
+ ┃┄┄┄┄┄┄┄┄┄┄┄
+ ┃ Message👑 : ${args.join(" ") ? args.join(" ") : 'no message'}*
+ ┗━━━━━━━━ \n\n`
  for (let mem of participants) {
- teks += `» @${mem.id.split('@')[0]}\n`
+ teks += `🎪 @${mem.id.split('@')[0]}\n`
  }
  Miku.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
  }
@@ -5019,7 +5023,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
  
  *━━━〈  🎆 Core 🎆  〉━━━*
 ❒✗ ${prefix}alive
-❒✗ ${prefix}speak
+❒✗ ${prefix}tts
 ❒✗ ${prefix}stalk
 ❒✗ ${prefix}profile
 ❒✗ ${prefix}help
@@ -5324,22 +5328,26 @@ case 'add':{
  break
 
 
- case "tts":  case "texttospeech":  case "say": case "speak":{
-    if (isBan) return reply(mess.banned)	 			
-    if (isBanChat) return reply(mess.bangc)
-
-    if (!args[0]) return reply("Please give me a text so that i can speak it!")
-      
-      let texttosay = text
-        ? text
-        : m.quoted && m.quoted.text
-        ? m.quoted.text
-        : m.text;
-      const SpeakEngine = require("google-tts-api"); 
-      const texttospeechurl = SpeakEngine.getAudioUrl(texttosay, {lang: "en", slow: false, host: "https://translate.google.com",});
-      Miku.sendMessage(m.chat,{audio: {url: texttospeechurl,},mimetype: "audio/mpeg",fileName: `MikuSpeechEngine.mp3`,},{quoted: m,});
-    }
-    break;
+ case 'tts':
+  const gtts = require('./lib/gtts.js')(args[0])
+  if (args.length < 1) return Miku.sendMessage(from, `ᴇxᴀᴍᴘʟᴇ: ${prefix}ᴇɴ ʜᴇʟʟᴏ`, text, {quoted: m})
+  if (args.length < 2) return Miku.sendMessage(from, `ᴇxᴀᴍᴘʟᴇ: ${prefix}ᴇɴ ʜᴇʟʟᴏ`, text, {quoted: m})
+ var dtt = body.slice(20)
+  reply(mess.wait)
+  var ranm = getRandom('.mp3')
+		var	rano = getRandom('.ogg')
+				dtt.length > 300
+         gtts.save(ranm, dtt, function() {
+          exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
+          fs.unlinkSync(ranm)
+          buffer = fs.readFileSync(rano)
+          if (err) return reply('error')
+          Ruri.sendMessage(from,  audio, {quoted: freply, ptt:true})
+          Miku.sendMessage(m.chat, { audio: buffer, mimetype: 'audio/mp4', ptt: true, quoted: mudratunha})
+          fs.unlinkSync(rano)
+          })
+          })
+  break;
 
 
     case 'qr': case 'qrcode':
