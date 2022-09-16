@@ -5301,22 +5301,18 @@ break
 case 'alive':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
-const txt = `HEY BRO I AM MARIN HOW CAN I HELP YOU ????`
 
-         let butRun = [
-                {buttonId: `${prefix}help`, buttonText: {displayText: '❤️‍🔥HELP❤️‍🔥'}, type: 1}
-                ]
-                let buttonMessage = {
-                    video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:true,
-                    caption: txt,
-                    footer: `${global.BotName}`,
-                    buttons: butRun,
-                    headerType: 4
-                }
-            Miku.sendMessage(m.chat,buttonMessage,{quoted:m})
-                }
+const txt = `Do you love Anya (miku) ? Then we are the same.`
+const mikuarray= [
+            "https://c.tenor.com/hjL3MnIsB88AAAPo/marin-kitagawa-kitagawa-marin.mp4"
+            
+            ]
+        
+            const mikuselection = mikuarray[Math.floor(Math.random()*mikuarray.length)]
+        
+            Miku.sendMessage(from,{video:{url:mikuselection},gifPlayback:true,caption:txt},{quoted:m})
 
-
+break
 
 case 'add':{     			
     if (!m.isGroup) return replay(mess.grouponly)
