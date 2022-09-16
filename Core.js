@@ -5304,7 +5304,7 @@ case 'alive':
 const txt = `Do you love marin ? Then we are the same.`
 const mikuarray= ["https://c.tenor.com/hjL3MnIsB88AAAPo/marin-kitagawa-kitagawa-marin.mp4"]
             const mikuselection = mikuarray[Math.floor(Math.random()*mikuarray.length)]
-	    let  butonss = [{buttonId: `${prefix}owner`, buttonText: {displayText: '❤️Owner❤️'}, type : 1 ,  buttonId: `${prefix}help`, buttonText: {displayText: '❤️help❤️'}, type : 1}]
+	    let  butonss = [{buttonId: `${prefix}help`, buttonText: {displayText: '❤️help❤️'} , type : 1]
 	    
 	    		 let buttonMessage = {
                     		 video:{url:{mikuselection },gifPlayback:true,
