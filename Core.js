@@ -5318,7 +5318,8 @@ const mikuarray= [
 
 break
 
-case 'add':{     			
+
+case 'add':{    			
     if (!m.isGroup) return replay(mess.grouponly)
  if (!isBotAdmins) return replay(mess.botadmin)
  let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
