@@ -5307,7 +5307,7 @@ const mikuarray= ["https://c.tenor.com/hjL3MnIsB88AAAPo/marin-kitagawa-kitagawa-
 	    let  butonss = [{buttonId: `${prefix}help`, buttonText: {displayText: '❤️help❤️'} , type : 1]
 	    
 	    		 let buttonMessage = {
-                    		 video:{url:{mikuselection },gifPlayback:true,
+                    		 video:{url:{mikuselection }},gifPlayback:true,
                     		 caption: txt,
                     		 footer: `${global.BotName}`,
                     		 buttons: butonss,
