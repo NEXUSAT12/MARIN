@@ -7,15 +7,15 @@ global.autoReadAll = false
 global.antitags = true
 
 
-global.Owner = ['918130784851' ]
+global.Owner = ['918130784851']
 global.OwnerNumber = ['918130784851']
 global.ownertag = ['918130784851']
 global.BotName = "MARIN"
 global.packname = "MARIN bot"
-global.author = "By: ua❤️"
+global.author = "By:𝐓𝐄𝐀𝐌 𝐗-𝐅𝐈𝐑𝐄🔥"
 global.OwnerName = "𝐓𝐄𝐀𝐌 𝐗-𝐅𝐈𝐑𝐄🔥"
 global.BotSourceCode = "https://github.com/NEXUSAT12"
-global.SupportGroupLink = "https://wa.me//+918130784851"
+global.SupportGroupLink = "https://chat.whatsapp.com/DDWBpH9ciy38RCGYO7RkfM"
 global.sessionName = "session"
 
 // Prefix //
@@ -27,7 +27,7 @@ global.location = "ghaziabad, india"
 global.reactmoji = "❤️"
 global.themeemoji = "💖"
 global.vidmenu = { url: 'https://c.tenor.com/YGuLegQWubwAAAPo/miku-nakano-gotoubun-no-hanayome.mp4' }
-global.websitex = "https://wa.me//+918130784851"
+global.websitex = "https://github.com/NEXUSAT12"
 global.lolhuman = "ᴀʏᴜsʜ"
 
 
