@@ -3,13 +3,13 @@ const chalk = require("chalk")
 
 global.available = true
 global.autoReadGc = true
-global.autoReadAll = false
+global.autoReadAll = true
 global.antitags = true
 
 
 global.Owner = ['918130784851','919987052500']
-global.OwnerNumber = ['918130784851']
-global.ownertag = ['918130784851']
+global.OwnerNumber = ['918130784851','919987052500']
+global.ownertag = ['918130784851','919987052500 ']
 global.BotName = "MARIN"
 global.packname = "MARIN bot"
 global.author = "By: ua❤️"
@@ -27,7 +27,7 @@ global.location = "ghaziabad, india"
 global.reactmoji = "❤️"
 global.themeemoji = "💖"
 global.vidmenu = { url: 'https://c.tenor.com/YGuLegQWubwAAAPo/miku-nakano-gotoubun-no-hanayome.mp4' }
-global.websitex = "https://github.com/NEXUSAT12"
+global.websitex = "https://wa.me//+918130784851"
 global.lolhuman = "ᴀʏᴜsʜ"
 
 
