@@ -5339,7 +5339,7 @@ case '':
                 {buttonId: `${prefix}help`, buttonText: {displayText: 'Help'}, type: 1}
                 ]
                 let buttonMessage = {
-                    audio:fs.readFileSync('./system/NEXUS.mp3'),mimetype: "audio/mpeg",filename:`MikuSpeechEngine.mp3`,
+                    audio:fs.readFileSync('./system/NEXUS.mp3'),mimetype: "audio/mpeg",filename: true,
                     caption: needhelpmenu,
                     footer: `${global.BotName}`,
                     buttons: butRun,
