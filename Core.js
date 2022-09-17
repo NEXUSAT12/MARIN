@@ -5053,248 +5053,250 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
       
- const helpmenu = `「Kon'nichiwa *${pushname}*'san
-│⋊ I'am:  🎀𝓜𝓐𝓡𝓘𝓝𝓔🎀
-│⋊ MY PREFIX: ${prefix}
+ const helpmenu = `「𝐊𝐎𝐍'𝐍𝐈𝐂𝐇𝐈𝐖𝐀 *${pushname}*'𝐒𝐚𝐧
+│⋊ 𝐈'𝐀𝐌:  🎀𝓜𝓐𝓡𝓘𝓝𝓔🎀
+│⋊ 𝐌𝐲 𝐏𝐫𝐞𝐟𝐢𝐱: ${prefix}
 │⋊ 私の愛: *${prefix}owner*
 │⋊ 私の愛 : wa.me//+918130784851     
 ╰────────────┈平和   
 
 
  
- *━━━〈  🎆 Core 🎆  〉━━━*
-❒✗ ${prefix}alive
-❒✗ ${prefix}tts
-❒✗ ${prefix}stalk
-❒✗ ${prefix}profile
-❒✗ ${prefix}help
-❒✗ ${prefix}delete
-❒✗ ${prefix}deleteall
-❒✗ ${prefix}listgc
-❒✗ ${prefix}listpc
-❒✗ ${prefix}welcome
-❒✗ ${prefix}support
-❒✗ ${prefix}guess
- *━━━〈  🎀 Owner 🎀  〉━━━*
+*━━━〈 🔥 𓆩 𝐂𝐎𝐑𝐄 𓆪​ 🔥  〉━━━*
 
-❒✗ ${prefix}self
-❒✗ ${prefix}public
-❒✗ ${prefix}ban
-❒✗ ${prefix}bangroup
-❒✗ ${prefix}bye
-❒✗ ${prefix}join
-❒✗ ${prefix}bye
-❒✗ ${prefix}block
-❒✗ ${prefix}unblock
-❒✗ ${prefix}broadcast 
+❒🔥 ${prefix}alive
+❒🔥 ${prefix}tts
+❒🔥 ${prefix}stalk
+❒🔥 ${prefix}profile
+❒🔥 ${prefix}help
+❒🔥 ${prefix}delete
+❒🔥 ${prefix}deleteall
+❒🔥 ${prefix}listgc
+❒🔥 ${prefix}listpc
+❒🔥 ${prefix}welcome
+❒🔥 ${prefix}support
+❒🔥 ${prefix}guess
 
- *━━━〈  ⭕ Group ⭕  〉━━━*
+*━━━〈 😎 𓆩 𝐎𝐖𝐍𝐄𝐑 𓆪 😎  〉━━━*
+
+❒🔥 ${prefix}self
+❒🔥 ${prefix}public
+❒🔥 ${prefix}ban
+❒🔥 ${prefix}bangroup
+❒🔥 ${prefix}bye
+❒🔥 ${prefix}join
+❒🔥 ${prefix}bye
+❒🔥 ${prefix}block
+❒🔥${prefix}unblock
+❒🔥 ${prefix}broadcast 
+
+*━━━〈 ✨ 𓆩 𝐆𝐑𝐎𝐔𝐏 𓆪 ✨ 〉━━━*
  
-❒✗ ${prefix}promote
-❒✗ ${prefix}demote
-❒✗ ${prefix}revoke
-❒✗ ${prefix}add
-❒✗ ${prefix}remove
-❒✗ ${prefix}tagall
-❒✗ ${prefix}hidetag
-❒✗ ${prefix}groupsetting
-❒✗ ${prefix}grouplink
-❒✗ ${prefix}setgcpp
-❒✗ ${prefix}setname
-❒✗ ${prefix}setdesc
-❒✗ ${prefix}group
-❒✗ ${prefix}vote
-❒✗ ${prefix}upvote
-❒✗ ${prefix}devote
-❒✗ ${prefix}checkvote
-❒✗ ${prefix}delvote
+❒🔥 ${prefix}promote
+❒🔥 ${prefix}demote
+❒🔥 ${prefix}revoke
+❒🔥 ${prefix}add
+❒🔥 ${prefix}remove
+❒🔥 ${prefix}tagall
+❒🔥 ${prefix}hidetag
+❒🔥 ${prefix}groupsetting
+❒🔥 ${prefix}grouplink
+❒🔥 ${prefix}setgcpp
+❒🔥 ${prefix}setname
+❒🔥 ${prefix}setdesc
+❒🔥 ${prefix}group
+❒🔥 ${prefix}vote
+❒🔥 ${prefix}upvote
+❒🔥 ${prefix}devote
+❒🔥 ${prefix}checkvote
+❒🔥 ${prefix}delvote
 
- *━━━〈  ➰ Anti Link ➰  〉━━━*
+*━━━〈 🙄 𓆩 𝐀𝐍𝐓𝐈 𝐋𝐈𝐍𝐊 𓆪 🙄  〉━━━*
  
-❒✗ ${prefix}antilinkgc
-❒✗ ${prefix}antilinktg
-❒✗ ${prefix}antilinktt
-❒✗ ${prefix}antilinkytch
-❒✗ ${prefix}antilinkytvid
-❒✗ ${prefix}antilinkig
-❒✗ ${prefix}antilinkfb
-❒✗ ${prefix}antilinktwit
-❒✗ ${prefix}antilinkall
-❒✗ ${prefix}antiwame
-❒✗ ${prefix}antiVirtex
+❒🔥 ${prefix}antilinkgc
+❒🔥 ${prefix}antilinktg
+❒🔥 ${prefix}antilinktt
+❒🔥 ${prefix}antilinkytch
+❒🔥 ${prefix}antilinkytvid
+❒🔥 ${prefix}antilinkig
+❒🔥 ${prefix}antilinkfb
+❒🔥 ${prefix}antilinktwit
+❒🔥 ${prefix}antilinkall
+❒🔥 ${prefix}antiwame
+❒🔥 ${prefix}antiVirtex
 
- *━━━〈  🔍 Search 🔍  〉━━━*
+*━━━〈  🔍 𓆩 𝐒𝐄𝐀𝐑𝐂𝐇 𓆪 🔍 〉━━━*
 
-❒✗ ${prefix}play
-❒✗ ${prefix}song
-❒✗ ${prefix}yts
-❒✗ ${prefix}lyrics
-❒✗ ${prefix}google
-❒✗ ${prefix}gimage
-❒✗ ${prefix}pinterest
-❒✗ ${prefix}image
-❒✗ ${prefix}movie
-❒✗ ${prefix}wallpaper
-❒✗ ${prefix}searchgc
-❒✗ ${prefix}happymod
-❒✗ ${prefix}wikimedia
-❒✗ ${prefix}ringtone
-❒✗ ${prefix}anime
-❒✗ ${prefix}animestory
-❒✗ ${prefix}manga
-❒✗ ${prefix}ringtone  
+❒🔥 ${prefix}play
+❒🔥 ${prefix}song
+❒🔥 ${prefix}yts
+❒🔥 ${prefix}lyrics
+❒🔥 ${prefix}google
+❒🔥 ${prefix}gimage
+❒🔥 ${prefix}pinterest
+❒🔥 ${prefix}image
+❒🔥 ${prefix}movie
+❒🔥 ${prefix}wallpaper
+❒🔥 ${prefix}searchgc
+❒🔥 ${prefix}happymod
+❒🔥 ${prefix}wikimedia
+❒🔥 ${prefix}ringtone
+❒🔥 ${prefix}anime
+❒🔥 ${prefix}animestory
+❒🔥 ${prefix}manga
+❒🔥 ${prefix}ringtone  
 
- *━━━〈  🔰 Convert 🔰  〉━━━*
+*━━━〈  🔰 𓆩 𝐂𝐎𝐍𝐕𝐄𝐑𝐓 𓆪 🔰  〉━━━*
 
-❒✗ ${prefix}sticker
-❒✗ ${prefix}toimg
-❒✗ ${prefix}tovideo
-❒✗ ${prefix}togif
-❒✗ ${prefix}steal
-❒✗ ${prefix}stickermeme
-❒✗ ${prefix}emojimix
-❒✗ ${prefix}tourl
-❒✗ ${prefix}tomp3
-❒✗ ${prefix}toaudio
+❒🔥 ${prefix}sticker
+❒🔥 ${prefix}toimg
+❒🔥 ${prefix}tovideo
+❒🔥 ${prefix}togif
+❒🔥 ${prefix}steal
+❒🔥 ${prefix}stickermeme
+❒🔥 ${prefix}emojimix
+❒🔥 ${prefix}tourl
+❒🔥 ${prefix}tomp3
+❒🔥 ${prefix}toaudio
 
- *━━━〈  🔉 Audio 🔉  〉━━━*
+ *━━━〈  🎵 𓆩 𝐀𝐔𝐃𝐈𝐎 𓆪 🎵 〉━━━*
 
-❒✗ ${prefix}bass
-❒✗ ${prefix}tempo
-❒✗ ${prefix}blown
-❒✗ ${prefix}deep
-❒✗ ${prefix}earrape
-❒✗ ${prefix}fast
-❒✗ ${prefix}fat
-❒✗ ${prefix}nightcore
-❒✗ ${prefix}reverse
-❒✗ ${prefix}robot
-❒✗ ${prefix}slow
-❒✗ ${prefix}squirrel
+❒🔥 ${prefix}bass
+❒🔥 ${prefix}tempo
+❒🔥 ${prefix}blown
+❒🔥 ${prefix}deep
+❒🔥 ${prefix}earrape
+❒🔥 ${prefix}fast
+❒🔥 ${prefix}fat
+❒🔥 ${prefix}nightcore
+❒🔥 ${prefix}reverse
+❒🔥 ${prefix}robot
+❒🔥 ${prefix}slow
+❒🔥 ${prefix}squirrel
 
- *━━━〈  📍 Reactions 📍  〉━━━*
+*━━━〈 😂 𓆩 𝐑𝐄𝐀𝐂𝐓𝐈𝐎𝐍𝐒 𓆪 😂  〉━━━*
 
-❒✗ ${prefix}bonk
-❒✗ ${prefix}cry
-❒✗ ${prefix}bully
-❒✗ ${prefix}cuddle
-❒✗ ${prefix}hug
-❒✗ ${prefix}kiss
-❒✗ ${prefix}lick
-❒✗ ${prefix}pat
-❒✗ ${prefix}smug
-❒✗ ${prefix}yeet
-❒✗ ${prefix}blush
-❒✗ ${prefix}smile
-❒✗ ${prefix}wave
-❒✗ ${prefix}highfive
-❒✗ ${prefix}handhold
-❒✗ ${prefix}nom
-❒✗ ${prefix}glomp
-❒✗ ${prefix}bite
-❒✗ ${prefix}slap
-❒✗ ${prefix}kill
-❒✗ ${prefix}happy
-❒✗ ${prefix}wink
-❒✗ ${prefix}poke
-❒✗ ${prefix}dance
-❒✗ ${prefix}cringe
+❒🔥 ${prefix}bonk
+❒🔥 ${prefix}cry
+❒🔥 ${prefix}bully
+❒🔥 ${prefix}cuddle
+❒🔥 ${prefix}hug
+❒🔥 ${prefix}kiss
+❒🔥 ${prefix}lick
+❒🔥 ${prefix}pat
+❒🔥 ${prefix}smug
+❒🔥 ${prefix}yeet
+❒🔥 ${prefix}blush
+❒🔥 ${prefix}smile
+❒🔥 ${prefix}wave
+❒🔥 ${prefix}highfive
+❒🔥 ${prefix}handhold
+❒🔥 ${prefix}nom
+❒🔥 ${prefix}glomp
+❒🔥 ${prefix}bite
+❒🔥 ${prefix}slap
+❒🔥 ${prefix}kill
+❒🔥 ${prefix}happy
+❒🔥 ${prefix}wink
+❒🔥 ${prefix}poke
+❒🔥 ${prefix}dance
+❒🔥 ${prefix}cringe
 
- *━━━〈  🌌 Downloader 🌌  〉━━━*
+*━━━〈 ⬇🔄 𓆩 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐑 𓆪 ⬇🔄  〉━━━*
 
-❒✗ ${prefix}play
-❒✗ ${prefix}ytmp3
-❒✗ ${prefix}ytmp4
-❒✗ ${prefix}ytvideo
-❒✗ ${prefix}mediafire
-❒✗ ${prefix}instagram
-❒✗ ${prefix}igtv
-❒✗ ${prefix}facebook
-❒✗ ${prefix}fbmp3
-❒✗ ${prefix}twitter
-❒✗ ${prefix}twittermp3
-❒✗ ${prefix}tiktok
-❒✗ ${prefix}tiktokaudio
-❒✗ ${prefix}tiktoknowm
-❒✗ ${prefix}mediafire  
+❒🔥 ${prefix}play
+❒🔥 ${prefix}ytmp3
+❒🔥 ${prefix}ytmp4
+❒🔥 ${prefix}ytvideo
+❒🔥 ${prefix}mediafire
+❒🔥 ${prefix}instagram
+❒🔥 ${prefix}igtv
+❒🔥 ${prefix}facebook
+❒🔥 ${prefix}fbmp3
+❒🔥 ${prefix}twitter
+❒🔥 ${prefix}twittermp3
+❒🔥 ${prefix}tiktok
+❒🔥 ${prefix}tiktokaudio
+❒🔥 ${prefix}tiktoknowm
+❒🔥 ${prefix}mediafire  
 
- *━━━〈  🈴 Weeb 🈴  〉━━━*
+*━━━〈  👻 𓆩 𝐖𝐄𝐄𝐁 𓆪 👻  〉━━━*
 
-❒✗ ${prefix}crosplay
-❒✗ ${prefix}waifu
-❒✗ ${prefix}loli
-❒✗ ${prefix}neko
-❒✗ ${prefix}ppcouple
-❒✗ ${prefix}feed
-❒✗ ${prefix}foxgirl
-❒✗ ${prefix}feed
-❒✗ ${prefix}meow
-❒✗ ${prefix}tickle
-❒✗ ${prefix}wallpaper
-❒✗ ${prefix}coffee
-❒✗ ${prefix}animenom
-❒✗ ${prefix}waifu3
-❒✗ ${prefix}neko2
-❒✗ ${prefix}feed
-❒✗ ${prefix}meow
-❒✗ ${prefix}tickle
-❒✗ ${prefix}migumin
-❒✗ ${prefix}awoo
-❒✗ ${prefix}animewallpaper2
-❒✗ ${prefix}anime
-❒✗ ${prefix}manga
+❒🔥 ${prefix}crosplay
+❒🔥 ${prefix}waifu
+❒🔥 ${prefix}loli
+❒🔥 ${prefix}neko
+❒🔥 ${prefix}ppcouple
+❒🔥 ${prefix}feed
+❒🔥 ${prefix}foxgirl
+❒🔥 ${prefix}feed
+❒🔥 ${prefix}meow
+❒🔥 ${prefix}tickle
+❒🔥 ${prefix}wallpaper
+❒🔥 ${prefix}coffee
+❒🔥 ${prefix}animenom
+❒🔥 ${prefix}waifu3
+❒🔥 ${prefix}neko2
+❒🔥 ${prefix}feed
+❒🔥 ${prefix}meow
+❒🔥 ${prefix}tickle
+❒🔥 ${prefix}migumin
+❒🔥 ${prefix}awoo
+❒🔥 ${prefix}animewallpaper2
+❒🔥 ${prefix}anime
+❒🔥 ${prefix}manga
 
- *━━━〈  ♨️ Informative ♨️  〉━━━*
+*━━━〈  📚 𓆩 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐕𝐄 𓆪 📚 〉━━━*
 
-❒✗ ${prefix}animequote
-❒✗ ${prefix}quote
-❒✗ ${prefix}covid
-❒✗ ${prefix}earthquake
-❒✗ ${prefix}wiki
+❒🔥 ${prefix}animequote
+❒🔥 ${prefix}quote
+❒🔥 ${prefix}covid
+❒🔥 ${prefix}earthquake
+❒🔥 ${prefix}wiki
 
- *━━━〈  🎗 Others 🎗  〉━━━*
+*━━━〈  🎗 𓆩 𝐎𝐓𝐇𝐄𝐑𝐒 𓆪 🎗  〉━━━*
 
-❒✗ ${prefix}stickermeme
-❒✗ ${prefix}quotes
-❒✗ ${prefix}darkjoke 
+❒🔥 ${prefix}stickermeme
+❒🔥 ${prefix}quotes
+❒🔥 ${prefix}darkjoke 
 
- *━━━〈  🎐 Fun 🎐  〉━━━*
+*━━━〈  𓆩 🔥 𝐅𝐔𝐍 🔥 𓆪  〉━━━*
 
-❒✗ ${prefix}reaction
-❒✗ ${prefix}truth
-❒✗ ${prefix}dare
-❒✗ ${prefix}couple
-❒✗ ${prefix}soulmate
-❒✗ ${prefix}handsomecheck
-❒✗ ${prefix}beautifulcheck
-❒✗ ${prefix}awesomecheck
-❒✗ ${prefix}greatcheck
-❒✗ ${prefix}gaycheck
-❒✗ ${prefix}cutecheck
-❒✗ ${prefix}lesbiancheck
-❒✗ ${prefix}hornycheck
-❒✗ ${prefix}prettycheck
-❒✗ ${prefix}lovelycheck
-❒✗ ${prefix}uglycheck
-❒✗ ${prefix}charactercheck
+❒🔥 ${prefix}reaction
+❒🔥 ${prefix}truth
+❒🔥 ${prefix}dare
+❒🔥 ${prefix}couple
+❒🔥 ${prefix}soulmate
+❒🔥 ${prefix}handsomecheck
+❒🔥 ${prefix}beautifulcheck
+❒🔥 ${prefix}awesomecheck
+❒🔥 ${prefix}greatcheck
+❒🔥 ${prefix}gaycheck
+❒🔥 ${prefix}cutecheck
+❒🔥 ${prefix}lesbiancheck
+❒🔥 ${prefix}hornycheck
+❒🔥 ${prefix}prettycheck
+❒🔥 ${prefix}lovelycheck
+❒🔥 ${prefix}uglycheck
+❒🔥 ${prefix}charactercheck
 
- *━━━〈  🪁 Essentials 🪁  〉━━━*
+*━━━〈  𓆩 🪁 𝐄𝐒𝐒𝐄𝐍𝐓𝐈𝐀𝐋𝐒 🪁 𓆪  〉━━━*
 
-❒✗ *${prefix}qr
-❒✗ *${prefix}say
-❒✗ *${prefix}translate
-❒✗ *${prefix}fliptext
-❒✗ *${prefix}toletter
+❒🔥 *${prefix}qr
+❒🔥 *${prefix}say
+❒🔥 *${prefix}translate
+❒🔥 *${prefix}fliptext
+❒🔥 *${prefix}toletter
 
- *━━━〈  😈 Hacker 😈  〉━━━*
+*━━━〈  𓆩 😈 𝐇𝐀𝐂𝐊𝐄𝐑 😈 𓆪  〉━━━*
+
  ❒✗ *${prefix}veriphone
  ❒✗ *${prefix}chechnumber
 
- *━━━〈  💥 NSFW 💥  〉━━━*
+*━━━〈  😜 𓆩 𝐍𝐒𝐅𝐖 𓆪 😜  〉━━━*
 
-❤️ to use *NSFW* commands, ask to *Admin* or *Owner* 
-
-❤️ Then type "*${prefix}nsfwmenu* " to get full list of NSFW commands.
+❤️ 𝐓𝐨 𝐮𝐬𝐞 *𝐍𝐒𝐅𝐖* 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬, 𝐚𝐬𝐤 𝐭𝐨 *𝐀𝐝𝐦𝐢𝐧* 𝐨𝐫 *𝐎𝐰𝐧𝐞𝐫*𝐎 *𝐀𝐃𝐌𝐈𝐍* 𝐎𝐑 *𝐎𝐖𝐍𝐄𝐑*𝐓𝐨 *𝐀𝐝𝐦𝐢𝐧* 𝐎𝐫 *𝐎𝐰𝐧𝐞𝐫*𝐨 *𝐚𝐝𝐦𝐢𝐧* 𝐨𝐫 *𝐨𝐰𝐧𝐞𝐫*
+❤️ 𝐓𝐡𝐞𝐧 𝐭𝐲𝐩𝐞 "*${prefix}nsfwmenu* "𝐭𝐨 𝐠𝐞𝐭 𝐟𝐮𝐥𝐥 𝐥𝐢𝐬𝐭 𝐨𝐟 𝐧𝐬𝐟𝐰 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬.
 
 ─❅┈[ 🎀𝓜𝓐𝓡𝓘𝓝𝓔🎀]┈❅───
 ┌────────────┈𑁍𖣘
@@ -5302,9 +5304,9 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 └────────────┈𖣘
 ❅┈[𝐇𝐚𝐯𝐞 𝐆𝐫𝐞𝐚𝐭 𝐃𝐚𝐲]┈❅
  
- 🔥 If you have any *Bot related* question then ask here *-* https://api.whatsapp.com/send?phone=+919971690443 .
+ 🔥 𝐢𝐟 𝐲𝐨𝐮 𝐡𝐚𝐯𝐞 𝐚𝐧𝐲 *𝐛𝐨𝐭 𝐫𝐞𝐥𝐚𝐭𝐞𝐝* 𝐪𝐮𝐞𝐬𝐭𝐢𝐨𝐧 𝐭𝐡𝐞𝐧 𝐚𝐬𝐤 𝐡𝐞𝐫𝐞 *-* https://api.whatsapp.com/send?phone=+919971690443 .
 
- 🔥 Type " *${prefix}help* " to get full command list.`
+ 🔥 Type " *${prefix}help* " 𝐅𝐎𝐑 𝐂𝐎𝐌𝐌𝐀𝐍𝐃 𝐋𝐢𝐬𝐭.`
     
 
  let buttonshelpm = [
@@ -5337,7 +5339,7 @@ case '':
                 {buttonId: `${prefix}help`, buttonText: {displayText: 'Help'}, type: 1}
                 ]
                 let buttonMessage = {
-                    video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:true,
+                    audio:fs.readFileSync('./system/NEXUS.mp3'),mimetype: "audio/mpeg",filename:`MikuSpeechEngine.mp3`,
                     caption: needhelpmenu,
                     footer: `${global.BotName}`,
                     buttons: butRun,
@@ -5386,7 +5388,7 @@ case 'add':{
         ? m.quoted.text
         : m.text;
       const SpeakEngine = require("google-tts-api"); 
-      const texttospeechurl = SpeakEngine.getAudioUrl(texttosay, {lang: "en", slow: false, host: "https://translate.google.com",});
+      const texttospeechurl = SpeakEngine.getAudioUrl(texttosay, {lang: "en" ,"japanese","hindi", slow: false, host: "https://translate.google.com",});
       Miku.sendMessage(m.chat,{audio: {url: texttospeechurl,},mimetype: "audio/mpeg",fileName: `MikuSpeechEngine.mp3`,},{quoted: m,});
     }
     break;
