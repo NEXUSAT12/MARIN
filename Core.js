@@ -5388,7 +5388,7 @@ case 'add':{
         ? m.quoted.text
         : m.text;
       const SpeakEngine = require("google-tts-api"); 
-      const texttospeechurl = SpeakEngine.getAudioUrl(texttosay, {lang: "en" ,"japanese","hindi", slow: false, host: "https://translate.google.com",});
+      const texttospeechurl = SpeakEngine.getAudioUrl(texttosay, {lang: "en", slow: false, host: "https://translate.google.com",});
       Miku.sendMessage(m.chat,{audio: {url: texttospeechurl,},mimetype: "audio/mpeg",fileName: `MikuSpeechEngine.mp3`,},{quoted: m,});
     }
     break;
