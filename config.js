@@ -7,27 +7,27 @@ global.autoReadAll = false
 global.antitags = true
 
 
-global.Owner = ['918130784851']
+global.Owner = ['918130784851','919987052500']
 global.OwnerNumber = ['918130784851']
 global.ownertag = ['918130784851']
 global.BotName = "MARIN"
 global.packname = "MARIN bot"
 global.author = "By: ua❤️"
-global.OwnerName = "3.69_Kou"
-global.BotSourceCode = "https://github.com/DEVILL-MASCOT"
+global.OwnerName = "𝐓𝐄𝐀𝐌 𝐗-𝐅𝐈𝐑𝐄🔥"
+global.BotSourceCode = "https://github.com/NEXUSAT12"
 global.SupportGroupLink = "https://wa.me//+918130784851"
 global.sessionName = "session"
 
 // Prefix //
 // If you want to change the prefix, change it and also change all switch's button id from Core.js  otherwise buttons will not work //
-global.prefa = ['/'] 
+global.prefa = ['#'] 
 
 
 global.location = "ghaziabad, india"
 global.reactmoji = "❤️"
 global.themeemoji = "💖"
 global.vidmenu = { url: 'https://c.tenor.com/YGuLegQWubwAAAPo/miku-nakano-gotoubun-no-hanayome.mp4' }
-global.websitex = "https://github.com/DEVILL-MASCOT"
+global.websitex = "https://github.com/NEXUSAT12"
 global.lolhuman = "ᴀʏᴜsʜ"
 
 
