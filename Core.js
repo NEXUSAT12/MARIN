@@ -715,6 +715,13 @@ sendOrder(m.chat, teks, "5123658817728409", fs.readFileSync('./Assets/pic10.jpg'
 }
 
 
+for (let anju of vien){
+	if (budy === anju){
+		result = fs.readFileSync(`./nexusmedia/${anju}.mp3`)
+		Miku.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
+		}
+
+
 if (AntiLink) {
     linkgce = await Miku.groupInviteCode(from)
     if (budy.includes(`https://chat.whatsapp.com/${linkgce}`)) {
@@ -5063,7 +5070,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 
  
 *━━━〈 🔥 𓆩 𝐂𝐎𝐑𝐄 𓆪​ 🔥  〉━━━*
-
+❒🔥 ${prefix}thanksto
 ❒🔥 ${prefix}alive
 ❒🔥 ${prefix}tts
 ❒🔥 ${prefix}stalk
@@ -5325,29 +5332,23 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 break
  
 
-case '':
+case 'thanksto':
     if(isCmd){
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-      mikupic ='https://wallpapercave.com/uwp/uwp1895870.jpg'
-	    
+ const thanks = `Thanks to Me (nexus) PIKA (For helping me to find the api's that used in bot )And Again Me (NEXUS 🎉) 🐦 Who Helped Assemble This Sexy Script !!! `
+ const mikuarray= [
+	    "https://telegra.ph/file/fc8c10666835418136477.mp4",
+            "https://telegra.ph/file/614ba2eb73d658b557b1b.mp4",
+ 	    "https://telegra.ph/file/b79a65e4311d5a680c10f.mp4",
+            
+            ]
         
- const needhelpmenu = `Do you need help ${pushname} Senpai? Type *${prefix}help* to get my full command list.`
- const result = fs.readFileSync(`./system/alive.mp3`)
-     
-         let butRun = [
-                {buttonId: `${prefix}help`, buttonText: {displayText: 'Help'}, type: 1}
-                ]
-                let buttonMessage = {
-                    audio: result, mimetype: 'audio/mp4', ptt: true ,
-                    caption: needhelpmenu,
-                    footer: `${global.BotName}`,
-                    buttons: butRun,
-                    headerType: 4
-                }
-            Miku.sendMessage(m.chat,buttonMessage,{quoted:m})
-                }
+            const mikuselection = mikuarray[Math.floor(Math.random()*mikuarray.length)]
+        
+            Miku.sendMessage(from,{video:{url:mikuselection},gifPlayback:true,caption:thanks},{quoted:m})
+			    
 break
 
 case 'alive':
