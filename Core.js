@@ -5330,7 +5330,7 @@ case '':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-      mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
+      mikupic ='https://wallpapercave.com/uwp/uwp1895870.jpg'
     
         
  const needhelpmenu = `Do you need help ${pushname} Senpai? Type *${prefix}help* to get my full command list.`
@@ -5339,7 +5339,7 @@ case '':
                 {buttonId: `${prefix}help`, buttonText: {displayText: 'Help'}, type: 1}
                 ]
                 let buttonMessage = {
-                    audio:fs.readFileSync('./system/NEXUS.mp3'),mimetype: "audio/mpeg",fileName: `MikuSpeechEngine.mp3`,
+                    audio:fs.readFileSync('./system/alive.mp3'),
                     caption: needhelpmenu,
                     footer: `${global.BotName}`,
                     buttons: butRun,
