@@ -714,14 +714,6 @@ teks = `I can't join the group untill my *Owner* ask me to join. Type *-owner* t
 sendOrder(m.chat, teks, "5123658817728409", fs.readFileSync('./Assets/pic10.jpg'), `${watermark}`, `${BotName}`, "918130784851@s.whatsapp.net", "AR7zJt8MasFx2Uir/fdxhkhPGDbswfWrAr2gmoyqNZ/0Wg==", "99999999999999999999")
 }
 
-
-for (let anju of vien){
-	if (budy === anju){
-		result = fs.readFileSync(`./nexusmedia/${anju}.mp3`)
-		Miku.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
-		}
-
-
 if (AntiLink) {
     linkgce = await Miku.groupInviteCode(from)
     if (budy.includes(`https://chat.whatsapp.com/${linkgce}`)) {
