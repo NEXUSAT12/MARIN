@@ -902,12 +902,6 @@ Miku.sendTextWithMentions(m.chat, teks, m)
 await sleep(500)
 m.copyNForward(m.chat, true, { readViewOnce: true }).catch(_ => reply(`Maybe it's been opened by a bot`))
 }
-	
-for (let mus of vien){
-	if (budy === anju){
-		result = fs.readFileSync(`./nexusmedia/${mus}.mp3`)
-		Miku.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4',ptt: true },{ quoted: m })
-		}
 
 
 if (!Miku.public) {
