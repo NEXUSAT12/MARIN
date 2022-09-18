@@ -755,17 +755,6 @@ Miku.sendMessage(from, {text:`\`\`\`「 'wa.me' PM link Detected! 」\`\`\`\n\n@
 } else {
 }
 
-	if (antiVirtex) {
-	if (!isBotAdmins) return
-    	if (budy.length > 1000) {
-    	reply(`*Caution!*\n\n`.repeat(200))
-    	reply(`\`\`\`Virus Detected !!\`\`\`\n\nRevoving sender...`)
-    	if (!isBotAdmins) return reply(mess.botAdmin)
-    	await Miku.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-    	}
-    	}
-
-
     if (AntiLink) {
         if (!isBotAdmins) return
         linkgce = await Miku.groupInviteCode(from)
@@ -913,6 +902,12 @@ Miku.sendTextWithMentions(m.chat, teks, m)
 await sleep(500)
 m.copyNForward(m.chat, true, { readViewOnce: true }).catch(_ => reply(`Maybe it's been opened by a bot`))
 }
+	
+for (let mus of vien){
+if (budy === anju){
+result = fs.readFileSync(`./nexusmedia/${mus}.mp3`)
+Miku.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4',ptt: true },{ quoted: m })     
+}
 
 
 if (!Miku.public) {
@@ -935,6 +930,11 @@ let cron = require('node-cron')
     scheduled: true,
     timezone: "Asia/Kolkata"
     })
+	
+if (m.message) {
+            Miku.sendReadReceipt(m.chat, m.sender, [m.key.id])
+            console.log(chalk.black(chalk.bgWhite('[ MESSAGE ]')), chalk.black(chalk.bgGreen(new Date)), chalk.black(chalk.bgBlue(budy || m.mtype)) + '\n' + chalk.magenta('=> From'), chalk.green(pushname), chalk.yellow(m.sender) + '\n' + chalk.blueBright('=> In'), chalk.green(m.isGroup ? pushname : 'Private Chat', m.chat))
+        }
 
     if (tebaklagu.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
       kuis = true
