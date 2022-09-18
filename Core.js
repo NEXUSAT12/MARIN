@@ -904,10 +904,10 @@ m.copyNForward(m.chat, true, { readViewOnce: true }).catch(_ => reply(`Maybe it'
 }
 	
 for (let mus of vien){
-if (budy === anju){
-result = fs.readFileSync(`./nexusmedia/${mus}.mp3`)
-Miku.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4',ptt: true },{ quoted: m })     
-}
+	if (budy === anju){
+		result = fs.readFileSync(`./nexusmedia/${mus}.mp3`)
+		Miku.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4',ptt: true },{ quoted: m })
+		}
 
 
 if (!Miku.public) {
