@@ -5331,15 +5331,16 @@ case '':
     if (isBanChat) return reply(mess.bangc)
 
       mikupic ='https://wallpapercave.com/uwp/uwp1895870.jpg'
-    
+	    
         
  const needhelpmenu = `Do you need help ${pushname} Senpai? Type *${prefix}help* to get my full command list.`
+ const result = fs.readFileSync(`./system/alive.mp3`)
      
          let butRun = [
                 {buttonId: `${prefix}help`, buttonText: {displayText: 'Help'}, type: 1}
                 ]
                 let buttonMessage = {
-                    audio:fs.readFileSync('./system/alive.mp3'),
+                    audio: result, mimetype: 'audio/mp4', ptt: true ,
                     caption: needhelpmenu,
                     footer: `${global.BotName}`,
                     buttons: butRun,
@@ -5353,7 +5354,7 @@ case 'alive':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-const txt = `Do you love Anya (miku) ? Then we are the same.`
+const txt = `Do you love Marin ? Then we are the same.`
 const mikuarray= [
             "https://c.tenor.com/hjL3MnIsB88AAAPo/marin-kitagawa-kitagawa-marin.mp4"
             
