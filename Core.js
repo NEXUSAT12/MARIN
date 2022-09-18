@@ -5332,6 +5332,27 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 break
 
 
+case 'thanksto':
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+
+const tx = `Thanks to Me (nexus) PIKA (For helping me to find the api's that used in bot )And Again Me (NEXUS 🎉) 🐦 Who Helped Assemble This Sexy Script !!!`
+const mikuarra= [
+            "https://telegra.ph/file/fc8c10666835418136477.mp4",
+            "https://telegra.ph/file/614ba2eb73d658b557b1b.mp4",
+ 	    "https://telegra.ph/file/b79a65e4311d5a680c10f.mp4",
+
+            
+            ]
+        
+            const mikuselectio = mikuarra[Math.floor(Math.random()*mikuarra.length)]
+        
+            Miku.sendMessage(from,{video:{url:mikuselectio},gifPlayback:true,caption:tx},{quoted:m})
+
+break
+
+
+
 case 'alive':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
@@ -5397,28 +5418,6 @@ case 'add':{
                         return('Error!')
                     })
     break
-
-
-case 'thanksto':
-    if(isCmd){
-    if (isBan) return reply(mess.banned)	 			
-    if (isBanChat) return reply(mess.bangc)
-
- const thanks = `Thanks to Me (nexus) PIKA (For helping me to find the api's that used in bot )And Again Me (NEXUS 🎉) 🐦 Who Helped Assemble This Sexy Script !!! `
- const mikuarray= [
-	    "https://telegra.ph/file/fc8c10666835418136477.mp4",
-            "https://telegra.ph/file/614ba2eb73d658b557b1b.mp4",
- 	    "https://telegra.ph/file/b79a65e4311d5a680c10f.mp4",
-            
-            ]
-        
-            const mikuselection = mikuarray[Math.floor(Math.random()*mikuarray.length)]
-        
-            Miku.sendMessage(from,{video:{url:mikuselection},gifPlayback:true,caption:thanks},{quoted:m})
-	    
-    }
-			    
-break
 
 
 
