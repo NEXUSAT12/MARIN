@@ -4460,7 +4460,7 @@ case 'veriphone':
   url: 'https://truecaller2.p.rapidapi.com/findPhone',
   qs: {phone: `${text}`},
   headers: {
-    'X-RapidAPI-Key': 'c027a42b9bmsh1ae9268b7d900e8p1eaf33jsn91864793b1a3',
+    'X-RapidAPI-Key': '837661b454msh274b6753ca80823p11c653jsn973bb2a55a34',
     'X-RapidAPI-Host': 'truecaller2.p.rapidapi.com',
      useQueryString: true
   }
