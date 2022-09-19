@@ -4456,13 +4456,13 @@ break
 case 'veriphone':
   reply(mess.wait)
   const dripdrop = {
-   method: 'GET',
+  method: 'GET',
   url: 'https://truecaller2.p.rapidapi.com/findPhone',
   qs: {phone: `${text}`},
   headers: {
-    'X-RapidAPI-Key': '837661b454msh274b6753ca80823p11c653jsn973bb2a55a34',
+    'X-RapidAPI-Key': '06a4c91363msh0c1c5e72f99fe3ep13229ejsn96003354961a',
     'X-RapidAPI-Host': 'truecaller2.p.rapidapi.com',
-     useQueryString: true
+     useQueryString: true 
   }
 };
   let mhati = require('request')
