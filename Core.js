@@ -1374,7 +1374,7 @@ switch(command) {
     case 'sc': case 'script': case 'sourcecode': {
         if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
-    teks = `*${global.BotName}'s For Script contact\n${ownertag}@s.whatsapp.net\nDont forget to follow me on *GitHub* and give a ⭐️ to my projects. `
+    teks = `*${global.BotName}'s For Script contact\n wa.me/${global.OwnerNumber}\nDont forget to follow me on *GitHub* and give a ⭐️ to my projects. `
     let buttons = [
     {buttonId: `${prefix}menu`, buttonText: {displayText: '✨Bot Menu✨'}, type: 1}
     ]
@@ -1487,12 +1487,12 @@ break
 
 case 'support': case 'supportgc':
     
-    reply(`*My developer's group:* http://wa.me/+918130784851`)
+    reply(`*My developer's group:* http://wa.me/${global.OwnerNumber}`)
     break
 
 case 'repo': case 'botrepo':
     
-    reply(`*My Source Code: *ask from ${ownertag}@s.whatsapp.net`)
+    reply(`*My Source Code: *ask from wa.me/${global.OwnerNumber}`)
     break
 
 case 'nsfwmenu':
@@ -5297,9 +5297,15 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
  🔥 Type " *${prefix}help* " 𝐅𝐎𝐑 𝐂𝐎𝐌𝐌𝐀𝐍𝐃 𝐋𝐢𝐬𝐭.`
     
 
- let buttonshelpm = [
-    {buttonId: `${prefix}owner`, buttonText: {displayText: '❤️Owner❤️'}, type: 1}
-    ]
+ let buttonshelpm = [{ buttonId: {
+                                   `${prefix}support`,
+                                    buttonText: { displayText :'❤️ support ❤️'}
+                                }
+                            }, {
+                                buttonId: {
+                                    `${prefix}owner`,
+                                    buttonText:{'❤️ OWNER ❤️'}
+                                }]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:true,
                     caption: helpmenu,
