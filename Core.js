@@ -5302,8 +5302,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
                                 },{
                                 buttonId: 
                                     `${prefix}owner`,
-                                    buttonText:{'❤️ OWNER ❤️'}
-                                }]
+                                    buttonText:{'❤️ OWNER ❤️'}]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:true,
                     caption: helpmenu,
