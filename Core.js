@@ -5297,11 +5297,10 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
  🔥 Type " *${prefix}help* " 𝐅𝐎𝐑 𝐂𝐎𝐌𝐌𝐀𝐍𝐃 𝐋𝐢𝐬𝐭.`
  
  
- const hsh = [ "https://c.tenor.com/hjL3MnIsB88AAAPo/marin-kitagawa-kitagawa-marin.mp4"]
  let buttonshelpm = [{
 	 urlButton: {
 		 displayText: 'whatsapp❤️‍🔥',
-		 url: `${myweb}`
+		 url: `${global.myweb}`
 		 }
 	 }, {quickReplyButton: {
 		 displayText: '👑Owner👑',
@@ -5309,7 +5308,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 		 }
 	     }]
                 let buttonMessage = {
-                    video:{hsh},gifPlayback:true,
+                    video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:true,
                     caption: helpmenu,
                     footer: `${BotName}`,
                     buttons: buttonshelpm,
