@@ -5299,8 +5299,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 
  let buttonshelpm = [{ buttonId: `${prefix}support`,
                                     buttonText: { displayText :'❤️ support ❤️'}
-                                }
-                            }, {
+                                },{
                                 buttonId: 
                                     `${prefix}owner`,
                                     buttonText:{'❤️ OWNER ❤️'}
