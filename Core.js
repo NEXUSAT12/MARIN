@@ -1374,7 +1374,7 @@ switch(command) {
     case 'sc': case 'script': case 'sourcecode': {
         if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
-    teks = `*${global.BotName}'s Script*\n\n*GitHub*: ${global.BotSourceCode}\n\nDont forget to follow me on *GitHub* and give a ⭐️ to my projects. `
+    teks = `*${global.BotName}'s For Script contact\n${ownertag}@s.whatsapp.net\nDont forget to follow me on *GitHub* and give a ⭐️ to my projects. `
     let buttons = [
     {buttonId: `${prefix}menu`, buttonText: {displayText: '✨Bot Menu✨'}, type: 1}
     ]
@@ -1487,12 +1487,12 @@ break
 
 case 'support': case 'supportgc':
     
-    reply(`*My developer's group:* http://wa,me/+918130784851`)
+    reply(`*My developer's group:* http://wa.me/+918130784851`)
     break
 
 case 'repo': case 'botrepo':
     
-    reply(`*My Source Code:* https://github.com/`)
+    reply(`*My Source Code: *ask from ${ownertag}@s.whatsapp.net`)
     break
 
 case 'nsfwmenu':
