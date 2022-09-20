@@ -5297,11 +5297,11 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
  🔥 Type " *${prefix}help* " 𝐅𝐎𝐑 𝐂𝐎𝐌𝐌𝐀𝐍𝐃 𝐋𝐢𝐬𝐭.`
     
 
- let buttonshelpm = [{ buttonId: { `${prefix}support`,
+ let buttonshelpm = [{ buttonId: `${prefix}support`,
                                     buttonText: { displayText :'❤️ support ❤️'}
                                 }
                             }, {
-                                buttonId: {
+                                buttonId: 
                                     `${prefix}owner`,
                                     buttonText:{'❤️ OWNER ❤️'}
                                 }]
