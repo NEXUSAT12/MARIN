@@ -5295,8 +5295,9 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
  🔥 𝐢𝐟 𝐲𝐨𝐮 𝐡𝐚𝐯𝐞 𝐚𝐧𝐲 *𝐛𝐨𝐭 𝐫𝐞𝐥𝐚𝐭𝐞𝐝* 𝐪𝐮𝐞𝐬𝐭𝐢𝐨𝐧 𝐭𝐡𝐞𝐧 𝐚𝐬𝐤 𝐡𝐞𝐫𝐞 *-* https://api.whatsapp.com/send?phone=+919971690443 .
 
  🔥 Type " *${prefix}help* " 𝐅𝐎𝐑 𝐂𝐎𝐌𝐌𝐀𝐍𝐃 𝐋𝐢𝐬𝐭.`
-    
-
+ 
+ 
+ const hsh = [ "https://c.tenor.com/hjL3MnIsB88AAAPo/marin-kitagawa-kitagawa-marin.mp4"]
  let buttonshelpm = [{
 	 urlButton: {
 		 displayText: 'whatsapp❤️‍🔥',
@@ -5308,7 +5309,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 		 }
 	     }]
                 let buttonMessage = {
-                    video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:true,
+                    video:{hsh},gifPlayback:true,
                     caption: helpmenu,
                     footer: `${BotName}`,
                     buttons: buttonshelpm,
