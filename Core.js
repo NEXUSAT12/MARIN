@@ -2396,11 +2396,12 @@ if (isBanChat) return reply(mess.bangc)
  ┃┄┄┄┄┄┄┄┄┄┄┄
  ┃ Message👑 : ${args.join(" ") ? args.join(" ") : 'no message'}*
  ┃┄┄┄┄┄┄┄┄┄┄┄
- ┃ *Announcer:  @${m.sender.id.split("@")[0]}*
+ ┃ Announcer👻:  @${m.sender.id.split('@')[0]}*
  ┗━━━━━━━━ \n\n`
  for (let mem of participants)
  for (let adm of groupAdmins) {
-	 teks += `\n👑@${adm.id.split("@")[0]}\n,\n🎪@${mem.id.split("@")[0]}\n`
+	 teks += `\n👑@${adm.id.split('@')[0]}\n,
+                  \n🔥@${mem.id.split('@')[0]}\n`
 	 }
 		Miku.sendMessage(m.chat,{ text:teks, mentions: participants.map(a => a.id) },{quoted: m })
 		}
