@@ -2396,7 +2396,7 @@ if (isBanChat) return reply(mess.bangc)
  ┃┄┄┄┄┄┄┄┄┄┄┄
  ┃ Message👑 : ${args.join(" ") ? args.join(" ") : 'no message'}*
  ┃┄┄┄┄┄┄┄┄┄┄┄
- ┃ Announcer👻:  @${m.sender.id.split('@')[0]}*
+ ┃ Announcer👻:  @${m.sender.split('@')[0]}*
  ┗━━━━━━━━ \n\n`
  for (let mem of participants)
  for (let adm of groupMetadata.admins) {
