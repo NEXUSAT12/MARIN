@@ -1499,21 +1499,13 @@ case 'nsfwmenu':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!AntiNsfw) return reply(mess.nonsfw)
-       const nexus = ` *━━━〈  📛 NSFW Menu 📛  〉━━━*\n\ ${prefix}nhentaivideo ,\n${prefix}blowjobgif ,\n${prefix}hneko ,\n${prefix}masturbation,\n${prefix}thighs ,\n${prefix}pussy ,\n${prefix}panties ,\n${prefix}orgy ,\n${prefix}ahegao ,\n${prefix}ass ,\n${prefix}bdsm ,\n$[prefix}blowjob ,\n${prefix}cuckold ,${prefix}ero ,\n${prefix}gasm ,\n${prefix}cum ,\n${prefix}femdom ,${prefix}foot ,\n${prefix}gangbang ,\n${prefix}glasses ,\n${prefix}jahy ,\n${prefix}trap ,\n${prefix}blowjobgif ,${prefix}spank ,${prefix}hneko ,\n${prefix}hwaifu ,\n${prefix}gasm\n`
-       const marin = ["https://c.tenor.com/DO2R1nI7hOcAAAPo/marin-kitagawa.mp4"]
-       let buttons = [{buttonId: `${prefix}blowjobgif`, buttonText: {displayText: `❤️‍🔥MARIN❤️‍🔥`}, type: 1}]
-                let buttonM = {
-                    video:{url:marin},gifPlayback:true,
-                    caption: nexus,
-                    footer: `${BotName}`,
-                    buttons: buttons,
-                    headerType: 4
-                    
-                }
-            Miku.sendMessage(m.chat, buttonM,{ quoted:m })
-                }
-	break
+    const marin = ["https://c.tenor.com/DO2R1nI7hOcAAAPo/marin-kitagawa.mp4"]
+    const nexus = `*━━━〈  📛 NSFW Menu 📛  〉━━━*\n\n ${prefix}nhentaivideo ,\n${prefix}blowjobgif ,\n${prefix}hneko ,\n${prefix}masturbation,\n${prefix}thighs ,\n${prefix}pussy ,\n${prefix}panties ,\n${prefix}orgy ,\n${prefix}ahegao ,\n${prefix}ass ,\n${prefix}bdsm ,\n$[prefix}blowjob ,\n${prefix}cuckold ,${prefix}ero ,\n${prefix}gasm ,\n${prefix}cum ,\n${prefix}femdom ,${prefix}foot ,\n${prefix}gangbang ,\n${prefix}glasses ,\n${prefix}jahy ,\n${prefix}trap ,\n${prefix}blowjobgif ,${prefix}spank ,${prefix}hneko ,\n${prefix}hwaifu ,\n${prefix}gasm\n`
+   const mikuselection = marin[Math.floor(Math.random()*marin.length)]
+        
+            Miku.sendMessage(from,{video:{url:mikuselection},gifPlayback:true,caption:nexus},{quoted:m})
 
+break
 
 case 'reaction': case 'react': case 'reactions': case 'r':
         if (isBan) return reply(mess.banned)	 			
