@@ -2398,14 +2398,14 @@ if (isBanChat) return reply(mess.bangc)
  ┗━━━━━━━━ \n\n`
  for (let mem of participants)
  for (let adm of groupAdmins) {
- teks += `\n👑*@${adm.id.split('@')[0]}\n\n\n🎪*@${mem.id.split('@')[0]}\n`}
- }
- Miku.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
- }
- break
-
+	 teks += `\n👑*@${adm.id.split('@')[0]}*\n\n\n🎪*@${mem.id.split('@')[0]*}\n`
+	 }
+		Miku.sendMessage(m.chat,{ text:teks, mentions: participants.map(a => a.id) },{quoted: m })
+		}
+	break
+	
  case 'hidetag': {
-    if (isBan) return reply(mess.banned)	 			
+ if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
