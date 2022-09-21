@@ -3479,67 +3479,80 @@ reply("Error link!")
 }
 break
 
-case 'music': case 'play': case 'song': case 'ytplay': {
-    if (isBan) return reply(mess.banned)	 			
- if (isBanChat) return reply(mess.bangc)
- let yts = require("yt-search")
- let search = await yts(text)
- let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
- let ytvc = await hx.youtube(anu.url)
- let buttons = [
- {buttonId: `${prefix}ytvd ${ytvc.link}`, buttonText: {displayText: '► Video'}, type: 1},
- {buttonId: `${prefix}ytad ${ytvc.mp3}`, buttonText: {displayText: '♫ Audio'}, type: 1}
- ]
- let buttonMessage = {
- image: { url: anu.thumbnail },
- caption: `「  _Anya Youtube Player_  」
+case 'play': case 'song': case 'ytplay': {
+		if (isBan) return reply(mess.banned)	 			
+ 		if (isBanChat) return reply(mess.bangc)
+                if (!text) return reply(`Example : ${prefix + command} Stay`)
+                let yts = require("yt-search")
+                let search = await yts(text)
+                let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
+                let buttons = [
+                    {buttonId: `${prefix}ytmp3 ${anu.url}`, buttonText: {displayText: '🎶Audio🎶'}, type: 1},
+                    {buttonId: `${prefix}ytmp4 ${anu.url}`, buttonText: {displayText: '📽️Video📽️'}, type: 1}
+                ]
+                let buttonMessage = {
+                    image: { url: anu.thumbnail },
+                    caption: ` 
+🐦 Title : ${anu.title}
+🐦 Ext : Search
+🐦 ID : ${anu.videoId}
+🐦 Duration : ${anu.timestamp}
+🐦 Viewes : ${anu.views}
+🐦 Uploaded On : ${anu.ago}
+🐦 Author : ${anu.author.name}
+🐦 Channel : ${anu.author.url}
+🐦 Description : ${anu.description}
+🐦 Url : ${anu.url}`,
+                    footer: `${global.BotName}`,
+                    buttons: buttons,
+                    headerType: 4
+                }
+                Miku.sendMessage(m.chat, buttonMessage, { quoted: m })
+            }
+            break
 
-*Title :* ${anu.title}
-*Duration :* ${anu.timestamp}
-*Viewers :* ${anu.views}
-*Uploaded :* ${anu.ago}
-*Channel :* ${anu.author.name}
-*Url :* ${anu.url}`,
- footer: `${global.BotName}`,
- buttons: buttons,
- headerType: 4,
-
- }
- Miku.sendMessage(m.chat, buttonMessage, { quoted: m })
- }
- break
-
- case 'getmusic': case 'getvideo': case 'yt': case 'youtube': case 'ytvideo': case 'ytmp3': case 'ytmp4': case 'ytmusic': {
-    if (isBan) return reply(mess.banned)	 			
- if (isBanChat) return reply(mess.bangc)
- if (!args[0]) return reply(mess.nolink)
- try {
- hx.youtube(args[0]).then(async(res) => {
- textyt = `「  _Anya Youtube Downloader_  」
-*Title :* ${res.title}
-*Size :* ${res.size}
-*Quality :* ${res.quality}
-*Select video or audio and wait a while*`
- let buttons = [
- {buttonId: `${prefix}ytvd ${res.link}`, buttonText: {displayText: '► Video'}, type: 1},
- {buttonId: `${prefix}ytad ${res.mp3}`, buttonText: {displayText: '♫ Audio'}, type: 1}
- ]
- let buttonMessage = {
- image: {url:res.thumb},
- caption: textyt,
- footer: `${BotName}`,
- buttons: buttons,
- headerType: 4,
-
- }
- Miku.sendMessage(from, buttonMessage, {quoted:m})
- }).catch(_ => _)
- } catch {
- reply("Link error!")
- }
- }
- break
-
+ case 'ytmp3': case 'getmusic': case 'ytaudio': {
+                let { yta } = require('./lib/y2mate')
+                if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`)
+                let quality = args[1] ? args[1] : '320kbps'
+                let media = await yta(text, quality)
+                if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
+                Miku.sendImage(m.chat, media.thumb, `🐦 Title : ${media.title}\n🐦 File Size : ${media.filesizeF}\n🐦 Url : ${isUrl(text)}\n🐦 Ext : MP3\n🐦 Resolution : ${args[1] || '320kbps'}`, m)
+                Miku.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
+            }
+            break
+            case 'ytmp4': case 'getvideo': case 'ytvideo': {
+                let { ytv } = require('./lib/y2mate')
+                if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 360p`)
+                let quality = args[1] ? args[1] : '360p'
+                let media = await ytv(text, quality)
+                if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
+                Miku.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🐦 Title : ${media.title}\n🐦 File Size : ${media.filesizeF}\n🐦 Url : ${isUrl(text)}\n🐦 Ext : MP3\n🐦 Resolution : ${args[1] || '360p'}` }, { quoted: m })
+            }
+            break
+	    case 'getmusicxxx': {
+                let { yta } = require('./lib/y2mate')
+		let urls = quoted.text.match(new RegExp(/(?:https?:\/\/)?(?:youtu\.be\/|(?:www\.|m\.)?youtube\.com\/(?:watch|v|embed|shorts)(?:\.php)?(?:\?.*v=|\/))([a-zA-Z0-9\_-]+)/, 'gi'))
+                let quality = args[1] ? args[1] : '128kbps'
+                let media = await yta(urls[text - 1], quality)
+                if (media.filesize >= 100000) return reply('File Over Limit '+util.format(media))
+                Miku.sendImage(m.chat, media.thumb, `🐦 Title : ${media.title}\n🐦 File Size : ${media.filesizeF}\n🐦 Url : ${urls[text - 1]}\n🐦 Ext : MP3\n🐦 Resolution : ${args[1] || '128kbps'}`, m)
+                Miku.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
+            }
+            break
+            case 'getvideoxxx': {
+                let { ytv } = require('./lib/y2mate')
+                if (!text) throw `Example : ${prefix + command} 1`
+                if (!m.quoted) throw 'Reply Message'
+                if (!m.quoted.isBaileys) throw `Can Only Reply To Meessages From Bots`
+                let urls = quoted.text.match(new RegExp(/(?:https?:\/\/)?(?:youtu\.be\/|(?:www\.|m\.)?youtube\.com\/(?:watch|v|embed|shorts)(?:\.php)?(?:\?.*v=|\/))([a-zA-Z0-9\_-]+)/, 'gi'))
+                if (!urls) throw`Maybe The Message You Replied Does Not Contain The Video Search Result`
+                let quality = args[1] ? args[1] : '360p'
+                let media = await ytv(urls[text - 1], quality)
+                if (media.filesize >= 100000) return reply('File Over Limit '+util.format(media))
+                Miku.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🐦 Title : ${media.title}\n🐦 File Size : ${media.filesizeF}\n🐦 Url : ${urls[text - 1]}\n🐦 Ext : MP3\n🐦 Resolution : ${args[1] || '360p'}` }, { quoted: m })
+            }
+            break
 
  case 'ytvd': {
     if (isBan) return reply(mess.banned)	 			
@@ -5047,10 +5060,11 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
     if (isBanChat) return reply(mess.bangc)
       
  const helpmenu = `「𝐊𝐎𝐍'𝐍𝐈𝐂𝐇𝐈𝐖𝐀 *${pushname}*'𝐒𝐚𝐧
-│⋊ 𝐈'𝐀𝐌:  🎀𝓜𝓐𝓡𝓘𝓝𝓔🎀
-│⋊ 𝐌𝐲 𝐏𝐫𝐞𝐟𝐢𝐱: ${prefix}
-│⋊ 私の愛: *${prefix}owner*
-│⋊ 私の愛 : wa.me//+918130784851     
+│🔥*𝐆𝐑𝐎𝐔𝐏 :${groupMetadata.subject}
+│🔥 𝐈'𝐀𝐌:  🎀𝓜𝓐𝓡𝓘𝓝𝓔🎀
+│🔥𝐌𝐲 𝐏𝐫𝐞𝐟𝐢𝐱: ${prefix}
+│🔥 私の愛: *${prefix}owner*
+│🔥 私の愛 : wa.me//+918130784851     
 ╰────────────┈平和   
 
 
@@ -5302,7 +5316,9 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
  🔥 Type " *${prefix}help* " 𝐅𝐎𝐑 𝐂𝐎𝐌𝐌𝐀𝐍𝐃 𝐋𝐢𝐬𝐭.`
  
  
- let buttonshelpm = [{buttonId: `${prefix}owner`, buttonText: {displayText: `👑OWNER👑`}, type: 1}]
+ let buttonshelpm = [{buttonId: `${prefix}owner`, buttonText: {displayText: `👑OWNER👑`}, type: 1},
+		     {buttonId: `${prefix}thanksto`, buttonText: {displayText: `💕THANKSTO💕`}, type: 1}
+		    ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:true,
                     caption: helpmenu,
