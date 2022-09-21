@@ -1501,9 +1501,9 @@ case 'nsfwmenu':
     if (!AntiNsfw) return reply(mess.nonsfw)
     const marin = ["https://c.tenor.com/DO2R1nI7hOcAAAPo/marin-kitagawa.mp4"]
     const nexus = `*━━━〈  📛 NSFW Menu 📛  〉━━━*\n\n ${prefix}nhentaivideo ,\n${prefix}blowjobgif ,\n${prefix}hneko ,\n${prefix}masturbation,\n${prefix}thighs ,\n${prefix}pussy ,\n${prefix}panties ,\n${prefix}orgy ,\n${prefix}ahegao ,\n${prefix}ass ,\n${prefix}bdsm ,\n$[prefix}blowjob ,\n${prefix}cuckold ,${prefix}ero ,\n${prefix}gasm ,\n${prefix}cum ,\n${prefix}femdom ,${prefix}foot ,\n${prefix}gangbang ,\n${prefix}glasses ,\n${prefix}jahy ,\n${prefix}trap ,\n${prefix}blowjobgif ,${prefix}spank ,${prefix}hneko ,\n${prefix}hwaifu ,\n${prefix}gasm\n`
-   const mikuselectio = marin[Math.floor(Math.random()*marin.length)]
+    const ayus = marin[Math.floor(Math.random()*marin.length)]
         
-            Miku.sendMessage(from,{video:{url:mikuselectio},gifPlayback:true,caption:nexus},{quoted:m})
+            Miku.sendMessage(from,{video:{url:ayus},gifPlayback:true,caption:nexus},{quoted:m})
 break
 
 		
