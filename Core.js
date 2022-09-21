@@ -2399,7 +2399,7 @@ if (isBanChat) return reply(mess.bangc)
  ┃ Announcer👻:  @${m.sender.id.split('@')[0]}*
  ┗━━━━━━━━ \n\n`
  for (let mem of participants)
- for (let adm of groupAdmins) {
+ for (let adm of groupMetadata.admins) {
 	 teks += `\n👑@${adm.id.split('@')[0]}\n,
                   \n🔥@${mem.id.split('@')[0]}\n`
 	 }
