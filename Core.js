@@ -177,6 +177,7 @@ const messagesD = body.slice(0).trim().split(/ +/).shift().toLowerCase()
 const groupMetadata = m.isGroup ? await Miku.groupMetadata(m.chat).catch(e => {}) : ''
 const groupName = m.isGroup ? groupMetadata.subject : ''
 const participants = m.isGroup ? await groupMetadata.participants : ''
+Const Nexus = m.isGroup ? await groulMetadata.admins : ''
 const groupAdmins = m.isGroup ? await participants.filter(v => v.admin !== null).map(v => v.id) : ''
 const groupOwner = m.isGroup ? groupMetadata.owner : ''
 const isBotAdmins = m.isGroup ? groupAdmins.includes(botNumber) : false
@@ -2399,7 +2400,7 @@ if (isBanChat) return reply(mess.bangc)
  ┃ Announcer👻:  @${m.sender.split('@')[0]}*
  ┗━━━━━━━━ \n\n`
  for (let mem of participants)
- for (let adm of groupMetadata.admins) {
+ for (let adm of groupAdmins) {
 	 teks += `\n👑@${adm.id.split('@')[0]}\n,
                   \n🔥@${mem.id.split('@')[0]}\n`
 	 }
