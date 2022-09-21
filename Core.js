@@ -5053,6 +5053,15 @@ Miku.send5ButImg(yoi, txt, `${global.BotName}`, BotLogo, btn, Thumb)
 replay('Broadcast Sent !')
 }
 break    
+		
+case 'bug': case 'report': {
+	if(!text) return reply(`Enter The Bug\n\nExample: ${command} Menu Error`)
+	Miku.sendMessage(`918130784851@s.whatsapp.net`, {text: `*Bug Report From:* wa.me/${m.sender.split("@")[0]}
+	From group : ${groupMetadata.subject}
+	Report Message: ${text}`})
+	reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, If You Play With This,\n Use This Feature Again And Again For No Reason,\n You Will Be Blocked For Sure !`)
+	}
+		break
 
 
 case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
@@ -5083,6 +5092,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❒🔥 ${prefix}welcome
 ❒🔥 ${prefix}support
 ❒🔥 ${prefix}guess
+❒🔥 ${prefix}report
 
 *━━━〈 😎 𓆩 𝐎𝐖𝐍𝐄𝐑 𓆪 😎  〉━━━*
 
