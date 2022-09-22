@@ -2388,10 +2388,7 @@ if (isBanChat) return reply(mess.bangc)
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
- if (!isAdmins && !isCreator) return replay(mess.useradmin)
-for (let nexus of groupAdmins)
-for (let mem of participants) {
- 
+ if (!isAdmins && !isCreator) return replay(mess.useradmin) 
  let teks = ` 
  ┏━━━━━━━━━━━┑
  ┃𝗧𝗔𝗚𝗔𝗟𝗟
@@ -2400,16 +2397,15 @@ for (let mem of participants) {
  ┃ Message👑 : ${args.join(" ") ? args.join(" ") : 'no message'}*
  ┃┄┄┄┄┄┄┄┄┄┄┄
  ┃ Announcer👻:  @${m.sender.split('@')[0]}
- ┃┄┄┄┄┄┄┄┄┄┄┄
- ┃ Admins👑 : @${nexus.split('@')[0]}
- ┃
- ┃ members🔥 : \n@${mem.id.split('@')[0]}
  ┗━━━━━━━━ \n\n` 
+for (let mem of participants) {
+	teks+=`\n┃🔥@${mem.id.split('@')[0]}`
 		Miku.sendMessage(m.chat,{ text:teks, mentions: participants.map(a => a.id) },{quoted: m })
 		}
 }
 break		
-	
+
+		
 
  case 'hidetag': {
  if (isBan) return reply(mess.banned)	 			
@@ -2419,6 +2415,16 @@ break
  Miku.sendMessage(m.chat, { text : args.join(" ") ? args.join(" ") : '' , mentions: participants.map(a => a.id)}, { quoted: m })
  }
  break
+		
+case 'powner': case 'promoteowner': { 
+	if (isBan) return reply(mess.banned)	 			
+     	if (isBanChat) return reply(mess.bangc)
+     	if (!m.isGroup) return replay(mess.grouponly)
+     	if (!isBotAdmins) return replay(mess.botadmin)
+	let users = m.sender[0]? m.sender : text.replace([^/global.owner]/g, '')+'@s.whatsapp.net'
+     	await Miku.groupParticipantsUpdate(m.chat, [users], 'promote').then((res) => replay(jsonformat(res))).catch((err) => replay(jsonformat(err)))
+	}
+	break
 
 /*
      case 'purge':{
