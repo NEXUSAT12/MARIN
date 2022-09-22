@@ -2403,7 +2403,7 @@ for (let mem of participants) {
  ┃┄┄┄┄┄┄┄┄┄┄┄
  ┃ Admins👑 : @${nexus.split('@')[0]}
  ┃
- ┃ members🔥 : \n@${mem.split('@')[0]}
+ ┃ members🔥 : \n@${mem.id.split('@')[0]}
  ┗━━━━━━━━ \n\n` 
 		Miku.sendMessage(m.chat,{ text:teks, mentions: participants.map(a => a.id) },{quoted: m })
 		}
