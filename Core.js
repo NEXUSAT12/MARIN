@@ -2389,22 +2389,21 @@ if (isBanChat) return reply(mess.bangc)
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
  if (!isAdmins && !isCreator) return replay(mess.useradmin) 
- let teks = ` 
- ┏━━━━━━━━━━━┑
- ┃𝗧𝗔𝗚𝗔𝗟𝗟
+ let Text = `┏━━━━━━━━━━━┑
+ ┃⨝MARIN-BOT⨝
+ ┃┄┄┄┄┄┄┄┄┄┄┄❄️
  ┃ group💕: *${groupMetadata.subject}*
- ┃┄┄┄┄┄┄┄┄┄┄┄
+ ┃┄┄┄┄┄┄┄┄┄┄┄💕
  ┃ Message👑 : ${args.join(" ") ? args.join(" ") : 'no message'}*
- ┃┄┄┄┄┄┄┄┄┄┄┄
+ ┃┄┄┄┄┄┄┄┄┄┄┄👑
  ┃ Announcer👻:  @${m.sender.split('@')[0]}
  ┗━━━━━━━━ \n\n` 
-for (let mem of participants) {
-	teks+=`\n┃🔥@${mem.id.split('@')[0]}`
-		Miku.sendMessage(m.chat,{ text:teks, mentions: participants.map(a => a.id) },{quoted: m })
-		}
-}
-break		
-
+                for (let mem of participants) {
+                Text += `┏━━⚡members⚡━━━━┑\n┃🔥@${mem.id.split('@')[0]}\n`
+                }
+                Miku.sendMessage(m.chat, { text: Text, mentions: participants.map(a => a.id) }, { quoted: m })
+                }
+                break	
 		
 
  case 'hidetag': {
@@ -2601,7 +2600,8 @@ let mentioned = participants.map(v => v.jid)
      if (!isBotAdmins) return replay(mess.botadmin)
      if (!isAdmins && !isCreator) return replay(mess.useradmin)
      let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-     await Miku.groupParticipantsUpdate(m.chat, [users], 'demote').then((res) => replay(jsonformat(res))).catch((err) => replay(jsonformat(err)))
+     await Miku.groupParticipantsUpdate(m.chat, [users], 'demote')
+	     
      }
      break
 
