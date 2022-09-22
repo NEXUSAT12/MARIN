@@ -2940,52 +2940,6 @@ case 'git': case 'gitclone':
     m.reply(`*Please wait, sending repository..*`)
     Miku.sendMessage(m.chat, { document: { url: url }, fileName: filename+'.zip', mimetype: 'application/zip' }, { quoted: m }).catch((err) => m.reply('*Sorry, the github link you provided is private, and cant be made into a file*'))
 			break
-		
-case 'igstalk': case 'instagramstalk': {
-if (isBan) return reply(mess.banned)	 			
-if (isBanChat) return reply(mess.bangc)
-////if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return m.reply(mess.endLimit)
-if (!text) throw `*where is the Username ? example : ${prefix + command} NEXUSAT12*`	    
-nex = await fetchJson(`https://api.lolhuman.xyz/api/stalkig/${text}?apikey=${setting.lolkey}`) 
-NEXUS = nex.result.photo_profile
-tesk = `
-▊▊▊STALKER   ▊▊▊
-▊▊▊INSTAGRAM ▊▊▊
-*Data Successfully Obtained!*
-▢ Username :  ${nex.result.username}
-▢ Full Name : ${nex.result.fullname}
-▢ Followers : ${nex.result.followers}
-▢ Following : ${nex.result.following}
-▢ total post : ${nex.result.posts}
-▢ Bio : ${nex.result.bio}
-`var yaha = await getBuffer(NEXUS)
-Miku.sendMessage(m.chat, { image: yaha, jpegThumbnail:yaha, caption: `${tesk}` }, { quoted: m }).catch((err) => m.reply('*Username Not found*'))
-}
-break
-case 'stalkgithub': case 'githubstalk': {
-if (isBan) return reply(mess.banned)	 			
-if (isBanChat) return reply(mess.bangc)
-//if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return m.reply(mess.endLimit)
-              if (!text) throw `*Example : ${prefix + command} zim-bot*`
-              ini_result = await fetchJson(`https://api-riychdwayne.herokuapp.com/api/githubstalk?username=${text}&apikey=${setting.riy}`) 
-              ini_result = inii_result.result             
-              ini_txt = `
-▊▊▊STALKER ▊▊▊
-▊▊▊GITHUB   ▊▊▊
-*Data Successfully Obtained!*
-\`\`\`📫 AVATAR : ${inii_result.avatar}\`\`\`
-\`\`\`🎞 PUBLIC REPO : ${inii_result.public_repo}\`\`\`
-\`\`\`📟 PUBLIC GISTS : ${inii_result.public_gists}\`\`\`
-\`\`\`📮 FOLLOWERS : ${inii_result.follower}\`\`\`
-\`\`\`📚 FOLLOWING : ${inii_result.following}\`\`\`
-\`\`\`📻 BIO : ${inii_result.bio}\`\`\`
-\`\`\`🗃️ EMAIL : ${inii_result.email}\`\`\`
-\`\`\`🗃️ LOCATION : ${inii_result.location}\`\`\`
-\`\`\`🗃️ TWITTER : ${inii_result.twiter_username}\`\`\`
-`
-Miku.sendImage(m.chat, inii_result.avatar, `${ini_txt}`, m).catch((err) => m.reply('*Username Not found*'))
-}
-break
 
 
 
@@ -5370,8 +5324,6 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❒🔥 ${prefix}stickermeme
 ❒🔥 ${prefix}quotes
 ❒🔥 ${prefix}darkjoke
-❒🔥 ${prefix}igstalk
-❒🔥 ${prefix}githubstalk
 ❒🔥 ${prefix}gitclone
 
 *━━━〈  𓆩 🔥 𝐅𝐔𝐍 🔥 𓆪  〉━━━*
