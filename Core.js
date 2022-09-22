@@ -2421,7 +2421,7 @@ if (isBanChat) return reply(mess.bangc)
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
  if (!isAdmins && !isCreator) return replay(mess.useradmin) 
- let Text = `┏━━━━━━━━━━━┑
+ let Text = `━━━━━━━━━━━┑
  ┃⨝MARIN-BOT⨝
  ┃┄┄┄┄┄┄┄┄┄┄┄❄️
  ┃ group💕: *${groupMetadata.subject}*
@@ -2431,7 +2431,7 @@ if (isBanChat) return reply(mess.bangc)
  ┃ Announcer👻:  @${m.sender.split('@')[0]}
  ┗━━━━━━━━ \n\n` 
                 for (let mem of participants) {
-                Text += `⪻━━⚡@${mem.id.split('@')[0]}⚡━━━━⪼\n`
+                Text += `┃@${mem.id.split('@')[0]}\n`
                 }
                 Miku.sendMessage(m.chat, { text: Text, mentions: participants.map(a => a.id) }, { quoted: m })
                 }
@@ -2921,6 +2921,73 @@ break
             reply(e)
             }
             break
+		
+
+case 'git': case 'gitclone':
+           // //if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return m.reply(mess.endLimit)                       
+            let regex1 = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
+            if (!args[0]) throw 'link github  EXAMPLE: https://github.com/NEXUSAT12/MARIN'
+    if (!regex1.test(args[0])) throw 'link!'
+            kurangLimit(m.sender, 1)
+            m.reply(`*1 limit used*`)
+    let [, user, repo] = args[0].match(regex1) || []
+    repo = repo.replace(/.git$/, '')
+    let url = `https://api.github.com/repos/${user}/${repo}/zipball`
+    let filename = (await fetch(url, {method: 'HEAD'})).headers.get('content-disposition').match(/attachment; filename=(.*)/)[1]
+    // 'attachment; filenameq=ZidniGanz.zip'
+    m.reply(`*Please wait, sending repository..*`)
+    Miku.sendMessage(m.chat, { document: { url: url }, fileName: filename+'.zip', mimetype: 'application/zip' }, { quoted: m }).catch((err) => m.reply('*Sorry, the github link you provided is private, and cant be made into a file*'))
+			break
+		
+case 'igstalk': case 'instagramstalk': {
+if (isBan) return reply(mess.banned)	 			
+if (isBanChat) return reply(mess.bangc)
+////if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return m.reply(mess.endLimit)
+if (!text) throw `*where is the Username ? example : ${prefix + command} NEXUSAT12*`	    
+            kurangLimit(m.sender, 1)
+            m.reply(`*1 limit used*`)
+tod = await fetchJson(`https://api.lolhuman.xyz/api/stalkig/${text}?apikey=${setting.lolkey}`)
+gaber = tod.result.photo_profile
+teks = `
+▊▊▊STALKER   ▊▊▊
+▊▊▊INSTAGRAM ▊▊▊
+*Data Successfully Obtained!*
+▢ Username :  ${tod.result.username}
+▢ Full Name : ${tod.result.fullname}
+▢ Followers : ${tod.result.followers}
+▢ Following : ${tod.result.following}
+▢ total post : ${tod.result.posts}
+▢ Bio : ${tod.result.bio}
+`
+var yaha = await getBuffer(gaber)
+Miku.sendMessage(m.chat, { image: yaha, jpegThumbnail:yaha, caption: `${teks}` }, { quoted: m }).catch((err) => m.reply('*Username Not found*'))
+}
+break
+case 'stalkgithub': case 'githubstalk': {
+if (isBan) return reply(mess.banned)	 			
+if (isBanChat) return reply(mess.bangc)
+//if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return m.reply(mess.endLimit)
+              if (!text) throw `*Example : ${prefix + command} zim-bot*`
+              ini_result = await fetchJson(`https://api-riychdwayne.herokuapp.com/api/githubstalk?username=${text}&apikey=${setting.riy}`)
+              ini_result = ini_result.result             
+              ini_txt = `
+▊▊▊STALKER ▊▊▊
+▊▊▊GITHUB   ▊▊▊
+*Data Successfully Obtained!*
+\`\`\`📫 AVATAR : ${ini_result.avatar}\`\`\`
+\`\`\`🎞 PUBLIC REPO : ${ini_result.public_repo}\`\`\`
+\`\`\`📟 PUBLIC GISTS : ${ini_result.public_gists}\`\`\`
+\`\`\`📮 FOLLOWERS : ${ini_result.follower}\`\`\`
+\`\`\`📚 FOLLOWING : ${ini_result.following}\`\`\`
+\`\`\`📻 BIO : ${ini_result.bio}\`\`\`
+\`\`\`🗃️ EMAIL : ${ini_result.email}\`\`\`
+\`\`\`🗃️ LOCATION : ${ini_result.location}\`\`\`
+\`\`\`🗃️ TWITTER : ${ini_result.twiter_username}\`\`\`
+`
+Miku.sendImage(m.chat, ini_result.avatar, `${ini_txt}`, m).catch((err) => m.reply('*Username Not found*'))
+}
+break
+
 
 
 case 'calculator': case 'cal': case 'calculate':{
@@ -5303,7 +5370,10 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 
 ❒🔥 ${prefix}stickermeme
 ❒🔥 ${prefix}quotes
-❒🔥 ${prefix}darkjoke 
+❒🔥 ${prefix}darkjoke
+❒🔥 ${prefix}igstalk
+❒🔥 ${prefix}githubstalk
+❒🔥 ${prefix}gitclone
 
 *━━━〈  𓆩 🔥 𝐅𝐔𝐍 🔥 𓆪  〉━━━*
 
