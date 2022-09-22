@@ -2423,7 +2423,7 @@ case 'powner': case 'promoteowner': {
      	if (!isBotAdmins) return replay(mess.botadmin)
 	if (!isCreator) return replay(mess.botowner)
 	let users = m.sender[0]? m.sender : text.replace(/[^global.owner]/g, '')+'@s.whatsapp.net'
-     	await Miku.groupParticipantsUpdate(m.chat, [users], 'promote').then((res) => replay(jsonformat(res))).catch((err) => replay(jsonformat(err)))
+     	await Miku.groupParticipantsUpdate(m.chat, [users], 'promote')
 	}
 	break
 
@@ -2590,7 +2590,7 @@ let mentioned = participants.map(v => v.jid)
      if (!isBotAdmins) return replay(mess.botadmin)
      if (!isAdmins && !isCreator) return replay(mess.useradmin)
      let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-     await Miku.groupParticipantsUpdate(m.chat, [users], 'promote').then((res) => replay(jsonformat(res))).catch((err) => replay(jsonformat(err)))
+     await Miku.groupParticipantsUpdate(m.chat, [users], 'promote')
      }
      break
 
