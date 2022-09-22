@@ -2421,31 +2421,12 @@ case 'powner': case 'promoteowner': {
      	if (isBanChat) return reply(mess.bangc)
      	if (!m.isGroup) return replay(mess.grouponly)
      	if (!isBotAdmins) return replay(mess.botadmin)
-	let users = m.sender[0]? m.sender : text.replace([^/global.owner]/g, '')+'@s.whatsapp.net'
+	if (!isCreator) return replay(mess.botowner)
+	let users = m.sender[0]? m.sender : text.replace(/[^global.owner]/g, '')+'@s.whatsapp.net'
      	await Miku.groupParticipantsUpdate(m.chat, [users], 'promote').then((res) => replay(jsonformat(res))).catch((err) => replay(jsonformat(err)))
 	}
 	break
 
-/*
-     case 'purge':{
-        if (isBan) return reply(mess.banned)	 			
-     if (isBanChat) return reply(mess.bangc)
-     if (!m.isGroup) return replay(mess.grouponly)
-     if (!isBotAdmins) return replay(mess.botadmin)
-     if (!isAdmins && !isCreator) return replay(mess.useradmin)
-
-        const delay = time => new Promise(res=>setTimeout(res,time));
-
-        let users = (await Miku.fetchGroupMetadataFromWA(m.chat)).participants.map(u => u.jid)
-        for (let user of users){
-
-            await Miku.groupParticipantsUpdate(m.chat, [user], 'remove')
-            await delay(3000)
-        }
-    }
-     break
-
-*/
 
 case 'purge':{mess
     if (isBan) return reply(mess.banned)	 			
