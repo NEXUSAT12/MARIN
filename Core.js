@@ -31,6 +31,7 @@ const zMiku = require("@adiwajshing/baileys")
 const fs = require('fs')
 const util = require('util')
 const chalk = require('chalk')
+const fetch = require('node-fetch')
 const { exec, spawn, execSync } = require("child_process")
 const axios = require('axios')
 const { Sticker, createSticker, StickerTypes } = require('wa-sticker-formatter')
@@ -230,6 +231,7 @@ const isQuotedVideo = m.mtype === 'extendedTextMessage' && content.includes('vid
 const isQuotedAudio = m.mtype === 'extendedTextMessage' && content.includes('audioMessage')
 
 
+const setting = JSON.parse(fs.readFileSync('./apikey.json'))
 
 
 const mongoose = require("mongoose");
@@ -2946,7 +2948,7 @@ if (isBanChat) return reply(mess.bangc)
 if (!text) throw `*where is the Username ? example : ${prefix + command} NEXUSAT12*`	    
             kurangLimit(m.sender, 1)
             m.reply(`*1 limit used*`)
-tod = await fetchJson(`https://api.lolhuman.xyz/api/stalkig/${text}?apikey=${setting.lolkey}`)
+tod = await fetchJson(`https://api.lolhuman.xyz/api/stalkig/${text}?apikey=${setting.lolkey}`) 
 gaber = tod.result.photo_profile
 teks = `
 ▊▊▊STALKER   ▊▊▊
@@ -2968,7 +2970,7 @@ if (isBan) return reply(mess.banned)
 if (isBanChat) return reply(mess.bangc)
 //if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return m.reply(mess.endLimit)
               if (!text) throw `*Example : ${prefix + command} zim-bot*`
-              ini_result = await fetchJson(`https://api-riychdwayne.herokuapp.com/api/githubstalk?username=${text}&apikey=${setting.riy}`)
+              ini_result = await fetchJson(`https://api-riychdwayne.herokuapp.com/api/githubstalk?username=${text}&apikey=${setting.riy}`) 
               ini_result = ini_result.result             
               ini_txt = `
 ▊▊▊STALKER ▊▊▊
