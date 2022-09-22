@@ -1,3 +1,29 @@
+/ ⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈
+//▮MARIN-BOT INC 2022 ®️ALL RIGHTS RESERVED
+//▮
+//▮FORK AND DON'T FORGET TO GIVE A STAR
+//▮
+//▮THIS SOFTWARE IS UNDER UZ COPYRIGHT
+//▮
+//▮REPORT ABUSE OF THIS SOFTWARE EMAIL US
+//▮WHATSAPP US : +918130784851
+//▮
+//╰▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+//
+//┏━━━━━━━━━━━━━━━━━━━━━━━━━
+//┃THIS SOFTWARE INCLUDES 
+//┃SOME ENCRYPTED FILES
+//┃
+//┃THANKS FOR CHOOSING MARIN-BOT
+//┃THANKS TO NEXUS
+//┃BEHOLD THE NEW
+//┃
+//┃LET LOVE LEAD
+//┃
+//┃YOU WANNA RE UPLOAD GIVE A PROPER CREDIT
+//┗━━━━━━━━━━━━━━━━━━━━━━━━━
+//
+
 process.on('uncaughtException', console.error)
 require("./config")
 const { BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, proto, generateWAMessageContent, generateWAMessage, prepareWAMessageMedia, areJidsSameUser, getContentType, WAFlag } = require('@adiwajshing/baileys')
@@ -132,9 +158,7 @@ const _autostick = JSON.parse(fs.readFileSync('./database/autostickpc.json'))
 let _leveling = JSON.parse(fs.readFileSync('./database/leveling.json'))
 let _level = JSON.parse(fs.readFileSync('./database/level.json'))
 let limit = JSON.parse(fs.readFileSync('./database/limit.json'))
-let setik = JSON.parse(fs.readFileSync('./src/sticker.json'))
 let vien = JSON.parse(fs.readFileSync('./src/audio.json'))
-let imagi = JSON.parse(fs.readFileSync('./src/image.json'))
 let videox = JSON.parse(fs.readFileSync('./src/video.json'))
 global.db = JSON.parse(fs.readFileSync('./src/database.json'))
 let _sewa = require("./lib/sewa");
@@ -560,7 +584,15 @@ limit: limitUser,
 } catch (err) {
 console.error(err)
 }
-
+//bgm code//
+for (let ayu of vien){
+    if (budy == ayu){
+	    result = fs.readFileSync(`./nexusmedia/${ayu}.mp3`)
+	    Miku.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4' , ptt: true }, { quoted: m})
+	}
+	} 
+	
+/////////////////////////////////////////
 const sendOrder = async(jid, text, orid, img, itcount, title, sellers, tokens, ammount) => {
 const order = generateWAMessageFromContent(jid, proto.Message.fromObject({
  "orderMessage": {
@@ -2399,13 +2431,14 @@ if (isBanChat) return reply(mess.bangc)
  ┃ Announcer👻:  @${m.sender.split('@')[0]}
  ┗━━━━━━━━ \n\n` 
                 for (let mem of participants) {
-                Text += `┏━━⚡members⚡━━━━┑\n┃🔥@${mem.id.split('@')[0]}\n`
+                Text += `⪻━━⚡@${mem.id.split('@')[0]}⚡━━━━⪼\n`
                 }
                 Miku.sendMessage(m.chat, { text: Text, mentions: participants.map(a => a.id) }, { quoted: m })
                 }
                 break	
 		
 
+		
  case 'hidetag': {
  if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
