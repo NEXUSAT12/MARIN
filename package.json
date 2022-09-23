@@ -1,6 +1,6 @@
 {
- "name": "miku-md",
- "description": "Multi Device Whatsapp Bot By Xeon",
+ "name": "Marin-md",
+ "description": "Multi Device Whatsapp Bot By NEXUS",
  "version": "3.0.0",
  "main": "index.js",
  "type": "commonjs",
@@ -18,7 +18,7 @@
   "bot-md",
   "multi-device"
  ],
- "author": "Fantox (FantoX001)",
+ "author": "NEXUSAT12",
  "license": "MIT",
  "dependencies": {
   "@adiwajshing/baileys": "^4.3.0",
@@ -86,10 +86,10 @@
  },
  "repository": {
   "type": "git",
-  "url": "git+https://github.com/DGXeon/CheemsBot-MD3.git"
+  "url": "git+https://github.com/NEXUSAT12/MARIN.git"
  },
  "bugs": {
-  "url": "https://github.com/DGXeon/CheemsBot-MD3/issues"
+  "url": "https://github.com/NEXUSAT12/MARIN/issues"
  },
- "homepage": "https://github.com/DGXeon/CheemsBot-MD3#readme"
+ "homepage": "https://github.com/NEXUSAT12/MARIN#readme"
 }
