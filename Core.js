@@ -1521,7 +1521,7 @@ break
 
 case 'support': case 'supportgc':
     
-    reply(`*My developer's group:* http://wa.me/${global.OwnerNumber}`)
+    reply(`*My developer's group:*\n\n https://chat.whatsapp.com/DDWBpH9ciy38RCGYO7RkfM`)
     break
 
 case 'repo': case 'botrepo':
@@ -2803,13 +2803,13 @@ ${vote[m.chat][2].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')
             menvote = vote[m.chat][1].concat(vote[m.chat][2])
             teks_vote = `*「 VOTE 」*
 *Reason:* ${vote[m.chat][0]}
-┌〔 UPVOTE 〕
+┌〔 𝐔𝐏𝐕𝐎𝐓𝐄 〕
 │ 
 ┃╠ Total: ${vote[m.chat][1].length}
 ${vote[m.chat][1].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
 │ 
 └────
-┌〔 DEVOTE 〕
+┌〔 𝐃𝐄𝐕𝐎𝐓𝐄 〕
 │ 
 ┃╠ Total: ${vote[m.chat][2].length}
 ${vote[m.chat][2].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
@@ -5119,7 +5119,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 │🔥 𝐈'𝐀𝐌:  🎀𝓜𝓐𝓡𝓘𝓝𝓔🎀
 │🔥𝐌𝐲 𝐏𝐫𝐞𝐟𝐢𝐱: ${prefix}
 │🔥 私の愛: *${prefix}owner*
-│🔥 私の愛 : wa.me//+918130784851     
+│🔥 私の愛 : wa.me/${global.Owner}     
 ╰────────────┈平和   
 
 
@@ -5368,7 +5368,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 └────────────┈𖣘
 ❅┈[𝐇𝐚𝐯𝐞 𝐆𝐫𝐞𝐚𝐭 𝐃𝐚𝐲]┈❅
  
- 🔥 𝐢𝐟 𝐲𝐨𝐮 𝐡𝐚𝐯𝐞 𝐚𝐧𝐲 *𝐛𝐨𝐭 𝐫𝐞𝐥𝐚𝐭𝐞𝐝* 𝐪𝐮𝐞𝐬𝐭𝐢𝐨𝐧 𝐭𝐡𝐞𝐧 𝐚𝐬𝐤 𝐡𝐞𝐫𝐞 *-* https://api.whatsapp.com/send?phone=+919971690443 .
+ 🔥 𝐢𝐟 𝐲𝐨𝐮 𝐡𝐚𝐯𝐞 𝐚𝐧𝐲 *𝐛𝐨𝐭 𝐫𝐞𝐥𝐚𝐭𝐞𝐝* 𝐪𝐮𝐞𝐬𝐭𝐢𝐨𝐧 𝐭𝐡𝐞𝐧 𝐚𝐬𝐤 𝐡𝐞𝐫𝐞 *-* https://wa.me/${global.Botno1} .
 
  🔥 Type " *${prefix}help* " 𝐅𝐎𝐑 𝐂𝐎𝐌𝐌𝐀𝐍𝐃 𝐋𝐢𝐬𝐭.`
  
