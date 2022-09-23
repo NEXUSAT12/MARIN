@@ -2423,17 +2423,17 @@ if (isBanChat) return reply(mess.bangc)
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
  if (!isAdmins && !isCreator) return replay(mess.useradmin) 
- let Text = `╭━━━━𝗠𝗔𝗥𝗜𝗡-𝗧𝗔𝗚━━━━╮
- ┃
- ┃┄┄┄┄┄┄┄┄┄┄┄❄️
- ┃ 𝗚𝗿𝗼𝘂𝗽💕: *${groupMetadata.subject}*
- ┃┄┄┄┄┄┄┄┄┄┄┄💕
- ┃ 𝗠𝗘𝗦𝗦𝗔𝗚𝗘👑 : ${args.join(" ") ? args.join(" ") : 'no message'}*
- ┃┄┄┄┄┄┄┄┄┄┄┄👑
- ┃ 𝗔𝗡𝗡𝗢𝗨𝗡𝗖𝗘𝗥👻:  @${m.sender.split('@')[0]}
- ┗━━━━━━━━ \n\n╭╼━━━━━𝗚𝗥𝗢𝗨𝗣_𝗠𝗘𝗠𝗕𝗘𝗥𝗦━━━━╾╮` 
+ let Text = `╭━━━≺ 𝗠𝗔𝗥𝗜𝗡-𝗧𝗔𝗚 ≻━━━╮
+┃
+┃┄┄┄┄┄┄┄┄┄┄┄
+┃ 𝗚𝗿𝗼𝘂𝗽💕: *${groupMetadata.subject}*
+┃┄┄┄┄┄┄┄┄┄┄┄
+┃ 𝗠𝗘𝗦𝗦𝗔𝗚𝗘👑 : ${args.join(" ") ? args.join(" ") : 'no message'}*
+┃┄┄┄┄┄┄┄┄┄┄┄
+┃ 𝗔𝗡𝗡𝗢𝗨𝗡𝗖𝗘𝗥👻:  @${m.sender.split('@')[0]}
+┗━━━━━━━━□ \n\n╭╼━━━━≺ 𝗚𝗥𝗢𝗨𝗣_𝗠𝗘𝗠𝗕𝗘𝗥𝗦 ≻━━━╾╮` 
                 for (let mem of participants) {
-                Text += `╠@${mem.id.split('@')[0]}━━━╾╯\n`
+                Text += `╠@${mem.id.split('@')[0]}\n`
                 }
                 Nexus.sendMessage(m.chat, { text: Text, mentions: participants.map(a => a.id) }, { quoted: m })
                 }
@@ -2930,8 +2930,6 @@ case 'git': case 'gitclone':
             let regex1 = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
             if (!args[0]) throw 'link github  EXAMPLE: https://github.com/NEXUSAT12/MARIN'
     if (!regex1.test(args[0])) throw 'link!'
-            kurangLimit(m.sender, 1)
-            m.reply(`*1 limit used*`)
     let [, user, repo] = args[0].match(regex1) || []
     repo = repo.replace(/.git$/, '')
     let url = `https://api.github.com/repos/${user}/${repo}/zipball`
