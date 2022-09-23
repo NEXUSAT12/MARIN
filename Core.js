@@ -2431,9 +2431,9 @@ if (isBanChat) return reply(mess.bangc)
  ┃ 𝗠𝗘𝗦𝗦𝗔𝗚𝗘👑 : ${args.join(" ") ? args.join(" ") : 'no message'}*
  ┃┄┄┄┄┄┄┄┄┄┄┄👑
  ┃ 𝗔𝗡𝗡𝗢𝗨𝗡𝗖𝗘𝗥👻:  @${m.sender.split('@')[0]}
- ┗━━━━━━━━ \n\n╭╼━━━━━𝗚𝗥𝗢𝗨𝗣_𝗠𝗘𝗠𝗕𝗘𝗥𝗦` 
+ ┗━━━━━━━━ \n\n╭╼━━━━━𝗚𝗥𝗢𝗨𝗣_𝗠𝗘𝗠𝗕𝗘𝗥𝗦━━━━╾╮` 
                 for (let mem of participants) {
-                Text += `『@${mem.id.split('@')[0]}』\n`
+                Text += `╠@${mem.id.split('@')[0]}━━━╾╯\n`
                 }
                 Nexus.sendMessage(m.chat, { text: Text, mentions: participants.map(a => a.id) }, { quoted: m })
                 }
