@@ -33,7 +33,7 @@ console.log(color('\nYou can follow me on GitHub: NEXUS_AT','aqua'))
     const Nexus = NexusConnect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
-        browser: ['Nexus by: Fantox','Safari','1.0.0'],
+        browser: ['Nexus by: NEXUSAT12'],
         auth: state,
         version
     })
@@ -155,6 +155,7 @@ I am *MARIN*, Welcome to ${metadata.subject}.
 
 *Group Description:*
 ${metadata.desc}
+hope you'll follow the rules of ${metadata.Subject}
 `
 
     let buttonMessage = {
@@ -170,7 +171,7 @@ Nexus.sendMessage(anu.id, buttonMessage)
                     Nexustext = `
 Sayonara 👋, @${WAuserName.split("@")[0]},
 
-I hope you will come back soon, but we are not going to miss you though!
+Hope you'll come back💕 *Just for saying leave kiya na dikhna nahi abh idhar🙄*!
 `
 
     let buttonMessage = {
