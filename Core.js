@@ -1990,8 +1990,8 @@ ntvirtex.splice(off, 1)
 replay('Success in turning off antivirus this group')
 } else {
   let buttonsntvirtex = [
-  { buttonId: `${prefix}on`, buttonText: { displayText: 'On' }, type: 1 },
-  { buttonId: `${prefix}off`, buttonText: { displayText: 'Off' }, type: 1 }
+  { buttonId: `${prefix} on`, buttonText: { displayText: 'On' }, type: 1 },
+  { buttonId: `${prefix} off`, buttonText: { displayText: 'Off' }, type: 1 }
   ]
   await Nexus.sendButtonText(m.chat, buttonsntvirtex, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.Botno1}`, m)
   }
@@ -2022,8 +2022,8 @@ nttoxic.splice(off, 1)
 replay('Success in turning off antitoxic in this group')
 } else {
   let buttonsnttoxci = [
-  { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
-  { buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
+  { buttonId: `${prefix} on`, buttonText: { displayText: 'On' }, type: 1 },
+  { buttonId: `${prefix} off`, buttonText: { displayText: 'Off' }, type: 1 }
   ]
   await Nexus.sendButtonText(m.chat, buttonsnttoxci, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.Botno1}`, m)
   }
@@ -3499,13 +3499,13 @@ await fs.unlinkSync(encmedia)
 }
 break
 		
-case 'attp2': {
-if (isBan) return reply(mess.banned)	 			
-if (isBanChat) return reply(mess.bangc)
-	if (!text) return reply(`Example : ${prefix + command} text`)
-        await Nexus.sendMedia(m.chat, `https://xteam.xyz/${command}?file&text=${text}`, 'hisoka', 'morou', m, {asSticker: true})
-}
-break
+// case 'attp2': {
+// if (isBan) return reply(mess.banned)	 			
+// if (isBanChat) return reply(mess.bangc)
+// 	if (!text) return reply(`Example : ${prefix + command} text`)
+//         await Nexus.sendMedia(m.chat, `https://xteam.xyz/${command}?file&text=${text}`, 'hisoka', 'morou', m, {asSticker: true})
+// }
+// break
 		
 case 'attp': {
 if (isBan) return reply(mess.banned)	 			
