@@ -1485,7 +1485,7 @@ let buttonspro = [
 		
 case 'kuismath': case 'math': {
 	if (isBan) return reply(mess.banned)
-	if (!isCreator) return replay(mess.botowner))
+	if (!isCreator) return replay(mess.botowner)
 	if (kuismath.hasOwnProperty(m.sender.split('@')[0])) return replay(`There Are Still Unfinished Sessions!`)
 	let { genMath, modes } = require('./lib/math')
 	if (!text) return replay(`Mode: ${Object.keys(modes).join(' | ')}\nFor Examples: ${prefix}math medium`)
@@ -1546,15 +1546,16 @@ reply(` Don't forget to join yeah!
 *GROUP 1*
 https://chat.whatsapp.com/DDWBpH9ciy38RCGYO7RkfM`)
 break
-case 'getsxvdxcmd': {
-if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-Nexus.sendMessage(from, {sticker:{url:"https://ZackNexus.github.io/media/menu.webp"}}, {quoted:m})
-Nexus.sendMessage(from, {sticker:{url:"https://ZackNexus.github.io/media/groupopen.webp"}}, {quoted:m})
-Nexus.sendMessage(from, {sticker:{url:"https://ZackNexus.github.io/media/groupclose.webp"}}, {quoted:m})
-}
-break
-
+		
+// //case 'getsxvdxcmd': {
+// if (isBan) return reply(mess.ban)	 			
+// if (isBanChat) return reply(mess.banChat)
+// Nexus.sendMessage(from, {sticker:{url:"https://ZackNexus.github.io/media/menu.webp"}}, {quoted:m})
+// Nexus.sendMessage(from, {sticker:{url:"https://ZackNexus.github.io/media/groupopen.webp"}}, {quoted:m})
+// Nexus.sendMessage(from, {sticker:{url:"https://ZackNexus.github.io/media/groupclose.webp"}}, {quoted:m})
+// }
+// break
+// //
 
 case 'support': case 'supportgc':
     
@@ -3236,44 +3237,43 @@ case 'google': case 'search': {
  }
  break
 
- case 'igdl': case 'instagram': case 'instagramreels': case 'igreels': {
-    if (isBan) return reply(mess.banned)	 			
- if (isBanChat) return reply(mess.bangc)
- if (!args[0]) return reply(`Example :\n${prefix + command} https://www.instagram.com/p/CcvJGuxh9VI/?igshid=YmMyMTA2M2Y=`)
- try {
- hx.igdl(args[0]).then(async(resed) => {
- ini_anu = []
- anu_list = []
- textbv = `「 _Instagram Downloader_ 」\n\nUsername : ${resed.user.username ? resed.user.name : "undefined"}\nFollowers : ${resed.user.followers}`
- urut = 1
- for (let i = 0; i < resed.medias.length; i++) {
- ini_anu.push({
-  "type": resed.medias[i].fileType,
-  "url": resed.medias[i].url
- })
- }
- ilod = 1
- for (let i of ini_anu) {
- anu_list.push({buttonId: `${prefix}ig ${i.type} ${i.url}`, buttonText: {displayText: `Media ${ilod++}`}, type: 1})
- }
- textbv += `\n\n_Select the media below to download_`
- let buttons = anu_list
- let buttonMessage = {
- image:BotLogo,
- jpegThumbnail:Thumb,
- caption: textbv,
- footer: `${global.BotName}`,
- buttons: buttons,
- headerType: 4
- }
- Nexus.sendMessage(from, buttonMessage, {quoted:m})
- })
- } catch (err) {
- reply("An Error Occured!")
- }
- }
- break
-
+case 'igdl': case 'instagram': case 'instagramreels': case 'igreels': {
+   if (isBan) return reply(mess.banned)	 			
+if (isBanChat) return reply(mess.bangc)
+if (!args[0]) return reply(`Example :\n${prefix + command} https://www.instagram.com/p/CcvJGuxh9VI/?igshid=YmMyMTA2M2Y=`)
+try {
+hx.igdl(args[0]).then(async(resed) => {
+ini_anu = []
+anu_list = []
+textbv = `*| INSTAGRAM DOWNLOADER |*\n\n${global.themeemoji} Username : ${resed.user.username ? resed.user.name : "undefined"}\n${global.themeemoji} Followers : ${resed.user.followers}`
+urut = 1
+for (let i = 0; i < resed.medias.length; i++) {
+ini_anu.push({
+ "type": resed.medias[i].fileType,
+ "url": resed.medias[i].url
+})
+}
+ilod = 1
+for (let i of ini_anu) {
+anu_list.push({buttonId: `ig ${i.type} ${i.url}`, buttonText: {displayText: `Media ${ilod++}`}, type: 1})
+}
+textbv += `\n\n_Select the media below to download_`
+let buttons = anu_list
+let buttonMessage = {
+image:log0,
+jpegThumbnail:thum,
+caption: textbv,
+footer: `${global.botname}`,
+buttons: buttons,
+headerType: 4
+}
+Nexus.sendMessage(from, buttonMessage, {quoted:m})
+})
+} catch (err) {
+reply(String(err))
+}
+}
+break
  case 'ig': {
     if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
@@ -3485,6 +3485,41 @@ Nexus.sendMessage(from, buttonMessage, {quoted:m})
 reply("Link invalid!")
 }
 }
+break
+		
+case 'patrick':
+case 'patricksticker': {
+if (isBan) return reply(mess.banned)
+if (isBanChat) return reply(mess.bangc)
+var ano = await fetchJson('https://raw.githubusercontent.com/rashidsiregar28/data/main/patrik')
+var wifegerak = ano.split('\n')
+var wifegerakx = wifegerak[Math.floor(Math.random() * wifegerak.length)]
+encmedia = await Nexus.sendImageAsSticker(from, wifegerakx, m, { packname: global.packname, author: global.author, })
+await fs.unlinkSync(encmedia)
+}
+break
+		
+case 'attp2': {
+if (isBan) return reply(mess.banned)	 			
+if (isBanChat) return reply(mess.bangc)
+	if (!text) return reply(`Example : ${prefix + command} text`)
+        await Nexus.sendMedia(m.chat, `https://xteam.xyz/${command}?file&text=${text}`, 'hisoka', 'morou', m, {asSticker: true})
+}
+break
+		
+case 'attp': {
+if (isBan) return reply(mess.banned)	 			
+if (isBanChat) return reply(mess.bangc)
+	if (!text) reply(`Use ${prefix}attp hello\n*Example : ${prefix + command} ${OwnerName }*` )
+        await Nexus.sendMedia(m.chat, `https://cililitan.herokuapp.com/api/attp?teks=${text}`, 'Xeon', 'Op', m, {asSticker: true}).catch((err) => reply(mess.error))
+}		
+break
+case 'ttp': {
+if (isBan) return reply(mess.banned)	 			
+if (isBanChat) return reply(mess.bangc)
+	if (!text) return reply(`*Example : ${prefix + command} hello*`)
+	await Nexus.sendMedia(m.chat, `https://cililitan.herokuapp.com/api/texttopng2?teks=${text}`, 'A L Y A', 'B O T M D', m, {asSticker: true})
+	}
 break
 
 case 'fbddlxx': {
@@ -5244,7 +5279,6 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❒🔥 ${prefix}listpc
 ❒🔥 ${prefix}welcome
 ❒🔥 ${prefix}support
-❒🔥 ${prefix}guess
 ❒🔥 ${prefix}report
 
 *━━━〈 😎 𓆩 𝐎𝐖𝐍𝐄𝐑 𓆪 😎  〉━━━*
@@ -5452,6 +5486,11 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❒🔥 ${prefix}charactercheck
 ❒🔥 ${prefix}math
 ❒🔥 ${prefix}checkdeath
+❒🔥 ${prefix}guess
+❒🔥 ${prefix}attp
+❒🔥 ${prefix}attp2
+❒🔥 ${prefix}ttp
+❒🔥 ${prefix}patrick
 
 *━━━〈  𓆩 🪁 𝐄𝐒𝐒𝐄𝐍𝐓𝐈𝐀𝐋𝐒 🪁 𓆪  〉━━━*
 
