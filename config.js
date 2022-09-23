@@ -27,7 +27,7 @@ global.prefa = ['#']
 global.location = "ghaziabad, india"
 global.reactmoji = "❤️"
 global.themeemoji = "💖"
-global.vidmenu = { url: 'https://c.tenor.com/YGuLegQWubwAAAPo/miku-nakano-gotoubun-no-hanayome.mp4' }
+global.vidmenu = { url: 'https://c.tenor.com/PwuDrnpFBj8AAAPo/marin-kitagawa.mp4' }
 global.websitex = "https://github.com/NEXUSAT12"
 global.lolhuman = "ᴀʏᴜsʜ"
 
