@@ -2431,7 +2431,7 @@ if (isBanChat) return reply(mess.bangc)
 ┃ 𝗠𝗘𝗦𝗦𝗔𝗚𝗘👑 : ${args.join(" ") ? args.join(" ") : 'no message'}*
 ┃┄┄┄┄┄┄┄┄┄┄┄
 ┃ 𝗔𝗡𝗡𝗢𝗨𝗡𝗖𝗘𝗥👻:  @${m.sender.split('@')[0]}
-┗━━━━━━━━□ \n\n╭╼━━━━≺ 𝗚𝗥𝗢𝗨𝗣_𝗠𝗘𝗠𝗕𝗘𝗥𝗦 ≻━━━╾╮` 
+┗━━━━━━━━□ \n\n╭╼━━━━≺ 𝗠𝗘𝗠𝗕𝗘𝗥𝗦 ≻━━━╾╮\n\n` 
                 for (let mem of participants) {
                 Text += `╠@${mem.id.split('@')[0]}\n`
                 }
@@ -5373,8 +5373,9 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
  🔥 Type " *${prefix}help* " 𝐅𝐎𝐑 𝐂𝐎𝐌𝐌𝐀𝐍𝐃 𝐋𝐢𝐬𝐭.`
  
  
- let buttonshelpm = [{buttonId: `${prefix}owner`, buttonText: {displayText: `👑OWNER👑`}, type: 1},
-		     {buttonId: `${prefix}thanksto`, buttonText: {displayText: `💕THANKSTO💕`}, type: 1}
+ let buttonshelpm = [{buttonId: `${prefix}owner`, buttonText: {displayText: `😎OWNER😎`}, type: 1},
+		     {buttonId: `${prefix}thanksto`, buttonText: {displayText: `❤️‍🔥THANKSTO❤️‍🔥`}, type: 1},
+		     {buttonId: `${prefix}support`, buttonText: {displayText: `👑SUPPORT GROUP👑`}, type: 1}
 		    ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/Nexus2.mp4'),gifPlayback:true,
@@ -5393,7 +5394,7 @@ case 'thanksto':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-const tx = `Thanks to Me (nexus) PIKA (For helping me to find the api's that used in bot )And Again Me (NEXUS 🎉) 🐦 Who Helped Assemble This Sexy Script !!!`
+const tx = `□.Thanks to Me Nexus who created and assembled MARIN bot\n and thanks to  my  freind PIKA For helped me in finding some api's that used in bot  !!!`
 const Nexusarra= [
             "https://telegra.ph/file/fc8c10666835418136477.mp4",
             "https://telegra.ph/file/614ba2eb73d658b557b1b.mp4",
