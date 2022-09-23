@@ -161,6 +161,7 @@ let _level = JSON.parse(fs.readFileSync('./database/level.json'))
 let limit = JSON.parse(fs.readFileSync('./database/limit.json'))
 let vien = JSON.parse(fs.readFileSync('./src/audio.json'))
 let videox = JSON.parse(fs.readFileSync('./src/video.json'))
+let bad = JSON.parse(fs.readFileSync('./src/bad.json'))
 global.db = JSON.parse(fs.readFileSync('./src/database.json'))
 let _sewa = require("./lib/sewa");
 const sewa = JSON.parse(fs.readFileSync('./database/sewa.json'))
@@ -221,6 +222,7 @@ const AntiLinkTwitter = m.isGroup ? ntilinktwt.includes(from) : false
 const AntiLinkAll = m.isGroup ? ntilinkall.includes(from) : false
 const antiWame = m.isGroup ? ntwame.includes(from) : false
 const antiVirtex = m.isGroup ? ntvirtex.includes(from) : false
+const antiToxic = m.isGroup ? nttoxic.includes(from) : false
 const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : false
 const isLeveling = m.isGroup ? _leveling.includes(from) : false
 autoreadsw = true
@@ -763,6 +765,21 @@ if (AntiLink) {
     } else {
     }
     }
+    
+    if (antiToxic)
+if (bad.includes(messagesD)) {
+tos = ['Hey, watch your mouth','Never been taught how to speak?','Stop being toxic my friend🤢','Dont be toxic🦄']
+sin =  tos[Math.floor(Math.random() * (tos.length))]
+reply(sin)
+if (m.text) {
+bvl = `\`\`\`「 Bad Word Detected 」\`\`\`\n\nYou are using bad word but you are an admin that's why i won't kick you😇`
+if (isAdmins) return reply(bvl)
+if (m.key.fromMe) return reply(bvl)
+if (isCreator) return reply(bvl)
+kice = m.sender
+await Nexus.groupParticipantsUpdate(m.chat, [kice], 'remove')
+Nexus.sendMessage(from, {text:`\`\`\`「 Bad Word Detected 」\`\`\`\n\n@${kice.split("@")[0]} was kicked because of using bad words in this group`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})}
+}
  
     if (antiWame)
     if (budy.includes(`wa.me`)) {
@@ -1464,6 +1481,26 @@ let buttonspro = [
         Nexus.sendMessage(m.chat,buttonMessage,{quoted:m})
         	
             break
+		
+		
+case 'kuismath': case 'math': {
+	if (isBan) return reply(mess.banned)
+	if (!isCreator) return replay(mess.botowner))
+	if (kuismath.hasOwnProperty(m.sender.split('@')[0])) return replay(`There Are Still Unfinished Sessions!`)
+	let { genMath, modes } = require('./lib/math')
+	if (!text) return replay(`Mode: ${Object.keys(modes).join(' | ')}\nFor Examples: ${prefix}math medium`)
+	let result = await genMath(text.toLowerCase())
+	Nexus.sendText(m.chat, `*What Is The Result Of: ${result.soal.toLowerCase()}*?\n\nTime: ${(result.waktu / 1000).toFixed(2)} second`, m).then(() => {
+		kuismath[m.sender.split('@')[0]] = result.jawaban
+		})
+	await sleep(result.waktu)
+	if (kuismath.hasOwnProperty(m.sender.split('@')[0])) {
+		console.log("Answer: " + result.jawaban)
+		reply("Time Out\nAnswer: " + kuismath[m.sender.split('@')[0]])
+		delete kuismath[m.sender.split('@')[0]]
+		}
+	}
+break
 
 
 case 'banchat': case 'bangroup':{
@@ -1560,7 +1597,13 @@ case 'limituser': case 'userlimit': case 'limit':
               }
              break
     
-
+case 'checkdeath':
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+		if (!text) return replay(`Use Someone's Name, Example : ${prefix + command} Bot`)
+		predea = await axios.get(`https://api.agify.io/?name=${q}`)
+		reply(`Name : ${predea.data.name}\n*Dead At Age :* ${predea.data.age} Year.\n\n_Quick, Quick, Repent Bro, Because No One Knows About Death_`)
+break
 
 
 case 'ringtone': {
@@ -1704,9 +1747,9 @@ let sections = []
         if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
             let sections = []
-            let com = [`group open`,`leveling on`,`antilinkgc on`,`antilinktg on`,`antilinktt on`,`antilinkytch on`,`antilinkytvid on`,`antilinkig on`,`antilinkfb on`,`antilinktwit on`,`antilinkall on`,`antiwame on`]
-            let comm = [`group close`,`leveling off`,`antilinkgc off`,`antilinktg off`,`antilinktt off`,`antilinkytch off`,`antilinkytvid off`,`antilinkig on`,`antilinkfb off`,`antilinktwit off`,`antilinkall off`,`antiwame off`]
-            let listnya = [`Group open/close`,`Leveling on/off`,`Antilink Group on/off`,`Antilink Telegram on/off`,`Antilink Tiktok on/off`,`Antilink Youtube Channel on/off`,`Antilink Youtube Video on/off`,`Antilink Instagram on/off`,`Antilink Facebook on/off`,`Antilink Twitter on/off`,`Antilink All on/off`,`Anti Wame on/off`]
+            let com = [`group open`,`leveling on`,`antilinkgc on`,`antilinktg on`,`antilinktt on`,`antilinkytch on`,`antilinkytvid on`,`antilinkig on`,`antilinkfb on`,`antilinktwit on`,`antilinkall on`,`antiwame on`,`antitoxic on`,`antivirtex on`]
+            let comm = [`group close`,`leveling off`,`antilinkgc off`,`antilinktg off`,`antilinktt off`,`antilinkytch off`,`antilinkytvid off`,`antilinkig on`,`antilinkfb off`,`antilinktwit off`,`antilinkall off`,`antiwame off`,`antitoxic off`,`antivirtex off`]
+            let listnya = [`Group open/close`,`Leveling on/off`,`Antilink Group on/off`,`Antilink Telegram on/off`,`Antilink Tiktok on/off`,`Antilink Youtube Channel on/off`,`Antilink Youtube Video on/off`,`Antilink Instagram on/off`,`Antilink Facebook on/off`,`Antilink Twitter on/off`,`Antilink All on/off`,`Anti Wame on/off`,`Anti Toxic on/off`,`Anti Virtex on/off`]
             let suruh = [`Enable`, `Disable`]
             let fiturname = [`Group`,`Leveling`,`Auto Sticker`,`Antilink Group`,`Antilink Telegram`,`Antilink Tiktok`,`Antilink Youtube Channel`,`Antilink Youtube Video`,`Antilink Instagram`,`Antilink Facebook`,`Antilink Twitter`,`Antilink All`,`Anti Wame`,`Auto Revoke`]
             let startnum = 0; let startnu = 0; let startn = 0;let start = 0
@@ -1921,6 +1964,70 @@ await Nexus.sendMessage(m.chat, { delete: key })
  reply('Leveling deactivated')
  } 
  break
+		
+case 'antivirus': case 'antivirtex': {
+if (isBan) return reply(mess.banned)	 			
+if (isBanChat) return reply(mess.bangc)
+if (!m.isGroup) return replay(mess.grouponly)
+if (!isBotAdmins) return replay(mess.botadmin)
+if (!isAdmins && !isCreator) return replay(mess.useradmin)
+if (args[0] === "on") {
+if (antiVirtex) return replay('Already activated')
+ntvirtex.push(from)
+replay('Success in turning on antivirus in this group')
+var groupe = await Nexus.groupMetadata(from)
+var members = groupe['participants']
+var mems = []
+members.map(async adm => {
+mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
+})
+Nexus.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nNo body is allowed to send virus in this group, member who send will be kicked immediately!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+} else if (args[0] === "off") {
+if (!antiVirtex) return replay('Already deactivated')
+let off = ntvirtex.indexOf(from)
+ntvirtex.splice(off, 1)
+replay('Success in turning off antivirus this group')
+} else {
+  let buttonsntvirtex = [
+  { buttonId: `${prefix}on`, buttonText: { displayText: 'On' }, type: 1 },
+  { buttonId: `${prefix}off`, buttonText: { displayText: 'Off' }, type: 1 }
+  ]
+  await Nexus.sendButtonText(m.chat, buttonsntvirtex, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.Botno1}`, m)
+  }
+  }
+  break
+
+case 'antitoxic': {
+if (isBan) return reply(mess.banned)	 			
+if (isBanChat) return reply(mess.bangc)
+if (!m.isGroup) return replay(mess.grouponly)
+if (!isBotAdmins) return replay(mess.botadmin)
+if (!isAdmins && !isCreator) return replay(mess.useradmin)
+if (args[0] === "on") {
+if (antiToxic) return replay('Already activated')
+nttoxic.push(from)
+replay('Success in turning on antitoxic in this group')
+var groupe = await Nexus.groupMetadata(from)
+var members = groupe['participants']
+var mems = []
+members.map(async adm => {
+mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
+})
+Nexus.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nNobody is allowed to use bad words in this group, one who uses will be kicked immediately!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+} else if (args[0] === "off") {
+if (!antiToxic) return replay('Already deactivated')
+let off = nttoxic.indexOf(from)
+nttoxic.splice(off, 1)
+replay('Success in turning off antitoxic in this group')
+} else {
+  let buttonsnttoxci = [
+  { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
+  { buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
+  ]
+  await Nexus.sendButtonText(m.chat, buttonsnttoxci, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.Botno1}`, m)
+  }
+  }
+  break
 
  case 'antilinkgc': {
     if (isBan) return reply(mess.banned)	 			
@@ -5186,7 +5293,8 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❒🔥 ${prefix}antilinktwit
 ❒🔥 ${prefix}antilinkall
 ❒🔥 ${prefix}antiwame
-❒🔥 ${prefix}antiVirtex
+❒🔥 ${prefix}antivirtex
+❒🔥 ${prefix}antitoxic
 
 *━━━〈  🔍 𓆩 𝐒𝐄𝐀𝐑𝐂𝐇 𓆪 🔍 〉━━━*
 
@@ -5271,7 +5379,6 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❒🔥 ${prefix}ytmp3
 ❒🔥 ${prefix}ytmp4
 ❒🔥 ${prefix}ytvideo
-❒🔥 ${prefix}mediafire
 ❒🔥 ${prefix}instagram
 ❒🔥 ${prefix}igtv
 ❒🔥 ${prefix}facebook
@@ -5343,6 +5450,8 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❒🔥 ${prefix}lovelycheck
 ❒🔥 ${prefix}uglycheck
 ❒🔥 ${prefix}charactercheck
+❒🔥 ${prefix}math
+❒🔥 ${prefix}checkdeath
 
 *━━━〈  𓆩 🪁 𝐄𝐒𝐒𝐄𝐍𝐓𝐈𝐀𝐋𝐒 🪁 𓆪  〉━━━*
 
@@ -5399,8 +5508,6 @@ const Nexusarra= [
             "https://telegra.ph/file/fc8c10666835418136477.mp4",
             "https://telegra.ph/file/614ba2eb73d658b557b1b.mp4",
  	    "https://telegra.ph/file/b79a65e4311d5a680c10f.mp4",
-
-            
             ]
         
             const Nexusselectio = Nexusarra[Math.floor(Math.random()*Nexusarra.length)]
