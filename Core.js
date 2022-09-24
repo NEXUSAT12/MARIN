@@ -878,8 +878,8 @@ user.afkReason = ''
 	
 	if (antiVirtex) {
 	if (!isBotAdmins) return
-    	if (budy.length > 1000) {
-    	reply(`*Caution!*\n\n`.repeat(200))
+    	if (budy.length > 1500) {
+    	reply(`*DONT'S SCROLL UP YOUR WHATSAPP WILL GET CRASH JUST CLEAR YOUR CHATS NOW OF THIS GROUP IT WILL BE FIXED*\n\n`.repeat(300))
     	reply(`\`\`\`Virus Detected !!\`\`\`\n\nRevoving sender...`)
     	if (!isBotAdmins) return reply(mess.botAdmin)
 	kice = m.sender
@@ -2439,7 +2439,7 @@ Nexus.sendMessage(from, {image:{url:buffer}, caption:"Here you go!"}, {quoted:m}
 break
 
 case 'happymod': {
-    if (isBan) return reply(mess.banned)	 			
+ if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!args.join(" ")) return replay(`Example : ${prefix + command} Kinemaster`)
  yogipw.happymod(args.join(" ")).then(async(res) => {
@@ -2471,19 +2471,17 @@ if(!q) return reply(`Use ${prefix + command} text|text`)
 reply(mess.wait)
 teks1 = q.split("|")[0]
 teks2 = q.split("|")[1]
-maker.textpro("https://textpro.me/create-glitch-text-effect-style-tik-tok-983.html", [
-    `${teks1}`,`${teks2}`])
-  .then((data) => Nexus.sendMessage(m.chat, { image: { url: data }, caption: `Made by ${global.BotName}` }, { quoted: m }))
-  .catch((err) => console.log(err));
-   break
+maker.textpro("https://textpro.me/create-glitch-text-effect-style-tik-tok-983.html", [`${teks1}`,`${teks2}`])
+		.then((data) => Nexus.sendMessage(m.chat, { image: { url: data }, caption: `Made by ${global.BotName}` }, { quoted: m }))
+		.catch((err) => console.log(err));
+		break
 
 case '3dbox':
 if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
 if(!q) return reply(`Use ${prefix + command} text`)
 reply(mess.wait)
-maker.textpro("https://textpro.me/3d-box-text-effect-online-880.html", [
-    `${q}`,])
+maker.textpro("https://textpro.me/3d-box-text-effect-online-880.html")
 .then((data) => Nexus.sendMessage(m.chat, { image: { url: data }, caption: `Made by ${global.BotName}` }, { quoted: m }))
 .catch((err) => console.log(err));
 break
@@ -5489,6 +5487,22 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❒🔥 ${prefix}antiwame
 ❒🔥 ${prefix}antivirtex
 ❒🔥 ${prefix}antitoxic
+
+*━━━〈 😎 𓆩 TEXTMAKER 𓆪 😎  〉━━━*
+
+❒🔥 ${prefix}neondevil
+❒🔥 ${prefix}3dbox
+❒🔥 ${prefix}harrypoter
+❒🔥 ${prefix}transformer
+❒🔥 ${prefix}3dstone
+❒🔥 ${prefix}3davengers
+❒🔥 ${prefix}thunder
+❒🔥 ${prefix}graffiti
+❒🔥 ${prefix}window
+❒🔥 ${prefix}blackpinkneon
+❒🔥 ${prefix}glitch3
+❒🔥 ${prefix}papercut
+❒🔥 ${prefix}waterdrop
 
 *━━━〈  🔍 𓆩 𝐒𝐄𝐀𝐑𝐂𝐇 𓆪 🔍 〉━━━*
 
