@@ -879,13 +879,12 @@ user.afkReason = ''
 	if (antiVirtex) {
 	if (!isBotAdmins) return
     	if (budy.length > 1500) {
-    	reply(`*DONT'S SCROLL UP YOUR WHATSAPP WILL GET CRASH JUST CLEAR YOUR CHATS NOW OF THIS GROUP IT WILL BE FIXED*\n\n`.repeat(300))
-    	reply(`\`\`\`Virus Detected !!\`\`\`\n\nRevoving sender...`)
-    	if (!isBotAdmins) return reply(mess.botAdmin)
-	kice = m.sender
-    	await Nexus.groupParticipantsUpdate(m.chat, [kice], 'remove')
-    	}
-    	}
+		reply(`*DONT'S SCROLL UP YOUR WHATSAPP WILL GET CRASH JUST CLEAR YOUR CHATS NOW OF THIS GROUP IT WILL BE FIXED*\n\n`.repeat(200))
+		reply(`\`\`\`Virus Detected !!\`\`\`\n\nRevoving sender...`)	
+		kice = m.sender
+    		await Nexus.groupParticipantsUpdate(m.chat,{delete : budy}, [kice], 'remove')
+    		}
+    		}
         
         if (AntiLinkTelegram)
            if (budy.includes("https://t.me/")){
@@ -2713,6 +2712,25 @@ if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
  Nexus.sendMessage(m.chat, { text : args.join(" ") ? args.join(" ") : '' , mentions: participants.map(a => a.id)}, { quoted: m })
+ }
+ break
+		
+case 'deletethis': case 'delthis': case 'deletethismessage': case 'delthismsg': {
+    if (isBan) return reply(mess.banned)	 			
+ if (isBanChat) return reply(mess.bangc)
+ if (!isBotAdmins) return replay(mess.botadmin)
+ if (!isAdmins && !isCreator) return replay(mess.useradmin)
+ if (!m.quoted) return reply('Please mention a message baka!')
+ let { chat, fromMe, id} = m.quoted
+
+const key = {
+    remoteJid: m.chat,
+    fromMe: false,
+    id: m.quoted.id,
+    participant: m.quoted.sender
+}
+
+await Nexus.sendMessage(m.chat, { delete: key })
  }
  break
 		
