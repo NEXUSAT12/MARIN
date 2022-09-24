@@ -745,68 +745,68 @@ user.afkReason = ''
 }
 
 
-if (m.mtype === 'groupInviteMessage') {
-teks = `I can't join the group untill my *Owner* ask me to join. Type *-owner* to get owner number and ask him.`
-sendOrder(m.chat, teks, "5123658817728409", fs.readFileSync('./Assets/pic10.jpg'), `${watermark}`, `${BotName}`, "918130784851@s.whatsapp.net", "AR7zJt8MasFx2Uir/fdxhkhPGDbswfWrAr2gmoyqNZ/0Wg==", "99999999999999999999")
-}
+	if (m.mtype === 'groupInviteMessage') {
+	teks = `I can't join the group untill my *Owner* ask me to join. Type *-owner* to get owner number and ask him.`
+	sendOrder(m.chat, teks, "5123658817728409", fs.readFileSync('./Assets/pic10.jpg'), `${watermark}`, `${BotName}`, "918130784851@s.whatsapp.net", "AR7zJt8MasFx2Uir/fdxhkhPGDbswfWrAr2gmoyqNZ/0Wg==", "99999999999999999999")
+	}
 
-if (AntiLink) {
-    linkgce = await Nexus.groupInviteCode(from)
-    if (budy.includes(`https://chat.whatsapp.com/${linkgce}`)) {
-    reply(`\`\`\`「  Antilink System  」\`\`\`\n\nNo action will be because you sent this group's link.`)
-    } else if (isUrl(m.text)) {
-    bvl = `\`\`\`「  *Antilink System*  」\`\`\`\n\nAdmin has sent a link so no action is taken.`
-    if (isAdmins) return reply(bvl)
-    if (m.key.fromMe) return reply(bvl)
-    if (isCreator) return reply(bvl)
-    kice = m.sender
-    await Nexus.groupParticipantsUpdate(m.chat, [kice], 'remove').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
-    Nexus.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Baka Has been removed for sending link in this group!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
-    } else {
-    }
-    }
+	if (AntiLink) {
+   	linkgce = await Nexus.groupInviteCode(from)
+    	if (budy.includes(`https://chat.whatsapp.com/${linkgce}`)) {
+    	reply(`\`\`\`「  Antilink System  」\`\`\`\n\nNo action will be because you sent this group's link.`)
+    	} else if (isUrl(m.text)) {
+    	bvl = `\`\`\`「  *Antilink System*  」\`\`\`\n\nAdmin has sent a link so no action is taken.`
+    	if (isAdmins) return reply(bvl)
+    	if (m.key.fromMe) return reply(bvl)
+    	if (isCreator) return reply(bvl)
+    	kice = m.sender
+    	await Nexus.groupParticipantsUpdate(m.chat, [kice], 'remove').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+    	Nexus.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Baka Has been removed for sending link in this group!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+    	} else {
+    	}
+    	}
     
-    if (antiToxic)
-if (bad.includes(messagesD)) {
-tos = ['Hey, watch your mouth','Never been taught how to speak?','Stop being toxic my friend🤢','Dont be toxic🦄']
-sin =  tos[Math.floor(Math.random() * (tos.length))]
-reply(sin)
-if (m.text) {
-bvl = `\`\`\`「 Bad Word Detected 」\`\`\`\n\nYou are using bad word but you are an admin that's why i won't kick you😇`
-if (isAdmins) return reply(bvl)
-if (m.key.fromMe) return reply(bvl)
-if (isCreator) return reply(bvl)
-kice = m.sender
-await Nexus.groupParticipantsUpdate(m.chat, [kice], 'remove')
-Nexus.sendMessage(from, {text:`\`\`\`「 Bad Word Detected 」\`\`\`\n\n@${kice.split("@")[0]} was kicked because of using bad words in this group`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})}
-}
+	if (antiToxic)
+	if (bad.includes(messagesD)) {
+	tos = ['Hey, watch your mouth','Never been taught how to speak?','Stop being toxic my friend🤢','Dont be toxic🦄']
+	sin =  tos[Math.floor(Math.random() * (tos.length))]
+	reply(sin)
+	if (m.text) {
+	bvl = `\`\`\`「 Bad Word Detected 」\`\`\`\n\nYou are using bad word but you are an admin that's why i won't kick you😇`
+	if (isAdmins) return reply(bvl)
+	if (m.key.fromMe) return reply(bvl)
+	if (isCreator) return reply(bvl)
+	kice = m.sender
+	await Nexus.groupParticipantsUpdate(m.chat, [kice], 'remove')
+	Nexus.sendMessage(from, {text:`\`\`\`「 Bad Word Detected 」\`\`\`\n\n@${kice.split("@")[0]} was kicked because of using bad words in this group`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})}
+	}
  
-    if (antiWame)
-    if (budy.includes(`wa.me`)) {
-  if (!isBotAdmins) return
-  bvl = `\`\`\`「 _'wa.me' PM link Detected!_  」\`\`\`\n\nLink sent by Admin so no action is taken!`
-  if (isAdmins) return reply(bvl)
-  if (m.key.fromMe) return reply(bvl)
-  if (isCreator) return reply(bvl)
-  kice = m.sender
-  await Nexus.groupParticipantsUpdate(m.chat, [kice], 'remove')
-  Nexus.sendMessage(from, {text:`\`\`\`「 'wa.me' PM link Detected! 」\`\`\`\n\n@${kice.split("@")[0]} Baka Has been removed for sending link in this group!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
-  } else {
-  }
-  if (antiWame)
-  if (budy.includes(`http://wa.me`)) {
-if (!isBotAdmins) return
-bvl = `\`\`\`「 'wa.me' PM link Detected! 」\`\`\`\n\nLink sent by Admin so no action is taken!`
-if (isAdmins) return reply(bvl)
-if (m.key.fromMe) return reply(bvl)
-if (isCreator) return reply(bvl)
-kice = m.sender
-await Nexus.groupParticipantsUpdate(m.chat, [kice], 'remove')
-Nexus.sendMessage(from, {text:`\`\`\`「 'wa.me' PM link Detected! 」\`\`\`\n\n@${kice.split("@")[0]}  Baka Has been removed for sending link in this group!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
-} else {
-}
+    	if (antiWame)
+    	if (budy.includes(`wa.me`)) {
+  	if (!isBotAdmins) return
+  	bvl = `\`\`\`「 _'wa.me' PM link Detected!_  」\`\`\`\n\nLink sent by Admin so no action is taken!`
+  	if (isAdmins) return reply(bvl)
+  	if (m.key.fromMe) return reply(bvl)
+  	if (isCreator) return reply(bvl)
+  	kice = m.sender
+  	await Nexus.groupParticipantsUpdate(m.chat, [kice], 'remove')
+  	Nexus.sendMessage(from, {text:`\`\`\`「 'wa.me' PM link Detected! 」\`\`\`\n\n@${kice.split("@")[0]} Baka Has been removed for sending link in this group!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+  	} else {
+  	}
+  	if (antiWame)
+  	if (budy.includes(`http://wa.me`)) {
+	if (!isBotAdmins) return
+	bvl = `\`\`\`「 'wa.me' PM link Detected! 」\`\`\`\n\nLink sent by Admin so no action is taken!`
+	if (isAdmins) return reply(bvl)
+	if (m.key.fromMe) return reply(bvl)
+	if (isCreator) return reply(bvl)
+	kice = m.sender
+	await Nexus.groupParticipantsUpdate(m.chat, [kice], 'remove')
+	Nexus.sendMessage(from, {text:`\`\`\`「 'wa.me' PM link Detected! 」\`\`\`\n\n@${kice.split("@")[0]}  Baka Has been removed for sending link in this group!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+	} else {
+	}
 
-    if (AntiLink) {
+    	if (AntiLink) {
         if (!isBotAdmins) return
         linkgce = await Nexus.groupInviteCode(from)
         if (budy.includes(`https://chat.whatsapp.com/${linkgce}`)) {
@@ -1990,10 +1990,10 @@ ntvirtex.splice(off, 1)
 replay('Success in turning off antivirus this group')
 } else {
   let buttonsntvirtex = [
-  { buttonId: `${prefix} on`, buttonText: { displayText: 'On' }, type: 1 },
-  { buttonId: `${prefix} off`, buttonText: { displayText: 'Off' }, type: 1 }
+  { buttonId: `${prefix}antivirtex on`, buttonText: { displayText: 'On' }, type: 1 },
+  { buttonId: `${prefix}antivritex off`, buttonText: { displayText: 'Off' }, type: 1 }
   ]
-  await Nexus.sendButtonText(m.chat, buttonsntvirtex, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.Botno1}`, m)
+  await Nexus.sendButtonText(m.chat, buttonsntvirtex, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.BotName}`, m)
   }
   }
   break
@@ -2022,10 +2022,10 @@ nttoxic.splice(off, 1)
 replay('Success in turning off antitoxic in this group')
 } else {
   let buttonsnttoxci = [
-  { buttonId: `${prefix} on`, buttonText: { displayText: 'On' }, type: 1 },
-  { buttonId: `${prefix} off`, buttonText: { displayText: 'Off' }, type: 1 }
-  ]
-  await Nexus.sendButtonText(m.chat, buttonsnttoxci, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.Botno1}`, m)
+  { buttonId: `${prefix}antitoxic on`, buttonText: { displayText: 'On' }, type: 1 },
+  { buttonId: `${prefix}antitoxic off`, buttonText: { displayText: 'Off' }, type: 1 }
+   ]
+  await Nexus.sendButtonText(m.chat, buttonsnttoxci, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.BotName}`, m)
   }
   }
   break
@@ -2429,6 +2429,14 @@ case 'listonline': case 'listaktif': case 'here':{
  Nexus.sendText(m.chat, '  「 *Online Members* 」\n\n' + online.map(v => `${liston++} . @` + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
  }
  break
+		
+case 'bts':
+if (isBan) return reply(mess.ban)
+	if (isBanChat) return reply(mess.banChat)
+teks = `Here you go!`
+buffer = `https://api.dapuhy.xyz/api/randomimage/batues?apikey=0gly81wDky`
+Nexus.sendMessage(from, {image:{url:buffer}, caption:"Here you go!"}, {quoted:m})
+break
 
 case 'happymod': {
     if (isBan) return reply(mess.banned)	 			
@@ -2456,8 +2464,160 @@ case 'happymod': {
  }
  break
 
+case'glitch3':
+if (isBan) return reply(mess.banned)	 			
+if (isBanChat) return reply(mess.bangc)
+if(!q) return reply(`Use ${prefix + command} text|text`)
+reply(mess.wait)
+teks1 = q.split("|")[0]
+teks2 = q.split("|")[1]
+maker.textpro("https://textpro.me/create-glitch-text-effect-style-tik-tok-983.html", [
+    `${teks1}`,`${teks2}`])
+  .then((data) => Nexus.sendMessage(m.chat, { image: { url: data }, caption: `Made by ${global.BotName}` }, { quoted: m }))
+  .catch((err) => console.log(err));
+   break
+
+case '3dbox':
+if (isBan) return reply(mess.banned)	 			
+if (isBanChat) return reply(mess.bangc)
+if(!q) return reply(`Use ${prefix + command} text`)
+reply(mess.wait)
+maker.textpro("https://textpro.me/3d-box-text-effect-online-880.html", [
+    `${q}`,])
+.then((data) => Nexus.sendMessage(m.chat, { image: { url: data }, caption: `Made by ${global.BotName}` }, { quoted: m }))
+.catch((err) => console.log(err));
+break
+
+
+case 'waterdrop':
+if (isBan) return reply(mess.banned)	 			
+if (isBanChat) return reply(mess.bangc)
+if(!q) return reply(`Use ${prefix + command} text`)
+reply(mess.wait)
+ maker.textpro("https://textpro.me/dropwater-text-effect-872.html", [
+     `${q}`,])
+    .then((data) => Nexus.sendMessage(m.chat, { image: { url: data }, caption: `Made by ${global.BotName}` }, { quoted: m }))
+    .catch((err) => console.log(err));
+     break
+		
+case 'papercut':
+   if (isBan) return reply(mess.banned)	 			
+if (isBanChat) return reply(mess.bangc)
+      if(!q) return reply(`Use ${prefix + command} text`)
+      reply(mess.wait)
+      maker.textpro("https://textpro.me/create-art-paper-cut-text-effect-online-1022.html", [
+`${q}`,])
+         .then((data) => Nexus.sendMessage(m.chat, { image: { url: data }, caption: `Made by ${global.BotName}` }, { quoted: m }))
+         .catch((err) => console.log(err));
+         break
+
+
+case 'transformer':
+   if (isBan) return reply(mess.banned)
+if (isBanChat) return reply(mess.bangc)
+      if(!q) return reply(`Use ${prefix + command} text`)
+      reply(mess.wait)
+      maker.textpro("https://textpro.me/create-a-transformer-text-effect-online-1035.html", [
+`${q}`,])
+.then((data) => Nexus.sendMessage(m.chat, { image: { url: data }, caption: `Made by ${global.BotName}` }, { quoted: m }))
+.catch((err) => console.log(err));
+break
+   
+
+case 'harrypoter':
+   if (isBan) return reply(mess.banned)	 			
+if (isBanChat) return reply(mess.bangc)
+       if(!q) return reply(`Use ${prefix + command} text|text`)
+       reply(mess.wait)
+       teks1 = q.split("|")[0]
+       teks2 = q.split("|")[1]
+       maker.textpro("https://textpro.me/create-harry-potter-text-effect-online-1025.html", [
+ `${teks1}`,`${teks2}`])
+ .then((data) => Nexus.sendMessage(m.chat, { image: { url: data }, caption: `Made by ${global.BotName}` }, { quoted: m }))
+ .catch((err) => console.log(err));
+ break
+
+
+case 'neondevil':
+   if (isBan) return reply(mess.banned)	 			
+if (isBanChat) return reply(mess.bangc)
+      if(!q) return reply(`Use ${prefix + command} text`)
+      reply(mess.wait)
+      maker.textpro("https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html", [
+`${q}`,])
+         .then((data) => Nexus.sendMessage(m.chat, { image: { url: data }, caption: `Made by ${global.BotName}` }, { quoted: m }))
+         .catch((err) => console.log(err));
+         break
+		
+case '3dstone':
+if (isBan) return reply(mess.banned)
+if (isBanChat) return reply(mess.bangc)
+if(!q) return reply(`Use ${prefix + command} text`)
+reply(mess.wait)
+maker.textpro("https://textpro.me/3d-stone-cracked-cool-text-effect-1029.html", [
+    `${q}`,])
+  .then((data) => Nexus.sendMessage(m.chat, { image: { url: data }, caption: `Made by ${global.BotName}` }, { quoted: m }))
+  .catch((err) => console.log(err));
+   break
+
+
+case '3davengers':
+if (isBan) return reply(mess.banned)
+if (isBanChat) return reply(mess.bangc)
+if(!q) return reply(`Use ${prefix + command} text`)
+reply(mess.wait)
+maker.textpro("https://textpro.me/create-3d-avengers-logo-online-974.html", [
+    `${q}`,])
+  .then((data) => Nexus.sendMessage(m.chat, { image: { url: data }, caption: `Made by ${global.BotName}` }, { quoted: m }))
+  .catch((err) => console.log(err));
+   break
+case 'thunder':
+if (isBan) return reply(mess.banned)
+if (isBanChat) return reply(mess.bangc)
+if(!q) return reply(`Use ${prefix + command} text`)
+reply(mess.wait)
+maker.textpro("https://textpro.me/online-thunder-text-effect-generator-1031.html", [
+    `${q}`,])
+  .then((data) => Nexus.sendMessage(m.chat, { image: { url: data }, caption: `Made by ${global.BotName}` }, { quoted: m }))
+  .catch((err) => console.log(err));
+   break
+case 'window':
+if (isBan) return reply(mess.banned)	 			
+if (isBanChat) return reply(mess.bangc)
+if(!q) return reply(`Use ${prefix + command} text`)
+reply(mess.wait)
+maker.textpro("https://textpro.me/write-text-on-foggy-window-online-free-1015.html", [
+    `${q}`,])
+  .then((data) => Nexus.sendMessage(m.chat, { image: { url: data }, caption: `Made by ${global.BotName}` }, { quoted: m }))
+  .catch((err) => console.log(err));
+   break
+case 'blackpinkneon':
+if (isBan) return reply(mess.banned)
+if (isBanChat) return reply(mess.bangc)
+if(!q) return reply(`Use ${prefix + command} text`)
+reply(mess.wait)
+maker.textpro("https://textpro.me/create-neon-light-blackpink-logo-text-effect-online-1081.html", [
+    `${q}`,])
+  .then((data) => Nexus.sendMessage(m.chat, { image: { url: data }, caption: `Made by ${global.BotName}` }, { quoted: m }))
+  .catch((err) => console.log(err));
+   break
+
+case 'graffiti': case 'grafiti':
+if (isBan) return reply(mess.banned)	 			
+if (isBanChat) return reply(mess.bangc)
+if(!q) return reply(`Use ${prefix + command} text|text`)
+reply(mess.wait)
+teks1 = q.split("|")[0]
+teks2 = q.split("|")[1]
+maker.textpro("https://textpro.me/create-a-cool-graffiti-text-on-the-wall-1010.html", [
+    `${teks1}`,`${teks2}`])
+  .then((data) => Nexus.sendMessage(m.chat, { image: { url: data }, caption: `Made by ${global.BotName}` }, { quoted: m }))
+  .catch((err) => console.log(err));
+   break
+
+		
  case 'yts': case 'ytsearch': {
-    if (isBan) return reply(mess.banned)	 			
+ if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!args.join(" ")) return replay(`Example : -yts Heat waves`)
  let yts = require("yt-search")
@@ -5504,7 +5664,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 
  ❒✗ *${prefix}veriphone
  ❒✗ *${prefix}chechnumber
-
+ 
 *━━━〈  😜 𓆩 𝐍𝐒𝐅𝐖 𓆪 😜  〉━━━*
 
 ❤️ 𝐓𝐨 𝐮𝐬𝐞 *𝐍𝐒𝐅𝐖* 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬, 𝐚𝐬𝐤 𝐭𝐨 *𝐀𝐝𝐦𝐢𝐧* 𝐨𝐫 *𝐎𝐰𝐧𝐞𝐫*𝐎 *𝐀𝐃𝐌𝐈𝐍* 𝐎𝐑 *𝐎𝐖𝐍𝐄𝐑*𝐓𝐨 *𝐀𝐝𝐦𝐢𝐧* 𝐎𝐫 *𝐎𝐰𝐧𝐞𝐫*𝐨 *𝐚𝐝𝐦𝐢𝐧* 𝐨𝐫 *𝐨𝐰𝐧𝐞𝐫*
