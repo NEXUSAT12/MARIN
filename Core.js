@@ -2714,6 +2714,27 @@ if (isBanChat) return reply(mess.bangc)
  Nexus.sendMessage(m.chat, { text : args.join(" ") ? args.join(" ") : '' , mentions: participants.map(a => a.id)}, { quoted: m })
  }
  break
+case 'iguser': {
+if (isBan) return reply(mess.banned)
+if (isBanChat) return reply(mess.bangc)
+if (!text) reply(`Please provide a valid instagram ID.`)
+Nex = await axios.get(`https://api.popcat.xyz/instagram?user=${text}`)
+const reply = `
+*🀄 Username:* ${Nex.data.username}
+*📃 Name:* ${Nex.data.full_name}
+*🗣 Private:* ${Nex.data.private}
+*✔ Verified:* ${Nex.data.verified}
+*🗻 Followers:* ${Nex.data.followers}
+*🍃 Following:* ${Nex.data.following}
+*🎛 Post:* ${Nex.data.posts}
+*🧑🏻‍🎤 reels:* ${Nex.data.reels}
+*📖 Bio:* ${Nex.data.biography}
+*✨ Link:* https://Instagram.com/${Nex.data.username}`
+Nexus.sendMessage(m.chat, {image: { url: Nex.data.profile_pic }, caption:reply}, {quoted:m})
+}
+break
+
+
 		
 case 'deletethis': case 'delthis': case 'deletethismessage': case 'delthismsg': {
     if (isBan) return reply(mess.banned)	 			
