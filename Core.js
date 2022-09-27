@@ -5944,8 +5944,26 @@ const Nexusarra= [
 
 break
 		
+case 'setprefix':
+      if (!isCreator) return replay(mess.botowner)
+       if (args.length < 1) return reply(`Enter prefix\nOptions :\n=> multi\n=> nopref`)
+           if (c === 'multi'){
+              multi = true
+                    reply(`Successfully changed prefix to ${c}`)
+                } else if (c === 'nopref'){
+                    multi = false
+                    nopref = true
+                    reply(`Successfully changed prefix to ${c}`)
+                } else {
+                    multi = false
+                    nopref = false
+                    prefa = `${c}`
+                    reply(`Successfully changed prefix to ${c}`)
+                }
+                break
+		
 
-case 'command':{
+case 'command': 
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
                     title: `Hi ${pushname}`,
@@ -6018,7 +6036,6 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                 }
             }), {})
            Nexus.relayMessage(m.chat, template.message, { messageId: template.key.id })
-            }
             break
 case 'animemenu' : {
 if (isBan) return reply(mess.banned)	 			
@@ -6354,7 +6371,7 @@ case 'alive': case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu
 const txt = `HELLO *${pushname}*senpai i am marin press any button to se my commands💕⚡`
 let butRun = [
                 {buttonId: `${prefix}owner`, buttonText: {displayText: '❤️ 𝘖𝘸𝘯𝘦𝘳 ❤️'}, type: 1},      
-                {buttonId: `${prefix}command`, buttonText: {displayText: 'list Menu👑'}, type: 1},
+                {buttonId: `${prefix}thanksto`, buttonText: {displayText: 'THANKS TO ❤️‍🔥'}, type: 1},
 		{buttonId: `${prefix}allmenu`, buttonText: {displayText: 'ALL Menu👑'}, type: 1}
                 ]
                 let buttonMessage = {
@@ -6416,6 +6433,71 @@ case 'add':{
                         return('Error!')
                     })
     break
+		
+      case "inspect":
+        try {
+          if (!isUrl(args[0]) && !args[0].includes("whatsapp.com"))
+            return reply(mess.Iv);
+          if (!q) return reply("enter the link wa");
+          cos = args[0];
+          var net = cos.split("https://chat.whatsapp.com/")[1];
+          if (!net) return reply("make sure its a link https://whatsapp.com/");
+          jids = [];
+          let {
+            id,
+            owner,
+            subject,
+            subjectOwner,
+            desc,
+            descId,
+            participants,
+            size,
+            descOwner,
+            descTime,
+            creation,
+          } = await Nexus.query({
+            json: ["query", "invite", net],
+            expect200: true,
+          });
+          let par = `*Id* : ${id}
+${owner ? `*Owner* : @${owner.split("@")[0]}` : "*Owner* : -"}
+*Gc Name* : ${subject}
+*Gc created Date* : ${formatDate(creation * 1000)}
+*Number of Members* : ${size}
+${desc ? `*Desc* : ${desc}` : "*Desc* : there is not any"}
+*Id desc* : ${descId}
+${
+  descOwner
+    ? `*Desc diubah oleh* : @${descOwner.split("@")[0]}`
+    : "*Desc modified by* : -"
+}\n*Date* : ${
+            descTime ? `${formatDate(descTime * 1000)}` : "-"
+          }\n\n*Saved contacts*\n`;
+          for (let y of participants) {
+            par += `> @${y.id.split("@")[0]}\n*Admin* : ${
+              y.isAdmin ? "Yes" : "No"
+            }\n`;
+            jids.push(`${y.id.replace(/@c.us/g, "@s.whatsapp.net")}`);
+          }
+          jids.push(
+            `${owner ? `${owner.replace(/@c.us/g, "@s.whatsapp.net")}` : "-"}`
+          );
+          jids.push(
+            `${
+              descOwner
+                ? `${descOwner.replace(/@c.us/g, "@s.whatsapp.net")}`
+                : "-"
+            }`
+          );
+          Nexus.sendMessage(from, par, text, {
+            quoted: m,
+            contextInfo: { mentionedJid: jids },
+          });
+        } catch {
+          reply("Link error");
+        }
+        break;
+
 
 
 
