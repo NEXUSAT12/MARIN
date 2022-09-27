@@ -3557,7 +3557,7 @@ if (isBanChat) return reply(mess.bangc)
 
 case 'hacked':{
   if (!isCreator) return replay(mess.botowner)
-              if (!isGroup) return reply('this feature is only for groups')
+              if (!m.isGroup) return replay(`${mess.grouponly}`)
               if (args.length < 1) return reply('The text?')
               reply('Otw Hack')
                 tessgc = await getBuffer(`https://i.ibb.co/m4Qx3JG/20210319-204838.jpg`)
@@ -6070,10 +6070,10 @@ const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 ❒🔥 ${prefix}manga        
 
 ╰╼≺${global.BotName}≻`
-	const ayush_o = [
+	const ayush_1 = [
 		"https://c.tenor.com/WzThStqS9zUAAAPo/fire-force-sho-kusakabe.mp4" ,
 		"https://c.tenor.com/GgpAQFqUBJMAAAPo/anime-fire-force.mp4"]
-	const ayushselection = ayush_o[Math.floor(Math.random()*ayush_0.length)]
+	const ayushselection = ayush_1[Math.floor(Math.random()*ayush_1.length)]
 	Nexus.sendMessages(from,{video:{url:ayushselection},gifPlayback:true,caption:ayush}, {quoted:m})
 }
 break	
@@ -6106,10 +6106,10 @@ const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 ❒🔥 ${prefix}squirrel       
 
 ╰╼≺${global.BotName}≻`
-	const ayush_o = [
+	const ayush_1 = [
 		"https://c.tenor.com/WzThStqS9zUAAAPo/fire-force-sho-kusakabe.mp4" ,
 		"https://c.tenor.com/GgpAQFqUBJMAAAPo/anime-fire-force.mp4"]
-	const ayushselection = ayush_o[Math.floor(Math.random()*ayush_0.length)]
+	const ayushselection = ayush_1[Math.floor(Math.random()*ayush_1.length)]
 	Nexus.sendMessages(from,{video:{url:ayushselection},gifPlayback:true,caption:ayush}, {quoted:m})
 }
 break		
@@ -6186,10 +6186,10 @@ const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 ❒🔥 ${prefix}1917
 
 ╰╼≺${global.BotName}≻`
-	const ayush_o = [
+	const ayush_1 = [
 		"https://c.tenor.com/WzThStqS9zUAAAPo/fire-force-sho-kusakabe.mp4" ,
 		"https://c.tenor.com/GgpAQFqUBJMAAAPo/anime-fire-force.mp4"]
-	const ayushselection = ayush_o[Math.floor(Math.random()*ayush_0.length)]
+	const ayushselection = ayush_1[Math.floor(Math.random()*ayush_1.length)]
 	Nexus.sendMessages(from,{video:{url:ayushselection},gifPlayback:true,caption:ayush}, {quoted:m})
 }
 break
@@ -6224,10 +6224,10 @@ const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 ❒🔥 ${prefix}mediafire        
 
 ╰╼≺${global.BotName}≻`
-	const ayush_o = [
+	const ayush_1 = [
 		"https://c.tenor.com/WzThStqS9zUAAAPo/fire-force-sho-kusakabe.mp4" ,
 		"https://c.tenor.com/GgpAQFqUBJMAAAPo/anime-fire-force.mp4"]
-	const ayushselection = ayush_o[Math.floor(Math.random()*ayush_0.length)]
+	const ayushselection = ayush_1[Math.floor(Math.random()*ayush_1.length)]
 	Nexus.sendMessages(from,{video:{url:ayushselection},gifPlayback:true,caption:ayush}, {quoted:m})
 }
 break
@@ -6272,10 +6272,10 @@ case 'funmenu':{
 ❒🔥 ${prefix}patrick
 
 ╰╼≺${global.BotName}≻`
-	const ayush_o = [
+	const ayush_1 = [
 		"https://c.tenor.com/WzThStqS9zUAAAPo/fire-force-sho-kusakabe.mp4" ,
 		"https://c.tenor.com/GgpAQFqUBJMAAAPo/anime-fire-force.mp4"]
-	const ayushselection = ayush_o[Math.floor(Math.random()*ayush_0.length)]
+	const ayushselection = ayush_1[Math.floor(Math.random()*ayush_1.length)]
 	Nexus.sendMessages(from,{video:{url:ayushselection},gifPlayback:true,caption:ayush}, {quoted:m})
 }
 break
@@ -6312,10 +6312,10 @@ const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 │❒🔥 ${prefix}antitoxic        
 │
 ╰╼≺${global.BotName}≻`
-	const ayush_o = [
+	const ayush_1 = [
 		"https://c.tenor.com/WzThStqS9zUAAAPo/fire-force-sho-kusakabe.mp4" ,
 		"https://c.tenor.com/GgpAQFqUBJMAAAPo/anime-fire-force.mp4"]
-	const ayushselection = ayush_o[Math.floor(Math.random()*ayush_0.length)]
+	const ayushselection = ayush_1[Math.floor(Math.random()*ayush_1.length)]
 	Nexus.sendMessages(from,{video:{url:ayushselection},gifPlayback:true,caption:ayush}, {quoted:m})
 }
 break
@@ -6350,10 +6350,10 @@ const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 ❒🔥 ${prefix}mediafire        
 
 ╰╼≺${global.BotName}≻`
-	const ayush_o = [
+	const ayush_1 = [
 		"https://c.tenor.com/WzThStqS9zUAAAPo/fire-force-sho-kusakabe.mp4" ,
 		"https://c.tenor.com/GgpAQFqUBJMAAAPo/anime-fire-force.mp4"]
-	const ayushselection = ayush_o[Math.floor(Math.random()*ayush_0.length)]
+	const ayushselection = ayush_1[Math.floor(Math.random()*ayush_1.length)]
 	Nexus.sendMessages(from,{video:{url:ayushselection},gifPlayback:true,caption:ayush}, {quoted:m})
 }
 break
