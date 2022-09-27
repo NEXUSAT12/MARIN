@@ -6040,7 +6040,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 case 'animemenu' : {
 if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
-const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+ reply(= `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 │                                      ❒
 │ *My prefix*       : ( ${prefix} )
 │ *My name*       : ${global.BotName}
@@ -6077,17 +6077,12 @@ const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 ❒🔥 ${prefix}manga        
 
 ╰╼≺${global.BotName}≻`
-	const Nexusarra= [
-            "https://c.tenor.com/ojD7kYfG7FsAAAAi/marin-marin-kitagawa.gif"
-            ]
-            const Nexusselectio = Nexusarra[Math.floor(Math.random()*Nexusarra.length)]
-            Nexus.sendMessage(from,{video:{url:Nexusselectio},gifPlayback:true,caption:tx},{quoted:m})
-}
+)}
 break	
 case 'voicechangermenu' : {
 if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
-const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+reply(`╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 │                                      ❒
 │ *My prefix*       : ( ${prefix} )
 │ *My name*       : ${global.BotName}
@@ -6113,17 +6108,12 @@ const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 ❒🔥 ${prefix}squirrel       
 
 ╰╼≺${global.BotName}≻`
-	const Nexusarra= [
-            "https://c.tenor.com/ojD7kYfG7FsAAAAi/marin-marin-kitagawa.gif"
-            ]
-            const Nexusselectio = Nexusarra[Math.floor(Math.random()*Nexusarra.length)]
-            Nexus.sendMessage(from,{video:{url:Nexusselectio},gifPlayback:true,caption:ayush},{quoted:m})
-}
+)}
 break		
 case 'textpromenu' :{
 if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
-const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+reply(`╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 │                                      ❒
 │ *My prefix*       : ( - )
 │ *My name*       : ${global.BotName}
@@ -6193,17 +6183,12 @@ const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 ❒🔥 ${prefix}1917
 
 ╰╼≺${global.BotName}≻`
-	const Nexusarra= [
-            "https://c.tenor.com/ojD7kYfG7FsAAAAi/marin-marin-kitagawa.gif"
-            ]
-            const Nexusselectio = Nexusarra[Math.floor(Math.random()*Nexusarra.length)]
-            Nexus.sendMessage(from,{video:{url:Nexusselectio},gifPlayback:true,caption:ayush},{quoted:m})
-}
+)}
 break
 case 'downloadmenu' :{
 if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
-const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+reply(`╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 │                                      ❒
 │ *My prefix*       : ( ${prefix} )
 │ *My name*       : ${global.BotName}
@@ -6231,17 +6216,12 @@ const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 ❒🔥 ${prefix}mediafire        
 
 ╰╼≺${global.BotName}≻`
-const Nexusarra= [
-            "https://c.tenor.com/ojD7kYfG7FsAAAAi/marin-marin-kitagawa.gif"
-            ]
-            const Nexusselectio = Nexusarra[Math.floor(Math.random()*Nexusarra.length)]
-            Nexus.sendMessage(from,{video:{url:Nexusselectio},gifPlayback:true,caption:ayush},{quoted:m})
-}
+)}
 break
 case 'funmenu':{
 		if (isBan) return reply(mess.banned)	 			
     		if (isBanChat) return reply(mess.bangc)
-	const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+	reply (`╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 │                                      ❒
 │ *My prefix*       : ( ${prefix} )
 │ *My name*       : ${global.BotName}
@@ -6279,17 +6259,12 @@ case 'funmenu':{
 ❒🔥 ${prefix}patrick
 
 ╰╼≺${global.BotName}≻`
-	const Nexusarra= [
-            "https://c.tenor.com/ojD7kYfG7FsAAAAi/marin-marin-kitagawa.gif"
-            ]
-            const Nexusselectio = Nexusarra[Math.floor(Math.random()*Nexusarra.length)]
-            Nexus.sendMessage(from,{video:{url:Nexusselectio},gifPlayback:true,caption:ayush},{quoted:m})
-}
+)}
 break
 case 'groupmenu' :{
 if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
-const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+ reply (`╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 │                                      ❒
 │ *My prefix*       : ( ${prefix} )
 │ *My name*       : ${global.BotName}
@@ -6319,17 +6294,12 @@ const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 │❒🔥 ${prefix}antitoxic        
 │
 ╰╼≺${global.BotName}≻`
-	const Nexusarra= [
-            "https://c.tenor.com/ojD7kYfG7FsAAAAi/marin-marin-kitagawa.gif"
-            ]
-            const Nexusselectio = Nexusarra[Math.floor(Math.random()*Nexusarra.length)]
-            Nexus.sendMessage(from,{video:{url:Nexusselectio},gifPlayback:true,caption:ayush},{quoted:m})
-}
+)}
 break
 case 'downloadmenu' : {
 if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
-const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+ reply(`╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 │                                      ❒
 │ *My prefix*       : ( - )
 │ *My name*       : ${global.BotName}
@@ -6357,12 +6327,7 @@ const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 ❒🔥 ${prefix}mediafire        
 
 ╰╼≺${global.BotName}≻`
-	const Nexusarra= [
-            "https://c.tenor.com/ojD7kYfG7FsAAAAi/marin-marin-kitagawa.gif"
-            ]
-            const Nexusselectio = Nexusarra[Math.floor(Math.random()*Nexusarra.length)]
-            Nexus.sendMessage(from,{video:{url:Nexusselectio},gifPlayback:true,caption:ayush},{quoted:m})
-}
+)}
 break
 
 case 'alive': case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu': {
