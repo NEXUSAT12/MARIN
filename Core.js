@@ -5982,11 +5982,6 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 										"rowId": `${prefix}downloadmenu`
 									},
 									{
-										"title": "Search Menu",
-										"description": "Displays The List Of Searching Features",
-										"rowId": `${prefix}searchmenu`
-									},
-									{
 									"title": "Anime Menu",
 									"description": "Displays The List Of Random Anime Features",
 									"rowId": `${prefix}animemenu`
@@ -5995,11 +5990,6 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 									"title": "Fun Menu",
 									"description": "Displays The List Of Fun Features",
 									"rowId": `${prefix}funmenu`
-									},
-									{
-									"title": "Convert Menu",
-									"description": "Displays The List Of Convert Features",
-									"rowId": `${prefix}convertmenu`
 									},
 									{
 									"title": "Voice Changer Menu",
@@ -6070,11 +6060,11 @@ const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 ❒🔥 ${prefix}manga        
 
 ╰╼≺${global.BotName}≻`
-	const ayush_1 = [
-		"https://c.tenor.com/WzThStqS9zUAAAPo/fire-force-sho-kusakabe.mp4" ,
-		"https://c.tenor.com/GgpAQFqUBJMAAAPo/anime-fire-force.mp4"]
-	const ayushselection = ayush_1[Math.floor(Math.random()*ayush_1.length)]
-	Nexus.sendMessages(from,{video:{url:ayushselection},gifPlayback:true,caption:ayush}, {quoted:m})
+	const Nexusarra= [
+            "https://c.tenor.com/ojD7kYfG7FsAAAAi/marin-marin-kitagawa.gif"
+            ]
+            const Nexusselectio = Nexusarra[Math.floor(Math.random()*Nexusarra.length)]
+            Nexus.sendMessage(from,{video:{url:Nexusselectio},gifPlayback:true,caption:tx},{quoted:m})
 }
 break	
 case 'voicechangermenu' : {
@@ -6106,11 +6096,11 @@ const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 ❒🔥 ${prefix}squirrel       
 
 ╰╼≺${global.BotName}≻`
-	const ayush_1 = [
-		"https://c.tenor.com/WzThStqS9zUAAAPo/fire-force-sho-kusakabe.mp4" ,
-		"https://c.tenor.com/GgpAQFqUBJMAAAPo/anime-fire-force.mp4"]
-	const ayushselection = ayush_1[Math.floor(Math.random()*ayush_1.length)]
-	Nexus.sendMessages(from,{video:{url:ayushselection},gifPlayback:true,caption:ayush}, {quoted:m})
+	const Nexusarra= [
+            "https://c.tenor.com/ojD7kYfG7FsAAAAi/marin-marin-kitagawa.gif"
+            ]
+            const Nexusselectio = Nexusarra[Math.floor(Math.random()*Nexusarra.length)]
+            Nexus.sendMessage(from,{video:{url:Nexusselectio},gifPlayback:true,caption:ayush},{quoted:m})
 }
 break		
 case 'textpromenu' :{
@@ -6186,11 +6176,11 @@ const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 ❒🔥 ${prefix}1917
 
 ╰╼≺${global.BotName}≻`
-	const ayush_1 = [
-		"https://c.tenor.com/WzThStqS9zUAAAPo/fire-force-sho-kusakabe.mp4" ,
-		"https://c.tenor.com/GgpAQFqUBJMAAAPo/anime-fire-force.mp4"]
-	const ayushselection = ayush_1[Math.floor(Math.random()*ayush_1.length)]
-	Nexus.sendMessages(from,{video:{url:ayushselection},gifPlayback:true,caption:ayush}, {quoted:m})
+	const Nexusarra= [
+            "https://c.tenor.com/ojD7kYfG7FsAAAAi/marin-marin-kitagawa.gif"
+            ]
+            const Nexusselectio = Nexusarra[Math.floor(Math.random()*Nexusarra.length)]
+            Nexus.sendMessage(from,{video:{url:Nexusselectio},gifPlayback:true,caption:ayush},{quoted:m})
 }
 break
 case 'downloadmenu' :{
@@ -6224,11 +6214,11 @@ const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 ❒🔥 ${prefix}mediafire        
 
 ╰╼≺${global.BotName}≻`
-	const ayush_1 = [
-		"https://c.tenor.com/WzThStqS9zUAAAPo/fire-force-sho-kusakabe.mp4" ,
-		"https://c.tenor.com/GgpAQFqUBJMAAAPo/anime-fire-force.mp4"]
-	const ayushselection = ayush_1[Math.floor(Math.random()*ayush_1.length)]
-	Nexus.sendMessages(from,{video:{url:ayushselection},gifPlayback:true,caption:ayush}, {quoted:m})
+const Nexusarra= [
+            "https://c.tenor.com/ojD7kYfG7FsAAAAi/marin-marin-kitagawa.gif"
+            ]
+            const Nexusselectio = Nexusarra[Math.floor(Math.random()*Nexusarra.length)]
+            Nexus.sendMessage(from,{video:{url:Nexusselectio},gifPlayback:true,caption:ayush},{quoted:m})
 }
 break
 case 'funmenu':{
@@ -6272,11 +6262,11 @@ case 'funmenu':{
 ❒🔥 ${prefix}patrick
 
 ╰╼≺${global.BotName}≻`
-	const ayush_1 = [
-		"https://c.tenor.com/WzThStqS9zUAAAPo/fire-force-sho-kusakabe.mp4" ,
-		"https://c.tenor.com/GgpAQFqUBJMAAAPo/anime-fire-force.mp4"]
-	const ayushselection = ayush_1[Math.floor(Math.random()*ayush_1.length)]
-	Nexus.sendMessages(from,{video:{url:ayushselection},gifPlayback:true,caption:ayush}, {quoted:m})
+	const Nexusarra= [
+            "https://c.tenor.com/ojD7kYfG7FsAAAAi/marin-marin-kitagawa.gif"
+            ]
+            const Nexusselectio = Nexusarra[Math.floor(Math.random()*Nexusarra.length)]
+            Nexus.sendMessage(from,{video:{url:Nexusselectio},gifPlayback:true,caption:ayush},{quoted:m})
 }
 break
 case 'groupmenu' :{
@@ -6312,11 +6302,11 @@ const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 │❒🔥 ${prefix}antitoxic        
 │
 ╰╼≺${global.BotName}≻`
-	const ayush_1 = [
-		"https://c.tenor.com/WzThStqS9zUAAAPo/fire-force-sho-kusakabe.mp4" ,
-		"https://c.tenor.com/GgpAQFqUBJMAAAPo/anime-fire-force.mp4"]
-	const ayushselection = ayush_1[Math.floor(Math.random()*ayush_1.length)]
-	Nexus.sendMessages(from,{video:{url:ayushselection},gifPlayback:true,caption:ayush}, {quoted:m})
+	const Nexusarra= [
+            "https://c.tenor.com/ojD7kYfG7FsAAAAi/marin-marin-kitagawa.gif"
+            ]
+            const Nexusselectio = Nexusarra[Math.floor(Math.random()*Nexusarra.length)]
+            Nexus.sendMessage(from,{video:{url:Nexusselectio},gifPlayback:true,caption:ayush},{quoted:m})
 }
 break
 case 'downloadmenu' : {
@@ -6350,11 +6340,11 @@ const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 ❒🔥 ${prefix}mediafire        
 
 ╰╼≺${global.BotName}≻`
-	const ayush_1 = [
-		"https://c.tenor.com/WzThStqS9zUAAAPo/fire-force-sho-kusakabe.mp4" ,
-		"https://c.tenor.com/GgpAQFqUBJMAAAPo/anime-fire-force.mp4"]
-	const ayushselection = ayush_1[Math.floor(Math.random()*ayush_1.length)]
-	Nexus.sendMessages(from,{video:{url:ayushselection},gifPlayback:true,caption:ayush}, {quoted:m})
+	const Nexusarra= [
+            "https://c.tenor.com/ojD7kYfG7FsAAAAi/marin-marin-kitagawa.gif"
+            ]
+            const Nexusselectio = Nexusarra[Math.floor(Math.random()*Nexusarra.length)]
+            Nexus.sendMessage(from,{video:{url:Nexusselectio},gifPlayback:true,caption:ayush},{quoted:m})
 }
 break
 
