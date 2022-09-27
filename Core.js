@@ -5963,7 +5963,9 @@ case 'setprefix':
                 break
 		
 
-case 'command': 
+case 'cammand': {
+if (isBan) return reply(mess.banned)
+if (isBanChat) return reply(mess.bangc)
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
                     title: `Hi ${pushname}`,
@@ -5972,60 +5974,75 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                     footerText: `${global.BotName}`,
                     listType: "SINGLE_SELECT",
                     sections: [{
-								"title": "Main Features",
+								"title": "Initial Features Of Bot 🦄",
 								"rows": [
 									{
-										"title": "Owner Menu",
-										"description": "Displays The List Of Owner Features",
-										"rowId": `${prefix}ownermenu`
+										"title": "Other ☕",
+										"description": "Displays The List Of Other Features",
+										"rowId": `${prefix}othermenu`
 									}
 								]
 							},
 							{
-								"title": "Bot Features",
+								"title": "Bot Features ❤️",
 								"rows": [
 									{
-										"title": "All Menu",
+										"title": "All Menu 🥀",
 										"description": "Displays The List Of All The Features!",
 										"rowId": `${prefix}allmenu`
 									},
 									{
-										"title": "Group Menu",
+										"title": "Owner Menu 💠",
+										"description": "Displays The List Of Owner Features",
+										"rowId": `${prefix}ownermenu`
+										},
+									{
+										"title": "Group Menu ✨",
 										"description": "Displays The List Of Main Features",
 										"rowId": `${prefix}groupmenu`
+										},
+										{
+										"title": "Maker Menu 🌈",
+										"description": "Displays The List Of Logo Making Features",
+										"rowId": `${prefix}textpromenu`
 									},
 									{
-										"title": "Download Menu",
+										"title": "VOICE CHANGER 🎵",
+										"description": "Displays The List Of Sound Features",
+										"rowId": `${prefix}voicechangermenu`
+									},
+									{
+										"title": "Download Menu ↘️",
 										"description": "Displays The List Of Download Features",
 										"rowId": `${prefix}downloadmenu`
 									},
 									{
-									"title": "Anime Menu",
-									"description": "Displays The List Of Random Anime Features",
-									"rowId": `${prefix}animemenu`
+										"title": "Anime Menu 😘",
+										"description": "Displays The List Of Random Anime Features",
+										"rowId": `${prefix}animemenu`
 									},
 									{
-									"title": "Fun Menu",
-									"description": "Displays The List Of Fun Features",
-									"rowId": `${prefix}funmenu`
+										"title": "Anime Sticker Menu ☺️",
+										"description": "Displays The List Of Anime Sticker Features",
+										"rowId": `${prefix}animestickermenu`
 									},
 									{
-									"title": "Voice Changer Menu",
-									"description": "Displays The List Of Voice Changing Features",
-									"rowId": `${prefix}voicechangermenu`
+										"title": "Nsfw Menu 🤓",
+										"description": "Displays The List Of Nsfe Features",
+										"rowId": `${prefix}nsfwmenu`
 									},
 									{
-									"title": "TXT-to-IMG Menu",
-									"description": "Displays The List Of Textpro Features",
-									"rowId": `${prefix}textpromenu`
+										"title": "Fun Menu 🕺",
+										"description": "Displays The List Of Fun Features",
+										"rowId": `${prefix}funmenu`
 									},
 								]
 							},
 							{
-								"title": "Credit",
+								"title": "Credit ©️",
 								"rows": [
 									{
-										"title": "Thanks To",
+										"title": "Thanks To ❤️",
 										"description": "Displays The List Of Credit Of The Bot !!",
 										"rowId": `${prefix}thanksto`
 									}
@@ -6035,7 +6052,8 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
           listType: 1
                 }
             }), {})
-           Nexus.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            Nexus.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            }
             break
 case 'animemenu' : {
 if (isBan) return reply(mess.banned)	 			
@@ -6181,39 +6199,6 @@ reply(`╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 ❒🔥 ${prefix}sand
 ❒🔥 ${prefix}glue
 ❒🔥 ${prefix}1917
-
-╰╼≺${global.BotName}≻`
-)}
-break
-case 'downloadmenu' :{
-if (isBan) return reply(mess.banned)	 			
-if (isBanChat) return reply(mess.bangc)
-reply(`╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
-│                                      ❒
-│ *My prefix*       : ( ${prefix} )
-│ *My name*       : ${global.BotName}
-│ *User name*    : ${pushname}
-│ *Owner name* : ${global.OwnerName}
-│ *Owner no.*     : http://wa.me//${global.Owner}
-│ *Group name*  : ${groupMetadata.subject}
-│                                      ❒
-╰╼━━━━━━━━━━━━╾╯
-╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
-
-❒🔥 ${prefix}play
-❒🔥 ${prefix}ytmp3
-❒🔥 ${prefix}ytmp4
-❒🔥 ${prefix}ytvideo
-❒🔥 ${prefix}instagram
-❒🔥 ${prefix}igtv
-❒🔥 ${prefix}facebook
-❒🔥 ${prefix}fbmp3
-❒🔥 ${prefix}twitter
-❒🔥 ${prefix}twittermp3
-❒🔥 ${prefix}tiktok
-❒🔥 ${prefix}tiktokaudio
-❒🔥 ${prefix}tiktoknowm
-❒🔥 ${prefix}mediafire        
 
 ╰╼≺${global.BotName}≻`
 )}
