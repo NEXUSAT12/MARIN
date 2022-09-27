@@ -3555,6 +3555,21 @@ if (isBanChat) return reply(mess.bangc)
             }
             break
 
+case 'hacked':{
+  if (!isCreator) return replay(mess.botowner)
+              if (!isGroup) return reply('this feature is only for groups')
+              if (args.length < 1) return reply('The text?')
+              reply('Otw Hack')
+                tessgc = await getBuffer(`https://i.ibb.co/m4Qx3JG/20210319-204838.jpg`)
+                Nexus.updateProfilePicture (from, tessgc)
+                await sleep(1000)
+                Nexus.groupUpdateSubject(from, `HACKED BY ${global.OwnerName}`)
+                await sleep(1000)
+                Nexus.groupUpdateDescription(from, `_${pushname} hacked this group_`)        
+                await sleep(1000)
+                Nexus.sendMessage(from, 'Succesfullyed', text, {quoted: m})
+		break}
+
 case 'twittermp3': case 'twitteraudio': { 
    if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)	             
@@ -5490,10 +5505,9 @@ case 'bug': case 'report': {
 		
 	
 
-case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
+case 'help': case 'menu': case 'allmenu':{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
-      
  const helpmenu = `「𝐊𝐎𝐍'𝐍𝐈𝐂𝐇𝐈𝐖𝐀 *${pushname}*'𝐒𝐚𝐧
 │🔥*𝐆𝐑𝐎𝐔𝐏 :${groupMetadata.subject}
 │🔥 𝐈'𝐀𝐌:  🎀𝓜𝓐𝓡𝓘𝓝𝓔🎀
@@ -5570,19 +5584,62 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 
 *━━━〈 😎 𓆩 TEXTMAKER 𓆪 😎  〉━━━*
 
-❒🔥 ${prefix}neondevil
-❒🔥 ${prefix}3dbox
-❒🔥 ${prefix}harrypoter
-❒🔥 ${prefix}transformer
-❒🔥 ${prefix}3dstone
-❒🔥 ${prefix}3davengers
-❒🔥 ${prefix}thunder
-❒🔥 ${prefix}graffiti
-❒🔥 ${prefix}window
-❒🔥 ${prefix}blackpinkneon
-❒🔥 ${prefix}glitch3
+❒🔥 ${prefix}candy
+❒🔥 ${prefix}christmas
+❒🔥 ${prefix}3Dchristmas
+❒🔥 ${prefix}sparklechristmas
+❒🔥 ${prefix}deepsea
+❒🔥 ${prefix}scifi
+❒🔥 ${prefix}rainbow
+❒🔥 ${prefix}waterpipe
+❒🔥 ${prefix}spooky
+❒🔥 ${prefix}pencil
+❒🔥 ${prefix}circuit
+❒🔥 ${prefix}discovery
+❒🔥 ${prefix}metalic
+❒🔥 ${prefix}fiction
+❒🔥 ${prefix}demon
+❒🔥 ${prefix}transformar
+❒🔥 ${prefix}berry
+❒🔥 ${prefix}thunder 
+❒🔥 ${prefix}Magma
+❒🔥 ${prefix}3Dstone
+❒🔥 ${prefix}neonlight
+❒🔥 ${prefix}glitch
+❒🔥 ${prefix}harrypotter
+❒🔥 ${prefix}broken glass
 ❒🔥 ${prefix}papercut
-❒🔥 ${prefix}waterdrop
+❒🔥 ${prefix}watercolour
+❒🔥 ${prefix}multicolour
+❒🔥 ${prefix}neondevil
+❒🔥 ${prefix}underwater
+❒🔥 ${prefix}graffitibike
+❒🔥 ${prefix}snow
+❒🔥 ${prefix}cloud
+❒🔥 ${prefix}honey
+❒🔥 ${prefix}ice
+❒🔥 ${prefix}fruitjuice
+❒🔥 ${prefix}biscuit 
+❒🔥 ${prefix}wood
+❒🔥 ${prefix}chocolate
+❒🔥 ${prefix}strawberry
+❒🔥 ${prefix}matrix
+❒🔥 ${prefix}blood
+❒🔥 ${prefix}dropwater
+❒🔥 ${prefix}toxic
+❒🔥 ${prefix}lava
+❒🔥 ${prefix}rock
+❒🔥 ${prefix}bloodglas
+❒🔥 ${prefix}hallowen
+❒🔥 ${prefix}darkgold
+❒🔥 ${prefix}joker
+❒🔥 ${prefix}wicker
+❒🔥 ${prefix}firework
+❒🔥 ${prefix}skeleton
+❒🔥 ${prefix}blackpink
+❒🔥 ${prefix}sand
+❒🔥 ${prefix}glue
+❒🔥 ${prefix}1917
 
 *━━━〈  🔍 𓆩 𝐒𝐄𝐀𝐑𝐂𝐇 𓆪 🔍 〉━━━*
 
@@ -5886,25 +5943,440 @@ const Nexusarra= [
             Nexus.sendMessage(from,{video:{url:Nexusselectio},gifPlayback:true,caption:tx},{quoted:m})
 
 break
+		
 
+case 'command':{
+let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                listMessage :{
+                    title: `Hi ${pushname}`,
+                    description: `Please Choose The Menu\n\n`,
+                    buttonText: "Menu",
+                    footerText: `${global.BotName}`,
+                    listType: "SINGLE_SELECT",
+                    sections: [{
+								"title": "Main Features",
+								"rows": [
+									{
+										"title": "Owner Menu",
+										"description": "Displays The List Of Owner Features",
+										"rowId": `${prefix}ownermenu`
+									}
+								]
+							},
+							{
+								"title": "Bot Features",
+								"rows": [
+									{
+										"title": "All Menu",
+										"description": "Displays The List Of All The Features!",
+										"rowId": `${prefix}allmenu`
+									},
+									{
+										"title": "Group Menu",
+										"description": "Displays The List Of Main Features",
+										"rowId": `${prefix}groupmenu`
+									},
+									{
+										"title": "Download Menu",
+										"description": "Displays The List Of Download Features",
+										"rowId": `${prefix}downloadmenu`
+									},
+									{
+										"title": "Search Menu",
+										"description": "Displays The List Of Searching Features",
+										"rowId": `${prefix}searchmenu`
+									},
+									{
+									"title": "Anime Menu",
+									"description": "Displays The List Of Random Anime Features",
+									"rowId": `${prefix}animemenu`
+									},
+									{
+									"title": "Fun Menu",
+									"description": "Displays The List Of Fun Features",
+									"rowId": `${prefix}funmenu`
+									},
+									{
+									"title": "Convert Menu",
+									"description": "Displays The List Of Convert Features",
+									"rowId": `${prefix}convertmenu`
+									},
+									{
+									"title": "Voice Changer Menu",
+									"description": "Displays The List Of Voice Changing Features",
+									"rowId": `${prefix}voicechangermenu`
+									},
+									{
+									"title": "TXT-to-IMG Menu",
+									"description": "Displays The List Of Textpro Features",
+									"rowId": `${prefix}textpromenu`
+									},
+								]
+							},
+							{
+								"title": "Credit",
+								"rows": [
+									{
+										"title": "Thanks To",
+										"description": "Displays The List Of Credit Of The Bot !!",
+										"rowId": `${prefix}thanksto`
+									}
+								]
+							}
+						],
+          listType: 1
+                }
+            }), {})
+           Nexus.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            }
+            break
+case 'animemenu' : {
+if (isBan) return reply(mess.banned)	 			
+if (isBanChat) return reply(mess.bangc)
+const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+│                                      ❒
+│ *My prefix*       : ( ${prefix} )
+│ *My name*       : ${global.BotName}
+│ *User name*    : ${pushname}
+│ *Owner name* : ${global.OwnerName}
+│ *Owner no.*     : http://wa.me//${global.Owner}
+│ *Group name*  : ${groupMetadata.subject}
+│                                      ❒
+╰╼━━━━━━━━━━━━╾╯
+╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 
+❒🔥 ${prefix}crosplay
+❒🔥 ${prefix}waifu
+❒🔥 ${prefix}loli
+❒🔥 ${prefix}neko
+❒🔥 ${prefix}ppcouple
+❒🔥 ${prefix}feed
+❒🔥 ${prefix}foxgirl
+❒🔥 ${prefix}feed
+❒🔥 ${prefix}meow
+❒🔥 ${prefix}tickle
+❒🔥 ${prefix}wallpaper
+❒🔥 ${prefix}coffee
+❒🔥 ${prefix}animenom
+❒🔥 ${prefix}waifu3
+❒🔥 ${prefix}neko2
+❒🔥 ${prefix}feed
+❒🔥 ${prefix}meow
+❒🔥 ${prefix}tickle
+❒🔥 ${prefix}migumin
+❒🔥 ${prefix}awoo
+❒🔥 ${prefix}animewallpaper2
+❒🔥 ${prefix}anime
+❒🔥 ${prefix}manga        
 
-case 'alive':
-    if (isBan) return reply(mess.banned)	 			
-    if (isBanChat) return reply(mess.bangc)
+╰╼≺${global.BotName}≻`
+	const ayush_o = [
+		"https://c.tenor.com/WzThStqS9zUAAAPo/fire-force-sho-kusakabe.mp4" ,
+		"https://c.tenor.com/GgpAQFqUBJMAAAPo/anime-fire-force.mp4"]
+	const ayushselection = ayush_o[Math.floor(Math.random()*ayush_0.length)]
+	Nexus.sendMessages(from,{video:{url:ayushselection},gifPlayback:true,caption:ayush}, {quoted:m})
+}
+break	
+case 'voicechangermenu' : {
+if (isBan) return reply(mess.banned)	 			
+if (isBanChat) return reply(mess.bangc)
+const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+│                                      ❒
+│ *My prefix*       : ( ${prefix} )
+│ *My name*       : ${global.BotName}
+│ *User name*    : ${pushname}
+│ *Owner name* : ${global.OwnerName}
+│ *Owner no.*     : http://wa.me//${global.Owner}
+│ *Group name*  : ${groupMetadata.subject}
+│                                      ❒
+╰╼━━━━━━━━━━━━╾╯
+╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 
-const txt = `Do you love Marin ? Then we are the same.`
-const Nexusarray= [
-            "https://c.tenor.com/hjL3MnIsB88AAAPo/marin-kitagawa-kitagawa-marin.mp4"
-            
-            ]
-        
-            const Nexusselection = Nexusarray[Math.floor(Math.random()*Nexusarray.length)]
-        
-            Nexus.sendMessage(from,{video:{url:Nexusselection},gifPlayback:true,caption:txt},{quoted:m})
+❒🔥 ${prefix}bass
+❒🔥 ${prefix}tempo
+❒🔥 ${prefix}blown
+❒🔥 ${prefix}deep
+❒🔥 ${prefix}earrape
+❒🔥 ${prefix}fast
+❒🔥 ${prefix}fat
+❒🔥 ${prefix}nightcore
+❒🔥 ${prefix}reverse
+❒🔥 ${prefix}robot
+❒🔥 ${prefix}slow
+❒🔥 ${prefix}squirrel       
 
+╰╼≺${global.BotName}≻`
+	const ayush_o = [
+		"https://c.tenor.com/WzThStqS9zUAAAPo/fire-force-sho-kusakabe.mp4" ,
+		"https://c.tenor.com/GgpAQFqUBJMAAAPo/anime-fire-force.mp4"]
+	const ayushselection = ayush_o[Math.floor(Math.random()*ayush_0.length)]
+	Nexus.sendMessages(from,{video:{url:ayushselection},gifPlayback:true,caption:ayush}, {quoted:m})
+}
+break		
+case 'textpromenu' :{
+if (isBan) return reply(mess.banned)	 			
+if (isBanChat) return reply(mess.bangc)
+const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+│                                      ❒
+│ *My prefix*       : ( - )
+│ *My name*       : ${global.BotName}
+│ *User name*    : ${pushname}
+│ *Owner name* : ${global.OwnerName}
+│ *Owner no.*     : http://wa.me//${global.Owner}
+│ *Group name*  : ${groupMetadata.subject}
+│                                      ❒
+╰╼━━━━━━━━━━━━╾╯
+╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+
+❒🔥 ${prefix}candy
+❒🔥 ${prefix}christmas
+❒🔥 ${prefix}3Dchristmas
+❒🔥 ${prefix}sparklechristmas
+❒🔥 ${prefix}deepsea
+❒🔥 ${prefix}scifi
+❒🔥 ${prefix}rainbow
+❒🔥 ${prefix}waterpipe
+❒🔥 ${prefix}spooky
+❒🔥 ${prefix}pencil
+❒🔥 ${prefix}circuit
+❒🔥 ${prefix}discovery
+❒🔥 ${prefix}metalic
+❒🔥 ${prefix}fiction
+❒🔥 ${prefix}demon
+❒🔥 ${prefix}transformar
+❒🔥 ${prefix}berry
+❒🔥 ${prefix}thunder 
+❒🔥 ${prefix}Magma
+❒🔥 ${prefix}3Dstone
+❒🔥 ${prefix}neonlight
+❒🔥 ${prefix}glitch
+❒🔥 ${prefix}harrypotter
+❒🔥 ${prefix}broken glass
+❒🔥 ${prefix}papercut
+❒🔥 ${prefix}watercolour
+❒🔥 ${prefix}multicolour
+❒🔥 ${prefix}neondevil
+❒🔥 ${prefix}underwater
+❒🔥 ${prefix}graffitibike
+❒🔥 ${prefix}snow
+❒🔥 ${prefix}cloud
+❒🔥 ${prefix}honey
+❒🔥 ${prefix}ice
+❒🔥 ${prefix}fruitjuice
+❒🔥 ${prefix}biscuit 
+❒🔥 ${prefix}wood
+❒🔥 ${prefix}chocolate
+❒🔥 ${prefix}strawberry
+❒🔥 ${prefix}matrix
+❒🔥 ${prefix}blood
+❒🔥 ${prefix}dropwater
+❒🔥 ${prefix}toxic
+❒🔥 ${prefix}lava
+❒🔥 ${prefix}rock
+❒🔥 ${prefix}bloodglas
+❒🔥 ${prefix}hallowen
+❒🔥 ${prefix}darkgold
+❒🔥 ${prefix}joker
+❒🔥 ${prefix}wicker
+❒🔥 ${prefix}firework
+❒🔥 ${prefix}skeleton
+❒🔥 ${prefix}blackpink
+❒🔥 ${prefix}sand
+❒🔥 ${prefix}glue
+❒🔥 ${prefix}1917
+
+╰╼≺${global.BotName}≻`
+	const ayush_o = [
+		"https://c.tenor.com/WzThStqS9zUAAAPo/fire-force-sho-kusakabe.mp4" ,
+		"https://c.tenor.com/GgpAQFqUBJMAAAPo/anime-fire-force.mp4"]
+	const ayushselection = ayush_o[Math.floor(Math.random()*ayush_0.length)]
+	Nexus.sendMessages(from,{video:{url:ayushselection},gifPlayback:true,caption:ayush}, {quoted:m})
+}
+break
+case 'downloadmenu' :{
+if (isBan) return reply(mess.banned)	 			
+if (isBanChat) return reply(mess.bangc)
+const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+│                                      ❒
+│ *My prefix*       : ( ${prefix} )
+│ *My name*       : ${global.BotName}
+│ *User name*    : ${pushname}
+│ *Owner name* : ${global.OwnerName}
+│ *Owner no.*     : http://wa.me//${global.Owner}
+│ *Group name*  : ${groupMetadata.subject}
+│                                      ❒
+╰╼━━━━━━━━━━━━╾╯
+╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+
+❒🔥 ${prefix}play
+❒🔥 ${prefix}ytmp3
+❒🔥 ${prefix}ytmp4
+❒🔥 ${prefix}ytvideo
+❒🔥 ${prefix}instagram
+❒🔥 ${prefix}igtv
+❒🔥 ${prefix}facebook
+❒🔥 ${prefix}fbmp3
+❒🔥 ${prefix}twitter
+❒🔥 ${prefix}twittermp3
+❒🔥 ${prefix}tiktok
+❒🔥 ${prefix}tiktokaudio
+❒🔥 ${prefix}tiktoknowm
+❒🔥 ${prefix}mediafire        
+
+╰╼≺${global.BotName}≻`
+	const ayush_o = [
+		"https://c.tenor.com/WzThStqS9zUAAAPo/fire-force-sho-kusakabe.mp4" ,
+		"https://c.tenor.com/GgpAQFqUBJMAAAPo/anime-fire-force.mp4"]
+	const ayushselection = ayush_o[Math.floor(Math.random()*ayush_0.length)]
+	Nexus.sendMessages(from,{video:{url:ayushselection},gifPlayback:true,caption:ayush}, {quoted:m})
+}
+break
+case 'funmenu':{
+		if (isBan) return reply(mess.banned)	 			
+    		if (isBanChat) return reply(mess.bangc)
+	const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+│                                      ❒
+│ *My prefix*       : ( ${prefix} )
+│ *My name*       : ${global.BotName}
+│ *User name*    : ${pushname}
+│ *Owner name* : ${global.OwnerName}
+│ *Owner no.*     : http://wa.me//${global.Owner}
+│ *Group name*  : ${groupMetadata.subject}
+│                                      ❒
+╰╼━━━━━━━━━━━━╾╯
+╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+
+❒🔥 ${prefix}reaction
+❒🔥 ${prefix}truth
+❒🔥 ${prefix}dare
+❒🔥 ${prefix}couple
+❒🔥 ${prefix}soulmate
+❒🔥 ${prefix}handsomecheck
+❒🔥 ${prefix}beautifulcheck
+❒🔥 ${prefix}awesomecheck
+❒🔥 ${prefix}greatcheck
+❒🔥 ${prefix}gaycheck
+❒🔥 ${prefix}cutecheck
+❒🔥 ${prefix}lesbiancheck
+❒🔥 ${prefix}hornycheck
+❒🔥 ${prefix}prettycheck
+❒🔥 ${prefix}lovelycheck
+❒🔥 ${prefix}uglycheck
+❒🔥 ${prefix}charactercheck
+❒🔥 ${prefix}math
+❒🔥 ${prefix}checkdeath
+❒🔥 ${prefix}guess
+❒🔥 ${prefix}attp
+❒🔥 ${prefix}attp2
+❒🔥 ${prefix}ttp
+❒🔥 ${prefix}patrick
+
+╰╼≺${global.BotName}≻`
+	const ayush_o = [
+		"https://c.tenor.com/WzThStqS9zUAAAPo/fire-force-sho-kusakabe.mp4" ,
+		"https://c.tenor.com/GgpAQFqUBJMAAAPo/anime-fire-force.mp4"]
+	const ayushselection = ayush_o[Math.floor(Math.random()*ayush_0.length)]
+	Nexus.sendMessages(from,{video:{url:ayushselection},gifPlayback:true,caption:ayush}, {quoted:m})
+}
+break
+case 'groupmenu' :{
+if (isBan) return reply(mess.banned)	 			
+if (isBanChat) return reply(mess.bangc)
+const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+│                                      ❒
+│ *My prefix*       : ( ${prefix} )
+│ *My name*       : ${global.BotName}
+│ *User name*    : ${pushname}
+│ *Owner name* : ${global.OwnerName}
+│ *Owner no.*     : http://wa.me//${global.Owner}
+│ *Group name*  : ${groupMetadata.subject}
+│                                      ❒
+╰╼━━━━━━━━━━━━╾╯
+╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+│
+│❒🔥 ${prefix}deletethis *(any msg)*
+│❒🔥 ${prefix}promote
+│❒🔥 ${prefix}demote
+│❒🔥 ${prefix}revoke
+│❒🔥 ${prefix}add
+│❒🔥 ${prefix}remove
+│❒🔥 ${prefix}tagall
+│❒🔥 ${prefix}hidetag
+│❒🔥 ${prefix}afk  *(type reason)*
+│❒🔥 ${prefix}grouplink
+│❒🔥 ${prefix}setgcpp
+│❒🔥 ${prefix}setname
+│❒🔥 ${prefix}setdesc
+│❒🔥 ${prefix}group  *(open/close)*
+│❒🔥 ${prefix}antivirus
+│❒🔥 ${prefix}antitoxic        
+│
+╰╼≺${global.BotName}≻`
+	const ayush_o = [
+		"https://c.tenor.com/WzThStqS9zUAAAPo/fire-force-sho-kusakabe.mp4" ,
+		"https://c.tenor.com/GgpAQFqUBJMAAAPo/anime-fire-force.mp4"]
+	const ayushselection = ayush_o[Math.floor(Math.random()*ayush_0.length)]
+	Nexus.sendMessages(from,{video:{url:ayushselection},gifPlayback:true,caption:ayush}, {quoted:m})
+}
+break
+case 'downloadmenu' : {
+if (isBan) return reply(mess.banned)	 			
+if (isBanChat) return reply(mess.bangc)
+const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+│                                      ❒
+│ *My prefix*       : ( - )
+│ *My name*       : ${global.BotName}
+│ *User name*    : ${pushname}
+│ *Owner name* : ${global.OwnerName}
+│ *Owner no.*     : http://wa.me//${global.Owner}
+│ *Group name*  : ${groupMetadata.subject}
+│                                      ❒
+╰╼━━━━━━━━━━━━╾╯
+╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+
+❒🔥 ${prefix}play
+❒🔥 ${prefix}ytmp3
+❒🔥 ${prefix}ytmp4
+❒🔥 ${prefix}ytvideo
+❒🔥 ${prefix}instagram
+❒🔥 ${prefix}igtv
+❒🔥 ${prefix}facebook
+❒🔥 ${prefix}fbmp3
+❒🔥 ${prefix}twitter
+❒🔥 ${prefix}twittermp3
+❒🔥 ${prefix}tiktok
+❒🔥 ${prefix}tiktokaudio
+❒🔥 ${prefix}tiktoknowm
+❒🔥 ${prefix}mediafire        
+
+╰╼≺${global.BotName}≻`
+	const ayush_o = [
+		"https://c.tenor.com/WzThStqS9zUAAAPo/fire-force-sho-kusakabe.mp4" ,
+		"https://c.tenor.com/GgpAQFqUBJMAAAPo/anime-fire-force.mp4"]
+	const ayushselection = ayush_o[Math.floor(Math.random()*ayush_0.length)]
+	Nexus.sendMessages(from,{video:{url:ayushselection},gifPlayback:true,caption:ayush}, {quoted:m})
+}
 break
 
+case 'alive': case 'h': case 'menu': case 'allmenu': case 'listmenu': {
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+const txt = `HELLO *${pushname}*senpai i am marin press any button to se my commands💕⚡`
+let butRun = [
+                {buttonId: `${prefix}owner`, buttonText: {displayText: '❤️ 𝘖𝘸𝘯𝘦𝘳 ❤️'}, type: 1},      
+                {buttonId: `${prefix}command`, buttonText: {displayText: 'list Menu👑'}, type: 1},
+		{buttonId: `${prefix}allmenu`, buttonText: {displayText: 'ALL Menu👑'}, type: 1}
+                ]
+                let buttonMessage = {
+                    audio:fs.readFileSync('./nexusmedia/bot.mp3'),mimetype: 'audio/mp4' , ptt: true ,
+                    caption: txt,
+                    footer: `${global.BotName}`,
+                    buttons: butRun,
+                    headerType: 4
+                }
+            Nexus.sendMessage(m.chat,buttonMessage,{quoted:m})
+                }
+break
 
 case 'add':{    			
     if (!m.isGroup) return replay(mess.grouponly)
