@@ -6040,7 +6040,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 case 'animemenu' : {
 if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
- reply(= `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+reply( `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 │                                      ❒
 │ *My prefix*       : ( ${prefix} )
 │ *My name*       : ${global.BotName}
@@ -6219,9 +6219,9 @@ reply(`╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 )}
 break
 case 'funmenu':{
-		if (isBan) return reply(mess.banned)	 			
-    		if (isBanChat) return reply(mess.bangc)
-	reply (`╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+if (isBan) return reply(mess.banned)	 			
+if (isBanChat) return reply(mess.bangc)
+reply(`╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 │                                      ❒
 │ *My prefix*       : ( ${prefix} )
 │ *My name*       : ${global.BotName}
@@ -6264,7 +6264,7 @@ break
 case 'groupmenu' :{
 if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
- reply (`╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+ reply(`╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 │                                      ❒
 │ *My prefix*       : ( ${prefix} )
 │ *My name*       : ${global.BotName}
