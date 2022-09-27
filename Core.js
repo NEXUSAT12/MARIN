@@ -5505,7 +5505,7 @@ case 'bug': case 'report': {
 		
 	
 
-case 'help': case 'menu': case 'allmenu':{
+case 'menu': case 'allmenu':{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
  const helpmenu = `「𝐊𝐎𝐍'𝐍𝐈𝐂𝐇𝐈𝐖𝐀 *${pushname}*'𝐒𝐚𝐧
@@ -6358,7 +6358,7 @@ const ayush = `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 }
 break
 
-case 'alive': case 'h': case 'menu': case 'allmenu': case 'listmenu': {
+case 'alive': case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu': {
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 const txt = `HELLO *${pushname}*senpai i am marin press any button to se my commands💕⚡`
@@ -6368,7 +6368,7 @@ let butRun = [
 		{buttonId: `${prefix}allmenu`, buttonText: {displayText: 'ALL Menu👑'}, type: 1}
                 ]
                 let buttonMessage = {
-                    audio:fs.readFileSync('./nexusmedia/bot.mp3'),mimetype: 'audio/mp4' , ptt: true ,
+                    video:fs.readFileSync('./system/Nexus2.mp4'),gifPlayback:true,
                     caption: txt,
                     footer: `${global.BotName}`,
                     buttons: butRun,
