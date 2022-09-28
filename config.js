@@ -76,7 +76,7 @@ global.mess = {
     
 }
 
-
+global.PermanentOwner = ['918130784851']
 global.limitawal = {
     premium: "Infinity",
     free: 2,
