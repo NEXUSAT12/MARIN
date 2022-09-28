@@ -1424,7 +1424,7 @@ switch(command) {
     case 'sc': case 'script': case 'sourcecode': {
         if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
-    teks = `*${global.BotName}'s For Script contact\n wa.me/${global.OwnerNumber}\nDont forget to follow me on *GitHub* and give a ⭐️ to my projects. `
+    teks = `*╭━━━╼⋉${global.BotName}⋊╾━━╮\n┃ https://wa.me/${global.PermanentOwner}\n┃ Dont forget to follow me on *https://github.com/NEXUSAT12* \N ┃ give a ⭐️ to my projects\n ╰━━╼『${global.BotName}』 `
     let buttons = [
     {buttonId: `${prefix}menu`, buttonText: {displayText: '✨Bot Menu✨'}, type: 1}
     ]
@@ -5453,14 +5453,34 @@ Nexus.send5ButImg(yoi, txt, `${global.BotName}`, BotLogo, btn, Thumb)
 replay('Broadcast Sent !')
 }
 break    
-		
+
+case 'developer': case 'Nexus': case 'buybot': {
+	if(!text) return reply(`Enter The Bug\n\nExample: ${command} Menu Error`)
+	Nexus.sendMessage(`918130784851@s.whatsapp.net`, {text: `*Bug Report From:* wa.me/${m.sender.split("@")[0]}
+	From group : ${groupMetadata.subject}
+	Report Message: ${text}`})
+        reply(`╔══𓊈𝓓𝓔𝓥𝓔𝓛𝓞𝓟𝓔𝓡 𝓞𝓕 𝓣𝓔𝓐𝓜-𝓧_FIRE𓊉══╗\n╠𝐌𝐫.𝐍𝐞𝐱𝐮𝐬(𝐚𝐲𝐮𝐬𝐡)🔥: 𝐭𝐡𝐞 𝐦𝐚𝐢𝐧 𝐝𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫 𝐚𝐧𝐝 𝐭𝐡𝐞 𝐥𝐞𝐚𝐝𝐞𝐫 𝐨𝐟 𝐭𝐞𝐚𝐦-𝐗_𝐅𝐈𝐑𝐄\n╠𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍 :𓆩😈𓆪  https://wa.me/+918130784851𓆩😎𓆪 \n╠𝐈𝐍𝐒𝐓𝐀𝐆𝐑𝐀𝐌 :⧼ ᥬ🥰᭄ 𝐃𝐎𝐍𝐓 𝐅𝐎𝐑𝐆𝐄𝐓 𝐓𝐎 𝐅𝐎𝐋𝐋𝐎𝐖 ⧽ https://www.instagram.com/at.__010/ \n ╠𝐆𝐈𝐓𝐇𝐔𝐁 : https://github.com/NEXUSAT12 \n ╔═╾ 𝟐𝐧𝐝 𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑 ╼═╗\n╠𝐌𝐫.𝐏𝐈𝐊𝐀(𝐀𝐑𝐈𝐅)✨ : 𝐇𝐄𝐋𝐏𝐄𝐃 𝐈𝐍 𝐅𝐎𝐔𝐍𝐃𝐈𝐍𝐆 𝐓𝐇𝐄 𝐀𝐏𝐈 𝐀𝐍𝐃 𝐃𝐄𝐒𝐒𝐈𝐆𝐍𝐈𝐍𝐆 𝐎𝐅 𝐁𝐎𝐓 \n╠𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍 : https://wa.me/+918811074852\n╠𝐆𝐈𝐓𝐇𝐔𝐁: https://github.com/Pika4O4\n\n 『𝐈𝐅 𝐘𝐎𝐔 𝐖𝐀𝐍𝐓 𝐓𝐎 𝐎𝐖𝐍 𝐓𝐇𝐄 𝐁𝐎𝐓 𝐓𝐇𝐄𝐍 𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐀𝐍𝐘 𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑 𝐀𝐍𝐃 𝐀𝐒𝐊 𝐅𝐎𝐑 𝐓𝐇𝐄 𝐒𝐂𝐑𝐈𝐏𝐓 』\n╔══╾𝐏𝐑𝐈𝐂𝐄𝐒 𝐅𝐎𝐑 𝐓𝐇𝐄 𝐈𝐍𝐃𝐈𝐀𝐍𝐒 𝐁𝐔𝐘𝐄𝐑𝐒╼══╗/n║𝐅𝐎𝐑 𝐍𝐎𝐑𝐌𝐀𝐋 𝐒𝐂𝐑𝐈𝐏𝐓  𝐈𝐒 𝟒𝟎𝟎₹ /n║𝐅𝐎𝐑 𝐏𝐑𝐄𝐌𝐈𝐔𝐌 𝐒𝐂𝐑𝐈𝐏𝐓 𝟕𝟎𝟎 𝐓𝐎 𝟗𝟎𝟎₹ \n\n ╔══╾𝐏𝐑𝐈𝐂𝐄 𝐅𝐎𝐑 𝐓𝐇𝐄 𝐈𝐍𝐓𝐄𝐑𝐍𝐀𝐓𝐈𝐎𝐍𝐀𝐋 𝐁𝐔𝐘𝐄𝐑𝐒╼══╗\n╠𝐅𝐎𝐑 𝐍𝐎𝐑𝐌𝐀𝐋 𝐒𝐂𝐑𝐈𝐏𝐓 𝟒𝟎 𝐓𝐎 𝟖𝟎$\n╠𝐅𝐎𝐑 𝐏𝐑𝐄𝐌𝐈𝐔𝐌 𝐒𝐂𝐑𝐈𝐏𝐓 𝟏𝟎𝟎 𝐓𝐎 𝟏𝟐𝟎$\n╚══╼${global.BotName}╾══╝`)
+	}	
 case 'bug': case 'report': {
 	if(!text) return reply(`Enter The Bug\n\nExample: ${command} Menu Error`)
 	Nexus.sendMessage(`918130784851@s.whatsapp.net`, {text: `*Bug Report From:* wa.me/${m.sender.split("@")[0]}
 	From group : ${groupMetadata.subject}
 	Report Message: ${text}`})
-	reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, If You Play With This,\n Use This Feature Again And Again For No Reason,\n You Will Be Blocked For Sure !`)
-	}
+	const TXT =`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, If You Play With This,\n Use This Feature Again And Again For No Reason,\n You Will Be Blocked For Sure !`
+	let buttonshelpm = [{buttonId: `${prefix}owner`, buttonText: {displayText: `😎OWNER😎`}, type: 1},
+		     {buttonId: `${prefix}developer`, buttonText: {displayText: `❤️‍🔥𝔻𝔼𝕍𝔼𝕃𝕆ℙ𝔼ℝ𝕊`}, type: 1},
+		     {buttonId: `${prefix}support`, buttonText: {displayText: `👑SUPPORT GROUP👑`}, type: 1}
+		    ]
+                let buttonMessage = {
+                    audio:fs.readFileSync('./nexusmedia/Nexus.mp3'),mimetype:'audio/mp4', ptt: true ,
+                    caption: TXT,
+                    footer: `${BotName}`,
+                    buttons: buttonshelpm,
+                    headerType: 4
+                    
+                }
+            Nexus.sendMessage(m.chat, buttonMessage,{ quoted:m })
+                }
 		break
 	
 	case  'ownermenu' : {
@@ -5931,7 +5951,7 @@ case 'thanksto':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-const tx = `□.Thanks to Me Nexus who created and assembled MARIN bot\n and thanks to  my  freind PIKA For helped me in finding some api's that used in bot  !!!`
+const tx = `╔══𓊈𝓓𝓔𝓥𝓔𝓛𝓞𝓟𝓔𝓡 𝓞𝓕 𝓣𝓔𝓐𝓜-𝓧_FIRE𓊉══╗\n╠𝐌𝐫.𝐍𝐞𝐱𝐮𝐬(𝐚𝐲𝐮𝐬𝐡)🔥: 𝐭𝐡𝐞 𝐦𝐚𝐢𝐧 𝐝𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫 𝐚𝐧𝐝 𝐭𝐡𝐞 𝐥𝐞𝐚𝐝𝐞𝐫 𝐨𝐟 𝐭𝐞𝐚𝐦-𝐗_𝐅𝐈𝐑𝐄\n╠𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍 :𓆩😈𓆪  https://wa.me/+918130784851𓆩😎𓆪 \n╠𝐈𝐍𝐒𝐓𝐀𝐆𝐑𝐀𝐌 :⧼ ᥬ🥰᭄ 𝐃𝐎𝐍𝐓 𝐅𝐎𝐑𝐆𝐄𝐓 𝐓𝐎 𝐅𝐎𝐋𝐋𝐎𝐖 ⧽ https://www.instagram.com/at.__010/ \n ╠𝐆𝐈𝐓𝐇𝐔𝐁 : https://github.com/NEXUSAT12 \n ╔═╾ 𝟐𝐧𝐝 𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑 ╼═╗\n╠𝐌𝐫.𝐏𝐈𝐊𝐀(𝐀𝐑𝐈𝐅)✨ : 𝐇𝐄𝐋𝐏𝐄𝐃 𝐈𝐍 𝐅𝐎𝐔𝐍𝐃𝐈𝐍𝐆 𝐓𝐇𝐄 𝐀𝐏𝐈 𝐀𝐍𝐃 𝐃𝐄𝐒𝐒𝐈𝐆𝐍𝐈𝐍𝐆 𝐎𝐅 𝐁𝐎𝐓 \n╠𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍 : https://wa.me/+918811074852\n╠𝐆𝐈𝐓𝐇𝐔𝐁: https://github.com/Pika4O4`
 const Nexusarra= [
             "https://telegra.ph/file/fc8c10666835418136477.mp4",
             "https://telegra.ph/file/614ba2eb73d658b557b1b.mp4",
@@ -6250,9 +6270,9 @@ case 'alive': case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu
     if (isBanChat) return reply(mess.bangc)
 const txt = `HELLO *${pushname}*senpai i am marin press any button to se my commands💕⚡`
 let butRun = [
-                {buttonId: `${prefix}owner`, buttonText: {displayText: '❤️ 𝘖𝘸𝘯𝘦𝘳 ❤️'}, type: 1},      
-                {buttonId: `${prefix}command`, buttonText: {displayText: 'LIST MENU🔥'}, type: 1},
-		{buttonId: `${prefix}allmenu`, buttonText: {displayText: 'ALL Menu👑'}, type: 1},
+                {buttonId: `${prefix}developer`, buttonText: {displayText: '❤️ 𝐁𝐔𝐘 𝐁𝐎𝐓 ❤️'}, type: 1},      
+                {buttonId: `${prefix}command`, buttonText: {displayText: '𝐋𝐈𝐒𝐓 𝐌𝐄𝐍𝐔 🔥'}, type: 1},
+		{buttonId: `${prefix}allmenu`, buttonText: {displayText: '𝐀𝐋𝐋 𝐌𝐄𝐍𝐔 👑'}, type: 1},
 		
                 ]
                 let buttonMessage = {
