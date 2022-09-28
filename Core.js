@@ -5465,9 +5465,7 @@ case 'bug': case 'report': {
 	Nexus.sendMessage(`918130784851@s.whatsapp.net`, {text: `*Bug Report From:* wa.me/${m.sender.split("@")[0]}
 	From group : ${groupMetadata.subject}
 	Report Message: ${text}`})
-	const TXT =`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, If You Play With This,\n Use This Feature Again And Again For No Reason,\n You Will Be Blocked For Sure !` 
-        result = fs.readFileSync(`./nexusmedia/bot.mp3`)
-	Nexus.sendMessage(m.chat, { audio: result, caption: TXT , mimetype: 'audio/mp4' , ptt: true, } { quoted: m})
+	reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, If You Play With This,\n Use This Feature Again And Again For No Reason,\n You Will Be Blocked For Sure !` )
                 }
 		break
 	
@@ -5478,7 +5476,7 @@ case 'bug': case 'report': {
 		let  nexusmenu = [`self on`,`public on`,`bangroup on`]
 		let  nexusmenu2 = [`self off`,`public off`,`bangroup off `]
 		let marin = [`self on/off`,`public on/off`,`bangroup on/off`]
-		let marin2 = [`SELF`,`PUBLIC`,`BANGROUP`]
+		let marin2 = [`SELF 𓆩😎𓆪 `,`PUBLIC𓆩😁𓆪 `,`BANGROUP𓆩😠𓆪 `]
 		let ne = [`ACTIVATE THIS COMMANDS`,`DEACTIVATE THIS COMMAND`]
 		let startnum = 0; let startnu = 0; let startn = 0;let start = 0
                     let startnumm = 1
@@ -5964,8 +5962,8 @@ case  'command' : {
     		if (isBanChat) return reply(mess.bangc)
 		let sections = []
 		let  nexusmenu = [`ownermenu`,`textpromenu`,`groupmenu`,`funmenu`,`downloadmenu`,`voicechangermenu`,`animemenu`]
-		let marin2 = [`ONLY FOR OWNER`,`TXT-IMG-MAKER MENU`,`ONLY FOR ADMINS`,`FOR FUN`,`DOWNLOADMENU`,`CHANGE VOICE OF ANY AUDIO`,`ANIME MENU`]
-		let ne = [`HERE ARE YOUR COMMANDS CHOOSE TO GET THE PARTICULAR MENU`]
+		let marin2 = [`𝐎𝐍𝐋𝐘 𝐅𝐎𝐑 𝐎𝐖𝐍𝐄𝐑 𓆩😎𓆪 `,`𝐓𝐗𝐓-𝐈𝐌𝐆-𝐌𝐀𝐊𝐄𝐑 𝐌𝐄𝐍𝐔 𓆩🤯𓆪 `,`𝐎𝐍𝐋𝐘 𝐅𝐎𝐑 𝐆𝐑𝐎𝐔𝐏𝐀𝐃𝐌𝐈𝐍𝐒 𓆩🤖𓆪 `,`𝐅𝐎𝐑 𝐅𝐔𝐍 𓆩😁𓆪 `,`𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐌𝐄𝐍𝐔 𓆩😲𓆪 `,`𝐂𝐇𝐀𝐍𝐆𝐄 𝐕𝐎𝐈𝐂𝐄 𝐎𝐅 𝐀𝐍𝐘 𝐀𝐔𝐃𝐈𝐎 𓆩😌𓆪 `,`𝐀𝐍𝐈𝐌𝐄 𝐌𝐄𝐍𝐔 𓆩🥴𓆪 `]
+		let ne = [`𝐡𝐞𝐫𝐞 𝐚𝐫𝐞 𝐲𝐨𝐮𝐫 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐜𝐡𝐨𝐨𝐬𝐞 𝐭𝐨 𝐠𝐞𝐭 𝐭𝐡𝐞 𝐩𝐚𝐫𝐭𝐢𝐜𝐮𝐥𝐚𝐫 𝐦𝐞𝐧𝐮`]
 		let startnum = 0; let startnu = 0; let startn = 0;let start = 0
                     let startnumm = 1
                     for (let x of nexusmenu) {
@@ -5996,7 +5994,7 @@ case  'command' : {
 case 'animemenu' : {
 if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
-reply( `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+reply( `╭╼━᚜ 𓆩🥰𓆪  𝐌𝐀𝐑𝐈𝐍 𝐁𝐘 𝐍𝐄𝐗𝐔𝐒 𓆩😈𓆪  ᚛━╾╮
 │                                      ❒
 │ *My prefix*       : ( ${prefix} )
 │ *My name*       : ${global.BotName}
@@ -6006,7 +6004,7 @@ reply( `╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 │ *Group name*  : ${groupMetadata.subject}
 │                                      ❒
 ╰╼━━━━━━━━━━━━╾╯
-╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+╭╼━᚜ 𓆩🥰𓆪  𝐌𝐀𝐑𝐈𝐍 𝐁𝐘 𝐍𝐄𝐗𝐔𝐒 𓆩😈𓆪  ᚛━╾╮
 
 ❒🔥 ${prefix}crosplay
 ❒🔥 ${prefix}waifu
@@ -6048,7 +6046,7 @@ reply(`╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 │ *Group name*  : ${groupMetadata.subject}
 │                                      ❒
 ╰╼━━━━━━━━━━━━╾╯
-╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+╭╼━᚜ 𓆩🥰𓆪  𝐌𝐀𝐑𝐈𝐍 𝐁𝐘 𝐍𝐄𝐗𝐔𝐒 𓆩😈𓆪   ᚛━╾╮
 
 ❒🔥 ${prefix}bass
 ❒🔥 ${prefix}tempo
