@@ -600,7 +600,7 @@ for (let ayu of vien){
 //sticker code//
 for (let ayu of setik){
     if (budy == ayu){
-	    result = fs.readFileSync(`./nexusmedia/NEXUS/${ayu}.webp`)
+	    result = fs.readFileSync(`./nexusmedia/NEXUS.VIDEO/${ayu}.webp`)
 	    Nexus.sendMessage(m.chat,{ sticker: result }, { quoted: m })
 	}
 	} 
