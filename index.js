@@ -148,7 +148,7 @@ Nexus.ev.on('group-participants.update', async (anu) => {
             
                 if (anu.action == 'add') {
                 let WAuserName = num
-                Nexustext = `╭━━━━╼≪${𝓜𝓐𝓡𝓘𝓝 𝓑𝓨 𝓝𝓔𝓧𝓤𝓢}≫╾━━━╮
+                Nexustext = `╭━━━━╼≪𝓜𝓐𝓡𝓘𝓝 𝓑𝓨 𝓝𝓔𝓧𝓤𝓢≫╾━━━╮
 ╠Hello @${WAuserName.split("@")[0]},
 ║I am *𝐌𝐀𝐑𝐈𝐍-𝐁𝐎𝐓 𝐁𝐘 {global.OwnerName} 𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎 ${metadata.subject}.
 ╠*𝐆𝐑𝐎𝐔𝐏 𝐃𝐄𝐒𝐂𝐑𝐈𝐏𝐓𝐈𝐎𝐍:*
