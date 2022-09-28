@@ -5961,100 +5961,40 @@ case 'setprefix':
                     reply(`Successfully changed prefix to ${c}`)
                 }
                 break
-		
+case  'command' : {
+		if (isBan) return reply(mess.banned)	 			
+    		if (isBanChat) return reply(mess.bangc)
+		let sections = []
+		let  nexusmenu = [`ownermenu`,`textpromenu`,`groupmenu`,`funmenu`,`downloadmenu`,`voicechangermenu`,`animemenu`]
+		let marin2 = [`ONLY FOR OWNER`,`TXT-IMG-MAKER MENU`,`ONLY FOR ADMINS`,`FOR FUN`,`DOWNLOADMENU`,`CHANGE VOICE OF ANY AUDIO`,`ANIME MENU`]
+		let ne = [`HERE ARE YOUR COMMANDS CHOOSE TO GET THE PARTICULAR MENU`]
+		let startnum = 0; let startnu = 0; let startn = 0;let start = 0
+                    let startnumm = 1
+                    for (let x of nexusmenu) {
+                        const yy = {title: `${marin2[startnum++]}`,
+                    rows: [
+                       {
+                        title: `${marin2[startnu++]}`,
+                        description: `${ne[0]}`,
+                        rowId: `${prefix}${x}`
+                      }
+                    ]
+                   }
+                        sections.push(yy)
+                    }
+                    const sendm =  Nexus.sendMessage(
+      from, 
+      {
+       text: "LIST MENU",
+       footer: `${BotName}`,
+       title: "CHECK THE MENU LIST......",
+       buttonText: "Click Button",
+       sections
+      }, { quoted : m }
+    )  
+}
+  break		
 
-case 'cammand': {
-if (isBan) return reply(mess.banned)
-if (isBanChat) return reply(mess.bangc)
-let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-                listMessage :{
-                    title: `Hi ${pushname}`,
-                    description: `Please Choose The Menu\n\n`,
-                    buttonText: "Menu",
-                    footerText: `${global.BotName}`,
-                    listType: "SINGLE_SELECT",
-                    sections: [{
-								"title": "Initial Features Of Bot 🦄",
-								"rows": [
-									{
-										"title": "Other ☕",
-										"description": "Displays The List Of Other Features",
-										"rowId": `${prefix}othermenu`
-									}
-								]
-							},
-							{
-								"title": "Bot Features ❤️",
-								"rows": [
-									{
-										"title": "All Menu 🥀",
-										"description": "Displays The List Of All The Features!",
-										"rowId": `${prefix}allmenu`
-									},
-									{
-										"title": "Owner Menu 💠",
-										"description": "Displays The List Of Owner Features",
-										"rowId": `${prefix}ownermenu`
-										},
-									{
-										"title": "Group Menu ✨",
-										"description": "Displays The List Of Main Features",
-										"rowId": `${prefix}groupmenu`
-										},
-										{
-										"title": "Maker Menu 🌈",
-										"description": "Displays The List Of Logo Making Features",
-										"rowId": `${prefix}textpromenu`
-									},
-									{
-										"title": "VOICE CHANGER 🎵",
-										"description": "Displays The List Of Sound Features",
-										"rowId": `${prefix}voicechangermenu`
-									},
-									{
-										"title": "Download Menu ↘️",
-										"description": "Displays The List Of Download Features",
-										"rowId": `${prefix}downloadmenu`
-									},
-									{
-										"title": "Anime Menu 😘",
-										"description": "Displays The List Of Random Anime Features",
-										"rowId": `${prefix}animemenu`
-									},
-									{
-										"title": "Anime Sticker Menu ☺️",
-										"description": "Displays The List Of Anime Sticker Features",
-										"rowId": `${prefix}animestickermenu`
-									},
-									{
-										"title": "Nsfw Menu 🤓",
-										"description": "Displays The List Of Nsfe Features",
-										"rowId": `${prefix}nsfwmenu`
-									},
-									{
-										"title": "Fun Menu 🕺",
-										"description": "Displays The List Of Fun Features",
-										"rowId": `${prefix}funmenu`
-									},
-								]
-							},
-							{
-								"title": "Credit ©️",
-								"rows": [
-									{
-										"title": "Thanks To ❤️",
-										"description": "Displays The List Of Credit Of The Bot !!",
-										"rowId": `${prefix}thanksto`
-									}
-								]
-							}
-						],
-          listType: 1
-                }
-            }), {})
-            Nexus.relayMessage(m.chat, template.message, { messageId: template.key.id })
-            }
-            break
 case 'animemenu' : {
 if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
