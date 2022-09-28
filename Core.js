@@ -5465,20 +5465,9 @@ case 'bug': case 'report': {
 	Nexus.sendMessage(`918130784851@s.whatsapp.net`, {text: `*Bug Report From:* wa.me/${m.sender.split("@")[0]}
 	From group : ${groupMetadata.subject}
 	Report Message: ${text}`})
-	const TXT =`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, If You Play With This,\n Use This Feature Again And Again For No Reason,\n You Will Be Blocked For Sure !`
-	let buttonshelpm = [{buttonId: `${prefix}owner`, buttonText: {displayText: `😎OWNER😎`}, type: 1},
-		     {buttonId: `${prefix}developer`, buttonText: {displayText: `❤️‍🔥𝔻𝔼𝕍𝔼𝕃𝕆ℙ𝔼ℝ𝕊`}, type: 1},
-		     {buttonId: `${prefix}support`, buttonText: {displayText: `👑SUPPORT GROUP👑`}, type: 1}
-		    ]
-                let buttonMessage = {
-                    audio:{fs.readFileSync('./nexusmedia/Nexus.mp3'),mimetype:'audio/mp4'},ptt: true,
-                    caption: TXT,
-                    footer: `${BotName}`,
-                    buttons: buttonshelpm,
-                    headerType: 4
-                    
-                }
-            Nexus.sendMessage(m.chat, buttonMessage,{ quoted:m })
+	const TXT =`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, If You Play With This,\n Use This Feature Again And Again For No Reason,\n You Will Be Blocked For Sure !` 
+        result = fs.readFileSync(`./nexusmedia/bot.mp3`)
+	Nexus.sendMessage(m.chat, { audio: result, caption: TXT , mimetype: 'audio/mp4' , ptt: true, } { quoted: m})
                 }
 		break
 	
