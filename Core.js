@@ -161,6 +161,7 @@ let _level = JSON.parse(fs.readFileSync('./database/level.json'))
 let limit = JSON.parse(fs.readFileSync('./database/limit.json'))
 let vien = JSON.parse(fs.readFileSync('./src/audio.json'))
 let videox = JSON.parse(fs.readFileSync('./src/video.json'))
+let setik = JSON.parse(fs.readFileSync('./src/sticker.json'))
 let bad = JSON.parse(fs.readFileSync('./src/bad.json'))
 global.db = JSON.parse(fs.readFileSync('./src/database.json'))
 let _sewa = require("./lib/sewa");
@@ -593,6 +594,14 @@ for (let ayu of vien){
     if (budy == ayu){
 	    result = fs.readFileSync(`./nexusmedia/${ayu}.mp3`)
 	    Nexus.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4' , ptt: true }, { quoted: m})
+	}
+	} 
+	
+//sticker code//
+for (let ayu of setik){
+    if (budy == ayu){
+	    result = fs.readFileSync(`./nexusmedia/NEXUS/${ayu}.webp`)
+	    Nexus.sendMessage(m.chat,{ sticker: result }, { quoted: m })
 	}
 	} 
 	
