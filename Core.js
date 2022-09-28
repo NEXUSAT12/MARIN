@@ -5944,23 +5944,13 @@ const Nexusarra= [
 
 break
 		
-case 'setprefix':
-      if (!isCreator) return replay(mess.botowner)
-       if (args.length < 1) return reply(`Enter prefix\nOptions :\n=> multi\n=> nopref`)
-           if (c === 'multi'){
-              multi = true
-                    reply(`Successfully changed prefix to ${c}`)
-                } else if (c === 'nopref'){
-                    multi = false
-                    nopref = true
-                    reply(`Successfully changed prefix to ${c}`)
-                } else {
-                    multi = false
-                    nopref = false
-                    prefa = `${c}`
-                    reply(`Successfully changed prefix to ${c}`)
-                }
-                break
+// case 'setprefix' : {
+//                if (!isCreator) return replay(`${mess.owner}`)
+//                if (!text) return replay(`Example : ${prefix + command}!!*@%*%&`)
+//           global.prefa = text.split("|")[0]
+//           reply(`prefix Has Been Successfully Changed to\n\n🐦 prefix : ${global.prefix}\n`)
+//             }
+            break
 case  'command' : {
 		if (isBan) return reply(mess.banned)	 			
     		if (isBanChat) return reply(mess.bangc)
@@ -6262,7 +6252,8 @@ const txt = `HELLO *${pushname}*senpai i am marin press any button to se my comm
 let butRun = [
                 {buttonId: `${prefix}owner`, buttonText: {displayText: '❤️ 𝘖𝘸𝘯𝘦𝘳 ❤️'}, type: 1},      
                 {buttonId: `${prefix}thanksto`, buttonText: {displayText: 'THANKS TO ❤️‍🔥'}, type: 1},
-		{buttonId: `${prefix}allmenu`, buttonText: {displayText: 'ALL Menu👑'}, type: 1}
+		{buttonId: `${prefix}allmenu`, buttonText: {displayText: 'ALL Menu👑'}, type: 1},
+		{buttonId: `${prefix}command`, buttonText: {displayText: 'LIST MENU🔥'}, type: 1}
                 ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/Nexus2.mp4'),gifPlayback:true,
