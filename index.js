@@ -148,14 +148,12 @@ Nexus.ev.on('group-participants.update', async (anu) => {
             
                 if (anu.action == 'add') {
                 let WAuserName = num
-                Nexustext = `
-Hello @${WAuserName.split("@")[0]},
-
-I am *MARIN*, Welcome to ${metadata.subject}.
-
-*Group Description:*
-${metadata.desc}
-hope you'll follow the rules of ${metadata.Subject}
+                Nexustext = `╭━━━━╼≪$✨{pushname}✨≫╾━━━╮
+╠Hello @${WAuserName.split("@")[0]},
+║I am *𝐌𝐀𝐑𝐈𝐍-𝐁𝐎𝐓 𝐁𝐘 {global.OwnerName} 𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎 ${metadata.subject}.
+╠*𝐆𝐑𝐎𝐔𝐏 𝐃𝐄𝐒𝐂𝐑𝐈𝐏𝐓𝐈𝐎𝐍:*
+║${metadata.desc}
+╠𝐇𝐨𝐩𝐞 𝐘𝐨𝐮'𝐥𝐥 𝐅𝐨𝐥𝐥𝐨𝐰 𝐓𝐡𝐞 𝐑𝐮𝐥𝐞𝐬 𝐎𝐟 ${metadata.subject}
 `
 
     let buttonMessage = {
