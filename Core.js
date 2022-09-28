@@ -6251,9 +6251,9 @@ case 'alive': case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu
 const txt = `HELLO *${pushname}*senpai i am marin press any button to se my commands💕⚡`
 let butRun = [
                 {buttonId: `${prefix}owner`, buttonText: {displayText: '❤️ 𝘖𝘸𝘯𝘦𝘳 ❤️'}, type: 1},      
-                {buttonId: `${prefix}thanksto`, buttonText: {displayText: 'THANKS TO ❤️‍🔥'}, type: 1},
+                {buttonId: `${prefix}command`, buttonText: {displayText: 'LIST MENU🔥'}, type: 1},
 		{buttonId: `${prefix}allmenu`, buttonText: {displayText: 'ALL Menu👑'}, type: 1},
-		{buttonId: `${prefix}command`, buttonText: {displayText: 'LIST MENU🔥'}, type: 1}
+		
                 ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/Nexus2.mp4'),gifPlayback:true,
