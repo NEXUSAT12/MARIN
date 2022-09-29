@@ -6350,7 +6350,7 @@ case 'add':{
     break
 
 
-case 'githubstalk':
+case 'githubstalk': {
 if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
 if (args.length < 1) return reply('Username?')
@@ -6360,6 +6360,7 @@ gstalk = `❏ *GITHUB STALK*\n\n❏ Name : ${anu.result.name}\n❏ Followers : $
 reply(mess.wait)
 buff = await getBuffer(anu.result.avatar_url)
 Nexus.sendMessage(from, buff, image, {quoted: m, caption: gstalk})
+}
 break 		
     
 case "inspect":{
