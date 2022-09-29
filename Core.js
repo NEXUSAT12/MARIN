@@ -6282,6 +6282,7 @@ break
 case 'alive': case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu': {
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
+Nexus.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 const txt = `HELLO *${pushname}*senpai i am marin press any button to se my commands💕⚡`
 let butRun = [
                 {buttonId: `${prefix}developer`, buttonText: {displayText: '❤️ 𝐁𝐔𝐘 𝐁𝐎𝐓 ❤️'}, type: 1},      
