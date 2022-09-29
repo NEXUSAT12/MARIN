@@ -6359,7 +6359,7 @@ anu = await fetchJson(`https://bx-hunter.herokuapp.com/api/stalk/github?user=${t
 gstalk = `❏ *GITHUB STALK*\n\n❏ Name : ${anu.result.name}\n❏ Followers : ${anu.result.followers}\n❏ Following : ${anu.result.following}\n❏ Id : ${anu.result.id}\n❏ Node Id : ${anu.result.node_id}\n❏ Type : ${anu.result.type}\n❏ Company : ${anu.result.company}\n❏ Location : ${anu.result.location}\n❏ Bio : ${anu.result.bio}\n❏ Site Admin : ${anu.result.site_admin}\n❏ Email : ${anu.result.email}\n❏ Created At : ${anu.result.created_at}\n❏ Updated At : ${anu.result.updated_at}\n❏ Twitter Username : ${anu.result.twitter_username}\n❏ Blog : ${anu.result.blog}\n❏ Avatar Url : ${anu.result.avatar_url}\n❏ Gravatar Id : ${anu.result.gravatar_id}\n❏ Html Url : ${anu.result.html_url}`
 reply(mess.wait)
 buff = await getBuffer(anu.result.avatar_url)
-Nexus.sendMessage(from, buff, image, {quoted: ftok, caption: gstalk})
+Nexus.sendMessage(from, buff, image, {quoted: m, caption: gstalk})
 break 		
     
 case "inspect":{
