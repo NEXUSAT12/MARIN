@@ -240,6 +240,25 @@ const setting = JSON.parse(fs.readFileSync('./apikey.json'))
 const mongoose = require("mongoose");
 
 
+const time2 = moment().tz("Asia/Jakarta").format("HH:mm:ss");
+    if (time2 < "24:59:00") {
+      var ucapanWaktu = "Good night";
+    }
+    if (time2 < "19:00:00") {
+      var ucapanWaktu = "Good evening🌞";
+    }
+    if (time2 < "18:00:00") {
+      var ucapanWaktu = "Good afternoon🌄";
+    }
+    if (time2 < "15:00:00") {
+      var ucapanWaktu = "Good afternoon☀️";
+    }
+    if (time2 < "11:00:00") {
+      var ucapanWaktu = "Good morning🌅";
+    }
+    if (time2 < "05:00:00") {
+      var ucapanWaktu = "Good night🌃";
+    }
 
 
 /////////// -  DM chatbot (Delete this part to turn off DM Chat Bot) - //////////////////
@@ -6329,15 +6348,29 @@ case 'add':{
                         return('Error!')
                     })
     break
-		
-      case "inspect":
-        try {
-          if (!isUrl(args[0]) && !args[0].includes("whatsapp.com"))
-            return reply(mess.Iv);
-          if (!q) return reply("enter the link wa");
-          cos = args[0];
-          var net = cos.split("https://chat.whatsapp.com/")[1];
-          if (!net) return reply("make sure its a link https://whatsapp.com/");
+
+
+case 'githubstalk':
+if (isBan) return reply(mess.banned)	 			
+if (isBanChat) return reply(mess.bangc)
+if (args.length < 1) return reply('Username?')
+var teks = body.slice(13)
+anu = await fetchJson(`https://bx-hunter.herokuapp.com/api/stalk/github?user=${teks}&apikey=${HunterApi}`, {method: 'get'})
+gstalk = `❏ *GITHUB STALK*\n\n❏ Name : ${anu.result.name}\n❏ Followers : ${anu.result.followers}\n❏ Following : ${anu.result.following}\n❏ Id : ${anu.result.id}\n❏ Node Id : ${anu.result.node_id}\n❏ Type : ${anu.result.type}\n❏ Company : ${anu.result.company}\n❏ Location : ${anu.result.location}\n❏ Bio : ${anu.result.bio}\n❏ Site Admin : ${anu.result.site_admin}\n❏ Email : ${anu.result.email}\n❏ Created At : ${anu.result.created_at}\n❏ Updated At : ${anu.result.updated_at}\n❏ Twitter Username : ${anu.result.twitter_username}\n❏ Blog : ${anu.result.blog}\n❏ Avatar Url : ${anu.result.avatar_url}\n❏ Gravatar Id : ${anu.result.gravatar_id}\n❏ Html Url : ${anu.result.html_url}`
+reply(mess.wait)
+buff = await getBuffer(anu.result.avatar_url)
+Nexus.sendMessage(from, buff, image, {quoted: ftok, caption: gstalk})
+break 		
+    
+case "inspect":{
+if (isBan) return reply(mess.banned)	 			        
+if (isBanChat) return reply(mess.bangc)          
+if (!isUrl(args[0]) && !args[0].includes("whatsapp.com"))           
+return reply(mess.Iv);        
+if (!q) return reply("enter the link wa");         
+cos = args[0];         
+var net = cos.split("https://chat.whatsapp.com/")[1];        
+if (!net) return reply("make sure its a link https://whatsapp.com/");
           jids = [];
           let {
             id,
