@@ -27,6 +27,10 @@ global.prefa = ['#']
 
 global.location = "ghaziabad, india"
 global.reactmoji = "❤️"
+global.reactmoji1= "😎"
+global.reactmoji2= "☕"
+global.reactmoji3= "🔥"
+global.themeemoji = "💖"
 global.themeemoji = "💖"
 global.vidmenu = { url: 'https://c.tenor.com/PwuDrnpFBj8AAAPo/marin-kitagawa.mp4' }
 global.websitex = "https://github.com/NEXUSAT12"
