@@ -4230,7 +4230,7 @@ delete tebakgambar[m.sender.split('@')[0]]
 } else if (args[0] === 'word') {
 if (tebakkata.hasOwnProperty(m.sender.split('@')[0])) return replay("There are still unfinished sessions!")
 let anu = await fetchJson('https://raw.githubusercontent.com/DGXeon/fungames/main/GuessTheWord.js')
-let result = anu[Math.floor(Math.random() * anu.lengt
+let result = anu[Math.floor(Math.random() * anu.length)]
 Nexus.sendText(m.chat, `Please answer the following question\n\n${result.soal}\nTime : 60s`, m).then(() => {
 tebakkata[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
 })
