@@ -6331,6 +6331,158 @@ let butRun = [
                 }
 break
 
+
+
+case 'marin':{
+if (isBan) return reply(mess.banned)
+if (isBanChat) return reply(mess.bangc)
+let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                listMessage :{
+                    title: `Aww my darling ${pushname} you need help? 🥺❤️`,
+                    description: `\n╭╼━━━᚜ 𝓜𝓪𝓻𝓲𝓷 𝓫𝔂 𝓝𝓮𝔁𝓾𝓼 ᚛━━━╾╮
+│                                                 ❒
+🔥 *My prefix*       : ( ${prefix} )
+❤️ *My name*       : ${global.BotName}
+🥵 *User name*    : ${pushname}
+😻 *Bot speed*      : ${latensie.toFixed(4)} ms
+🐤 *Bot runtime*   : ${runtime(process.uptime())}
+❤️‍🔥 *Bot users*      : ${Object.keys(global.db.users).length}
+🎃 *Owner name* : ${global.OwnerName}
+🦊 *Owner num.*  : http://wa.me//${global.PermanentOwnerNumber}
+🍓 *Group name*  : ${groupMetadata.subject}
+│                                                 ❒
+╰╼━━━━━━━━━━━━━━━━╾╯\n\n_Tap here for *full commands*_ 🐤👇\nㅤ`,
+                    buttonText: "🦋⃟✮͢ 𝑻𝒂𝒑 𝒉𝒆𝒓𝒆 ✮⃝❤️" ,
+                    footerText: `${global.BotName}`,
+                    listType: "SINGLE_SELECT",
+                    sections: [{
+								"title": "Main features of the Bot ❣️",
+								"rows": [
+									{
+										"title": "ᵃⁿʸᵃ⃟❤️ 𝗔𝗹𝗹 𝗺𝗲𝗻𝘂 𝗹𝗶𝘀𝘁",
+										"description": "Display the list of all features",
+										"rowId": `${prefix}allmenu`
+									}
+								]
+							},
+                                                        {
+								"title": "Quick commands functions for lazy people ❤️‍🔥",
+								"rows": [
+									{
+										"title": "ᵃⁿʸᵃ⃟❤️‍🔥 𝗔𝗹𝗹 𝗺𝗲𝗻𝘂 𝗹𝗶𝘀𝘁 𝟮.𝟬",
+										"description": "Use most of the commands without any typing efforts",
+										"rowId": ``
+									}
+								]
+							},
+							{
+								"title": "Bot Features ❤️",
+								"rows": [
+									{
+										"title": "ᵃⁿʸᵃ⃟🐦 𝗚𝗿𝗼𝘂𝗽 𝗺𝗲𝗻𝘂",
+										"description": "Display the list of group features",
+										"rowId": `${prefix}groupmenu`
+									},
+                                                                        {
+											"title": "ᵃⁿʸᵃ⃟⚙️ 𝗚𝗿𝗼𝘂𝗽 𝘀𝗲𝘁𝘁𝗶𝗻𝗴𝘀",
+										"description": "Display the list of all group settings ",
+										"rowId": `${prefix}groupsettings`
+										},
+									{
+										"title": "ᵃⁿʸᵃ⃟🥵 𝗢𝘄𝗻𝗲𝗿 𝗺𝗲𝗻𝘂",
+										"description": "Display the list of owner features",
+										"rowId": `${prefix}ownermenu`
+										},
+									{
+										"title": "ᵃⁿʸᵃ⃟⚠️ 𝗔𝗻𝘁𝗶𝗹𝗶𝗻𝗸 𝗺𝗲𝗻𝘂",
+										"description": "Display the list of antilink features",
+										"rowId": `${prefix}antilinkmenu`
+										},
+										{
+										"title": "ᵃⁿʸᵃ⃟🔍 𝗦𝗲𝗮𝗿𝗰𝗵 𝗺𝗲𝗻𝘂",
+										"description": "Display the list of searching features",
+										"rowId": ``
+										},
+									{
+										"title": "ᵃⁿʸᵃ⃟🔊 𝗔𝘂𝗱𝗶𝗼 𝗺𝗲𝗻𝘂",
+										"description": "Display the list of audio changing features",
+										"rowId": `${prefix}voicechangermenu`
+									},
+									{
+										"title": "ᵃⁿʸᵃ⃟🥳 𝗙𝘂𝗻 𝗺𝗲𝗻𝘂",
+										"description": "Display the list of fun features",
+										"rowId": `${prefix}funmenu`
+									},
+									{
+										"title": "ᵃⁿʸᵃ⃟⬇️ 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗿 𝗺𝗲𝗻𝘂",
+										"description": "Display the list of downloading features",
+										"rowId": `${prefix}downloadermenu`
+									},
+									{
+										"title": "ᵃⁿʸᵃ⃟😚 𝗔𝗻𝗶𝗺𝗲 𝗺𝗲𝗻𝘂",
+										"description": "Display the list of anime features",
+										"rowId": `${prefix}animemenu`
+									},
+									{
+										"title": "ᵃⁿʸᵃ⃟🎃 𝗧𝗲𝘅𝘁𝗺𝗮𝗸𝗲𝗿 𝗺𝗲𝗻𝘂",
+										"description": "Display the list of textmaker features",
+										"rowId": `${prefix}textpromenu`
+									},
+									{
+										"title": "ᵃⁿʸᵃ⃟👻 𝗥𝗲𝗮𝗰𝘁𝗶𝗼𝗻 𝗺𝗲𝗻𝘂",
+										"description": "Display the list of reactions features",
+										"rowId": `${prefix}react`
+									},
+										{
+										"title": "ᵃⁿʸᵃ⃟❤️‍🩹 𝗧𝗼𝗼𝗹 𝗺𝗲𝗻𝘂",
+										"description": "Display the list of tools",
+										"rowId": `${prefix}allmenu`
+									     },
+									{
+										"title": "ᵃⁿʸᵃ⃟🥶 𝗩𝗼𝗶𝗰𝗲 𝗺𝗲𝗻𝘂",
+										"description": "Display the list of voice features",
+										"rowId": `${prefix}voicechangermenu`
+									     },
+										{
+										"title": "ᵃⁿʸᵃ⃟💦 𝗡𝗦𝗙𝗪",
+										"description": "Warning ⚠️ only for hawasi people",
+										"rowId": `${prefix}nsfwmenu`
+										},
+                                                                                {
+										"title": "𝗡𝗲𝗲𝗱 𝘀𝗼𝗺𝗲 𝗵𝗲𝗹𝗽 🫠",
+										"description": "If you have any Bot related questions",
+										"rowId": `${prefix}owner`
+										}
+								]
+							},
+							{
+								"title": "If you want to own this Bot 🥀",
+								"rows": [
+									{
+										"title": "ᵃⁿʸᵃ⃟😍 𝗕𝘂𝘆 𝘁𝗵𝗶𝘀 𝗕𝗼𝘁 ",
+										"description": "Tap here to buy this Bot",
+										"rowId": `${prefix}developer`
+									}
+								]
+							},
+							{
+								"title": "Credit ©️",
+								"rows": [
+									{
+										"title": "𝖳𝗁𝖺𝗇𝗄𝗌 𝗍𝗈 ✨",
+										"description": "Displays The List Of Credit Of The Bot !!",
+										"rowId": `${prefix}thanksto`
+									}
+								]
+							}
+						],
+          listType: 1
+                }
+            }), {})
+            Nexus.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            }
+            break
+
 case 'add':{    			
     if (!m.isGroup) return replay(mess.grouponly)
  if (!isBotAdmins) return replay(mess.botadmin)
