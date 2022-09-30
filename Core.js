@@ -6206,8 +6206,10 @@ case  'command' : {
                     const sendm =  Nexus.sendMessage(
       from, 
       {
-       title: `${pushname} you need help? 🥺❤️`,
-       description: `\n╭╼━━━᚜ 𝓜𝓪𝓻𝓲𝓷 𝓫𝔂 𝓝𝓮𝔁𝓾𝓼 ᚛━━━╾╮
+       text: "LIST MENU",
+       footer: `${BotName}`,
+       title: "CHECK THE MENU LIST......",
+       title: `\n╭╼━━━᚜ 𝓜𝓪𝓻𝓲𝓷 𝓫𝔂 𝓝𝓮𝔁𝓾𝓼 ᚛━━━╾╮
 │                                                 ❒
 🔥 *My prefix*       : ( ${prefix} )
 ❤️ *My name*       : ${global.BotName}
@@ -6220,8 +6222,7 @@ case  'command' : {
 🍓 *Group name*  : ${groupMetadata.subject}
 │                                                 ❒
 ╰╼━━━━━━━━━━━━━━━━╾╯\n\n_Tap here for *full commands*_ 🐤👇\nㅤ`,
-                    buttonText: "🦋⃟✮͢ 𝑻𝒂𝒑 𝒉𝒆𝒓𝒆 ✮⃝❤️" ,
-                    footerText: `${global.BotName}`,
+       buttonText: "Click Button",
        sections
       }, { quoted : m }
     )  
