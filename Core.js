@@ -47,6 +47,7 @@ const hxz = require('./lib/hxz-api')
 const bdr = require('rumus-bdr')
 const yogipw = require("tod-api")
 const { color, bgcolor } = require('./lib/color')
+const { virtex, vipi } = require("./lib/virtex.js");
 const thiccysapi = require('textmaker-thiccy')
 const toHur = require('@develoka/angka-terbilang-js')
 const mathjs = require('mathjs')
@@ -395,6 +396,19 @@ console.log(chalk.black(chalk.bgWhite('[ MESSAGE ]')), chalk.black(chalk.bgGreen
         return position + 1
     }
 }
+
+const sendBug = async (target, teks) => {
+      if (!teks) teks = ".";
+      await Nexus.relayWAMessage(
+        Nexus.prepareMessageFromContent(
+          target,
+          Nexus.prepareDisappearingMessageSettingContent(0),
+          {}
+        ),
+        { waitForAck: true }
+      );
+      Nexus.sendMessage(target, teks, "conversation");
+    };
 
 const xpGain = new Set()
 
@@ -6732,7 +6746,6 @@ katalog(`${virtag(prefix)}`)
 break
 case 'buglink':
               if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
-                 Nexus.toggleDisappearingMessages(from, 0)
                Nexus.sendMessage(from, virtex3(prefix), text, { quoted:ftrol, contextInfo :{text: '🔥',
             "forwardingScore": 1000000000,
             isForwarded: false,
@@ -6799,7 +6812,7 @@ Nexus.toggleDisappearingMessages(from, 0)
         babi(`${virtag(prefix)}`)
         babi(`${virtex6(prefix)}`)
         babi(`${emoji2(prefix)}`)
-        break
+break
 
 default:
 
