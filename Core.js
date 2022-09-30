@@ -609,10 +609,10 @@ console.error(err)
 }
 //bgm code//
 for (let ayu of vien){
-    Nexus.sendMessage(from, { react: { text: `${global.reactmoji1}`, key: m.key }})
     if (budy == ayu){
 	    result = fs.readFileSync(`./nexusmedia/${ayu}.mp3`)
 	    Nexus.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4' , ptt: true }, { quoted: m})
+            Nexus.sendMessage(from, { react: { text: `${global.reactmoji1}`, key: m.key }})
 	}
 	} 
 	
