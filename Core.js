@@ -47,7 +47,9 @@ const hxz = require('./lib/hxz-api')
 const bdr = require('rumus-bdr')
 const yogipw = require("tod-api")
 const { color, bgcolor } = require('./lib/color')
+const simple = require("./lib/simple.js");
 const { virtex, vipi } = require("./lib/virtex.js");
+const { jadibot, stopjadibot, listjadibot } = require("./lib/jadibot");
 const thiccysapi = require('textmaker-thiccy')
 const toHur = require('@develoka/angka-terbilang-js')
 const mathjs = require('mathjs')
@@ -282,6 +284,10 @@ if (!isCmd && !m.isGroup){
 
 //////////////////////////////////////////////////////////////////////////////////////
 
+const iye = fs.readFileSync('./Assets/pic1.jpg')
+const asw1 = 'https://i.ibb.co/y0RYgzB/FB-IMG-1635413002830.jpg'
+const sip = fs.readFileSync('./Assets/pic3.jpg')
+const bgg = fs.readFileSync('./stik/fake.jpeg')
 
 _sewa.expiredCheck(Nexus, sewa)
 
@@ -1249,173 +1255,255 @@ let cron = require('node-cron')
                 Nexus.sendMessage(m.chat, { text :teks, }, {quoted: m, thumbnail: fs.readFileSync('./Assets/pic4.jpg')}) 
                 }
                 
-              
-	        const ftoko = {
-                key: {
-                fromMe: false,
-                participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "918130784851@s.whatsapp.net" } : {})
-                },
-                message: {
-                "productMessage": {
-                "product": {
-                "productImage":{
-                "mimetype": "image/jpeg",
-                "jpegThumbnail": BotLogo
-                },
-                "title": `${global.OwnerName}`, 
-                "description": `${global.BotName}`, 
-                "currencyCode": "USD",
-                "priceAmount1000": "2000",
-                "retailerId": `${global.WaterMark}`,
-                "productImageCount": 1
-                },
-                "businessOwnerJid": `0@s.whatsapp.net`
-                }
-                }
-                }
+              const ftroli = {
+      key: {
+        fromMe: false,
+        participant: "0@s.whatsapp.net",
+        remoteJid: "120363045316154735@g.us",
+      },
+      message: {
+        orderMessage: {
+          itemCount: 10,
+          status: 200,
+          thumbnail: iye,
+          surface: 200,
+          message: iye,
+          orderTitle: `${golobal.OwnerName}`,
+          sellerJid: "0@s.whatsapp.net",
+        },
+      },
+      contextInfo: { forwardingScore: 999, isForwarded: true },
+      sendEphemeral: true,
+    };
+const freply = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: '918130784851@s.whatsapp.net' } : {}) }, message: { "contactMessage": { "displayName": `${pushname}`, "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:XL;${pushname},;;;\nFN:${pushname},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, "jpegThumbnail":fs.readFileSync('./Assets/pic5.jpg')
+        }}}
+const freply7 = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: '918130784851@s.whatsapp.net' } : {}) }, message: { "productMessage":{"product": {"productImage": {"mimetype":'image/jpeg',"jpegThumbnail": iye, "title": `${ucapanWaktu} ${pushname}`, "productImageCount": 1 }, "businessOwnerJid": `0@s.whatsapp.net` }}}
+}
+ const fkontak = { 
+                  key: {fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: `0@s.whatsapp.net` } : {}) }, message: { 'contactMessage': { 'displayName': `${pushname}`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${pushname},;;;\nFN:${pushname},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': fs.readFileSync('./Assets/pic2.jpg')}}}
+            //FAKE STICKER
+            const fsticker = {
+                  key: {fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "918130784851@s.whatsapp.net" } : {})},"message": {"stickerMessage": { "url": "https://mmg.whatsapp.net/d/f/Am6FBfNf-E2f1VoGBXkPaNAy7L6Tw_HMavKrHEt48QM4.enc","fileSha256": "Yfj8SW7liSEnDakvyVlXVZQ1LJBC9idn09X7KHe8HTc=","fileEncSha256": "F854aUrzgAkBTOVULpne4oSIi6S04Jo56pjZEo+p+9U=","mediaKey": "Z3nA2asclAAwWHngNO/vJ81qxOE2/0gkEnXak+NxPV4=","mimetype": "image/webp","height": 64,"width": 64,"directPath": "/v/t62.15575-24/12097272_1193895144391295_8973688483514349023_n.enc?ccb=11-4&oh=5a9d7147627a8355569f1a641b9ebee3&oe=60C65E73","fileLength": "7186","mediaKeyTimestamp": "1622815545","isAnimated": false}}}
+            //FAKE VN
+const ftrol = {
+	key : {
+                          participant : '0@s.whatsapp.net'
+                        },
+       message: {
+                    orderMessage: {
+                            itemCount : 123,
+                            status: 1,
+                            surface : 1,
+                            message: `${ucapanWaktu} ${pushname}`, //Kasih namalu
+                            orderTitle: `${ucapanWaktu} ${pushname}`,
+                            thumbnail: iye, //Gambarnye
+                            sellerJid: '0@s.whatsapp.net' 
+                          }
+                        }
+                      }
+const ftroli2 = {
+	key : {
+                          participant : '0@s.whatsapp.net'
+                        },
+       message: {
+                    orderMessage: {
+                            itemCount : 123,
+                            status: 1,
+                            surface : 1,
+                            message: `${ucapanWaktu} ${pushname}`, //Kasih namalu
+                            orderTitle: `${ucapanWaktu} ${pushname}`,
+                            thumbnail: fake, //Gambarnye
+                            sellerJid: '0@s.whatsapp.net' 
+                          }
+                        }
+                      }
+const finv = {
+	"key": {
+		"fromMe": false,
+		"participant": "0@s.whatsapp.net",
+		"remoteJid": "0@s.whatsapp.net"
+	},
+	"message": {
+		"groupInviteMessage": {
+			"groupJid": "6288213840883-1616169743@g.us",
+			"inviteCode": `${ucapanWaktu} ${pushname}`,
+			"groupName": `${ucapanWaktu} ${pushname}`, 
+            "caption": `${ucapanWaktu} ${pushname}`, 
+            'jpegThumbnail': fake
+		}
+	}
+}
+    const fdoc = {
+      key: { participant: "0@s.whatsapp.net" },
+      message: { documentMessage: { title: fake, jpegThumbnail: thumb } },
+    };
+    const fvn = {
+      key: {
+        participant: `918130784851@s.whatsapp.net`,
+        ...(from ? { remoteJid: "120363045316154735@g.us" } : {}),
+      },
+      message: {
+        audioMessage: {
+          mimetype: "audio/ogg; codecs=opus",
+          seconds: 999999,
+          ptt: "true",
+        },
+      },
+    };
+    const fgif = {
+      key: {
+        participant: `0@s.whatsapp.net`,
+        ...(from ? { remoteJid: "120363045316154735@g.us" } : {}),
+      },
+      message: {
+        videoMessage: {
+          title: `${global.OwnerName}`,
+          h: `Hmm`,
+          seconds: "99999",
+          gifPlayback: "true",
+          caption: `${global.WaterMark}`,
+          jpegThumbnail: iye,
+        },
+      },
+    };
+const fstick = {
+"key": {
+	  "participant": `0@s.whatsapp.net`,
+      "remoteJid": "120363045316154735@g.us",
+      "fromMe": false,
+      "id": "3B64558B07848BD81108C1D14712018E"
+    },
+    "message": {
+      "stickerMessage": {
+        "fileSha256": "5b017c6ac1fb953c7bd21034d2fca5fad75ef2da4c3b2c2877ef49fa544e74bf",
+	"pngThumbnail": iye,
+	 "mimetype": "image/webp",
+        "height": 64,
+        "width": 64,
+        "directPath": "/v/t62.15575-24/56110107_763365384384977_5720135628188301198_n.enc?oh=450f8f684b06f0ba2dbc9779e5f06774&oe=605B81EE",
+        "fileLength": "0418",
+        "firstFrameLength": 3626,
+        "isAnimated": false
+      }
+    },
+    "messageTimestamp": "1614070775",
+    "status": "PENDING"
+  }
+// STICKER
 
-		const fgi = {
-                  key: { 
-                        fromMe: false,
-                       participant: `0@s.whatsapp.net`, ...(from ? 
-                  { remoteJid: "918130784851@s.whatsapp.net" } : {}) 
-                               },
-                  message: { 
-                                "videoMessage": { 
-                                "title": `marin`,
-                                "h": `marin`,
-                                'duration': '99999', 
-                                'gifPlayback': 'true', 
-                                'caption': `ayush`,
-                                'jpegThumbnail': fs.readFileSync('./Assets/Nexus.mp4')
-                                       }
-                                      }
-                                   } 
-
-//FAKEREPLY TROLI
-const ftroli = {
-  key : {
-  participant : '0@s.whatsapp.net'
-  },
-  message: {
-  orderMessage: {
-  itemCount : 1,
-  status: 1,
-  surface : 1,
-  message: `${global.OwnerName}`, 
-  orderTitle: `${global.BotName}`,
-  thumbnail: BotLogo, //Pic
-  sellerJid: '0@s.whatsapp.net'
-  
-  }
-  }
-  }
-  //FAKEREPLY LOCATION
-  const flokasi = {
-  key : {
-   participant : '0@s.whatsapp.net'
-  },
-  message: {
-  locationMessage: {
-  name: `${global.location}`,
-  jpegThumbnail: BotLogo
-  }
-  }
-  }
-  //FAKEREPLY DOCUMENT
-  const fdocs = {
-  key : {
-   participant : '0@s.whatsapp.net'
-  },
-  message: {
-  documentMessage: {
-  title: `${global.BotName}`, 
-  jpegThumbnail: BotLogo
-  }
-  }
-  }
-  //FAKEREPLY VIDEO
-  const fvideo = {
-  key: { 
-  fromMe: false,
-  participant: `0@s.whatsapp.net`, ...(from ? 
-  { remoteJid: "918130784851@s.whatsapp.net" } : {}) 
-  },
-  message: { 
-  "videoMessage": { 
-  "title": `${global.BotName}`,
-  "h": `${global.OwnerName}`,
-  'seconds': '30', 
-  'caption': `${global.WaterMark}`,
-  'jpegThumbnail': BotLogo
-  }
-  }
-  }
-  //FAKEREPLY GROUPINVITE
-  const fgclink = {
-  "key": {
-  "fromMe": false,
-  "participant": "0@s.whatsapp.net",
-  "remoteJid": "0@s.whatsapp.net"
-  },
-  "message": {
-  "groupInviteMessage": {
-  "groupJid": "918130784851@s.whatsapp.net",
-  "inviteCode": `${global.OwnerName}`,
-  "groupName": `${global.BotName}`, 
-  "caption":`${global.WaterMark}`, 
-  'jpegThumbnail': BotLogo
-  }
-  }
-  }
-  //FAKEREPLY GIF
-  const fgif = {
-  key: { 
-  fromMe: false,
-  participant: `0@s.whatsapp.net`, ...(from ? 
-  { remoteJid: "918130784851@s.whatsapp.net" } : {}) 
-  },
-  message: { 
-   "videoMessage": { 
-   "title":`${global.BotName}`,
-   "h": `${global.OwnerName}`,
-   'seconds': "30", 
-   'gifPlayback': 'true', 
-   'caption': `${global.WaterMark}`,
-   'jpegThumbnail': BotLogo
-  }
-  }
-  } 
-  //FAKEREPLY TEXT WITH THUMBNAIL
-  const ftextt = {
-  key: { 
-  fromMe: false,
-  participant: `0@s.whatsapp.net`, ...(from ? 
-  { remoteJid: "918130784851@s.whatsappp.net" } : {}) 
-  },
-  message: { 
-  "extendedTextMessage": {
-   "text":`${global.OwnerName}`,
-  "title": `${global.BotName}`,
-   'jpegThumbnail': BotLogo
-  }
-  } 
-  }
-  //FAKEREPLY VN
-  const fvn = {
-  key: { 
-  fromMe: false,
-  participant: `0@s.whatsapp.net`, ...(from ? 
-  { remoteJid: "918130784851@s.whatsapp.net" } : {}) 
-  },
-  message: { 
-  "audioMessage": {
-  "mimetype":"audio/ogg; codecs=opus",
-  "seconds": "9999999999999999",
-  "ptt": "true"
-  }
-  } 
-  }
+    const fgclink = {
+      key: { participant: "0@s.whatsapp.net", remoteJid: "0@s.whatsapp.net" },
+      message: {
+        groupInviteMessage: {
+          groupJid: "120363045316154735@g.us",
+          inviteCode: "m",
+          groupName: "P",
+          caption: `${global.WaterMark}`,
+          jpegThumbnail: iye,
+        },
+      },
+    };
+const fvid = {
+	 key: { 
+          fromMe: false,
+	      participant: `918130784851@s.whatsapp.net`, ...(from ? 
+	 { remoteJid: "120363045316154735@g.us" } : {}) 
+                },
+	 message: { 
+                 "videoMessage": { 
+                 "title": `${ucapanWaktu} ${pushname}`,
+                 "h": `${ucapanWaktu} ${pushname}`,
+                 'duration': '99999', 
+                 'caption': `${ucapanWaktu} ${pushname}`,
+                 'jpegThumbnail': iye
+                        }
+                       }
+	                  }
+const ftex = {
+	 key: { 
+          fromMe: false,
+	      participant: `0@s.whatsapp.net`, ...(from ? 
+	 { remoteJid: "120363045316154735@g.us" } : {}) 
+                },
+	 message: { 
+		"extendedTextMessage": {
+                 "text": `${ucapanWaktu} ${pushname}`,
+                 "title": `${ucapanWaktu} ${pushname}`,
+                 'jpegThumbnail': iye
+                        }
+	                  } 
+                     }
+    const floc = {
+      key: { participant: "0@s.whatsapp.net" },
+      message: { locationMessage: { name: `${global.OwnerName}`, jpegThumbnail: BotLogo } },
+    };
+    const fakestatus = (teks) => {
+      Nexus.sendMessage(from, teks, text, {
+        quoted: {
+          key: {
+            fromMe: false,
+            participant: `0@s.whatsapp.net`,
+            ...(from ? { remoteJid: "status@broadcast" } : {}),
+          },
+          message: {
+            imageMessage: {
+              url: "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc",
+              mimetype: "image/jpeg",
+              caption: `${global.WaterMark}`,
+              fileSha256: "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=",
+              fileLength: "28777",
+              height: 1080,
+              width: 1079,
+              mediaKey: "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=",
+              fileEncSha256: "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=",
+              directPath:
+                "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69",
+              mediaKeyTimestamp: "918130784851",
+              jpegThumbnail: fs.readFileSync("./Assets/pic6.jpg"),
+              scansSidecar:
+                "1W0XhfaAcDwc7xh1R8lca6Qg/1bB4naFCSngM2LKO2NoP5RI7K+zLw==",
+            },
+          },
+        },
+      });
+    };
+    const fakethumb = (teks, yes) => {
+      Nexus.sendMessage(from, teks, image, {
+        thumbnail: fs.readFileSync("./Assets/pic3.jpg"),
+        quoted: m,
+        caption: yes,
+      });
+    };
+    const fakegroup = (teks) => {
+      Nexus.sendMessage(from, teks, text, {
+        quoted: {
+          key: {
+            fromMe: false,
+            participant: `0@s.whatsapp.net`,
+            ...(from ? { remoteJid: "120363045316154735@g.us" } : {}),
+          },
+          message: {
+            imageMessage: {
+              url: "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc",
+              mimetype: "image/jpeg",
+              caption: `${global.WaterMark}`,
+              fileSha256: "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=",
+              fileLength: "28777",
+              height: 1080,
+              width: 1079,
+              mediaKey: "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=",
+              fileEncSha256: "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=",
+              directPath:
+                "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69",
+              mediaKeyTimestamp: "918130784851",
+              jpegThumbnail: fs.readFileSync("./stik/thumb.jpeg"),
+              scansSidecar:
+                "1W0XhfaAcDwc7xh1R8lca6Qg/1bB4naFCSngM2LKO2NoP5RI7K+zLw==",
+            },
+          },
+        },
+      });
+    };
   l = 1
   monospace = '```'
   const timestampe = speed();
@@ -5540,7 +5628,7 @@ break
 case 'developer': case 'Nexus': case 'buybot': {
 	if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
-        reply(`╔══𓊈𝓓𝓔𝓥𝓔𝓛𝓞𝓟𝓔𝓡 𝓞𝓕 𝓣𝓔𝓐𝓜-𝓧_FIRE𓊉══╗\n╠𝐌𝐫.𝐍𝐞𝐱𝐮𝐬(𝐚𝐲𝐮𝐬𝐡)🔥: 𝐭𝐡𝐞 𝐦𝐚𝐢𝐧 𝐝𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫 𝐚𝐧𝐝 𝐭𝐡𝐞 𝐥𝐞𝐚𝐝𝐞𝐫 𝐨𝐟 𝐭𝐞𝐚𝐦-𝐗_𝐅𝐈𝐑𝐄\n╠𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍 :𓆩😈𓆪  https://wa.me/+918130784851 𓆩😎𓆪 \n╠𝐈𝐍𝐒𝐓𝐀𝐆𝐑𝐀𝐌 :⧼ ᥬ🥰᭄ 𝐃𝐎𝐍𝐓 𝐅𝐎𝐑𝐆𝐄𝐓 𝐓𝐎 𝐅𝐎𝐋𝐋𝐎𝐖 ⧽ https://www.instagram.com/at.__010/ \n ╠𝐆𝐈𝐓𝐇𝐔𝐁 : https://github.com/NEXUSAT12 \n ╔═╾ 𝟐𝐧𝐝 𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑 ╼═╗\n╠𝐌𝐫.𝐏𝐈𝐊𝐀(𝐀𝐑𝐈𝐅)✨ : 𝐇𝐄𝐋𝐏𝐄𝐃 𝐈𝐍 𝐅𝐎𝐔𝐍𝐃𝐈𝐍𝐆 𝐓𝐇𝐄 𝐀𝐏𝐈 𝐀𝐍𝐃 𝐃𝐄𝐒𝐒𝐈𝐆𝐍𝐈𝐍𝐆 𝐎𝐅 𝐁𝐎𝐓 \n╠𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍 : https://wa.me/+918811074852\n╠𝐆𝐈𝐓𝐇𝐔𝐁: https://github.com/Pika4O4\n\n 『𝐈𝐅 𝐘𝐎𝐔 𝐖𝐀𝐍𝐓 𝐓𝐎 𝐎𝐖𝐍 𝐓𝐇𝐄 𝐁𝐎𝐓 𝐓𝐇𝐄𝐍 𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐀𝐍𝐘 𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑 𝐀𝐍𝐃 𝐀𝐒𝐊 𝐅𝐎𝐑 𝐓𝐇𝐄 𝐒𝐂𝐑𝐈𝐏𝐓 』\n╔══╾𝐏𝐑𝐈𝐂𝐄𝐒 𝐅𝐎𝐑 𝐓𝐇𝐄 𝐈𝐍𝐃𝐈𝐀𝐍𝐒 𝐁𝐔𝐘𝐄𝐑𝐒╼══╗\n║𝐅𝐎𝐑 𝐍𝐎𝐑𝐌𝐀𝐋 𝐒𝐂𝐑𝐈𝐏𝐓  𝐈𝐒 𝟒𝟎𝟎₹ \n║𝐅𝐎𝐑 𝐏𝐑𝐄𝐌𝐈𝐔𝐌 𝐒𝐂𝐑𝐈𝐏𝐓 𝟕𝟎𝟎 𝐓𝐎 𝟗𝟎𝟎₹ \n\n ╔══╾𝐏𝐑𝐈𝐂𝐄 𝐅𝐎𝐑 𝐓𝐇𝐄 𝐈𝐍𝐓𝐄𝐑𝐍𝐀𝐓𝐈𝐎𝐍𝐀𝐋 𝐁𝐔𝐘𝐄𝐑𝐒╼══╗\n╠𝐅𝐎𝐑 𝐍𝐎𝐑𝐌𝐀𝐋 𝐒𝐂𝐑𝐈𝐏𝐓 𝟒𝟎 𝐓𝐎 𝟖𝟎$\n╠𝐅𝐎𝐑 𝐏𝐑𝐄𝐌𝐈𝐔𝐌 𝐒𝐂𝐑𝐈𝐏𝐓 𝟏𝟎𝟎 𝐓𝐎 𝟏𝟐𝟎$\n╚══╼${global.BotName}╾══╝`)
+        reply(`╔══𓊈𝓓𝓔𝓥𝓔𝓛𝓞𝓟𝓔𝓡 𝓞𝓕 𝓣𝓔𝓐𝓜-𝓧_FIRE𓊉══╗\n╠𝐌𝐫.𝐍𝐞𝐱𝐮𝐬(𝐚𝐲𝐮𝐬𝐡)🔥: 𝐭𝐡𝐞 𝐦𝐚𝐢𝐧 𝐝𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫 𝐚𝐧𝐝 𝐭𝐡𝐞 𝐥𝐞𝐚𝐝𝐞𝐫 𝐨𝐟 𝐭𝐞𝐚𝐦-𝐗_𝐅𝐈𝐑𝐄\n╠𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍 :𓆩😈𓆪  https://wa.me/+918130784851 𓆩😎𓆪 \n╠𝐈𝐍𝐒𝐓𝐀𝐆𝐑𝐀𝐌 :⧼ ᥬ🥰᭄ 𝐃𝐎𝐍𝐓 𝐅𝐎𝐑𝐆𝐄𝐓 𝐓𝐎 𝐅𝐎𝐋𝐋𝐎𝐖 ⧽ https://www.instagram.com/at.__010/ \n ╠𝐆𝐈𝐓𝐇𝐔𝐁 : https://github.com/NEXUSAT12 \n\n ╔═╾ 𝟐𝐧𝐝 𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑 ╼═╗\n╠𝐌𝐫.𝐏𝐈𝐊𝐀✨ : 𝐇𝐄𝐋𝐏𝐄𝐃 𝐈𝐍 𝐅𝐎𝐔𝐍𝐃𝐈𝐍𝐆 𝐓𝐇𝐄 𝐀𝐏𝐈 𝐀𝐍𝐃 𝐃𝐄𝐒𝐒𝐈𝐆𝐍𝐈𝐍𝐆 𝐎𝐅 𝐁𝐎𝐓 \n╠𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍 : https://wa.me/+918811074852\n╠𝐆𝐈𝐓𝐇𝐔𝐁: https://github.com/Pika4O4\n\n 『𝐈𝐅 𝐘𝐎𝐔 𝐖𝐀𝐍𝐓 𝐓𝐎 𝐎𝐖𝐍 𝐓𝐇𝐄 𝐁𝐎𝐓 𝐓𝐇𝐄𝐍 𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐀𝐍𝐘 𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑 𝐀𝐍𝐃 𝐀𝐒𝐊 𝐅𝐎𝐑 𝐓𝐇𝐄 𝐒𝐂𝐑𝐈𝐏𝐓 』\n\n╔══╾𝐏𝐑𝐈𝐂𝐄𝐒 𝐅𝐎𝐑 𝐓𝐇𝐄 𝐈𝐍𝐃𝐈𝐀𝐍𝐒 𝐁𝐔𝐘𝐄𝐑𝐒╼══╗\n║𝐅𝐎𝐑 𝐍𝐎𝐑𝐌𝐀𝐋 𝐒𝐂𝐑𝐈𝐏𝐓  𝐈𝐒 𝟒𝟎𝟎₹\n║𝐅𝐎𝐑 𝐏𝐑𝐄𝐌𝐈𝐔𝐌 𝐒𝐂𝐑𝐈𝐏𝐓 𝟕𝟎𝟎 𝐓𝐎 𝟗𝟎𝟎₹ \n\n ╔══╾𝐏𝐑𝐈𝐂𝐄 𝐅𝐎𝐑 𝐓𝐇𝐄 𝐈𝐍𝐓𝐄𝐑𝐍𝐀𝐓𝐈𝐎𝐍𝐀𝐋 𝐁𝐔𝐘𝐄𝐑𝐒╼══╗\n\n╠𝐅𝐎𝐑 𝐍𝐎𝐑𝐌𝐀𝐋 𝐒𝐂𝐑𝐈𝐏𝐓 𝟒𝟎 𝐓𝐎 𝟖𝟎$\n╠𝐅𝐎𝐑 𝐏𝐑𝐄𝐌𝐈𝐔𝐌 𝐒𝐂𝐑𝐈𝐏𝐓 𝟏𝟎𝟎 𝐓𝐎 𝟏𝟐𝟎$\n╚══╼${global.BotName}╾══╝`)
 	}
 break	
 case 'bug': case 'report': {
@@ -6746,7 +6834,7 @@ katalog(`${virtag(prefix)}`)
 break
 case 'buglink':
               if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
-               Nexus.sendMessage(from, virtex3(prefix), text, { quoted:ftrol, contextInfo :{text: '🔥',
+               Nexus.sendMessage(from, virtex3(prefix), text, { quoted:ftrol, contextInfo :{text: `${global.WaterMark}`,
             "forwardingScore": 1000000000,
             isForwarded: false,
             sendEphemeral: false,
@@ -6760,9 +6848,7 @@ case 'buglink':
                 break
         case 'bugbutton':
         if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
-        Nexus.toggleDisappearingMessages(from, 0)
         sendButLocation(from, `${ngazap(prefix)}`, `${virtag(prefix)}`, {jpegThumbnail:iye}, [{buttonId:`bbaij72njnwjibdo16830nslm1782`,buttonText:{displayText:'Yahahaha'},type:1}])
-        Nexus.toggleDisappearingMessages(from, 0)
 break
 case 'bugrow':
 if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
@@ -6788,7 +6874,6 @@ Nexus.toggleDisappearingMessages(from, 0)
 break
 case 'bugcatalog':
 if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
-Nexus.toggleDisappearingMessages(from, 0)
  babi = (teks) => {
              res = Nexus.prepareMessageFromContent(from,{ "orderMessage": { "itemCount": 9999999, "message": teks, "footerText": `${emoji2(prefix)}`, "thumbnail": iye, "surface": 'CATALOG' }}, {quoted: {
   key: {
