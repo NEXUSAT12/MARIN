@@ -19,6 +19,7 @@ global.myweb = "https://chat.whatsapp.com/DDWBpH9ciy38RCGYO7RkfM"
 global.BotSourceCode = "https://github.com/NEXUSAT12"
 global.SupportGroupLink = "https://chat.whatsapp.com/DDWBpH9ciy38RCGYO7RkfM"
 global.sessionName = "session"
+global.WaterMark = "MARIN-_-BY_-_NEXUS"
 
 // Prefix //
 // If you want to change the prefix, change it and also change all switch's button id from Core.js  otherwise buttons will not work //
