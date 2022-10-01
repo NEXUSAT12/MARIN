@@ -47,7 +47,6 @@ const hxz = require('./lib/hxz-api')
 const bdr = require('rumus-bdr')
 const yogipw = require("tod-api")
 const { color, bgcolor } = require('./lib/color')
-const simple = require("./lib/simple.js");
 const { virtex, vipi } = require("./lib/virtex.js");
 const { jadibot, stopjadibot, listjadibot } = require("./lib/jadibot");
 const thiccysapi = require('textmaker-thiccy')
