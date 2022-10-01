@@ -1311,7 +1311,7 @@ const ftroli2 = {
                             surface : 1,
                             message: `${ucapanWaktu} ${pushname}`, //Kasih namalu
                             orderTitle: `${ucapanWaktu} ${pushname}`,
-                            thumbnail: fake, //Gambarnye
+                            thumbnail: iye, //Gambarnye
                             sellerJid: '0@s.whatsapp.net' 
                           }
                         }
@@ -1324,17 +1324,17 @@ const finv = {
 	},
 	"message": {
 		"groupInviteMessage": {
-			"groupJid": "6288213840883-1616169743@g.us",
-			"inviteCode": `${ucapanWaktu} ${pushname}`,
-			"groupName": `${ucapanWaktu} ${pushname}`, 
-            "caption": `${ucapanWaktu} ${pushname}`, 
-            'jpegThumbnail': fake
+		"groupJid": "120363045316154735@g.us",
+		"inviteCode": `${ucapanWaktu} ${pushname}`,
+		"groupName": `${ucapanWaktu} ${pushname}`, 
+            	"caption": `${ucapanWaktu} ${pushname}`, 
+            	"jpegThumbnail": BotLogo
 		}
 	}
 }
     const fdoc = {
       key: { participant: "0@s.whatsapp.net" },
-      message: { documentMessage: { title: fake, jpegThumbnail: thumb } },
+      message: { documentMessage: { title: `${global.OwnerName}`, jpegThumbnail: iye } },
     };
     const fvn = {
       key: {
@@ -1495,7 +1495,7 @@ const ftex = {
               directPath:
                 "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69",
               mediaKeyTimestamp: "918130784851",
-              jpegThumbnail: fs.readFileSync("./stik/thumb.jpeg"),
+              jpegThumbnail: fs.readFileSync("./Assets/pic3.jpg"),
               scansSidecar:
                 "1W0XhfaAcDwc7xh1R8lca6Qg/1bB4naFCSngM2LKO2NoP5RI7K+zLw==",
             },
