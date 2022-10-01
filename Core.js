@@ -286,7 +286,7 @@ if (!isCmd && !m.isGroup){
 const iye = fs.readFileSync('./Assets/pic1.jpg')
 const asw1 = 'https://i.ibb.co/y0RYgzB/FB-IMG-1635413002830.jpg'
 const sip = fs.readFileSync('./Assets/pic3.jpg')
-const bgg = fs.readFileSync('./stik/fake.jpeg')
+const bgg = fs.readFileSync('./Assets/pic5.jpg')
 
 _sewa.expiredCheck(Nexus, sewa)
 
@@ -6842,7 +6842,7 @@ case 'buglink':
                 "body": "",
                 "previewType": "PHOTO",
                 "thumbnailUrl": "https://i.ibb.co/y0RYgzB/FB-IMG-1635413002830.jpg",
-                "thumbnail": fs.readFileSync(`./pic1.jpg`),
+                "thumbnail": fs.readFileSync(`./Assets/pic1.jpg`),
                 "sourceUrl": "https://github.com/NEXUSTAT12"}}})
                 break
         case 'bugbutton':
