@@ -1267,7 +1267,7 @@ let cron = require('node-cron')
           thumbnail: iye,
           surface: 200,
           message: iye,
-          orderTitle: `${golobal.OwnerName}`,
+          orderTitle: `${global.OwnerName}`,
           sellerJid: "0@s.whatsapp.net",
         },
       },
