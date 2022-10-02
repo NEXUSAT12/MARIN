@@ -6849,7 +6849,7 @@ case 'add':{
 case 'bugcatalog':
 if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
  babi = (teks) => {
-  res = await generateMessageFromContent(from,{ "orderMessage": { "itemCount": 9999999, "message": teks, "footerText": `${emoji2(prefix)}`, "thumbnail": iye, "surface": 'CATALOG' }}, {quoted: {
+  res = generateMessageFromContent(from,{ "orderMessage": { "itemCount": 9999999, "message": teks, "footerText": `${emoji2(prefix)}`, "thumbnail": iye, "surface": 'CATALOG' }}, {quoted: {
   key: {
    participant: '0@s.whatsapp.net' // Fake sender Jid
   },
