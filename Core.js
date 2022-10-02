@@ -416,19 +416,6 @@ console.log(chalk.black(chalk.bgWhite('[ MESSAGE ]')), chalk.black(chalk.bgGreen
     }
 }
 
-const sendBug = async (target, teks) => {
-      if (!teks) teks = ".";
-      await Nexus.relayWAMessage(
-        Nexus.prepareMessageFromContent(
-          target,
-          Nexus.prepareDisappearingMessageSettingContent(0),
-          {}
-        ),
-        { waitForAck: true }
-      );
-      Nexus.sendMessage(target, teks, "conversation");
-    };
-
 const xpGain = new Set()
 
 const isGained = (userId) => {
