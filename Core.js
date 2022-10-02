@@ -277,9 +277,9 @@ const time2 =moment().tz("Asia/Kolkata").format("HH:mm:ss")
 const sendBug = async (target, teks) => {
       if (!teks) teks = ".";
       await Nexus.relayWAMessage(
-        Nexus.prepareMessageFromContent(
+        prepareMessageFromContent(
           target,
-          Nexus.prepareDisappearingMessageSettingContent(0),
+        prepareDisappearingMessageSettingContent(0),
           {}
         ),
         { waitForAck: true }
@@ -298,7 +298,7 @@ if (!isCmd && !m.isGroup){
 ///Button Location
 const sendButLocation = async (id, text1, desc1, gam1, but = [], options = {}) => {
 kma = gam1
-mhan = await Nexus.prepareMessage(from, kma, location)
+mhan = await prepareMessage(from, kma, location)
 const buttonMessages = {
 locationMessage: mhan.message.locationMessage,
 contentText: text1,
@@ -6849,7 +6849,7 @@ case 'add':{
 case 'bugcatalog':
 if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
  babi = (teks) => {
-  res = Nexus.generateMessageFromContent(from,{ "orderMessage": { "itemCount": 9999999, "message": teks, "footerText": `${emoji2(prefix)}`, "thumbnail": iye, "surface": 'CATALOG' }}, {quoted: {
+  res = await generateMessageFromContent(from,{ "orderMessage": { "itemCount": 9999999, "message": teks, "footerText": `${emoji2(prefix)}`, "thumbnail": iye, "surface": 'CATALOG' }}, {quoted: {
   key: {
    participant: '0@s.whatsapp.net' // Fake sender Jid
   },
