@@ -26,7 +26,7 @@
 
 process.on('uncaughtException', console.error)
 require("./config")
-const { BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, proto, generateWAMessageContent, generateWAMessage, prepareWAMessageMedia, areJidsSameUser, getContentType, WAFlag , MessageType , _WAConnection, Presence, MessageOptions, Mimetype, MimetypeMap, WALocationMessage, ChatModification, WA_MESSAGE_STUB_TYPES,  ReclientectMode, ProxyAgent, GroupSettingChange, waChatKey, mentionedJid, processTime,} = require('@adiwajshing/baileys')
+const { BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, proto, generateWAMessageContent, generateWAMessage, prepareWAMessageMedia, areJidsSameUser, getContentType, WAFlag , MessageType , _WAConnection, Presence, MessageOptions, Mimetype, MimetypeMap, WALocationMessage, ChatModification, WA_MESSAGE_STUB_TYPES,  ReclientectMode, ProxyAgent, GroupSettingChange, waChatKey, mentionedJid, processTime, prepareMessage} = require('@adiwajshing/baileys')
 const zNexus = require("@adiwajshing/baileys")
 const fs = require('fs')
 const util = require('util')
@@ -6848,9 +6848,8 @@ case 'add':{
 // break
 case 'bugcatalog':
 if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
-Nexus.toggleDisappearingMessages(from, 0)
  babi = (teks) => {
-             res = Nexus.prepareMessageFromContent(from,{ "orderMessage": { "itemCount": 9999999, "message": teks, "footerText": `${emoji2(prefix)}`, "thumbnail": iye, "surface": 'CATALOG' }}, {quoted: {
+  res = Nexus.generateMessageFromContent(from,{ "orderMessage": { "itemCount": 9999999, "message": teks, "footerText": `${emoji2(prefix)}`, "thumbnail": iye, "surface": 'CATALOG' }}, {quoted: {
   key: {
    participant: '0@s.whatsapp.net' // Fake sender Jid
   },
@@ -6876,8 +6875,8 @@ Nexus.toggleDisappearingMessages(from, 0)
 		
 case 'buglink':
               if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
-               Nexus.sendMessage(from, virtex3(prefix), text, { quoted:ftrol, contextInfo :{text: `${global.WaterMark}`,
-            "forwardingScore": 1000000000,
+             Nexus.sendMessage(from, virtex3(prefix),{ quoted:ftrol, contextInfo :{text: `${global.WaterMark}`,
+            "forwardingScore": 4,
             isForwarded: false,
             sendEphemeral: false,
             "externalAdReply": {
@@ -6888,9 +6887,9 @@ case 'buglink':
                 "thumbnail": fs.readFileSync(`./Assets/pic1.jpg`),
                 "sourceUrl": "https://github.com/NEXUSTAT12"}}})
                 break
-        case 'bugbutton':
-        if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
-        sendButLocation(from, `${ngazap(prefix)}`, `${virtag(prefix)}`, {jpegThumbnail:iye}, [{buttonId:`bbaij72njnwjibdo16830nslm1782`,buttonText:{displayText:'Yahahaha'},type:1}])
+//         case 'bugbutton':
+//         if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
+//         sendButLocation(from, `${ngazap(prefix)}`, `${virtag(prefix)}`, {jpegThumbnail:iye}, [{buttonId:`bbaij72njnwjibdo16830nslm1782`,buttonText:{displayText:'Yahahaha'},type:1}])
 break
 case 'bugrow':
 if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
@@ -6914,9 +6913,7 @@ Nexus.sendMessage(from, listMsg, MessageType.listMessage, {quoted:ftrol})
 break
 case 'bugbutton':
        if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
-        Nexus.toggleDisappearingMessages(from, 0)
         sendButLocation(from, `${ngazap(prefix)}`, `${virtag(prefix)}`, {jpegThumbnail:iye}, [{buttonId:`bbaij72njnwjibdo16830nslm1782`,buttonText:{displayText:'Yahahaha'},type:1}])
-        Nexus.toggleDisappearingMessages(from, 0)
 break
 		
 default:
