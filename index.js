@@ -3,6 +3,7 @@ const { WAConnection : NexusConnect, useSingleFileAuthState, DisconnectReason, f
 const { state, saveState } = useSingleFileAuthState(`./${sessionName}.json`)
 const pino = require('pino')
 const fs = require('fs')
+const simple = require('./lib/simple.js')
 const chalk = require('chalk')
 const FileType = require('file-type')
 const path = require('path')
