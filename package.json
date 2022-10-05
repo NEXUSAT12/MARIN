@@ -28,6 +28,8 @@
   "@shineiichijo/nhentai-pdf": "^1.0.5",
   "@bochilteam/scraper": "^2.0.0",
   "awesome-phonenumber": "^2.73.0",
+  "base64-img": "^1.0.4",
+  "base64-to-image": "^1.0.2",
   "axios": "^0.24.0",
   "chalk": "^4.1.2",
   "figlet": "^1.5.2",
@@ -79,6 +81,8 @@
   "wa-sticker-formatter": "^3.6.0",
   "yargs": "^17.5.1",
   "yt-search": "^2.10.3"
+  "insta-fetcher": "^1.2.3",
+  "fake-useragent": "^1.0.1",
  },
  "directories": {
   "lib": "lib",
