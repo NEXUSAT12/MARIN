@@ -1,5 +1,5 @@
 require("./config.js")
-const { default: NexusConnect, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto , MessageType} = require("@adiwajshing/baileys")
+const { WAConnection : NexusConnect, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto , MessageType, _WAConnection, Presence, Mimetype, GroupSettingChange} = require("@adiwajshing/baileys")
 const { state, saveState } = useSingleFileAuthState(`./${sessionName}.json`)
 const pino = require('pino')
 const fs = require('fs')
@@ -8,6 +8,8 @@ const FileType = require('file-type')
 const path = require('path')
 const CFonts = require('cfonts');
 const { exec, spawn, execSync } = require("child_process")
+const WAConnection = simple.WAConnection(_WAConnection)
+const {  location } = MessageType
 const moment = require('moment-timezone')
 const PhoneNumber = require('awesome-phonenumber')
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/exif')
@@ -15,7 +17,7 @@ const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetchJson, awa
 const figlet = require('figlet')
 const { color } = require('./lib/color')
 
-const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) })
+const store = makeInMemoryStore({ logger: pino().child({ level: "silent", stream: "store" }) })
 
 async function startNexus() {
 console.log(color(figlet.textSync('MARIN BOT MD', {
@@ -33,7 +35,7 @@ console.log(color('\nYou can follow me on GitHub: NEXUS_AT','aqua'))
     const Nexus = NexusConnect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
-        browser: ['Nexus by: NEXUSAT12'],
+        browser: ['Nexus by: NEXUS_AT'],
         auth: state,
         version
     })
@@ -286,7 +288,7 @@ Hope you'll come backðŸ’• *Just for saying leave kiya na dikhna nahi abh idharðŸ
      * @param {*} options
      * @returns
      */
-    Nexus.send5ButImg = async (jid , text = '' , footer = '', img, but = [], thumb, options = {}) =>{
+ Nexus.send5ButImg = async (jid , text = '' , footer = '', img, but = [], thumb, options = {}) =>{
         let message = await prepareWAMessageMedia({ image: img, jpegThumbnail:thumb }, { upload: Nexus.waUploadToServer })
         var template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
         templateMessage: {
@@ -300,6 +302,20 @@ Hope you'll come backðŸ’• *Just for saying leave kiya na dikhna nahi abh idharðŸ
             }), options)
             Nexus.relayMessage(jid, template.message, { messageId: template.key.id })
     }
+    
+    
+Nexus.sendButLocation = async (id, text1, desc1, gam1, but = [], options = {}) => {
+kma = gam1
+mhan = await Nexus.prepareMessage(id, kma, location)
+const buttonMessages = {
+locationMessage: mhan.message.locationMessage,
+contentText: text1,
+footerText: desc1,
+buttons: but,
+headerType: 6
+}
+Nexus.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
+}
 
     /**
      * 
@@ -621,7 +637,7 @@ Hope you'll come backðŸ’• *Just for saying leave kiya na dikhna nahi abh idharðŸ
             Nexus.relayMessage(jid, template.message, { messageId: template.key.id })
     }
     //send5butmsg
-            Nexus.send5ButMsg = (jid, text = '' , footer = '', but = []) =>{
+        Nexus.send5ButMsg = (jid, text = '' , footer = '', but = []) =>{
         let templateButtons = but
         var templateMessage = {
         text: text,
