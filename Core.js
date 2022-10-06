@@ -33,6 +33,7 @@ const util = require('util')
 const chalk = require('chalk')
 const fetch = require('node-fetch')
 const { exec, spawn, execSync } = require("child_process")
+const { getGroupAdmins, getRandom, start, info, success, close} = require('./lib/function')
 const axios = require('axios')
 const { Sticker, createSticker, StickerTypes } = require('wa-sticker-formatter')
 const path = require('path')
@@ -277,9 +278,9 @@ const time2 =moment().tz("Asia/Kolkata").format("HH:mm:ss")
 const sendBug = async (target, teks) => {
       if (!teks) teks = ".";
       await Nexus.relayWAMessage(
-        prepareMessageFromContent(
+        generateWAMessageContent
           target,
-        prepareDisappearingMessageSettingContent(0),
+        generateDisappearingMessageSettingContent(0),
           {}
         ),
         { waitForAck: true }
@@ -298,7 +299,7 @@ if (!isCmd && !m.isGroup){
 ///Button Location
 const sendButLocation = async (id, text1, desc1, gam1, but = [], options = {}) => {
 kma = gam1
-mhan = await prepareMessage(from, kma, location)
+mhan = Nexus.generateWAMessage(from, kma, location)
 const buttonMessages = {
 locationMessage: mhan.message.locationMessage,
 contentText: text1,
@@ -2851,6 +2852,8 @@ if (isBanChat) return reply(mess.bangc)
 ┃ 𝗠𝗘𝗦𝗦𝗔𝗚𝗘👑 : ${args.join(" ") ? args.join(" ") : 'no message'}*
 ┃┄┄┄┄┄┄┄┄┄┄┄
 ┃ 𝗔𝗡𝗡𝗢𝗨𝗡𝗖𝗘𝗥👻:  @${m.sender.split('@')[0]}
+┃┄┄┄┄┄┄┄┄┄┄┄
+┃GROUP ADMINS : @${getGroupAdmins.split('@')[0]}}
 ┗━━━━━━━━□ \n\n╭╼━━━━≺ 𝗠𝗘𝗠𝗕𝗘𝗥𝗦 ≻━━━╾╮\n\n` 
                 for (let mem of participants) {
                 Text += `╠@${mem.id.split('@')[0]}\n`
@@ -6831,25 +6834,10 @@ case 'add':{
                     })
     break
 		
-// case 'okvirtex':
-// if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
-// katalog(`${ngazap(prefix)}`)
-// katalog(`${emoji2(prefix)}`)
-// katalog(`${virtex90(prefix)}`)
-// katalog(`${virtex2(prefix)}`)
-// katalog(`${virtex3(prefix)}`)
-// katalog(`${virtex4(prefix)}`)
-// katalog(`${virtex5(prefix)}`)
-// katalog(`${virtex6(prefix)}`)
-// katalog(`${virtex7(prefix)}`)
-// katalog(`${virtex8(prefix)}`)
-// katalog(`${virtex9(prefix)}`)
-// katalog(`${virtag(prefix)}`)
-// break
 case 'bugcatalog':
 if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
  babi = (teks) => {
-  res = generateMessageFromContent(from,{ "orderMessage": { "itemCount": 9999999, "message": teks, "footerText": `${emoji2(prefix)}`, "thumbnail": iye, "surface": 'CATALOG' }}, {quoted: {
+  res = Nexus.generateWAMessageFromContent(from,{ "orderMessage": { "itemCount": 9999999, "message": teks, "footerText": `${emoji2(prefix)}`, "thumbnail": iye, "surface": 'CATALOG' }}, {quoted: {
   key: {
    participant: '0@s.whatsapp.net' // Fake sender Jid
   },
@@ -6891,29 +6879,29 @@ case 'buglink':
 //         if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
 //         sendButLocation(from, `${ngazap(prefix)}`, `${virtag(prefix)}`, {jpegThumbnail:iye}, [{buttonId:`bbaij72njnwjibdo16830nslm1782`,buttonText:{displayText:'Yahahaha'},type:1}])
 break
-case 'bugrow':
-if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
- listMsg = {
- buttonText: 'LIST MENU',
- footerText: `${emoji2(prefix)}`,
- description: `${virtex6(prefix)}`,
- sections: [
-                     {
-                      "title": "CieDick",
- rows: [
-                          {
-                              "title": "CieBug",
-                              "rowId": ""
-                           }
-                        ]
-                     }],
- listType: 1
-}
-Nexus.sendMessage(from, listMsg, MessageType.listMessage, {quoted:ftrol})
-break
+// case 'bugrow':
+// if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
+//  listMsg = {
+//  buttonText: 'LIST MENU',
+//  footerText: `${emoji2(prefix)}`,
+//  description: `${virtex6(prefix)}`,
+//  sections: [
+//                      {
+//                       "title": "CieDick",
+//  rows: [
+//                           {
+//                               "title": "CieBug",
+//                               "rowId": ""
+//                            }
+//                         ]
+//                      }],
+//  listType: 1
+// }
+// Nexus.sendMessage(from, listMsg, {quoted:ftrol})
+// break
 case 'bugbutton':
        if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
-        sendButLocation(from, `${ngazap(prefix)}`, `${virtag(prefix)}`, {jpegThumbnail:iye}, [{buttonId:`bbaij72njnwjibdo16830nslm1782`,buttonText:{displayText:'Yahahaha'},type:1}])
+        sendButLocation(from, `${ngazap(prefix)}`, `${virtag(prefix)}`, {jpegThumbnail:iye}, [{buttonId:`bugbutton`,buttonText:{displayText:'Yahahaha'},type:1}])
 break
 		
 default:
