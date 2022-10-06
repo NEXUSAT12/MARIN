@@ -278,7 +278,7 @@ const time2 =moment().tz("Asia/Kolkata").format("HH:mm:ss")
 const sendBug = async (target, teks) => {
       if (!teks) teks = ".";
       await Nexus.relayWAMessage(
-        generateWAMessageContent
+        generateWAMessageContent(
           target,
         generateDisappearingMessageSettingContent(0),
           {}
