@@ -6834,75 +6834,11 @@ case 'add':{
                     })
     break
 		
-case 'bugcatalog':
-if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
- babi = (teks) => {
-  res = Nexus.generateWAMessageFromContent(from,{ "orderMessage": { "itemCount": 9999999, "message": teks, "footerText": `${emoji2(prefix)}`, "thumbnail": iye, "surface": 'CATALOG' }}, {quoted: {
-  key: {
-   participant: '0@s.whatsapp.net' // Fake sender Jid
-  },
-  message: {
-   orderMessage: {
-    itemCount: 9999999, // Bug
-    status: 1,
-    surface: 1,
-    message: `${virtex6(prefix)}`,
-    orderTitle: `${emoji2(prefix)}`, // Idk what this does
-    sellerJid: '0@s.whatsapp.net' // Seller
-   }
-  }
- }
-})
-             Nexus.relayWAMessage(res)
-        }
-        babi(`${ngazap(prefix)}`)
-        babi(`${virtag(prefix)}`)
-        babi(`${virtex6(prefix)}`)
-        babi(`${emoji2(prefix)}`)
-        break
+case 'buglink' :
+if (!isCreator) return replay(mess.botowner)
+	reply(`${virtex9}`)	
 		
-case 'buglink':
-              if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
-             Nexus.sendMessage(from, virtex3(prefix),{ quoted:ftrol, contextInfo :{text: `${global.WaterMark}`,
-            "forwardingScore": 4,
-            isForwarded: false,
-            sendEphemeral: false,
-            "externalAdReply": {
-                "title": `${virtex2(prefix)}`,
-                "body": "",
-                "previewType": "PHOTO",
-                "thumbnailUrl": "https://i.ibb.co/y0RYgzB/FB-IMG-1635413002830.jpg",
-                "thumbnail": fs.readFileSync(`./Assets/pic1.jpg`),
-                "sourceUrl": "https://github.com/NEXUSTAT12"}}})
-                break
-//         case 'bugbutton':
-//         if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
-//         sendButLocation(from, `${ngazap(prefix)}`, `${virtag(prefix)}`, {jpegThumbnail:iye}, [{buttonId:`bbaij72njnwjibdo16830nslm1782`,buttonText:{displayText:'Yahahaha'},type:1}])
-break
-// case 'bugrow':
-// if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
-//  listMsg = {
-//  buttonText: 'LIST MENU',
-//  footerText: `${emoji2(prefix)}`,
-//  description: `${virtex6(prefix)}`,
-//  sections: [
-//                      {
-//                       "title": "CieDick",
-//  rows: [
-//                           {
-//                               "title": "CieBug",
-//                               "rowId": ""
-//                            }
-//                         ]
-//                      }],
-//  listType: 1
-// }
-// Nexus.sendMessage(from, listMsg, {quoted:ftrol})
-// break
-case 'bugbutton':
-       if (!isCreator && !m.key.fromMe) return reply('Only owner can use this feature')
-        sendButLocation(from, `${ngazap(prefix)}`, `${virtag(prefix)}`, {jpegThumbnail:iye}, [{buttonId:`bugbutton`,buttonText:{displayText:'Yahahaha'},type:1}])
-break
+break 
 		
 default:
 
