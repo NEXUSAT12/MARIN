@@ -1284,12 +1284,12 @@ let cron = require('node-cron')
                                },
                   message: { 
                                 "videoMessage": { 
-                                "title": `Anya`,
-                                "h": `Anya`,
+                                "title": `${global.BotName}`,
+                                "h": `${global.BotName}`,
                                 'duration': '99999', 
                                 'gifPlayback': 'true', 
-                                'caption': `Pika`,
-                                'jpegThumbnail': fs.readFileSync('./Assets/miku.mp4')
+                                'caption': `NEXUS`,
+                                'jpegThumbnail': fs.readFileSync('./Assets/Nexus.mp4')
                                        }
                                       }
                                    } 
@@ -1308,7 +1308,6 @@ const ftroli = {
   orderTitle: `${global.BotName}`,
   thumbnail: BotLogo, //Pic
   sellerJid: '0@s.whatsapp.net'
-  
   }
   }
   }
