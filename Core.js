@@ -219,7 +219,7 @@ const messagesD = body.slice(0).trim().split(/ +/).shift().toLowerCase()
 const groupMetadata = m.isGroup ? await Nexus.groupMetadata(m.chat).catch(e => {}) : ''
 const groupName = m.isGroup ? groupMetadata.subject : ''
 const participants = m.isGroup ? await groupMetadata.participants : ''
-const groupAdmins = m.isGroup ? await groupMetadata.participants.filter(v => v.admin !== null).map(v => v.id) : ''
+const groupAdmins = m.isGroup ? await participants.filter(v => v.admin !== null).map(v => v.id) : ''
 const groupOwner = m.isGroup ? groupMetadata.owner : ''
 const isBotAdmins = m.isGroup ? groupAdmins.includes(botNumber) : false
 const isAdmins = m.isGroup ? groupAdmins.includes(m.sender) : false
@@ -2847,8 +2847,6 @@ if (isBanChat) return reply(mess.bangc)
 ┃ 𝗠𝗘𝗦𝗦𝗔𝗚𝗘👑 : ${args.join(" ") ? args.join(" ") : 'no message'}*
 ┃┄┄┄┄┄┄┄┄┄┄┄
 ┃ 𝗔𝗡𝗡𝗢𝗨𝗡𝗖𝗘𝗥👻:  @${m.sender.split('@')[0]}
-┃┄┄┄┄┄┄┄┄┄┄┄ 
-┃𝐆𝐑𝐎𝐔𝐏 𝐀𝐃𝐌𝐈𝐍𝐒 : @${groupAdmins.split('@')[0]}
 ┗━━━━━━━━□ \n\n╭╼━━━━≺ 𝗠𝗘𝗠𝗕𝗘𝗥𝗦 ≻━━━╾╮\n\n` 
                 for (let mem of participants) {
                 Text += `╠@${mem.id.split('@')[0]}\n`
@@ -6901,6 +6899,14 @@ let msgs = global.db.database
 if (!(budy.toLowerCase() in msgs)) return
 Nexus.copyNForward(m.chat, msgs[budy.toLowerCase()], true)
 }
+}
+}catch (err) {
+Nexus.sendMessage(`${ownertag}@s.whatsapp.net`, util.format(err), {quoted:m})
+console.log(err)
+}
+}
+
+
 
 let file = require.resolve(__filename)
 fs.watchFile(file, () => {
