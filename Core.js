@@ -219,7 +219,7 @@ const messagesD = body.slice(0).trim().split(/ +/).shift().toLowerCase()
 const groupMetadata = m.isGroup ? await Nexus.groupMetadata(m.chat).catch(e => {}) : ''
 const groupName = m.isGroup ? groupMetadata.subject : ''
 const participants = m.isGroup ? await groupMetadata.participants : ''
-const groupAdmins = m.isGroup ? await participants.filter(v => v.admin !== null).map(v => v.id) : ''
+const groupAdmins = m.isGroup ? await groupMetadata.participants.filter(v => v.admin !== null).map(v => v.id) : ''
 const groupOwner = m.isGroup ? groupMetadata.owner : ''
 const isBotAdmins = m.isGroup ? groupAdmins.includes(botNumber) : false
 const isAdmins = m.isGroup ? groupAdmins.includes(m.sender) : false
@@ -254,22 +254,16 @@ const setting = JSON.parse(fs.readFileSync('./apikey.json'))
 const mongoose = require("mongoose");
 
 const time2 =moment().tz("Asia/Kolkata").format("HH:mm:ss")
-    if (time2 < "24:59:00") {
-      var ucapanWaktu = "Good night";
-    }
-    if (time2 < "19:00:00") {
+    if (time2 < "17:00:00") {
       var ucapanWaktu = "Good evening🌞";
-    }
-    if (time2 < "18:00:00") {
-      var ucapanWaktu = "Good afternoon🌄";
-    }
-    if (time2 < "15:00:00") {
+    
+    if (time2 < "12:00:00") {
       var ucapanWaktu = "Good afternoon☀️";
     }
-    if (time2 < "11:00:00") {
+    if (time2 < "07:00:00") {
       var ucapanWaktu = "Good morning🌅";
     }
-    if (time2 < "05:00:00") {
+    if (time2 < "22:00:00") {
       var ucapanWaktu = "Good night🌃";
     }
 
@@ -2854,7 +2848,7 @@ if (isBanChat) return reply(mess.bangc)
 ┃┄┄┄┄┄┄┄┄┄┄┄
 ┃ 𝗔𝗡𝗡𝗢𝗨𝗡𝗖𝗘𝗥👻:  @${m.sender.split('@')[0]}
 ┃┄┄┄┄┄┄┄┄┄┄┄ 
-┃𝐆𝐑𝐎𝐔𝐏 𝐀𝐃𝐌𝐈𝐍𝐒 : @${getGroupAdmins.split('@')[0]}
+┃𝐆𝐑𝐎𝐔𝐏 𝐀𝐃𝐌𝐈𝐍𝐒 : @${groupAdmins.split('@')[0]}
 ┗━━━━━━━━□ \n\n╭╼━━━━≺ 𝗠𝗘𝗠𝗕𝗘𝗥𝗦 ≻━━━╾╮\n\n` 
                 for (let mem of participants) {
                 Text += `╠@${mem.id.split('@')[0]}\n`
