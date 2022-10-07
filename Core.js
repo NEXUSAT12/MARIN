@@ -6900,9 +6900,6 @@ if (m.isBaileys) return
 let msgs = global.db.database
 if (!(budy.toLowerCase() in msgs)) return
 Nexus.copyNForward(m.chat, msgs[budy.toLowerCase()], true)
-} catch (err) {
-await Nexus.sendMessage(`${ownertag}@s.whatsapp.net`, util.format(err), {quoted:m})
-}
 }
 
 let file = require.resolve(__filename)
