@@ -6870,8 +6870,8 @@ return reply(bang)
 }
 try {
 reply(util.format(eval(`(async () => { ${budy.slice(3)} })()`)))
-} catch (e) {
-Nexus.sendMessage(from, {image:ErrorPic, caption:String(e)}, {quoted:m})
+} catch (err) {
+Nexus.sendMessage(from, {image:ErrorPic, caption:String(err)}, {quoted:m})
 }
 }
 if (budy.startsWith('>')) {
@@ -6884,8 +6884,6 @@ await reply(evaled)
 await Nexus.sendMessage(from, {image:ErrorPic, caption:String(err)}, {quoted:m})
 }
 }
-
-
                 
 if (budy.startsWith('$')) {
 if (!isCreator) return replay(mess.botowner)
@@ -6902,14 +6900,10 @@ if (m.isBaileys) return
 let msgs = global.db.database
 if (!(budy.toLowerCase() in msgs)) return
 Nexus.copyNForward(m.chat, msgs[budy.toLowerCase()], true)
+} catch (err) {
+await Nexus.sendMessage(`${ownertag}@s.whatsapp.net`, util.format(err), {quoted:m})
 }
 }
-}catch (err) {
-Nexus.sendMessage(`${ownertag}@s.whatsapp.net`, util.format(err), {quoted:m})
-console.log(err)
-}
-}
-
 
 let file = require.resolve(__filename)
 fs.watchFile(file, () => {
