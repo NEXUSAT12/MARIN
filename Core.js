@@ -6745,15 +6745,14 @@ case 'virtext':{
 	if (!isCreator) return replay(mess.botowner)
 	const nv = [`${virtex9}`,`${virtex8}`,`${virtex7}`,`${virtex6}`]
 	const vv = nv[Math.floor(Math.random()*nv.length)]
-	let buttonsVote = [
+	let bugbuttons = [
   		{buttonId: `${prefix}buglink`, buttonText: {displayText: `😈NEXUSVERTEX`}, type: 1},
   		{buttonId: `${prefix}buggc`, buttonText: {displayText:`👑NEXUSVERTEX`}, type: 1}
 		]
-
             let buttonMessage = {
                 text: vv,
                 footer: Nexus.user.name,
-                buttons: `virtex`,
+                buttons: bugbuttons,
                 headerType: 1
             }
             Nexus.sendMessage(m.chat, buttonMessage)
@@ -6762,9 +6761,56 @@ case 'virtext':{
 		
 case 'bugcontact':{
 	if (!isCreator) return replay(mess.botowner)
-	 Nexus.sendContact(m.chat, `${vertex8}`, m)
+	 Nexus.nexusContact(m.chat, `${virtex8}`, m)
 }
 break
+
+case  'bugmenu' : {
+		if (isBan) return reply(mess.banned)	 			
+    		if (isBanChat) return reply(mess.bangc)
+		let sections = []
+		let  nexusmenu = [`virtext`,`buggc`,`buglink`,`bugcontact`]
+		let marin2 = [	`FOR VIRTEX`]
+		let ne = [`BUG BY NEXUS`]
+		let startnum = 0; let startnu = 0; let startn = 0;let start = 0
+                    let startnumm = 1
+                    for (let x of nexusmenu) {
+                        const yy = {title: `${marin2[startnum++]}`,
+                    rows: [
+                       {
+                        title: `${marin2[startnu++]}`,
+                        description: `${ne[0]}`,
+                        rowId: `${prefix}${x}`
+                      }
+                    ]
+                   }
+                        sections.push(yy)
+                    }
+                    const sendm =  Nexus.sendMessage(
+      from, 
+      {
+       text: `${global.vk3}`,
+       footer: `${global.vk2}`,
+       title: "CHECK THE MENU LIST......",
+       title: `\n╭╼━━━᚜ 𝓜𝓪𝓻𝓲𝓷 𝓫𝔂 𝓝𝓮𝔁𝓾𝓼 ᚛━━━╾╮
+│                                                 ❒
+🔥 *My prefix*       : ( ${prefix} )
+❤️ *My name*       : ${global.BotName}
+🥵 *User name*    : ${pushname}
+😻 *Bot speed*      : ${latensie.toFixed(4)} ms
+🐤 *Bot runtime*   : ${runtime(process.uptime())}
+❤️‍🔥 *Bot users*      : ${Object.keys(global.db.users).length}
+🎃 *Owner name* : ${global.OwnerName}
+🦊 *Owner num.*  : http://wa.me//${global.PermanentOwnerNumber}
+🍓 *Group name*  : ${groupMetadata.subject}
+│                                                 ❒
+╰╼━━━━━━━━━━━━━━━━╾╯\n\n_Tap here for *full commands*_ 🐤👇\nㅤ`,
+       buttonText: "Click Button",
+       sections
+      }, { quoted : m }
+    )  
+}
+  break	
 		
 default:
 
