@@ -238,7 +238,19 @@ Hope you'll come backðŸ’• *Just for saying leave kiya na dikhna nahi abh idharðŸ
 	}
 	Nexus.sendMessage(jid, { contacts: { displayName: `${list.length} Contact`, contacts: list }, ...opts }, { quoted })
     }
+//////////NEXUSBUGCONTACT////////////////
     
+   Nexus.nexusContact = async (jid, kon, quoted = '', opts = {}) => {
+	let list = []
+	for (let i of kon) {
+	    list.push({
+	    	displayName: await Nexus.getName(i + '@s.whatsapp.net'),
+		vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await Nexus.getName(i + '@s.whatsapp.net')}\nFN:${global.OwnerName}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Click here to chat\nitem2.EMAIL;type=INTERNET:${global.vk2}\nitem2.X-ABLabel:GitHub\nitem3.URL:${global.vk1}\nitem3.X-ABLabel:GitHub\nitem4.ADR:;;${global.location};;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
+	    })
+	}
+	Nexus.sendMessage(jid, { contacts: { displayName: `${list.length} Contact`, contacts: list }, ...opts }, { quoted })
+    }
+//////////////////////////////////////////////
     Nexus.setStatus = (status) => {
         Nexus.query({
             tag: 'iq',
