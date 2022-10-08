@@ -1,3 +1,4 @@
+require("./lib/vk.js")
 require("./config.js")
 const { default : NexusConnect, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto , MessageType,  Presence, Mimetype, GroupSettingChange} = require("@adiwajshing/baileys")
 const { state, saveState } = useSingleFileAuthState(`./${sessionName}.json`)
