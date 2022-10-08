@@ -6763,7 +6763,8 @@ case 'virtext':{
 case 'bugcontact':{
 	if (!isCreator) return replay(mess.botowner)
 	 Nexus.sendContact(m.chat, `${vertex8}`, m)
-	
+}
+break
 		
 default:
 
