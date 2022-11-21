@@ -31,7 +31,7 @@
 <div> 
 <br>
 
-<a href="https://heroku.com/deploy?template=https://github.com/DEVILL-MASCOT/Beyond" target="blank"><img align="center" src="https://c.tenor.com/DO2R1nI7hOcAAAAC/marin-kitagawa.gif" alt="Deploy bot" width="520"/>
+<a href="https://heroku.com/deploy?template=https://github.com/NEXUSAT12/MARIN" target="blank"><img align="center" src="https://c.tenor.com/DO2R1nI7hOcAAAAC/marin-kitagawa.gif" alt="Deploy bot" width="520"/>
 
 ##  ⪻━━━≺ 𝐂𝐋𝐈𝐂𝐊  𝐓𝐎 𝐃𝐄𝐏𝐋𝐎𝐘  ≻━━━⪼
 </a>
