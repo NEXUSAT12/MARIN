@@ -1461,7 +1461,7 @@ const ftroli = {
     
     Type *${prefix}menu* or press any button below to start using *${global.BotName}*
     
-    ©️ *${global.BotName}* All Rights Reserved by: *AYUSH❄️❤️‍🔥👑*
+    ©️ *${global.BotName}* All Rights Reserved by: *shubham❄️❤️‍🔥👑*
     `
         const qtod = m.quoted? "true":"false"
         
@@ -1478,7 +1478,7 @@ switch(command) {
     case 'sc': case 'script': case 'sourcecode': {
         if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
-    teks = `*╭━━━╼⋉${global.BotName}⋊╾━━╮\n┃ https://wa.me/${global.PermanentOwner}\n┃ Dont forget to follow me on *https://github.com/NEXUSAT12* \N ┃ give a ⭐️ to my projects\n ╰━━╼『${global.BotName}』 `
+    teks = `*╭━━━╼⋉${global.BotName}⋊╾━━╮\n┃ https://wa.me/${global.PermanentOwner}\n┃ Dont forget to follow me on *https://github.com/* \N ┃ give a ⭐️ to my projects\n ╰━━╼『${global.BotName}』 `
     let buttons = [
     {buttonId: `${prefix}menu`, buttonText: {displayText: '✨Bot Menu✨'}, type: 1}
     ]
@@ -1612,7 +1612,7 @@ break
 
 case 'support': case 'supportgc':
     
-    reply(`*My developer's group:*\n\n https://chat.whatsapp.com/DDWBpH9ciy38RCGYO7RkfM`)
+    reply(`*My developer's group:*\n\n https://chat.whatsapp.com/EsNqFrGKxGXFrdwgRaQl9q`)
     break
 
 case 'repo': case 'botrepo':
@@ -2752,7 +2752,7 @@ if (isBanChat) return reply(mess.bangc)
 ┃ 𝗔𝗡𝗡𝗢𝗨𝗡𝗖𝗘𝗥👻:  @${m.sender.split('@')[0]}
 ┗━━━━━━━━□ \n\n╭╼━━━━≺ 𝗠𝗘𝗠𝗕𝗘𝗥𝗦 ≻━━━╾╮\n\n` 
                 for (let mem of participants) {
-                Text += `╠@${mem.id.split('@')[0]}\n`
+                Text += `💔@${mem.id.split('@')[0]}\n`
                 }
                 Nexus.sendMessage(m.chat, { text: Text, mentions: participants.map(a => a.id) }, { quoted: m })
                 }
@@ -3819,8 +3819,8 @@ reply(mess.error)
  const Nexustiktokop = musim_rambutan.result.watermark
 texttk = `_Please choose the button below_`
 let buttons = [
-{buttonId: `${prefix}ttnowm ${q}`, buttonText: {displayText: 'Watermark Free'}, type: 1},
-{buttonId: `${prefix}ttaud ${q}`, buttonText: {displayText: 'Audio '}, type: 1}
+{buttonId: `#${prefix}ttnowm ${q}`, buttonText: {displayText: 'Watermark Free'}, type: 1},
+{buttonId: `#${prefix}ttaud ${q}`, buttonText: {displayText: 'Audio '}, type: 1}
 ]
 let buttonMessage = {
 video: {url:Nexustiktokop},
@@ -3877,12 +3877,12 @@ case 'play2': case 'ytplay2': {
     let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
     let ytvc = await hx.youtube(anu.url)
     let buttons = [
-    {buttonId: `${prefix}ytmp4 ${anu.url}`, buttonText: {displayText: '► Video'}, type: 1},
-    {buttonId: `${prefix}ytmp3 ${anu.url}`, buttonText: {displayText: '♫ Audio'}, type: 1}
+    {buttonId: `#${prefix}ytmp4 ${anu.url}`, buttonText: {displayText: '► Video'}, type: 1},
+    {buttonId: `#${prefix}ytmp3 ${anu.url}`, buttonText: {displayText: '♫ Audio'}, type: 1}
                     ]
                     let buttonMessage = {
                         image: { url: anu.thumbnail},
-                        caption: `「 _MARIN Youtube Player_ 」
+                        caption: `「 _ Youtube Player_ 」
 
     Title : ${anu.title}
     ID : ${anu.videoId}
@@ -3908,14 +3908,14 @@ case 'ytdl2': case 'yt2': case 'youtube2':{
 if (!args[0]) return reply(mess.nolink)
 try {
 hx.youtube(args[0]).then(async(res) => {
-textyt = `「 _MARIN Youtube Downloader_ 」
+textyt = `「 _ Youtube Downloader_ 」
 Title : ${res.title}
 Size : ${res.size}
 Quality : ${res.quality}
 _Select video or audio and wait a while_`
 let buttons = [
-{buttonId: `${prefix}ytmp4 ${res.link}`, buttonText: {displayText: '► Video'}, type: 1},
-{buttonId: `${prefix}ytmp3 ${res.link}`, buttonText: {displayText: '♫ Audio'}, type: 1}
+{buttonId: `#${prefix}ytmp4 ${res.link}`, buttonText: {displayText: '► Video'}, type: 1},
+{buttonId: `#${prefix}ytmp3 ${res.link}`, buttonText: {displayText: '♫ Audio'}, type: 1}
 ]
 let buttonMessage = {
 image: {url:res.thumb},
@@ -3941,8 +3941,8 @@ case 'play': case 'song': case 'ytplay': {
                 let search = await yts(text)
                 let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
                 let buttons = [
-                    {buttonId: `${prefix}ytmp3 ${anu.url}`, buttonText: {displayText: '🎶Audio🎶'}, type: 1},
-                    {buttonId: `${prefix}ytmp4 ${anu.url}`, buttonText: {displayText: '📽️Video📽️'}, type: 1}
+                    {buttonId: `#${prefix}ytmp3 ${anu.url}`, buttonText: {displayText: '🎶Audio🎶'}, type: 1},
+                    {buttonId: `#${prefix}ytmp4 ${anu.url}`, buttonText: {displayText: '📽️Video📽️'}, type: 1}
                 ]
                 let buttonMessage = {
                     image: { url: anu.thumbnail },
