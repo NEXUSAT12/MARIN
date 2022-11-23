@@ -6,7 +6,7 @@
 //▮THIS SOFTWARE IS UNDER UZ COPYRIGHT
 //▮
 //▮REPORT ABUSE OF THIS SOFTWARE EMAIL US
-//▮WHATSAPP US : +918130784851
+//▮WHATSAPP US : +917798203711
 //▮
 //╰▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
 //
@@ -1461,7 +1461,7 @@ const ftroli = {
     
     Type *${prefix}menu* or press any button below to start using *${global.BotName}*
     
-    ©️ *${global.BotName}* All Rights Reserved by: *AYUSH❄️❤️‍🔥👑*
+    ©️ *${global.BotName}* All Rights Reserved by: *shubham❄️❤️‍🔥👑*
     `
         const qtod = m.quoted? "true":"false"
         
@@ -1478,7 +1478,7 @@ switch(command) {
     case 'sc': case 'script': case 'sourcecode': {
         if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
-    teks = `*╭━━━╼⋉${global.BotName}⋊╾━━╮\n┃ https://wa.me/${global.PermanentOwner}\n┃ Dont forget to follow me on *https://github.com/NEXUSAT12* \N ┃ give a ⭐️ to my projects\n ╰━━╼『${global.BotName}』 `
+    teks = `*╭━━━╼⋉${global.BotName}⋊╾━━╮\n┃ https://wa.me/${global.PermanentOwner}\n┃ Dont forget to follow me on *https://github.com/* \N ┃ give a ⭐️ to my projects\n ╰━━╼『${global.BotName}』 `
     let buttons = [
     {buttonId: `${prefix}menu`, buttonText: {displayText: '✨Bot Menu✨'}, type: 1}
     ]
@@ -1612,7 +1612,7 @@ break
 
 case 'support': case 'supportgc':
     
-    reply(`*My developer's group:*\n\n https://chat.whatsapp.com/DDWBpH9ciy38RCGYO7RkfM`)
+    reply(`*My developer's group:*\n\n https://chat.whatsapp.com/EsNqFrGKxGXFrdwgRaQl9q`)
     break
 
 case 'repo': case 'botrepo':
@@ -2742,7 +2742,7 @@ if (isBanChat) return reply(mess.bangc)
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
  if (!isAdmins && !isCreator) return replay(mess.useradmin) 
- let Text = `╭━━━≺ 𝗠𝗔𝗥𝗜𝗡-𝗧𝗔𝗚 ≻━━━╮
+ let Text = `╭━━━≺ 𓄂⍣⃝🇬𝚑𝚘𝚜𝚝 ×͜×-𝗧𝗔𝗚 ≻━━━╮
 ┃
 ┃┄┄┄┄┄┄┄┄┄┄┄
 ┃ 𝗚𝗿𝗼𝘂𝗽💕: *${groupMetadata.subject}*
@@ -2752,7 +2752,7 @@ if (isBanChat) return reply(mess.bangc)
 ┃ 𝗔𝗡𝗡𝗢𝗨𝗡𝗖𝗘𝗥👻:  @${m.sender.split('@')[0]}
 ┗━━━━━━━━□ \n\n╭╼━━━━≺ 𝗠𝗘𝗠𝗕𝗘𝗥𝗦 ≻━━━╾╮\n\n` 
                 for (let mem of participants) {
-                Text += `╠@${mem.id.split('@')[0]}\n`
+                Text += `💔@${mem.id.split('@')[0]}\n`
                 }
                 Nexus.sendMessage(m.chat, { text: Text, mentions: participants.map(a => a.id) }, { quoted: m })
                 }
@@ -3819,8 +3819,8 @@ reply(mess.error)
  const Nexustiktokop = musim_rambutan.result.watermark
 texttk = `_Please choose the button below_`
 let buttons = [
-{buttonId: `${prefix}ttnowm ${q}`, buttonText: {displayText: 'Watermark Free'}, type: 1},
-{buttonId: `${prefix}ttaud ${q}`, buttonText: {displayText: 'Audio '}, type: 1}
+{buttonId: `#${prefix}ttnowm ${q}`, buttonText: {displayText: 'Watermark Free'}, type: 1},
+{buttonId: `#${prefix}ttaud ${q}`, buttonText: {displayText: 'Audio '}, type: 1}
 ]
 let buttonMessage = {
 video: {url:Nexustiktokop},
@@ -3877,12 +3877,12 @@ case 'play2': case 'ytplay2': {
     let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
     let ytvc = await hx.youtube(anu.url)
     let buttons = [
-    {buttonId: `${prefix}ytmp4 ${anu.url}`, buttonText: {displayText: '► Video'}, type: 1},
-    {buttonId: `${prefix}ytmp3 ${anu.url}`, buttonText: {displayText: '♫ Audio'}, type: 1}
+    {buttonId: `${prefix}ytmp3 ${res.link}`, buttonText: {displayText: '► Video'}, type: 1},
+    {buttonId: `${prefix}ytmp3 ${res.link}`, buttonText: {displayText: '♫ Audio'}, type: 1}
                     ]
                     let buttonMessage = {
                         image: { url: anu.thumbnail},
-                        caption: `「 _MARIN Youtube Player_ 」
+                        caption: `「 _ Youtube Player_ 」
 
     Title : ${anu.title}
     ID : ${anu.videoId}
@@ -3908,13 +3908,13 @@ case 'ytdl2': case 'yt2': case 'youtube2':{
 if (!args[0]) return reply(mess.nolink)
 try {
 hx.youtube(args[0]).then(async(res) => {
-textyt = `「 _MARIN Youtube Downloader_ 」
+textyt = `「 _ Youtube Downloader_ 」
 Title : ${res.title}
 Size : ${res.size}
 Quality : ${res.quality}
 _Select video or audio and wait a while_`
 let buttons = [
-{buttonId: `${prefix}ytmp4 ${res.link}`, buttonText: {displayText: '► Video'}, type: 1},
+{buttonId: `${prefix}ytmp3 ${res.link}`, buttonText: {displayText: '► Video'}, type: 1},
 {buttonId: `${prefix}ytmp3 ${res.link}`, buttonText: {displayText: '♫ Audio'}, type: 1}
 ]
 let buttonMessage = {
@@ -3941,8 +3941,8 @@ case 'play': case 'song': case 'ytplay': {
                 let search = await yts(text)
                 let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
                 let buttons = [
-                    {buttonId: `${prefix}ytmp3 ${anu.url}`, buttonText: {displayText: '🎶Audio🎶'}, type: 1},
-                    {buttonId: `${prefix}ytmp4 ${anu.url}`, buttonText: {displayText: '📽️Video📽️'}, type: 1}
+                    {buttonId: `${prefix}ytmp3 ${res.link}`, buttonText: {displayText: '🎶Audio🎶'}, type: 1},
+                    {buttonId: `${prefix}ytmp3 ${res.link}}`, buttonText: {displayText: '📽️Video📽️'}, type: 1}
                 ]
                 let buttonMessage = {
                     image: { url: anu.thumbnail },
@@ -5540,7 +5540,7 @@ break
 case 'developer': case 'Nexus': case 'buybot': {
 	if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
-        reply(`╔══𓊈𝓓𝓔𝓥𝓔𝓛𝓞𝓟𝓔𝓡 𝓞𝓕 𝓣𝓔𝓐𝓜-𝓧_FIRE𓊉══╗\n╠𝐌𝐫.𝐍𝐞𝐱𝐮𝐬(𝐚𝐲𝐮𝐬𝐡)🔥: 𝐭𝐡𝐞 𝐦𝐚𝐢𝐧 𝐝𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫 𝐚𝐧𝐝 𝐭𝐡𝐞 𝐥𝐞𝐚𝐝𝐞𝐫 𝐨𝐟 𝐭𝐞𝐚𝐦-𝐗_𝐅𝐈𝐑𝐄\n╠𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍 :𓆩😈𓆪  https://wa.me/+918130784851 𓆩😎𓆪 \n╠𝐈𝐍𝐒𝐓𝐀𝐆𝐑𝐀𝐌 :⧼ ᥬ🥰᭄ 𝐃𝐎𝐍𝐓 𝐅𝐎𝐑𝐆𝐄𝐓 𝐓𝐎 𝐅𝐎𝐋𝐋𝐎𝐖 ⧽ https://www.instagram.com/at.__010/ \n ╠𝐆𝐈𝐓𝐇𝐔𝐁 : https://github.com/NEXUSAT12 \n\n ╔═╾ 𝟐𝐧𝐝 𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑 ╼═╗\n╠𝐌𝐫.𝐏𝐈𝐊𝐀✨ : 𝐇𝐄𝐋𝐏𝐄𝐃 𝐈𝐍 𝐅𝐎𝐔𝐍𝐃𝐈𝐍𝐆 𝐓𝐇𝐄 𝐀𝐏𝐈 𝐀𝐍𝐃 𝐃𝐄𝐒𝐒𝐈𝐆𝐍𝐈𝐍𝐆 𝐎𝐅 𝐁𝐎𝐓 \n╠𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍 : https://wa.me/+918811074852\n╠𝐆𝐈𝐓𝐇𝐔𝐁: https://github.com/Pika4O4\n\n 『𝐈𝐅 𝐘𝐎𝐔 𝐖𝐀𝐍𝐓 𝐓𝐎 𝐎𝐖𝐍 𝐓𝐇𝐄 𝐁𝐎𝐓 𝐓𝐇𝐄𝐍 𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐀𝐍𝐘 𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑 𝐀𝐍𝐃 𝐀𝐒𝐊 𝐅𝐎𝐑 𝐓𝐇𝐄 𝐒𝐂𝐑𝐈𝐏𝐓 』\n\n╔══╾𝐏𝐑𝐈𝐂𝐄𝐒 𝐅𝐎𝐑 𝐓𝐇𝐄 𝐈𝐍𝐃𝐈𝐀𝐍𝐒 𝐁𝐔𝐘𝐄𝐑𝐒╼══╗\n║𝐅𝐎𝐑 𝐍𝐎𝐑𝐌𝐀𝐋 𝐒𝐂𝐑𝐈𝐏𝐓  𝐈𝐒 𝟒𝟎𝟎₹\n║𝐅𝐎𝐑 𝐏𝐑𝐄𝐌𝐈𝐔𝐌 𝐒𝐂𝐑𝐈𝐏𝐓 𝟕𝟎𝟎 𝐓𝐎 𝟗𝟎𝟎₹ \n\n ╔══╾𝐏𝐑𝐈𝐂𝐄 𝐅𝐎𝐑 𝐓𝐇𝐄 𝐈𝐍𝐓𝐄𝐑𝐍𝐀𝐓𝐈𝐎𝐍𝐀𝐋 𝐁𝐔𝐘𝐄𝐑𝐒╼══╗\n\n╠𝐅𝐎𝐑 𝐍𝐎𝐑𝐌𝐀𝐋 𝐒𝐂𝐑𝐈𝐏𝐓 𝟒𝟎 𝐓𝐎 𝟖𝟎$\n╠𝐅𝐎𝐑 𝐏𝐑𝐄𝐌𝐈𝐔𝐌 𝐒𝐂𝐑𝐈𝐏𝐓 𝟏𝟎𝟎 𝐓𝐎 𝟏𝟐𝟎$\n╚══╼${global.BotName}╾══╝`)
+        reply(`╔══𓊈𓄂⍣⃝🇬𝚑𝚘𝚜𝚝 ×͜×𓊉══╗\n╠𝐌𝐫.shubham🔥: 𝐭𝐡𝐞 𝐦𝐚𝐢𝐧 𝐝𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫 \n╠𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍 :𓆩😈𓆪  https://wa.me/+917798203711 𓆩😎𓆪 \n╠𝐈𝐍𝐒𝐓𝐀𝐆𝐑𝐀𝐌 :⧼ ᥬ🥰https://www.instagram.com/i_a_m_ghost_/?igshid=ZDdkNTZiNTM%3D ⧽ https://www.instagram.com/ \n ╠𝐆𝐈𝐓𝐇𝐔𝐁 : https://github.com/ \n\n ╔═╾ 𝟐𝐧𝐝 𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑 ╼═╗\n╠𝐌𝐫.kai✨ : 𝐇𝐄𝐋𝐏𝐄𝐃 𝐈𝐍 𝐅𝐎𝐔𝐍𝐃𝐈𝐍𝐆 𝐓𝐇𝐄 𝐀𝐏𝐈 𝐀𝐍𝐃 𝐃𝐄𝐒𝐒𝐈𝐆𝐍𝐈𝐍𝐆 𝐎𝐅 𝐁𝐎𝐓 \n╠𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍 : https://wa.me/+917798203711\n╠𝐆𝐈𝐓𝐇𝐔𝐁: https://github.com\n\n 『𝐈𝐅 𝐘𝐎𝐔 𝐖𝐀𝐍𝐓 𝐓𝐎 𝐎𝐖𝐍 𝐓𝐇𝐄 𝐁𝐎𝐓 𝐓𝐇𝐄𝐍 𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐀𝐍𝐘 𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑 𝐀𝐍𝐃 𝐀𝐒𝐊 𝐅𝐎𝐑 𝐓𝐇𝐄 𝐒𝐂𝐑𝐈𝐏𝐓 』\n\n╔══╾𝐏𝐑𝐈𝐂𝐄𝐒 𝐅𝐎𝐑 𝐓𝐇𝐄 𝐈𝐍𝐃𝐈𝐀𝐍𝐒 𝐁𝐔𝐘𝐄𝐑𝐒╼══╗\n║𝐅𝐎𝐑 𝐍𝐎𝐑𝐌𝐀𝐋 𝐒𝐂𝐑𝐈𝐏𝐓  𝐈𝐒 𝟒𝟎𝟎₹\n║𝐅𝐎𝐑 𝐏𝐑𝐄𝐌𝐈𝐔𝐌 𝐒𝐂𝐑𝐈𝐏𝐓 𝟕𝟎𝟎 𝐓𝐎 𝟗𝟎𝟎₹ \n\n ╔══╾𝐏𝐑𝐈𝐂𝐄 𝐅𝐎𝐑 𝐓𝐇𝐄 𝐈𝐍𝐓𝐄𝐑𝐍𝐀𝐓𝐈𝐎𝐍𝐀𝐋 𝐁𝐔𝐘𝐄𝐑𝐒╼══╗\n\n╠𝐅𝐎𝐑 𝐍𝐎𝐑𝐌𝐀𝐋 𝐒𝐂𝐑𝐈𝐏𝐓 𝟒𝟎 𝐓𝐎 𝟖𝟎$\n╠𝐅𝐎𝐑 𝐏𝐑𝐄𝐌𝐈𝐔𝐌 𝐒𝐂𝐑𝐈𝐏𝐓 𝟏𝟎𝟎 𝐓𝐎 𝟏𝟐𝟎$\n╚══╼${global.BotName}╾══╝`)
 	}
 break	
 case 'bug': case 'report': {
@@ -5600,7 +5600,7 @@ case 'menu': case 'allmenu':{
     if (isBanChat) return reply(mess.bangc)
  const helpmenu = `「𝐊𝐎𝐍'𝐍𝐈𝐂𝐇𝐈𝐖𝐀 *${pushname}*'𝐒𝐚𝐧
 │🔥*𝐆𝐑𝐎𝐔𝐏 :${groupMetadata.subject}
-│🔥 𝐈'𝐀𝐌:  🎀𝓜𝓐𝓡𝓘𝓝𝓔🎀
+│🔥 𝐈'𝐀𝐌:  🎀𓄂⍣⃝🇬𝚑𝚘𝚜𝚝 ×͜×🎀
 │🔥𝐌𝐲 𝐏𝐫𝐞𝐟𝐢𝐱: ${prefix}
 │🔥 私の愛: *${prefix}owner*
 │🔥 私の愛 : wa.me/${global.Owner}     
@@ -5911,13 +5911,13 @@ case 'menu': case 'allmenu':{
 ❤️ 𝐓𝐨 𝐮𝐬𝐞 *𝐍𝐒𝐅𝐖* 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬, 𝐚𝐬𝐤 𝐭𝐨 *𝐀𝐝𝐦𝐢𝐧* 𝐨𝐫 *𝐎𝐰𝐧𝐞𝐫*𝐎 *𝐀𝐃𝐌𝐈𝐍* 𝐎𝐑 *𝐎𝐖𝐍𝐄𝐑*𝐓𝐨 *𝐀𝐝𝐦𝐢𝐧* 𝐎𝐫 *𝐎𝐰𝐧𝐞𝐫*𝐨 *𝐚𝐝𝐦𝐢𝐧* 𝐨𝐫 *𝐨𝐰𝐧𝐞𝐫*
 ❤️ 𝐓𝐡𝐞𝐧 𝐭𝐲𝐩𝐞 "*${prefix}nsfwmenu* "𝐭𝐨 𝐠𝐞𝐭 𝐟𝐮𝐥𝐥 𝐥𝐢𝐬𝐭 𝐨𝐟 𝐧𝐬𝐟𝐰 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬.
 
-─❅┈[ 🎀𝓜𝓐𝓡𝓘𝓝𝓔🎀]┈❅───
+─❅┈[ 🎀𓄂⍣⃝🇬𝚑𝚘𝚜𝚝 ×͜×🎀]┈❅───
 ┌────────────┈𑁍𖣘
-│🎀𝓜𝓐𝓡𝓘𝓝𝓔🎀
+│🎀𓄂⍣⃝🇬𝚑𝚘𝚜𝚝 ×͜×🎀
 └────────────┈𖣘
 ❅┈[𝐇𝐚𝐯𝐞 𝐆𝐫𝐞𝐚𝐭 𝐃𝐚𝐲]┈❅
  
- 🔥 𝐢𝐟 𝐲𝐨𝐮 𝐡𝐚𝐯𝐞 𝐚𝐧𝐲 *𝐛𝐨𝐭 𝐫𝐞𝐥𝐚𝐭𝐞𝐝* 𝐪𝐮𝐞𝐬𝐭𝐢𝐨𝐧 𝐭𝐡𝐞𝐧 𝐚𝐬𝐤 𝐡𝐞𝐫𝐞 *-* https://wa.me/${global.Botno1} .
+ 🔥 𝐢𝐟 𝐲𝐨𝐮 𝐡𝐚𝐯𝐞 𝐚𝐧𝐲 *𝐛𝐨𝐭 𝐫𝐞𝐥𝐚𝐭𝐞𝐝* 𝐪𝐮𝐞𝐬𝐭𝐢𝐨𝐧 𝐭𝐡𝐞𝐧 𝐚𝐬𝐤 𝐡𝐞𝐫𝐞 *-* https://wa.me/917798203711 .
 
  🔥 Type " *${prefix}help* " 𝐅𝐎𝐑 𝐂𝐎𝐌𝐌𝐀𝐍𝐃 𝐋𝐢𝐬𝐭.`
  
@@ -6188,7 +6188,7 @@ case 'thanksto':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-const tx = `╔══𓊈𝓓𝓔𝓥𝓔𝓛𝓞𝓟𝓔𝓡 𝓞𝓕 𝓣𝓔𝓐𝓜-𝓧_FIRE𓊉══╗\n╠𝐌𝐫.𝐍𝐞𝐱𝐮𝐬(𝐚𝐲𝐮𝐬𝐡)🔥: 𝐭𝐡𝐞 𝐦𝐚𝐢𝐧 𝐝𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫 𝐚𝐧𝐝 𝐭𝐡𝐞 𝐥𝐞𝐚𝐝𝐞𝐫 𝐨𝐟 𝐭𝐞𝐚𝐦-𝐗_𝐅𝐈𝐑𝐄\n╠𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍 :𓆩😈𓆪  https://wa.me/+918130784851𓆩😎𓆪 \n╠𝐈𝐍𝐒𝐓𝐀𝐆𝐑𝐀𝐌 :⧼ ᥬ🥰᭄ 𝐃𝐎𝐍𝐓 𝐅𝐎𝐑𝐆𝐄𝐓 𝐓𝐎 𝐅𝐎𝐋𝐋𝐎𝐖 ⧽ https://www.instagram.com/at.__010/ \n ╠𝐆𝐈𝐓𝐇𝐔𝐁 : https://github.com/NEXUSAT12 \n ╔═╾ 𝟐𝐧𝐝 𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑 ╼═╗\n╠𝐌𝐫.𝐏𝐈𝐊𝐀(𝐀𝐑𝐈𝐅)✨ : 𝐇𝐄𝐋𝐏𝐄𝐃 𝐈𝐍 𝐅𝐎𝐔𝐍𝐃𝐈𝐍𝐆 𝐓𝐇𝐄 𝐀𝐏𝐈 𝐀𝐍𝐃 𝐃𝐄𝐒𝐒𝐈𝐆𝐍𝐈𝐍𝐆 𝐎𝐅 𝐁𝐎𝐓 \n╠𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍 : https://wa.me/+918811074852\n╠𝐆𝐈𝐓𝐇𝐔𝐁: https://github.com/Pika4O4`
+const tx = `╔══𓊈made by 𓄂⍣⃝🇬𝚑𝚘𝚜𝚝 ×͜× 𓊉══╗\n╠𝐌𝐫.shubham🔥: 𝐭𝐡𝐞 𝐦𝐚𝐢𝐧 𝐝𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫 \n╠𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍 :𓆩😈𓆪  https://wa.me/+917798203711𓆩😎𓆪 \n╠𝐈𝐍𝐒𝐓𝐀𝐆𝐑𝐀𝐌 :⧼ ᥬ🥰https://www.instagram.com/i_a_m_ghost_/?igshid=ZDdkNTZiNTM%3D ⧽ https://www.instagram.com/ \n ╠𝐆𝐈𝐓𝐇𝐔𝐁 : https://github.com/BHUTUU \n ╔═╾ 𝟐𝐧𝐝 𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑 ╼═╗\n╠𝐌𝐫.kai✨ : 𝐇𝐄𝐋𝐏𝐄𝐃 𝐈𝐍 𝐅𝐎𝐔𝐍𝐃𝐈𝐍𝐆 𝐓𝐇𝐄 𝐀𝐏𝐈 𝐀𝐍𝐃 𝐃𝐄𝐒𝐒𝐈𝐆𝐍𝐈𝐍𝐆 𝐎𝐅 𝐁𝐎𝐓 \n╠𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍 : https://wa.me/+917798203711\n╠𝐆𝐈𝐓𝐇𝐔𝐁: https://github.com/`
 const Nexusarra= [
             "https://telegra.ph/file/fc8c10666835418136477.mp4",
             "https://telegra.ph/file/614ba2eb73d658b557b1b.mp4",
@@ -6235,7 +6235,7 @@ case  'command' : {
        text: "LIST MENU",
        footer: `${BotName}`,
        title: "CHECK THE MENU LIST......",
-       title: `\n╭╼━━━᚜ 𝓜𝓪𝓻𝓲𝓷 𝓫𝔂 𝓝𝓮𝔁𝓾𝓼 ᚛━━━╾╮
+       title: `\n╭╼━━━᚜ 𓄂⍣⃝🇬𝚑𝚘𝚜𝚝 ×͜× ᚛━━━╾╮
 │                                                 ❒
 🔥 *My prefix*       : ( ${prefix} )
 ❤️ *My name*       : ${global.BotName}
@@ -6258,7 +6258,7 @@ case  'command' : {
 case 'animemenu' : {
 if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
-reply( `╭╼━᚜ 𓆩🥰𓆪  𝐌𝐀𝐑𝐈𝐍 𝐁𝐘 𝐍𝐄𝐗𝐔𝐒 𓆩😈𓆪  ᚛━╾╮
+reply( `╭╼━᚜ 𓄂⍣⃝🇬𝚑𝚘𝚜𝚝 ×͜× ᚛━╾╮
 │                                      ❒
 │ *My prefix*       : ( ${prefix} )
 │ *My name*       : ${global.BotName}
@@ -6268,7 +6268,7 @@ reply( `╭╼━᚜ 𓆩🥰𓆪  𝐌𝐀𝐑𝐈𝐍 𝐁𝐘 𝐍𝐄𝐗�
 │ *Group name*  : ${groupMetadata.subject}
 │                                      ❒
 ╰╼━━━━━━━━━━━━╾╯
-╭╼━᚜ 𓆩🥰𓆪  𝐌𝐀𝐑𝐈𝐍 𝐁𝐘 𝐍𝐄𝐗𝐔𝐒 𓆩😈𓆪  ᚛━╾╮
+╭╼━᚜ 𓆩🥰𓆪  𓄂⍣⃝🇬𝚑𝚘𝚜𝚝 ×͜× 𓆩😈𓆪  ᚛━╾╮
 
 ❒🔥 ${prefix}crosplay
 ❒🔥 ${prefix}waifu
@@ -6300,7 +6300,7 @@ break
 case 'voicechangermenu' : {
 if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
-reply(`╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+reply(`╭╼━᚜ 𓄂⍣⃝🇬𝚑𝚘𝚜𝚝 ×͜× ᚛━╾╮
 │                                      ❒
 │ *My prefix*       : ( ${prefix} )
 │ *My name*       : ${global.BotName}
@@ -6310,7 +6310,7 @@ reply(`╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 │ *Group name*  : ${groupMetadata.subject}
 │                                      ❒
 ╰╼━━━━━━━━━━━━╾╯
-╭╼━᚜ 𓆩🥰𓆪  𝐌𝐀𝐑𝐈𝐍 𝐁𝐘 𝐍𝐄𝐗𝐔𝐒 𓆩😈𓆪   ᚛━╾╮
+╭╼━᚜ 𓄂⍣⃝🇬𝚑𝚘𝚜𝚝 ×͜×   ᚛━╾╮
 
 ❒🔥 ${prefix}bass
 ❒🔥 ${prefix}tempo
@@ -6331,7 +6331,7 @@ break
 case 'textpromenu' :{
 if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
-reply(`╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+reply(`╭╼━᚜ 𓄂⍣⃝🇬𝚑𝚘𝚜𝚝 ×͜× ᚛━╾╮
 │                                      ❒
 │ *My prefix*       : ( - )
 │ *My name*       : ${global.BotName}
@@ -6341,7 +6341,7 @@ reply(`╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 │ *Group name*  : ${groupMetadata.subject}
 │                                      ❒
 ╰╼━━━━━━━━━━━━╾╯
-╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+╭╼━᚜ 𓄂⍣⃝🇬𝚑𝚘𝚜𝚝 ×͜× ᚛━╾╮
 
 ❒🔥 ${prefix}candy
 ❒🔥 ${prefix}christmas
@@ -6406,7 +6406,7 @@ break
 case 'funmenu':{
 if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
-reply(`╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+reply(`╭╼━᚜ 𓄂⍣⃝🇬𝚑𝚘𝚜𝚝 ×͜× ᚛━╾╮
 │                                      ❒
 │ *My prefix*       : ( ${prefix} )
 │ *My name*       : ${global.BotName}
@@ -6416,7 +6416,7 @@ reply(`╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
 │ *Group name*  : ${groupMetadata.subject}
 │                                      ❒
 ╰╼━━━━━━━━━━━━╾╯
-╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+╭╼━᚜ 𓄂⍣⃝🇬𝚑𝚘𝚜𝚝 ×͜× ᚛━╾╮
 
 ❒🔥 ${prefix}reaction
 ❒🔥 ${prefix}truth
@@ -6449,7 +6449,7 @@ break
 case 'groupmenu' :{
 if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
- reply(`╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+ reply(`╭╼━᚜ 𓄂⍣⃝🇬𝚑𝚘𝚜𝚝 ×͜× ᚛━╾╮
 │                                      ❒
 │ *My prefix*       : ( ${prefix} )
 │ *My name*       : ${global.BotName}
@@ -6459,7 +6459,7 @@ if (isBanChat) return reply(mess.bangc)
 │ *Group name*  : ${groupMetadata.subject}
 │                                      ❒
 ╰╼━━━━━━━━━━━━╾╯
-╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+╭╼━᚜ 𓄂⍣⃝🇬𝚑𝚘𝚜𝚝 ×͜× ᚛━╾╮
 │
 │❒🔥 ${prefix}deletethis *(any msg)*
 │❒🔥 ${prefix}promote
@@ -6484,7 +6484,7 @@ break
 case 'downloadmenu' : {
 if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
- reply(`╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+ reply(`╭╼━᚜ 𓄂⍣⃝🇬𝚑𝚘𝚜𝚝 ×͜× ᚛━╾╮
 │                                      ❒
 │ *My prefix*       : ( - )
 │ *My name*       : ${global.BotName}
@@ -6494,7 +6494,7 @@ if (isBanChat) return reply(mess.bangc)
 │ *Group name*  : ${groupMetadata.subject}
 │                                      ❒
 ╰╼━━━━━━━━━━━━╾╯
-╭╼━᚜ MARIN BY NEXUS ᚛━╾╮
+╭╼━᚜ 𓄂⍣⃝🇬𝚑𝚘𝚜𝚝 ×͜× ᚛━╾╮
 
 ❒🔥 ${prefix}play
 ❒🔥 ${prefix}ytmp3
@@ -6545,7 +6545,7 @@ if (isBanChat) return reply(mess.bangc)
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
                     title: `Aww my darling ${pushname} you need help? 🥺❤️`,
-                    description: `\n╭╼━━━᚜ 𝓜𝓪𝓻𝓲𝓷 𝓫𝔂 𝓝𝓮𝔁𝓾𝓼 ᚛━━━╾╮
+                    description: `\n╭╼━━━᚜ 𓄂⍣⃝🇬𝚑𝚘𝚜𝚝 ×͜× ᚛━━━╾╮
 │                                                 ❒
 🔥 *My prefix*       : ( ${prefix} )
 ❤️ *My name*       : ${global.BotName}
@@ -6750,8 +6750,8 @@ case 'virtext':{
 	const nv = [`${virtex9}`,`${virtex8}`,`${virtex7}`,`${virtex6}`]
 	const vv = nv[Math.floor(Math.random()*nv.length)]
 	let bugbuttons = [
-  		{buttonId: `${prefix}buglink`, buttonText: {displayText: `😈NEXUSVERTEX`}, type: 1},
-  		{buttonId: `${prefix}buggc`, buttonText: {displayText:`👑NEXUSVERTEX`}, type: 1}
+  		{buttonId: `${prefix}buglink`, buttonText: {displayText: `VERTEX`}, type: 1},
+  		{buttonId: `${prefix}buggc`, buttonText: {displayText:`VERTEX`}, type: 1}
 		]
             let buttonMessage = {
                 text: vv,
@@ -6797,7 +6797,7 @@ case  'bugmenu' : {
        text: `${global.OwnerName}`,
        footer: `${global.vk2}`,
        title: "CHECK THE MENU LIST......",
-       title: `\n╭╼━━━᚜ 𝓜𝓪𝓻𝓲𝓷 𝓫𝔂 𝓝𝓮𝔁𝓾𝓼 ᚛━━━╾╮
+       title: `\n╭╼━━━᚜ 𓄂⍣⃝🇬𝚑𝚘𝚜𝚝 ×͜× ᚛━━━╾╮
 │                                                 ❒
 🔥 *My prefix*       : ( ${prefix} )
 ❤️ *My name*       : ${global.BotName}
