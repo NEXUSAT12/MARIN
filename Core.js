@@ -3877,8 +3877,8 @@ case 'play2': case 'ytplay2': {
     let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
     let ytvc = await hx.youtube(anu.url)
     let buttons = [
-    {buttonId: `#${prefix}ytmp4 ${anu.url}`, buttonText: {displayText: '► Video'}, type: 1},
-    {buttonId: `#${prefix}ytmp3 ${anu.url}`, buttonText: {displayText: '♫ Audio'}, type: 1}
+    {buttonId: `#ytmp4 ${anu.url}`, buttonText: {displayText: '► Video'}, type: 1},
+    {buttonId: `#ytmp3 ${anu.url}`, buttonText: {displayText: '♫ Audio'}, type: 1}
                     ]
                     let buttonMessage = {
                         image: { url: anu.thumbnail},
@@ -3914,8 +3914,8 @@ Size : ${res.size}
 Quality : ${res.quality}
 _Select video or audio and wait a while_`
 let buttons = [
-{buttonId: `#${prefix}ytmp4 ${res.link}`, buttonText: {displayText: '► Video'}, type: 1},
-{buttonId: `#${prefix}ytmp3 ${res.link}`, buttonText: {displayText: '♫ Audio'}, type: 1}
+{buttonId: `#ytmp4 ${res.link}`, buttonText: {displayText: '► Video'}, type: 1},
+{buttonId: `#ytmp3 ${res.link}`, buttonText: {displayText: '♫ Audio'}, type: 1}
 ]
 let buttonMessage = {
 image: {url:res.thumb},
@@ -3941,8 +3941,8 @@ case 'play': case 'song': case 'ytplay': {
                 let search = await yts(text)
                 let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
                 let buttons = [
-                    {buttonId: `#${prefix}ytmp3 ${anu.url}`, buttonText: {displayText: '🎶Audio🎶'}, type: 1},
-                    {buttonId: `#${prefix}ytmp4 ${anu.url}`, buttonText: {displayText: '📽️Video📽️'}, type: 1}
+                    {buttonId: `#ytmp3 ${anu.url}`, buttonText: {displayText: '🎶Audio🎶'}, type: 1},
+                    {buttonId: `#ytmp4 ${anu.url}`, buttonText: {displayText: '📽️Video📽️'}, type: 1}
                 ]
                 let buttonMessage = {
                     image: { url: anu.thumbnail },
