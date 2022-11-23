@@ -7,19 +7,19 @@ global.autoReadAll = false
 global.antitags = true
 
 
-global.Owner = ['918130784851']
-global.OwnerNumber = ['918130784851']
-global.ownertag = ['918130784851']
+global.Owner = ['917798203711']
+global.OwnerNumber = ['917798203711']
+global.ownertag = ['917798203711']
 global.Botno1 = ['919971690443']
-global.BotName = "𝗠𝗔𝗥𝗜𝗡" 
-global.packname = "MARIN bot"
-global.author = "By:𝐓𝐄𝐀𝐌 𝐗-𝐅𝐈𝐑𝐄🔥"
-global.OwnerName = "NEXUS"
-global.myweb = "https://chat.whatsapp.com/DDWBpH9ciy38RCGYO7RkfM"
-global.BotSourceCode = "https://github.com/NEXUSAT12"
-global.SupportGroupLink = "https://chat.whatsapp.com/DDWBpH9ciy38RCGYO7RkfM"
+global.BotName = "𓄂⍣⃝🇬𝚑𝚘𝚜𝚝 ×͜×" 
+global.packname = "𓄂⍣⃝🇬𝚑𝚘𝚜𝚝 ×͜×"
+global.author = "By:shubham"
+global.OwnerName = "shubham"
+global.myweb = "https://chat.whatsapp.com/EsNqFrGKxGXFrdwgRaQl9q"
+global.BotSourceCode = "dm to ownwr"
+global.SupportGroupLink = "https://chat.whatsapp.com/EsNqFrGKxGXFrdwgRaQl9q"
 global.sessionName = "session"
-global.WaterMark = "MARIN-_-BY_-_NEXUS"
+global.WaterMark = "𓄂⍣⃝🇬𝚑𝚘𝚜𝚝 ×͜×"
 
 // Prefix //
 // If you want to change the prefix, change it and also change all switch's button id from Core.js  otherwise buttons will not work //
@@ -81,7 +81,7 @@ global.mess = {
     
 }
 
-global.PermanentOwner = ['918130784851']
+global.PermanentOwner = ['917798203711']
 global.limitawal = {
     premium: "Infinity",
     free: 2,
