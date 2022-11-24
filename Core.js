@@ -5180,34 +5180,6 @@ console.log(musers)
     }
 }
 break
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-/*
-
-case 'cry': case 'kill': case 'hug': case 'pat': case 'lick': case 'kiss': case 'bite': case 'yeet':
-case 'bully': case 'bonk': case 'wink': case 'poke': case 'nom': case 'slap': case 'smile':
-case 'wave': case 'blush': case 'smug': case 'glomp': case 'happy': case 'dance':
-case 'cringe': case 'cuddle': case 'highfive': case 'handhold': case 'kick':
-
-    if (isBan) return reply(mess.banned)	 			
-    if (isBanChat) return reply(mess.bangc)
-    if (!m.isGroup) return replay(mess.grouponly)						
-resggh = await axios.get(`https://nekos.life/api/v2/img/${command}`)         
-let resffj = await getBuffer(resggh.data.url)
-let resmain = await GIFBufferToVideoBuffer(resffj)   
-      await Nexus.sendMessage(m.chat,{video: resmain, gifPlayback:true},{ quoted:m }).catch(err => {
-                  return reply('error..')
-                                  })
-break
-
-*/
-
-
-
-
 case 'megumin':
 if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
@@ -6861,8 +6833,6 @@ if(err) return Nexus.sendMessage(from, {image:ErrorPic, caption:String(err)}, {q
 if (stdout) return replay(stdout)
 })
 }
-
-
 if (isCmd && budy.toLowerCase() != undefined) {
 if (m.chat.endsWith('broadcast')) return
 if (m.isBaileys) return
