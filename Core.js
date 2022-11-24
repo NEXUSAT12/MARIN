@@ -6,7 +6,7 @@
 //▮THIS SOFTWARE IS UNDER UZ COPYRIGHT
 //▮
 //▮REPORT ABUSE OF THIS SOFTWARE EMAIL US
-//▮WHATSAPP US : +917798203711
+//▮WHATSAPP US : +918130784851
 //▮
 //╰▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
 //
@@ -3428,7 +3428,7 @@ case 'togif': case 'getgif':{
 
 
  case 'owner': case 'creator': case 'mod': case 'mods':{
-    Nexus.sendContact(m.chat, global.Owner, m)
+    Nexus.sendContact(m.chat, global.pmo, m)
     }
     break
 
@@ -3877,7 +3877,7 @@ case 'play2': case 'ytplay2': {
     let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
     let ytvc = await hx.youtube(anu.url)
     let buttons = [
-    {buttonId: `${prefix}ytmp3 ${res.link}`, buttonText: {displayText: '► Video'}, type: 1},
+    {buttonId: `${prefix}ytmp4 ${res.link}`, buttonText: {displayText: '► Video'}, type: 1},
     {buttonId: `${prefix}ytmp3 ${res.link}`, buttonText: {displayText: '♫ Audio'}, type: 1}
                     ]
                     let buttonMessage = {
@@ -3914,7 +3914,7 @@ Size : ${res.size}
 Quality : ${res.quality}
 _Select video or audio and wait a while_`
 let buttons = [
-{buttonId: `${prefix}ytmp3 ${res.link}`, buttonText: {displayText: '► Video'}, type: 1},
+{buttonId: `${prefix}ytmp4 ${res.link}`, buttonText: {displayText: '► Video'}, type: 1},
 {buttonId: `${prefix}ytmp3 ${res.link}`, buttonText: {displayText: '♫ Audio'}, type: 1}
 ]
 let buttonMessage = {
@@ -3933,87 +3933,82 @@ reply("Error link!")
 }
 break
 
-case 'play': case 'song': case 'ytplay': {
-		if (isBan) return reply(mess.banned)	 			
- 		if (isBanChat) return reply(mess.bangc)
-                if (!text) return reply(`Example : ${prefix + command} Stay`)
-                let yts = require("yt-search")
-                let search = await yts(text)
-                let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
-                let buttons = [
-                    {buttonId: `${prefix}ytmp3 ${res.link}`, buttonText: {displayText: '🎶Audio🎶'}, type: 1},
-                    {buttonId: `${prefix}ytmp3 ${res.link}}`, buttonText: {displayText: '📽️Video📽️'}, type: 1}
-                ]
-                let buttonMessage = {
-                    image: { url: anu.thumbnail },
-                    caption: ` 
-🐦 Title : ${anu.title}
-🐦 Ext : Search
-🐦 ID : ${anu.videoId}
-🐦 Duration : ${anu.timestamp}
-🐦 Viewes : ${anu.views}
-🐦 Uploaded On : ${anu.ago}
-🐦 Author : ${anu.author.name}
-🐦 Channel : ${anu.author.url}
-🐦 Description : ${anu.description}
-🐦 Url : ${anu.url}`,
-                    footer: `${global.BotName}`,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                Nexus.sendMessage(m.chat, buttonMessage, { quoted: m })
-            }
-            break
-
- case 'ytmp3': case 'getmusic': case 'ytaudio': {
-                let { yta } = require('./lib/ytdl')
-                if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`)
-                let quality = args[1] ? args[1] : '320kbps'
-                let media = await yta(text, quality)
-                if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                Nexus.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
-            }
-            break
-            case 'ytmp4': case 'getvideo': case 'ytvideo': {
-                let { ytv } = require('./lib/y2mate')
-                if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 360p`)
-                let quality = args[1] ? args[1] : '360p'
-                let media = await ytv(text, quality)
-                if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                Nexus.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🐦 Title : ${media.title}\n🐦 File Size : ${media.filesizeF}\n🐦 Url : ${isUrl(text)}\n🐦 Ext : MP3\n🐦 Resolution : ${args[1] || '360p'}` }, { quoted: m })
-            }
-            break
-	    case 'getmusicxxx': {
-                let { yta } = require('./lib/y2mate')
-		let urls = quoted.text.match(new RegExp(/(?:https?:\/\/)?(?:youtu\.be\/|(?:www\.|m\.)?youtube\.com\/(?:watch|v|embed|shorts)(?:\.php)?(?:\?.*v=|\/))([a-zA-Z0-9\_-]+)/, 'gi'))
-                let quality = args[1] ? args[1] : '128kbps'
-                let media = await yta(urls[text - 1], quality)
-                if (media.filesize >= 100000) return reply('File Over Limit '+util.format(media))
-                Nexus.sendImage(m.chat, media.thumb, `🐦 Title : ${media.title}\n🐦 File Size : ${media.filesizeF}\n🐦 Url : ${urls[text - 1]}\n🐦 Ext : MP3\n🐦 Resolution : ${args[1] || '128kbps'}`, m)
-                Nexus.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
-            }
-            break
-            case 'getvideoxxx': {
-                let { ytv } = require('./lib/y2mate')
-                if (!text) throw `Example : ${prefix + command} 1`
-                if (!m.quoted) throw 'Reply Message'
-                if (!m.quoted.isBaileys) throw `Can Only Reply To Meessages From Bots`
-                let urls = quoted.text.match(new RegExp(/(?:https?:\/\/)?(?:youtu\.be\/|(?:www\.|m\.)?youtube\.com\/(?:watch|v|embed|shorts)(?:\.php)?(?:\?.*v=|\/))([a-zA-Z0-9\_-]+)/, 'gi'))
-                if (!urls) throw`Maybe The Message You Replied Does Not Contain The Video Search Result`
-                let quality = args[1] ? args[1] : '360p'
-                let media = await ytv(urls[text - 1], quality)
-                if (media.filesize >= 100000) return reply('File Over Limit '+util.format(media))
-                Nexus.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🐦 Title : ${media.title}\n🐦 File Size : ${media.filesizeF}\n🐦 Url : ${urls[text - 1]}\n🐦 Ext : MP3\n🐦 Resolution : ${args[1] || '360p'}` }, { quoted: m })
-            }
-            break
-
- case 'ytvd': {
-    if (isBan) return reply(mess.banned)	 			
+case 'music': case 'play': case 'song': case 'ytplay': {
+ if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
- Nexus.sendMessage(from, {video:{url:args[0]}, mimetype:"video/mp4", caption:"Here it is...",}, {quoted:m})
+ const YT=require('./lib/ytdl')
+ const { isUrl, fetchBuffer } = require('./lib/Function')
+ if(!text) return XBotInc.sendMessage(from,{text:"Pls enter song name to play!"},{quoted:m})
+ let yts = require("yt-search")
+ let search = await yts(text)
+ let anu = search.videos[0]
+ let buttons = [
+ {buttonId: `${prefix}ytad ${text}`, buttonText: {displayText: '♫ Audio'}, type: 1},
+ {buttonId: `${prefix}ytvd ${text}`, buttonText: {displayText: '► Video'}, type: 1},
+ {buttonId: `${prefix}ytdoc ${text}`, buttonText: {displayText:'♫ Doc'}, type: 1}
+ ]
+ let buttonMessage = {
+ image: { url: anu.thumbnail },
+ caption: `「  _${botname} Youtube Player  」
+
+*Title :* ${anu.title}
+
+*Duration :* ${anu.timestamp}
+*Viewers :* ${anu.views}
+*Uploaded :* ${anu.ago}
+*Channel :* ${anu.author.name}
+*Url :* ${anu.url}`,
+ footer: `${botname}`,
+ buttons: buttons,
+ headerType: 4,
+ }
+XBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
  }
  break
-
+case 'ytad': case 'getmusic': case 'yt': case 'youtube': case 'ytmp3': case 'ytmusic': case 'ytdl': {
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+    reply(` Getting  your 𝗮𝘂𝗱𝗶𝗼 ${pushname}_`)
+    const YT=require('./lib/ytdl')
+    let yts = require("yt-search")
+    let search = await yts(text)
+    let anu = search.videos[0]
+    const ytmp3play = await YT.mp3(anu.url)
+    let stats = fs.statSync(ytmp3play.path)
+    let fileSizeInBytes = stats.size;
+    if (fileSizeInBytes > 60000000) return reply('Cant send audios longer than 60 MB!')
+ XBotInc.sendMessage(from, {audio: fs.readFileSync(ytmp3play.path),fileName: anu.title + '.mp3',mimetype: 'audio/mpeg',}, {quoted:m})
+ }
+ break
+case 'ytdoc': {
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+    reply(` Getting  your 𝗮𝘂𝗱𝗶𝗼 ${pushname}_`)
+    const YT=require('./lib/ytdl')
+    let yts = require("yt-search")
+    let search = await yts(text)
+    let anu = search.videos[0]
+    const ytmp3play = await YT.mp3(anu.url)
+    let stats = fs.statSync(ytmp3play.path)
+    let fileSizeInBytes = stats.size;
+    if (fileSizeInBytes > 60000000) return reply('Cant send audios longer than 60 MB!')
+ XBotInc.sendMessage(from, {document: fs.readFileSync(ytmp3play.path),fileName: anu.title + '.mp3',mimetype: 'audio/mpeg',}, {quoted:m})
+ }
+ break
+ case 'ytvd': case 'getvideo': case 'ytvideo': case 'ytmp4': {
+    if (isBan) return reply(mess.banned)	 			
+ if (isBanChat) return reply(mess.bangc)
+    reply(`Getting ready your 𝘃𝗶𝗱𝗲𝗼 ${pushname}_`)
+ const YT=require('./lib/ytdl')
+    let yts = require("yt-search")
+    let search = await yts(text)
+    let anu = search.videos[0]
+    const ytmp4play = await YT.mp4(anu.url)
+    let vidduration =ytmp4play.duration;
+    if (vidduration > 1800) return reply('Cant send videos longer than *30 min*')
+XBotInc.sendMessage(from, {video:{url:ytmp4play.videoUrl}, mimetype:"video/mp4", caption:anu.title+` By *${botname} MD*`,}, {quoted:m})
+ }
+ break
  case 'ytad': {
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
@@ -5180,6 +5175,34 @@ console.log(musers)
     }
 }
 break
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+/*
+
+case 'cry': case 'kill': case 'hug': case 'pat': case 'lick': case 'kiss': case 'bite': case 'yeet':
+case 'bully': case 'bonk': case 'wink': case 'poke': case 'nom': case 'slap': case 'smile':
+case 'wave': case 'blush': case 'smug': case 'glomp': case 'happy': case 'dance':
+case 'cringe': case 'cuddle': case 'highfive': case 'handhold': case 'kick':
+
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+    if (!m.isGroup) return replay(mess.grouponly)						
+resggh = await axios.get(`https://nekos.life/api/v2/img/${command}`)         
+let resffj = await getBuffer(resggh.data.url)
+let resmain = await GIFBufferToVideoBuffer(resffj)   
+      await Nexus.sendMessage(m.chat,{video: resmain, gifPlayback:true},{ quoted:m }).catch(err => {
+                  return reply('error..')
+                                  })
+break
+
+*/
+
+
+
+
 case 'megumin':
 if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
@@ -6278,7 +6301,7 @@ reply(`╭╼━᚜ 𓄂⍣⃝🇬𝚑𝚘𝚜𝚝 ×͜× ᚛━╾╮
 │ *My name*       : ${global.BotName}
 │ *User name*    : ${pushname}
 │ *Owner name* : ${global.OwnerName}
-│ *Owner no.*     : http://wa.me//${global.Owner}
+│ *Owner no.*     : http://wa.me//${global.pmo}
 │ *Group name*  : ${groupMetadata.subject}
 │                                      ❒
 ╰╼━━━━━━━━━━━━╾╯
@@ -6833,6 +6856,8 @@ if(err) return Nexus.sendMessage(from, {image:ErrorPic, caption:String(err)}, {q
 if (stdout) return replay(stdout)
 })
 }
+
+
 if (isCmd && budy.toLowerCase() != undefined) {
 if (m.chat.endsWith('broadcast')) return
 if (m.isBaileys) return
