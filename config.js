@@ -10,7 +10,7 @@ global.antitags = true
 global.Owner = ['917798203711']
 global.OwnerNumber = ['917798203711']
 global.ownertag = ['917798203711']
-global.Botno1 = ['919971690443']
+global.Botno1 = ['917798203711']
 global.BotName = "𓄂⍣⃝🇬𝚑𝚘𝚜𝚝 ×͜×" 
 global.packname = "𓄂⍣⃝🇬𝚑𝚘𝚜𝚝 ×͜×"
 global.author = "By:shubham"
@@ -23,7 +23,7 @@ global.WaterMark = "𓄂⍣⃝🇬𝚑𝚘𝚜𝚝 ×͜×"
 
 // Prefix //
 // If you want to change the prefix, change it and also change all switch's button id from Core.js  otherwise buttons will not work //
-global.prefa = ['#'] 
+global.prefa = ['.'] 
 
 
 global.location = "ghaziabad, india"
