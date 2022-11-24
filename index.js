@@ -65,7 +65,7 @@ if (mek.key && mek.key.remoteJid === 'status@broadcast') return
 if (!Nexus.public && !mek.key.fromMe && chatUpdate.type === 'notify') return
 if (mek.key.id.startsWith('BAE5') && mek.key.id.length === 16) return
 m = smsg(Nexus, mek, store)
-require("./Core")(Nexus, m, chatUpdate, store)
+require("./core")(Nexus, m, chatUpdate, store)
 } catch (err) {
 console.log(err)
 }
